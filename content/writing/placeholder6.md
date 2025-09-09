@@ -1,5 +1,5 @@
 +++
-title = "Placeholder Text 2"
+title = "Placeholder Text 1"
 date = "2023-10-20"
 description = "Lorem Ipsum Dolor Si Amet"
 [taxonomies]

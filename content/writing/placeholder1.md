@@ -3,7 +3,7 @@ title = "Markdown Syntax Guide"
 date = "2022-10-20" 
 description = "hey." 
 [taxonomies] 
-tags = ["markdown", "css", "html"] 
+"writing/tags" = ["markdown", "css", "html"] 
 [extra] 
 cover.image = "images/markdown-syntax.png" 
 cover.alt = "A Markdown logo" 

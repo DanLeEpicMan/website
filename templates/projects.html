@@ -1,5 +1,6 @@
 {% extends "index.html" %}<!---->
 {% block main %}<!---->
+{% include "partials/profile.html" %}<!---->
 
 {% set_global data = load_data(path="projects.toml", format="toml") %}<!---->
 

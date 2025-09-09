@@ -1,7 +1,7 @@
 +++
 title = "Archive"
-path = "archive"
+path = "writing/archive"
 template = "archive.html"
 [extra]
-section = "_index.md"
+section = "writing/_index.md"
 +++
