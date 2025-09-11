@@ -9,7 +9,7 @@ title = "Daniel Naylor"
 description = "Personal website and portfolio of Daniel Naylor"
 
 # The default site author.
-author = "Daniel Naylor"
+author = ""
 # The default language; used in feeds.
 default_language = "en"
 
@@ -119,10 +119,6 @@ url = "$BASE_URL/cv"
 [[extra.menu]]
 name = "Writing"
 url = "$BASE_URL/writing"
-
-[[extra.menu]]
-name = "Archive"
-url = "$BASE_URL/archive"
 
 [[extra.menu]]
 name = "About"
