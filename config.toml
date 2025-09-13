@@ -54,7 +54,7 @@ mermaid = true
 # Enable comment support globally.
 comment = false
 # The URL of social image.
-social_image = "icons/d_symbol.svg"
+social_image = ""
 
 [extra.style]
 # The custom background color.
@@ -91,13 +91,14 @@ avatar_spin_speed = "6s"
 
 # The social icons below the profile on the home page.
 # The `name` should be the file name of static/icons/*.svg or the icon name of https://simpleicons.org/
-[[extra.profile.social]]
+[[extra.profile.social]] 
 name = "linkedin"
 url = "https://www.linkedin.com/in/daniel-t-naylor/"
 
 [[extra.profile.social]]
 name = "email"
 url = "mailto:naylord@uci.edu"
+title = "naylord@uci.edu"
 
 [[extra.profile.social]]
 name = "github"
