@@ -1,54 +1,17 @@
 [[project]]
-name = "lorem"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["nisi", "saepe"]
+name = "Adjusted Judge Scores"
+desc = "A tool for adjusting raw judge scores to account for judge bias and variability. Originally developed for Data Science UCSB's 2025 Hackathon and Project Showcase."
+tags = ["personal", "data science"]
 links = [
-    { name = "github", url = "https://example.com" },
-    { name = "docs", url = "https://example.com" },
+    { name = "github", url = "https://github.com/DanLeEpicMan/score-adjuster" },
+    { name = "blog", url = "https://example.com" },
 ]
 
 [[project]]
-name = "ipsum"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["lorem", "ipsum"]
+name = "The Cause in Basketball Skill"
+desc = "A causal inference framework that proposes an alternative to RAPM for evaluating basketball players. Worked alongside Dr. Alexander Franks during Summer 2024."
+tags = ["sports analytics", "causal inference"]
 links = [
-    { name = "homepage", url = "https://example.com" },
-    { name = "source", url = "https://example.com" },
-    { name = "docs", url = "https://example.com" },
-]
-
-[[project]]
-name = "dolor sit"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["amet", "ipsum", "vero", "optio"]
-links = [{ name = "github", url = "https://example.com" }]
-
-[[project]]
-name = "amet"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["lorem", "ipsum"]
-links = [
-    { name = "website", url = "https://example.com" },
-    { name = "github", url = "https://example.com" },
-    { name = "docs", url = "https://example.com" },
-    { name = "wiki", url = "https://example.com" },
-]
-
-[[project]]
-name = "lorem-ipsum"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["dolor", "lorem", "ipsum", "amet"]
-links = [
-    { name = "github", url = "https://example.com" },
-    { name = "docs", url = "https://example.com" },
-]
-
-[[project]]
-name = "praesentium"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
-tags = ["lorem", "ipsum"]
-links = [
-    { name = "homepage", url = "https://example.com" },
-    { name = "github", url = "https://example.com" },
-    { name = "docs", url = "https://example.com" },
+    { name = "github", url = "https://github.com/DanLeEpicMan/RAPM" },
+    { name = "poster", url = "https://github.com/DanLeEpicMan/RAPM/blob/main/poster.pdf" },
 ]
