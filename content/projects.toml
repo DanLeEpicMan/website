@@ -4,7 +4,7 @@ desc = "A tool for adjusting raw judge scores to account for judge bias and vari
 tags = ["personal", "data science"]
 links = [
     { name = "github", url = "https://github.com/DanLeEpicMan/score-adjuster" },
-    { name = "blog", url = "https://example.com" },
+    { name = "blog", url = "/writing/adjusted-score-notes" },
 ]
 
 [[project]]
