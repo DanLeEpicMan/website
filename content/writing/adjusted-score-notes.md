@@ -105,17 +105,24 @@ This article talks exclusively about turning raw scores into adjusted scores. Ho
 For many of these methods, we will require the following two definitions from statistics
 - $\mu_j$: Judge $j$'s raw score [average](https://en.wikipedia.org/wiki/Arithmetic_mean).
 - $\sigma_j$: Judge $j$'s raw score [standard deviation](https://en.wikipedia.org/wiki/Standard_deviation).
-  - We include *[Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction)*. While there's *some* justification for treating this as a population, not a sample, this complicates details under the hood (e.g. then we need to specify whether $\sigma_j$ is an estimator, or if the distribution for each outcome really is $\frac{1}{N}$)
+  - Unless otherwise stated, we treat the data as a **sample** instead of a **population**. In those cases, we include *[Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction)*.
 
 ## $z$-score Sum
 
-A rather simple method that assumes nothing more than what is already given. The [$z$-score](https://en.wikipedia.org/wiki/Standard_score) of $p_{ij}$ is defined as
+A rather simple method that makes one fairly mild assumption. 
+
+{% admonition(type='question', title='Assumption: Data as Population') %}
+The score data for each judge represents a complete population, not a sample.
+{% end %}
+This is analogous to the methodology of standardized testing. It's customary to treat standardized test scores as a population, not a sample. We need this assumption for the [$z$-score](https://en.wikipedia.org/wiki/Standard_score) to be well-defined, otherwise we are in truth defining a [$t$-statistic](https://en.wikipedia.org/wiki/T-statistic).
+
+The $z$-score of $p_{ij}$ is defined as
 
 $$
 z_{ij} = \frac{p_{ij} - \mu_j}{\sigma_j}
 $$
 
-Essentially, we treat each raw score as a part of a population of judge $j$'s scores, and transform them into [$z$-scores](https://en.wikipedia.org/wiki/Standard_score). We therefore define the adjusted score as
+Essentially, we treat each raw score as a part of a population of judge $j$'s scores, and transform them into $z$-score. We therefore define the adjusted score as
 
 $$
 \begin{equation}
@@ -128,14 +135,14 @@ Applying this transformation to our toy data, we get the ranking
 *Table 2: $z$-score Sum Final Scores*
 | Finalist  | $z$-score Sum |
 | --------- | ------------- |
-| Project 1 | 10.946        |
-| Project 4 | 5.078         |
-| Project 2 | 4.049         |
-| Project 6 | 4.048         |
-| Project 3 | -2.091        |
-| Project 8 | -2.263        |
-| Project 7 | -9.084        |
-| Project 5 | -10.684       |
+| Project 1 | 11.702        |
+| Project 4 | 5.429         |
+| Project 2 | 4.329         |
+| Project 6 | 4.328         |
+| Project 3 | -2.235        |
+| Project 8 | -2.419        |
+| Project 7 | -9.711        |
+| Project 5 | -11.422       |
 
 At first glance, this gives us what we want wanted. An umambiguous first place and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye
 1. By definition, $z$-scores are <ins>dimensionless</ins>, therefore the final score is dimensionless. There's two conflicting interpretations of this:
@@ -212,7 +219,9 @@ Before we proceed, we must make two crucial assumptions
 {% admonition(type='question', title='Assumption: Purely Average Score') %}
 All judges have a score which they would consistently give to any idealized average project. This "purely average score" is unique to each judge.
 {% end %}
-The existence of an "idealized average project" is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person's 7/10 may be someone else's 5/10. We will use $\mu_j$ as a stand-in for this "purely average score".
+The existence of an "idealized average project" is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person's 7/10 may be someone else's 5/10. 
+
+We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias). I acknowledge this concern, but we had a good reason for using this average that I will not elaborate on.
 
 {% admonition(type='question', title='Assumption: Judge Variability') %}
 The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.
