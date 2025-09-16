@@ -145,7 +145,7 @@ Applying this transformation to our toy data, we get the ranking
 | Project 5 | -11.422       |
 
 At first glance, this gives us what we want wanted. An umambiguous first place and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye
-1. By definition, $z$-scores are <ins>dimensionless</ins>, therefore the final score is dimensionless. There's two conflicting interpretations of this:
+1. By definition, $z$-scores are [dimensionless](https://en.wikipedia.org/wiki/Dimensionless_quantity), therefore the final score is dimensionless. There's two conflicting interpretations of this:
    - On one hand, the final score being dimensionless makes it an objective quantity.
    - On the other hand, we are effectively interpreting it as a score, which is contentious as it does not share its units.
 2. Interestingly, this is almost identical to the ranking of scoring method (1). However, note that Project 3 and Project 8 switched places.
@@ -169,7 +169,9 @@ All judges choose their scores independently.
 {% end %}
 By independent, we mean the random variables representing each judge's scores are all [mutually independent](https://en.wikipedia.org/wiki/Independence_(probability_theory)#More_than_two_random_variables). We can interpret each random variable, $S_j$, as "Judge $j$'s outcomes for Project Showcase 2025". There's certainly more nuance than this, however to avoid being pedantic, we'll sweep those details under the rug.
 
-Note that the ratio $\frac{\mathrm{Var}(S_j)}{\mathrm{Var}(\sum_{k=1}^{N} S_k)}$ quantifies how much the variability of $S_j$ describes the variability of $\sum_{k=1}^{N} S_k$. Because we assumed independence, $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$. Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. As a result of the prior analysis, there is validity behind interpreting $\omega_j$ as the proportion of variability judge $j$ introduces. 
+We want independence to ensure that there is no "overlapping signal" across judges. That is, each judge represents their own opinions and nothing more. Thus, $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ quantifies how much variability judge $j$ introduces.
+
+Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. Because of the prior analysis, there is validity behind interpreting $\omega_j$ as judge $j$'s introduced variability.
 
 We define the **Proportional Variance** score as
 $$
@@ -200,16 +202,25 @@ Moreover, it reduces the tightness of the scores. If we multiply everything by 1
 As before though, there's more that meets the eye
 1. Saying that independence justifies the interpretation of $\omega_j$ *is* a bit fallacious. Rather, it's more appropriate to say independence *inspires* this interpretation.
     - You can also argue that, being an estimator, this approximates the truth pretty well. After all, it's common practice in statistics to replace quantities with estimators. However, this is merely acknowledging an abuse and not justifying it.
-2. The assumption of independence is contentious. In this example, we have that $\sum_{k=1}^{N} \mathrm{Var}(S_k) \approx 163.571$, versus $\mathrm{Var}(\sum_{k=1}^{N} S_k) \approx 810.5$
-    - Perhaps the problem is in the random variable setup. Are the scores of each projects truly iid samples? All our math up to here treats them as such.
-      - Independent is reasonable, but perhaps not identically distributed, as there is differentiation between projects. Still, how do you account for this?
+2. The assumption of independence is contentious. In this example, we have that $\sum_{k=1}^{N} \mathrm{Var}(S_k) \approx 163.571$, yet $\mathrm{Var}(\sum_{k=1}^{N} S_k) \approx 810.5$
     - One can argue that, if we drop the denominator in $\omega_j$, we obtain a new score method that's equivalent in ranking to Proportional Variance. Thus, we can drop the assumption of independence while keeping an essentially identical system.
       - However, this messes up both the range and the units. Is it okay to judge a project with units of $\mathrm{points}^3$?
       - Also, see $\kappa$-adjusted score for a similar approach
+    - **In fact, independence is unnecessarily strong** for the interpretation of $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ as introduced variability. **Uncorrelated is sufficient**, as this ensures $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$, hence $\frac{\mathrm{Var}(S_j)}{\mathrm{Var}(\sum_{k=1}^{N} S_k)} = \frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$
+      - At the cost of a modification, we can drop the assumption altogether. Using [Principal Component Analysis](https://en.wikipedia.org/wiki/Principal_component_analysis), we can linearly transform the random vector $(S_1, \dots, S_N)$ into $(\hat{S}_1, \dots, \hat{S}_N)$ such that $\hat{S}_i, \hat{S}_j$ are uncorrelated for every $i \neq j$. To obtain a ranking, we apply Proportional Variance on the new dataset induced by $(\hat{S}_1, \dots, \hat{S}_N)$.
+        - We are essentially transforming the judges into a new, idealized set of judges with uncorrelated opinions. *Is this an ethical thing to do?*
+        - Implementing this in code is incredibly simple. Note that all of this is equivalent to performing a change of basis on $P$ before computing its final scores. This is equivalent to finding $\rho^{\mathrm{PV}} (PC)$ where $C$ is the matrix of $P$'s principal components.
 3. This method is pretty susceptible to outliers. One deviating score can drastically inflate the variance of a judge. 
       - We see this behavior with **Judge Foxtrot**. All scores are within 5 points of 35, except one 44 entry. 
 
 As promising and reasonable Proportional Variance seems, it nonetheless has its problems. 
+{% admonition(type='warning', title='Caution: Ramifications of New Approach') %}
+In point 2 above, I outline a process that drops the assumption of independence altogether by weakening it to correlation, then showing that all score data can be manipulated to achieve zero correlation.
+
+**Be very careful with this approach**. Aside from the ethical concerns of replacing the judges with idealized versions of themselves, this is ultimately manipulating the data to fit a very specific metric (i.e. uncorrelated). Is this level of preprocessing necessary? If yes, why is the solution to change the raw data and not its generating process? 
+
+These criticisms may apply to all the other methods (e.g. "How is adjusting scores not fitting a specific goal?"). The point of this blog is to address them as best I can. I do not renounce this approach as fundamentally wrong, but **I implore anyone attempting it to offer more justification than I have.**
+{% end %}
 
 ## $\kappa$-adjusted Score
 
