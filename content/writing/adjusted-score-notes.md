@@ -10,7 +10,7 @@ description = "Notes and details on my project 'Adjusted Judge Score'"
 
 During 2023–2025, I was a board member for [Data Science UCSB](https://www.datascienceucsb.org/). A major event we host is our annual [Project Showcase](https://www.datascienceucsb.org/projects), where club members present their projects in front of judges, comprised of industry experts, professors, PhD students, etc. Judges are asked to score each project, and we combine their scores via a simple sum to determine a final ranking, using this to distribute cash prizes.
 
-However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we didn't believe the winners didn't deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1-2 points from each other, out of about 60 points total. 
+However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we believed the winners didn't deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1-2 points from each other, out of about 60 points total. 
 
 Upon closer inspection, we realized what the problem was. Many judges gave essentially the same score to all projects, particularly higher scores. In other words, many judges exhibited a ***positivity bias***. Since all judges are weighted equally, this causes the value of an individual point to rise dramatically.
 
@@ -74,7 +74,7 @@ This is a complicated way of saying that both methods always produce the same ra
 $$
     \varrho_i = \frac{1}{N} \sum_{j=1}^{N} p_{ij}
 $$
-Since $x \mapsto cx$ is monotically increasing when $c > 0$. For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking. Interestingly, equivalent in ranking forms an [equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation).
+Since $x \mapsto cx$ is monotonically increasing when $c > 0$. For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking. Interestingly, equivalent in ranking forms an [equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation).
 
 # Scoring Methods
 
@@ -169,7 +169,7 @@ All judges choose their scores independently.
 {% end %}
 By independent, we mean the random variables representing each judge's scores are all [mutually independent](https://en.wikipedia.org/wiki/Independence_(probability_theory)#More_than_two_random_variables). We can interpret each random variable, $S_j$, as "Judge $j$'s outcomes for Project Showcase 2025". There's certainly more nuance than this, however to avoid being pedantic, we'll sweep those details under the rug.
 
-With these assumptions, set $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. Because we assumed independence, $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$. Therefore, there is validity behind interpreting $\omega_j$ as the proportion of variability judge $j$ introduces. 
+Note that the ratio $\frac{\mathrm{Var}(S_j)}{\mathrm{Var}(\sum_{k=1}^{N} S_k)}$ quantifies how much the variability of $S_j$ describes the variability of $\sum_{k=1}^{N} S_k$. Because we assumed independence, $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$. Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. As a result of the prior analysis, there is validity behind interpreting $\omega_j$ as the proportion of variability judge $j$ introduces. 
 
 We define the **Proportional Variance** score as
 $$
@@ -195,7 +195,7 @@ Applying this method to our scores, we get the following ranking
 
 The benefit of this scoring method is it preserves the range, as well as the units, of the raw data. In this example, the range is 5–45, and the units are points. 
 
-Moreover, it reduces the tightness of the scores. If we multiply everything by 10 to bring the range to 50–450, we see that second and third place are off by about 11 points, whereas with the Raw Sum method, they're off by 2 points (see *Table 1*).
+Moreover, it reduces the tightness of the scores. If we multiply everything by 10 to bring the range to 50–450, we see that second and third place are off by about 8 points, whereas with the Raw Sum method, they're off by 2 points (see *Table 1*).
 
 As before though, there's more that meets the eye
 1. Saying that independence justifies the interpretation of $\omega_j$ *is* a bit fallacious. Rather, it's more appropriate to say independence *inspires* this interpretation.
@@ -221,7 +221,7 @@ All judges have a score which they would consistently give to any idealized aver
 {% end %}
 The existence of an "idealized average project" is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person's 7/10 may be someone else's 5/10. 
 
-We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias). I acknowledge this concern, but we had a good reason for using this average that I will not elaborate on.
+We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias). I acknowledge this concern, and an easy fix is to slightly modify the assumption to "Purely Average Score among Top Performers", or "Purely Decent Score". In our opinion, we felt that this assumption was equally reasonable for our events.
 
 {% admonition(type='question', title='Assumption: Judge Variability') %}
 The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.
