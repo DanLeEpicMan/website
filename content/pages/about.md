@@ -19,4 +19,4 @@ Additionally, I enjoy connecting with nature. I am an [Eagle Scout](https://en.w
     <img src="/images/whitney.jpg" alt="Troop 609!" title="Troop 609!">
 </div>
 
-And lastly, I really enjoy talking to people. I have a very bad habit of giving unsolicited advice or telling stories unprompted. Feel free to reach out to me if you don't mind! All my socials can be found on my home page.
+And lastly, I really enjoy talking to people. Feel free to reach out to me if you don't mind! All my socials can be found on my home page.
