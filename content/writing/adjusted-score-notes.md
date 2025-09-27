@@ -64,17 +64,24 @@ $$
 While two methods may not always produce the same scores, they may be equal in one crucial way
 
 {% admonition(type='abstract', title='Definition: Equivalent in Ranking') %}
-Define $(k)\_{ \vec{v} }$ as the index of the $k$th largest component of the vector $\vec{v}$, i.e. the index of the $k$th [order statistic](https://en.wikipedia.org/wiki/Order_statistic). 
+Define $(k)\_{ \vec{v} }$ as the index of the $k$th largest component of the vector $\vec{v}$, i.e. the index of the $k$th [order statistic](https://en.wikipedia.org/wiki/Order_statistic), in descending order. 
 
 We say two scoring methods, $\rho$ and $\varrho$, are **equivalent in ranking** if, for every input $P$, $(k)\_{\rho(P)} = (k)\_{\varrho(P)}$ for every $1 \leq k \leq M$.
 {% end %}
 
-This is a complicated way of saying that both methods always produce the same ranking, even if they don't produce the same final scores. For example, (1) is equivalent in ranking to the mean, i.e.
+This is a complicated way of saying that both methods always produce the same ranking, even if they don't produce the same final scores. For example, (1) is equivalent in ranking to the average judge score, i.e.
 
 $$
     \varrho_i = \frac{1}{N} \sum_{j=1}^{N} p_{ij}
 $$
-Since $x \mapsto cx$ is monotonically increasing when $c > 0$. For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking. Interestingly, equivalent in ranking forms an [equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation).
+For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking. 
+
+{% admonition(type='tip', title='More on Equivalent in Ranking') %}
+There's two details worth mentioning
+1. The precise definition of $(k)\_{ \vec{v} }$ is intentionally avoided. Without proper care, it may not even be well-defined! What happens in the event of a tie?
+   - In practice, a tiebreaker is defined. We do not concern ourselves with such details, and simply assume it is a part of the definition of $(k)\_{ \vec{v} }$
+2. Interestingly, equivalent in ranking forms an [equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation).
+{% end %}
 
 # Scoring Methods
 
@@ -147,7 +154,7 @@ Applying this transformation to our toy data, we get the ranking
 At first glance, this gives us what we want wanted. An umambiguous first place and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye
 1. By definition, $z$-scores are [dimensionless](https://en.wikipedia.org/wiki/Dimensionless_quantity), therefore the final score is dimensionless. There's two conflicting interpretations of this:
    - On one hand, the final score being dimensionless makes it an objective quantity.
-   - On the other hand, we are effectively interpreting it as a score, which is contentious as it does not share its units.
+   - On the other hand, we are effectively interpreting it as a score, which is contentious as it does not have the same units.
 2. Interestingly, this is almost identical to the ranking of scoring method (1). However, note that Project 3 and Project 8 switched places.
 3. Unlike Raw Sum score, this has a (theoretically) infinite range. Without prior knowledge of $\\{\mu_j\\}\_{j=1}^{N}, \\{\sigma_j\\} \_{j=1}^{N}$, pinning down the range is incredibly difficult.
 4. Since we are **DIVIDING** by standard deviation, we are actually *uplifting* the positivity bias. Judge Delta's points are now the most valuable points since they contain the least variability. 
@@ -169,7 +176,7 @@ All judges choose their scores independently.
 {% end %}
 By independent, we mean the random variables representing each judge's scores are all [mutually independent](https://en.wikipedia.org/wiki/Independence_(probability_theory)#More_than_two_random_variables). We can interpret each random variable, $S_j$, as "Judge $j$'s outcomes for Project Showcase 2025". There's certainly more nuance than this, however to avoid being pedantic, we'll sweep those details under the rug.
 
-We want independence to ensure that there is no "overlapping signal" across judges. That is, each judge represents their own opinions and nothing more. Thus, $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ quantifies how much variability judge $j$ introduces.
+We want independence to ensure that there is no "overlapping signal" across judges. That is, each judge represents their own opinions and nothing more. Thus, $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ quantifies how much variability judge $j$ introduces in relation to all other judges.
 
 Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. Because of the prior analysis, there is validity behind interpreting $\omega_j$ as judge $j$'s introduced variability.
 
@@ -215,7 +222,7 @@ As before though, there's more that meets the eye
 
 As promising and reasonable Proportional Variance seems, it nonetheless has its problems. 
 {% admonition(type='warning', title='Caution: Ramifications of New Approach') %}
-In point 2 above, I outline a process that drops the assumption of independence altogether by weakening it to correlation, then showing that all score data can be manipulated to achieve zero correlation.
+In point 2 above, I outline a process that drops the assumption of independence altogether by weakening it to zero correlation, then showing that all score data can be manipulated to achieve zero correlation.
 
 **Be very careful with this approach**. Aside from the ethical concerns of replacing the judges with idealized versions of themselves, this is ultimately manipulating the data to fit a very specific metric (i.e. uncorrelated). Is this level of preprocessing necessary? If yes, why is the solution to change the raw data and not its generating process? 
 
