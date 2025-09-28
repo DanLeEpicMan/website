@@ -129,7 +129,7 @@ $$
 z_{ij} = \frac{p_{ij} - \mu_j}{\sigma_j}
 $$
 
-Essentially, we treat each raw score as a part of a population of judge $j$'s scores, and transform them into $z$-score. We therefore define the adjusted score as
+Essentially, we treat each raw score as a part of a population of judge $j$'s scores, and transform them into $z$-scores. We therefore define the adjusted score as
 
 $$
 \begin{equation}
@@ -239,7 +239,9 @@ All judges have a score which they would consistently give to any idealized aver
 {% end %}
 The existence of an "idealized average project" is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person's 7/10 may be someone else's 5/10. 
 
-We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias). I acknowledge this concern, and an easy fix is to slightly modify the assumption to "Purely Average Score among Top Performers", or "Purely Decent Score". In our opinion, we felt that this assumption was equally reasonable for our events.
+We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias). 
+
+I acknowledge this concern, and an easy fix is to slightly modify the assumption to "Purely Average Score among Top Performers", or "Purely Decent Score". Note that this implicitly assumes some finalists are below this threshold. In our opinion, we felt that this assumption was equally reasonable for our events.
 
 {% admonition(type='question', title='Assumption: Judge Variability') %}
 The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.
@@ -254,16 +256,17 @@ $$
 \end{equation}
 $$
 
-The first thing to note is that, while this definition is complicated, it ensures that the units of $\rho_{i}^{\kappa\textrm{-adj}}$ are the same units as the raw data. Additionally, treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". This is then up-weighted by $\sigma_{j}^{\kappa}$, and subsequentially rooted by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ is to simply avoid issues where we may root a negative number.
+While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ is to simply avoid issues where we may root a negative number.
 
-Analyzing the behavior of $\kappa$, we experience three interesting effects
-- For $\kappa \in (0, \infty)$, we see a diminishing effect for sufficiently large scores. For example, in the Desmos graph below, increasing the score from 5 -> 6 has a stronger effect on the final score than 10 -> 11.
-- For $\kappa = 0$, we get a scoring method that's equivalent in ranking to the Raw Sum method (1).
-- For $\kappa \in (-1, 0)$, there's an explosive effect for sufficiently large scores. The opposite behavior of $\kappa \in (0, \infty)$ occurs.
-- Lastly, while $\kappa \in (-\infty, -1)$ is technically defined, it is not interpretable.
+However, there's more to the role of $\kappa$ than meets the eye. By design, it's intended to quantify how much weight $\sigma_j$ has. Higher $\kappa$ means the weights are larger. However, note that we effectively weigh the score by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, which means that the exponent is always less than 1. Perhaps not the precise desired behavior, but the desired behavior nonetheless.
 
-*The desmos graph visualizes this transformation. The purple graph shows how scores for a single judge will be transformed. Parameters are $\kappa = 1, \sigma_j = 6, \mu_j = 0$. The black graph is equivalent in ranking to a Raw Sum score.*
-<iframe src="https://www.desmos.com/calculator/mwgmmok14i?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+More interestingly, this method makes point gains non-linear.
+- When $\kappa \in (0, \infty)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a root function, meaning increasing $p_{ij}$ from $\mu_j$ -> $\mu_j + 1$ has more of an increase than $\mu_j + 5$ -> $\mu_j + 6$.
+- When $\kappa = 0$, this is linear, and in fact equivalent in ranking to (1).
+- When $\kappa \in (-1, 0)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a polynomial, meaning increasing $p_{ij}$ from $\mu_j + 5$ -> $\mu_j + 6$ has more of an increase than $\mu_j$ -> $\mu_j + 1$.
+- Lastly, while $\kappa < -1$ is *technically* defined, it is not interpretable. We would run into a situation where scores close to $\mu_j$ are more valuable than scores far greater than $\mu_j$.
+
+Note that $\mu_j, \sigma_j$ changes if $p_{ij}$ changes. This analysis, while accurate for the most part, is oversimplified. Only small increments to points should be considered.
 
 Applying this method to our toy data yields
 
@@ -286,9 +289,22 @@ As with everything else, there's deeper criticisms
     - Still, is there any nuance or cleverness here, or is the choice arbitrary?
 3. Out of all methods, this one is the most numerically unstable
     - Especially for raw scores with large ranges.
-    - Especially susceptible to outliers, as with Proportional Variance
+    - Though not as susceptible to outliers as Proportional Variance since $\sigma_j$ is rooted.
 
-Still, in spite of these criticisms, we were the most satisfied with this scoring method. We felt that it not only down-weighted the positivity bias present in many judges, but also filtered out noise very well. We were extremely satisfied with all its results.
+{% admonition(type='tip', title='An Interesting Modification') %}
+Since we effectively weigh by $\sigma\_{j}^{\frac{\kappa}{1 + \kappa}}$, the weights are going to be smaller than $\sigma_j$. It's quite strange that $\kappa$ has this effect.
+
+Motivated from the definition of the $L^p$ norms, let's instead define
+$$
+\varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_j^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left(p_{ij} - \mu_j \right) \right)
+$$
+
+Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward. 
+
+However, this loses the effect of non-linear point gains, and moreover $\mu_j$ can be dropped without affecting the ranking. Be aware of these changes if you decide to go with this modification.
+{% end %}
+
+Still, in spite of these criticisms, we were the most satisfied with this scoring method. We felt that it not only down-weighted the positivity bias present in many judges, but also filtered out noise very well. We also saw the non-linear point gains as a benefit.
 
 # Conclusion
 
