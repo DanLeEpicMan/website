@@ -28,7 +28,7 @@ Before I can begin articulating my solutions, I must lay out definitions.
 
 For illustrating examples, we will use the anonymized raw scores for **Project Showcase 2025**. Judges were asked to score projects in 5 separate categories on a range from 1–9. Hence, the range of a judge's raw score is 5–45.
 
-<div id="CSVTable"></div>
+<div id="CSVTable" style="overflow-x: auto;"></div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
 <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
 
@@ -250,11 +250,11 @@ The judges whose individual points are most informative, hence possesses the lea
 Like Proportional Variance, we will use standard deviation to weigh points. Unlike Proportional Variance, we include a hyperparameter to tune the strength of this weighting.
 
 Let $\kappa > -1$. The $\kappa$-adjusted score is defined as
+<div style="overflow-x: auto;">
 $$
-\begin{equation}
-    \rho_{i}^{\kappa\textrm{-adj}} = \sum_{j=1}^{N} \mathrm{sign}(p_{ij} - \mu_j) \left (\sigma_j^\kappa \left| p_{ij} - \mu_j \right| \right)^{\frac{1}{1 + \kappa}}
-\end{equation}
+\rho_{i}^{\kappa\textrm{-adj}} = \sum_{j=1}^{N} \mathrm{sign}(p_{ij} - \mu_j) \left (\sigma_j^\kappa \left| p_{ij} - \mu_j \right| \right)^{\frac{1}{1 + \kappa}}
 $$
+</div>
 
 While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ is to simply avoid issues where we may root a negative number.
 
@@ -295,11 +295,13 @@ As with everything else, there's deeper criticisms
 Since we effectively weigh by $\sigma\_{j}^{\frac{\kappa}{1 + \kappa}}$, the weights are going to be smaller than $\sigma_j$. It's quite strange that $\kappa$ has this effect.
 
 Motivated from the definition of the $L^p$ norms, let's instead define
+<div style="overflow-x: auto;">
 $$
-\varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_j^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left(p_{ij} - \mu_j \right) \right)
+\varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_{j}^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left( p_{ij} - \mu_j \right) \right)
 $$
+</div>
 
-Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward. 
+Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward.
 
 However, this loses the effect of non-linear point gains, and moreover $\mu_j$ can be dropped without affecting the ranking. Be aware of these changes if you decide to go with this modification.
 {% end %}
