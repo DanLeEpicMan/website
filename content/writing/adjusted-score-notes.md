@@ -3,7 +3,7 @@ title = "Adjusted Judge Score Notes"
 date = "2025-09-15" 
 description = "Notes and details on my project 'Adjusted Judge Score'" 
 [taxonomies] 
-"writing/tags" = ["project", "personal"] 
+"writing/tags" = ["recreational", "project"] 
 +++
 
 # Introduction of the Problem

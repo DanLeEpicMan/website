@@ -3,7 +3,7 @@ title = "How My Troop Has Changed"
 date = "2025-09-17" 
 description = "Reflecting on my Boy Scout troop after a long period of absence." 
 [taxonomies] 
-"writing/tags" = ["blog", "personal"] 
+"writing/tags" = ["blog"] 
 [extra]
 cover.image = "/images/changing-time/cover.jpg"
 cover.alt = "Staring into the distance"
