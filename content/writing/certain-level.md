@@ -20,35 +20,28 @@ As much as I may seem to speak in absolutes, this is definitely not the case. It
 
 # What is this "certain level of arrogance"?
 
-To introduce what I mean by this, allow me to explain by way of example. There were many examples I wanted to write about that perfectly articulates my point, however in the interest of privacy, I will focus only on one.
+To introduce what I mean, allow me to explain by way of example. But rather than focusing on a negative example illustrating arrogance, I'll focus on a positive example illustrating the exact opposite. In this way, I can hone in on elements neglected by this arrogance.
 
-## "How Sexy is Your Man?"
+*Note: I obtained permission from the project members to write about their project. However, in the interest of privacy, I will not disclose anything more than the project itself.*
 
-"How Sexy is Your Man?" was an ethically dubious project I encountered in Data Science UCSB. The premise of the project is that you submit a picture of a male face, and it returns a bunch of metrics quantifying how "sexy" it is.
+## DataDrip
 
-An immediate criticism is that this project borders eugenics and supremacism. Any bias in the training data will yield awful results. For example, training a model on predominantly white faces will cause the model to favor "white features" over others, treading deeply into racist territory. The counterargument to this is to simply include a representative sample, however that is a challenge that goes well beyond the scope of the project. No matter how you want to slice it, data under-represents marginalized communities, especially those outside the United States. [And enhancing data collection for those communities raises its own share of ethical concerns.](https://epic.org/issues/democracy-free-speech/privacy-and-racial-justice/)
+DataDrip was a project in Data Science UCSB. It was one of the finalists for Project Showcase 2025, ultimately scoring 3rd place. The premise of this project is that you submit a picture of your face, and it returns a wardrobe of fashion items. In essence, the project is finding ["drip"](https://www.kontentino.com/social-media-urban-dictionary/drip/) that will complement you.
 
-But on a much more fundamental level, the premise of the project is questionable.
-1. The data of the project were human faces. Are these faces real? 
-    - If yes, was the consent of each and every person obtained, either directly or implicitly through licensing agreements? 
-    - If no, is it fine to compare human beauty to artificial beauty?
-2. Beauty standards vary tremendously across cultures, and even within cultures. Quantifying "sexiness" neglects this fact.
+While at first glance this may seem questionable, the project was very well thought out. Color analysis motivates the entire approach, namely the [four seasons categorization](https://www.washingtonpost.com/lifestyle/style/color-analysis-what-looks-best-on-you/2021/08/16/16174e96-f92a-11eb-9c0e-97e29906a970_story.html). The idea here is that skin tone determines what "season" you are, which narrows down a list of suitable clothing items. My understanding of the project is it extracts facial features into embeddings via a pre-trained model, and from there uses heuristics to both classify a user's season and create a list of clothes.
 
-Even if the project realigned itself to measure how well a person "fits" a very particular beauty standard (e.g. Asian Baby Boy), I still object to this deeply. Developing metrics to quantify such things is a non-technical skill, and everyone in the project comes from technical backgrounds. **The fact of the matter is that in such a case, without consultation of non-technical people or resources, there is a huge component that this project simply lacks.**
-
-### Was this really arrogance?
-
-It's undeniable that this project possesses a certain level of negligence. But was this really a case of arrogance? My initial impressions were yes, as the presentation of the results were incredibly disturbing. Not only did they dive into the model architecture and (concerning) design philosophies, they included an analysis of "sexiest features". Anyone reading their results would likely conclude this as [scientific racism](https://en.wikipedia.org/wiki/Scientific_racism), thus a case of arrogance.
-
-However, it is plausible that this was simply designed by beginners who hadn't thought through the ethical implications. After all, it's a project by undergraduates. The most likely scenario is that this project was intended as a (very weird) joke. In such a case, this is just unfortunate ignorance and some immaturity.
-
-What do I personally believe? I think it's probably a mix of both. I don't think the project members were entirely aware of what they were doing. That being said, performing a project of this scale to such a degree should signal red flags. I do not think this project was made by evil or flawed people, and I hope they've since moved on to better projects.
+Aside from being an impressive project, I have a few key praises
+1. The members were pretty technical people, and for the most part, this was an entirely technical project.
+    - That is, the members simply applied the analysis and methodology of experts, rather than trying to do everything themselves.
+    - To be more specific, **the project members did not masquerade as experts in non-technical fields they have little exposure with.**
+2. All ethical concerns, such as biases in training data and use of external tools/methods, were approached carefully. They were very keen on ensuring that this is not only a useful tool, **but an ethically sound one too**.
+3. The team all chose to work in an area they had a deep interest in, rather than choosing something with several buzzwords just to put on a resume.
 
 ## A Precise Definition
 
-Regardless of whether this project was truly arrogance, a mix of it, or simply ignorance, the above example illustrates my point. **It takes a certain level of arrogance to completely neglect non-technical skills and assume you can fulfill the same roles as an expert.** That is, to assume that because you can build a solution with technology, you can thus put an end to the problem at hand.
+The arrogance I describe is pretty much the exact opposite of every praise I outlined above. **It takes a certain level of arrogance to completely neglect non-technical skills and assume you can fulfill the same roles as an expert.** That is, to assume that because you can build a solution with technology, you can thus put an end to the problem at hand.
 
-Somewhat related, though not at all articulated above, is the shallow pursuit of achievements. I've dealt with people who wanted to work on a project not because it interested them, but because they only wanted a project on their resume, and nothing more. In essence, **this certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.** I must stress that I am not at all speaking to the intimidation or confusion many beginners feel, that is entirely separate.
+Somewhat related is the shallow pursuit of achievements. I've dealt with people who wanted to work on a project not because it interested them, but because they only wanted a project on their resume, and nothing more. In essence, **this certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.** I must stress that I am not at all speaking to the intimidation or confusion many beginners feel, that is entirely separate.
 
 {% admonition(type='note', title='An Important Clarification') %}
 
