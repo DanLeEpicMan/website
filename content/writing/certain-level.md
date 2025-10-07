@@ -28,7 +28,7 @@ To introduce what I mean, allow me to explain by way of example. But rather than
 
 DataDrip was a project in Data Science UCSB. It was one of the finalists for Project Showcase 2025, ultimately scoring 3rd place. The premise of this project is that you submit a picture of your face, and it returns a wardrobe of fashion items. In essence, the project is finding ["drip"](https://www.kontentino.com/social-media-urban-dictionary/drip/) that will complement you.
 
-While at first glance this may seem questionable, the project was very well thought out. Color analysis motivates the entire approach, namely the [four seasons categorization](https://www.washingtonpost.com/lifestyle/style/color-analysis-what-looks-best-on-you/2021/08/16/16174e96-f92a-11eb-9c0e-97e29906a970_story.html). The idea here is that skin tone determines what "season" you are, which narrows down a list of suitable clothing items. My understanding of the project is it extracts facial features into embeddings via a pre-trained model, and from there uses heuristics to both classify a user's season and create a list of clothes.
+While at first glance this may seem questionable, the project was very well-thought-out. Color analysis motivates the entire approach, namely the [four seasons categorization](https://www.washingtonpost.com/lifestyle/style/color-analysis-what-looks-best-on-you/2021/08/16/16174e96-f92a-11eb-9c0e-97e29906a970_story.html). The idea here is that skin tone determines what "season" you are, which narrows down a list of suitable clothing items. My understanding of the project is it extracts facial features into embeddings via a pre-trained model, and from there uses heuristics to both classify a user's season and create a list of clothes.
 
 Aside from being an impressive project, I have a few key praises
 1. The members were pretty technical people, and for the most part, this was an entirely technical project.
@@ -51,7 +51,7 @@ However, I must acknowledge that in the realm of low-level design, I am not an e
 
 {% end %}
 
-# Where does it come from? Why is it overrepresented in tech?
+# Where does it come from? Why is it over-represented in tech?
 
 The over-representation of this mindset in SDS, CS, and even Math is something I've noticed throughout all of my undergrad. I don't claim to understand this entirely, but I have a couple ideas.
 
@@ -77,11 +77,11 @@ And moreover, I partially dispute the premise of this observation. While I agree
 
 Furthermore, the barrier of entry for using technology becomes lower every year. Tech skills are increasingly becoming more accessible to those in other degrees, and even those without degrees.
 
-Granted, using technology is not at all what a tech degree prepares you for. Saying such a thing is no different than saying mathematics teaches you how to add numbers together. But this leads me directly into the my broader criticism.
+Granted, using technology is not at all what a tech degree prepares you for. Saying such a thing is no different from saying mathematics teaches you how to add numbers together. But this leads me directly into my broader criticism.
 
 > This certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.
 
-Truth of the matter is that many of these people whom neglect non-technical skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that's effectively what these people get out of it.
+Truth of the matter is that many of these people who neglect non-technical skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that's effectively what these people get out of it.
 
 ## Demands of Industry
 
@@ -93,7 +93,7 @@ Yet that disruption only describes a very particular kind of job. In many applic
 
 # What's the point of all this?
 
-So why did I write this blog anyways? Because I've had this exact conversation with so many people around me. It's gotten to a point where I feel like articulating the frustrations has some value.
+So why did I write this blog? Because I've had this exact conversation with so many people around me. It's gotten to a point where I feel like articulating the frustrations has some value.
 
 Beyond school, I've seen this behavior in [many](https://en.wikipedia.org/wiki/Theranos) [different](https://www.404media.co/how-teas-founder-convinced-millions-of-women-to-spill-their-secrets-then-exposed-them-to-the-world/) places. Much of this discussion translates well into the "tech bro" phenomenon.
 
