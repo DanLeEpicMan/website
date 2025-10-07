@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Daniel Naylor</title>
+    <subtitle>Personal website and portfolio of Daniel Naylor</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://dtnaylor.com/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://dtnaylor.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-10-04T00:00:00+00:00</updated>
+    <id>https://dtnaylor.com/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A Certain Level of Arrogance</title>
+        <published>2025-10-04T00:00:00+00:00</published>
+        <updated>2025-10-04T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://dtnaylor.com/writing/certain-level/"/>
+        <id>https://dtnaylor.com/writing/certain-level/</id>
+        
+        <content type="html" xml:base="https://dtnaylor.com/writing/certain-level/">&lt;p&gt;During my two years as an officer of &lt;a href=&quot;https:&#x2F;&#x2F;www.datascienceucsb.org&#x2F;&quot;&gt;Data Science UCSB&lt;&#x2F;a&gt;, I frequently interacted with hundreds of club members, predominantly &lt;a href=&quot;https:&#x2F;&#x2F;catalog.ucsb.edu&#x2F;programs&#x2F;BSSTSDS&quot;&gt;Statistics &amp;amp; Data Science&lt;&#x2F;a&gt; &lt;em&gt;(SDS)&lt;&#x2F;em&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.cs.ucsb.edu&#x2F;&quot;&gt;Computer Science&lt;&#x2F;a&gt; &lt;em&gt;(CS)&lt;&#x2F;em&gt; majors. Most of them were awesome, either ambitious beginners wanting to learn more, or seasoned veterans tackling interesting projects.&lt;&#x2F;p&gt;
+&lt;p&gt;But every now and then, I encountered people who possessed a certain level of arrogance. Every major has their fair share of unpleasant people, but CS and SDS especially had an over-representation of them. While a vocal minority, I have experienced this trait so commonly first-hand. After having talked about it with so many people around me, I can&#x27;t help but feel that there&#x27;s an underlying reason behind it.&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 23, 68, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;danger.svg)&quot;
+    &gt;
+      danger
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Take What I Say Lightly&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;I am not writing this blog with the intention of insulting anyone. Rather, I write this to illustrate an unproductive and downright unpleasant mindset I frequently encountered.&lt;&#x2F;p&gt;
+&lt;p&gt;As much as I may seem to speak in absolutes, this is definitely not the case. It is not my intention to slander all of SDS and CS majors, nor to suggest that they are inferior. Many of my greatest friends come from both majors. What I am focusing on is a very vocal &lt;strong&gt;minority&lt;&#x2F;strong&gt; that unfortunately is over-represented in these fields.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h1 id=&quot;what-is-this-certain-level-of-arrogance&quot;&gt;What is this &quot;certain level of arrogance&quot;?&lt;&#x2F;h1&gt;
+&lt;p&gt;To introduce what I mean, allow me to explain by way of example. But rather than focusing on a negative example illustrating arrogance, I&#x27;ll focus on a positive example illustrating the exact opposite. In this way, I can hone in on elements neglected by this arrogance.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Note: I obtained permission from the project members to write about their project. However, in the interest of privacy, I will not disclose anything more than the project itself.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;datadrip&quot;&gt;DataDrip&lt;&#x2F;h2&gt;
+&lt;p&gt;DataDrip was a project in Data Science UCSB. It was one of the finalists for Project Showcase 2025, ultimately scoring 3rd place. The premise of this project is that you submit a picture of your face, and it returns a wardrobe of fashion items. In essence, the project is finding &lt;a href=&quot;https:&#x2F;&#x2F;www.kontentino.com&#x2F;social-media-urban-dictionary&#x2F;drip&#x2F;&quot;&gt;&quot;drip&quot;&lt;&#x2F;a&gt; that will complement you.&lt;&#x2F;p&gt;
+&lt;p&gt;While at first glance this may seem questionable, the project was very well-thought-out. Color analysis motivates the entire approach, namely the &lt;a href=&quot;https:&#x2F;&#x2F;www.washingtonpost.com&#x2F;lifestyle&#x2F;style&#x2F;color-analysis-what-looks-best-on-you&#x2F;2021&#x2F;08&#x2F;16&#x2F;16174e96-f92a-11eb-9c0e-97e29906a970_story.html&quot;&gt;four seasons categorization&lt;&#x2F;a&gt;. The idea here is that skin tone determines what &quot;season&quot; you are, which narrows down a list of suitable clothing items. My understanding of the project is it extracts facial features into embeddings via a pre-trained model, and from there uses heuristics to both classify a user&#x27;s season and create a list of clothes.&lt;&#x2F;p&gt;
+&lt;p&gt;Aside from being an impressive project, I have a few key praises&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;The members were pretty technical people, and for the most part, this was an entirely technical project.
+&lt;ul&gt;
+&lt;li&gt;That is, the members simply applied the analysis and methodology of experts, rather than trying to do everything themselves.&lt;&#x2F;li&gt;
+&lt;li&gt;To be more specific, &lt;strong&gt;the project members did not masquerade as experts in non-technical fields they have little exposure with.&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;All ethical concerns, such as biases in training data and use of external tools&#x2F;methods, were approached carefully. They were very keen on ensuring that this is not only a useful tool, &lt;strong&gt;but an ethically sound one too&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;The team all chose to work in an area they had a deep interest in, rather than choosing something with several buzzwords just to put on a resume.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;a-precise-definition&quot;&gt;A Precise Definition&lt;&#x2F;h2&gt;
+&lt;p&gt;The arrogance I describe is pretty much the exact opposite of every praise I outlined above. &lt;strong&gt;It takes a certain level of arrogance to completely neglect non-technical skills and assume you can fulfill the same roles as an expert.&lt;&#x2F;strong&gt; That is, to assume that because you can build a solution with technology, you can thus put an end to the problem at hand.&lt;&#x2F;p&gt;
+&lt;p&gt;Somewhat related is the shallow pursuit of achievements. I&#x27;ve dealt with people who wanted to work on a project not because it interested them, but because they only wanted a project on their resume, and nothing more. In essence, &lt;strong&gt;this certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.&lt;&#x2F;strong&gt; I must stress that I am not at all speaking to the intimidation or confusion many beginners feel, that is entirely separate.&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(68, 138, 255, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;note.svg)&quot;
+    &gt;
+      note
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;An Important Clarification&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;It&#x27;s important to clarify that I&#x27;m not suggesting absolute care of every detail is necessary. I frequently use technologies like &lt;a href=&quot;https:&#x2F;&#x2F;pandas.pydata.org&#x2F;&quot;&gt;pandas&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;pytorch.org&#x2F;&quot;&gt;PyTorch&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;numpy.org&#x2F;&quot;&gt;NumPy&lt;&#x2F;a&gt;, &amp;amp; &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;&quot;&gt;git&lt;&#x2F;a&gt; in my work. I cannot explain how they work beyond vague simplifications. And frankly, I&#x27;m not interested in improving this understanding.&lt;&#x2F;p&gt;
+&lt;p&gt;However, I must acknowledge that in the realm of low-level design, I am not an expert. I am not qualified to take on a role requiring such skills. Perhaps those skills are easy for me to acquire, but that does not make me good at them.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h1 id=&quot;where-does-it-come-from-why-is-it-over-represented-in-tech&quot;&gt;Where does it come from? Why is it over-represented in tech?&lt;&#x2F;h1&gt;
+&lt;p&gt;The over-representation of this mindset in SDS, CS, and even Math is something I&#x27;ve noticed throughout all of my undergrad. I don&#x27;t claim to understand this entirely, but I have a couple ideas.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;raising-the-bar&quot;&gt;Raising the Bar&lt;&#x2F;h2&gt;
+&lt;p&gt;As any undergrad can tell you, getting into Computer Science and Data Science programs is &lt;em&gt;really&lt;&#x2F;em&gt; competitive. You have to achieve nearly perfect marks in advanced high school courses, as well as stellar extracurriculars, to have a chance at moderately prestigious universities. As a result, anyone in such a program is going to be academically capable.&lt;&#x2F;p&gt;
+&lt;p&gt;Combine this academic capability with the &lt;a href=&quot;https:&#x2F;&#x2F;dailynexus.com&#x2F;2024-09-06&#x2F;ucsb-awards-majority-a-grades-for-fifth-consecutive-school-year&#x2F;&quot;&gt;overall trend of grade inflation&lt;&#x2F;a&gt;, and it suddenly makes maintaining these perfect marks within reach. Easy? Of course not. But for an academically gifted individual who already knows how to optimize grade performance, it suddenly becomes an accessible task to maintain a near-perfect record.&lt;&#x2F;p&gt;
+&lt;p&gt;And well, this naturally develops such an arrogance. After all, if you&#x27;re good at nearly every class you&#x27;ve taken, surely that must mean you&#x27;re good at most things. Especially if you&#x27;re studying a field that&#x27;s used everywhere in life.&lt;&#x2F;p&gt;
+&lt;p&gt;Yet there&#x27;s a fundamental issue with this. Tech majors primarily receive non-technical exposure through high school coursework, general education courses, and other extracurriculars, which are usually &lt;strong&gt;introductory&lt;&#x2F;strong&gt;. For the most part, intro classes only offer a brief, simplified overview.&lt;&#x2F;p&gt;
+&lt;p&gt;Furthermore, while technology is universally applicable to virtually every field, that doesn&#x27;t mean a tech degree teaches you these applications. Does being a math major make me good at all engineering and sciences? After all, math is even more ubiquitous than technology.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;difficulty-imbalance&quot;&gt;Difficulty Imbalance&lt;&#x2F;h2&gt;
+&lt;p&gt;The aforementioned raised bar isn&#x27;t a result of pure chance. After all, CS and SDS are known for being difficult majors, and their skills are nothing to scoff at.&lt;&#x2F;p&gt;
+&lt;p&gt;In general (though not universal), it is true that, on average, the skills of a tech major are comparatively more difficult to learn than the skills of other non-technical majors. However, &lt;strong&gt;that doesn&#x27;t mean those other skills are trivial, or that they are easy to learn.&lt;&#x2F;strong&gt; For example, something like policy analysis does not have a very high barrier to entry, but becoming a skilled analyst requires years of experience that&#x27;s completely orthogonal to tech experiences.&lt;&#x2F;p&gt;
+&lt;p&gt;And moreover, I partially dispute the premise of this observation. While I agree that tech degrees are generally more work on average than non-technical degrees, &lt;strong&gt;they ultimately test completely different skills&lt;&#x2F;strong&gt;. For instance, humanities skills are much different than technology skills. It&#x27;s very much possible to be good in one and awful in the other. In fact, I would argue that a substantial amount of STEM people have awful humanities skills.&lt;&#x2F;p&gt;
+&lt;p&gt;Furthermore, the barrier of entry for using technology becomes lower every year. Tech skills are increasingly becoming more accessible to those in other degrees, and even those without degrees.&lt;&#x2F;p&gt;
+&lt;p&gt;Granted, using technology is not at all what a tech degree prepares you for. Saying such a thing is no different from saying mathematics teaches you how to add numbers together. But this leads me directly into my broader criticism.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Truth of the matter is that many of these people who neglect non-technical skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that&#x27;s effectively what these people get out of it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;demands-of-industry&quot;&gt;Demands of Industry&lt;&#x2F;h2&gt;
+&lt;p&gt;In reality, the demands of industry are almost entirely applied skills. Abstract theoretical knowledge often has no value in the workforce, at least for jobs below the graduate level. Using, designing, and implementing technology is what defines a job in tech. I suspect that many people who fall into this &quot;certain level of arrogance&quot; simply optimize their experiences around getting a job. And well, I can&#x27;t blame them. It&#x27;s hard to not be frustrated when you are well-aware that what you study is not directly relevant to what you will work as.&lt;&#x2F;p&gt;
+&lt;p&gt;However, the bar for a &quot;coding studies&quot; major, i.e. those whose only learning focus is to apply technology and nothing more, becomes lower each year. The barrier for implementing many technologies is not high, and with the onset of LLMs, it becomes easy to automate repetitive tasks at scale.&lt;&#x2F;p&gt;
+&lt;p&gt;Yet that disruption only describes a very particular kind of job. In many applications I encounter, especially in data science, domain expertise is incredibly valuable. Such expertise is predominantly non-technical skills, such as scientific knowledge or humanities-adjacent skills. For more CS-oriented jobs, I&#x27;ve observed that the abstract knowledge is quite useful in design. Overall, they require skills that go much farther than &quot;coding studies&quot;, i.e. just learning to code and not much more.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-s-the-point-of-all-this&quot;&gt;What&#x27;s the point of all this?&lt;&#x2F;h1&gt;
+&lt;p&gt;So why did I write this blog? Because I&#x27;ve had this exact conversation with so many people around me. It&#x27;s gotten to a point where I feel like articulating the frustrations has some value.&lt;&#x2F;p&gt;
+&lt;p&gt;Beyond school, I&#x27;ve seen this behavior in &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Theranos&quot;&gt;many&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;www.404media.co&#x2F;how-teas-founder-convinced-millions-of-women-to-spill-their-secrets-then-exposed-them-to-the-world&#x2F;&quot;&gt;different&lt;&#x2F;a&gt; places. Much of this discussion translates well into the &quot;tech bro&quot; phenomenon.&lt;&#x2F;p&gt;
+&lt;p&gt;My hope is that someone will read this and receive clarity. Or better yet, realize the kind of path they were traveling on. After all, I was exactly like this as a freshman. But it wasn&#x27;t until my introduction to math, something I truly enjoyed, that I realized chasing dollar signs maybe isn&#x27;t a good idea.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How My Troop Has Changed</title>
+        <published>2025-09-17T00:00:00+00:00</published>
+        <updated>2025-09-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://dtnaylor.com/writing/changing-time/"/>
+        <id>https://dtnaylor.com/writing/changing-time/</id>
+        
+        <content type="html" xml:base="https://dtnaylor.com/writing/changing-time/">&lt;p&gt;As many people familiar with me know, I was a Boy Scout for most of my youth. I joined &lt;a href=&quot;https:&#x2F;&#x2F;www.troop609.org&#x2F;&quot;&gt;Troop 609&lt;&#x2F;a&gt; in 2014, and was incredibly active, going on almost every single one of the outings and events. My troop was famous in Los Angeles County for being &lt;strong&gt;THEE&lt;&#x2F;strong&gt; high adventure troop, and to this day, it still maintains that title.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;summit_to_whitney.jpg&quot; alt=&quot;Approaching Mount Whitney&quot;&gt;
+    &lt;figcaption&gt;Approaching the top of Mount Whitney in 2019&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;However, after visiting the troop following a &lt;em&gt;very long&lt;&#x2F;em&gt; hiatus, I could tell things were different. Not necessarily in a bad way, but in a way that made me realize just how long I was gone, and how much has happened since then.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;my-memories-of-609&quot;&gt;My memories of 609&lt;&#x2F;h1&gt;
+&lt;p&gt;While many people around me know that I was a Boy Scout, I haven&#x27;t talked about those experiences much, if at all. Not because I was ever ashamed of them, but because I never really felt the need to. But after seeing how different my troop was many years later, I finally understood just how much I appreciated the things I took for granted.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;weekly-meetings&quot;&gt;Weekly Meetings&lt;&#x2F;h2&gt;
+&lt;p&gt;From the day I joined Troop 609 in 2014, until the onset of COVID-19, I was &lt;em&gt;very&lt;&#x2F;em&gt; active in my troop. I attended almost every single weekly meeting, an event I consistently looked forward to. The meetings were a time to not only stay involved with the troop and be aware of upcoming events, but also to see my friends weekly.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+        &lt;source src=&quot;&#x2F;images&#x2F;changing-time&#x2F;birthday.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+        Your browser does not support the video tag.
+    &lt;&#x2F;video&gt;
+    &lt;figcaption&gt;The troop celebrating my birthday at the end of a meeting.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Troops are organized into &lt;a href=&quot;https:&#x2F;&#x2F;troopleader.scouting.org&#x2F;general-troop-information&#x2F;troop-structure&#x2F;the-patrol&#x2F;&quot;&gt;patrols&lt;&#x2F;a&gt;, and during my time the troop had about 6 active patrols at any given moment, totaling approximately 50 scouts. I was a part of the Blackbird Patrol, named after &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lockheed_SR-71_Blackbird&quot;&gt;the plane of the same name&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;blackbird_patrol.jpg&quot; alt=&quot;Blackbird Patrol&quot;&gt;
+    &lt;figcaption&gt;The Blackbird Patrol in 2017&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Patrols were a core part of our identity, as they formed the people whom we interacted with most. Moreover, they were entirely youth-led, meaning we all learned together through our successes and failures. Despite how cliquey this sounds, it never reached this point. The troop as a whole was mostly youth-led. Also, any competition among patrols was very friendly.&lt;&#x2F;p&gt;
+&lt;p&gt;Every troop meeting, we would always devote 30 minutes–1 hour playing a game, sometimes with patrols competing. &lt;a href=&quot;https:&#x2F;&#x2F;ultimatecampresource.com&#x2F;camp-games&#x2F;other-games&#x2F;trash-can-game&#x2F;&quot;&gt;Our favorite game was &quot;trash can&quot;&lt;&#x2F;a&gt;, which was eventually banned by the scoutmasters for being too rough. While at first I always wanted to skip these games to cut down on the meeting length, it wasn&#x27;t until much later that I realized just how memorable they were.&lt;&#x2F;p&gt;
+&lt;p&gt;I looked forward to these meetings greatly. It was an opportunity to not only interact with my patrol, but also everyone in the troop. Seeing about 50 peers regularly to socialize and plan events with is a unique experience, especially when you&#x27;re so young.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;outings-short-and-simple-trips&quot;&gt;Outings: Short and Simple Trips&lt;&#x2F;h2&gt;
+&lt;p&gt;The real joy of Boy Scouts, however, was the outings. For most troops, this meant something very simple. For example, a hike lasting around 5–10 miles, or driving to a camping ground and spending a day or two there to enjoy the scenery. We dubbed the latter &quot;car camping&quot; since we typically didn&#x27;t travel very far from the cars.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;running_springs.jpg&quot; alt=&quot;Running Springs&quot;&gt;
+    &lt;figcaption&gt;A car camping trip at Running Springs (Jan. 2021). We came here to play in the snow and learn about survival at near-freezing temperatures.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Troop 609 certainly had outings like this, and they formed the bulk of our outings. After all, they had the most broad appeal. For many scouts in my troop, these outings were the extent of their involvement. Of course, there&#x27;s nothing inherently wrong with that, but in my opinion, they missed out on more exciting adventures.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;urban_day_hike.jpg&quot; alt=&quot;Urban Day Hike&quot;&gt;
+    &lt;figcaption&gt;Outdoors isn&#x27;t always nature! Every year we had an &quot;Urban Day Hike&quot; where we would hike around Los Angeles. Pictured above is the OOMO Cube in Little Tokyo.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;outings-high-adventure-treks&quot;&gt;Outings: High Adventure Treks&lt;&#x2F;h2&gt;
+&lt;p&gt;By far what defined Troop 609&#x27;s identity was its regularly scheduled high adventure treks. These trips often lasted 3 days minimum and were arduous. We hosted several of these trips a year, most notably during the summer and winter when all the scouts were on break.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;forest_hiking.JPG&quot; alt=&quot;Backpacking through the forest&quot;&gt;
+    &lt;figcaption&gt;Despite our fatigue, knowing that civilization is nowhere near, we inch towards our monumental goal. Part of my Mt. Whitney trip in 2019.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;These trips were always my favorite, as we went to places inaccessible to most people. The sights we saw were unlike anything else. It truly is a unique experience to venture out in nature to a place mostly untouched by humans.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;silver_knapsack.jpg&quot; alt=&quot;Silver knapsack&quot;&gt;
+    &lt;figcaption&gt;Not even COVID stopped us from trekking the Silver Knapsack in June 2020!&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;While backpacking constituted a majority of our treks, it certainly wasn&#x27;t the only high adventure we did. Another notable trip was canoeing 50 miles down the Colorado River, starting from Hoover Dam. A truly unique experience I&#x27;ll probably never get again.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;changing-time&#x2F;colorado_river.jpg&quot; alt=&quot;Floating down the Colorado River.&quot;&gt;
+    &lt;figcaption&gt;Floating down the Colorado River in August 2018. The air was hot and the water was ice cold. Felt amazing to stop and swim.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Something I never really appreciated until many years later was just how much endurance these adventures gave me. Backpacking, and treks in general, are &lt;ins&gt;hard&lt;&#x2F;ins&gt;. It is nothing short of miserable to feel the weight of 40 pounds of gear on your back, knowing that the destination is so far, and turning around is equally worse. But through this misery lies a purpose and a beauty. At the end of the day, I chose to go on these trips, knowing exactly how I will feel for most of it.&lt;&#x2F;p&gt;
+&lt;p&gt;That stress made these trips all the better. It really felt like I had to earn these sights. And well, I did. This blog displays the most exemplary pictures, but it pales in comparison to experiencing it first-hand. Not many people are able to say they&#x27;ve seen the views I&#x27;ve seen, or the experiences I&#x27;ve had. Sightseeing is one thing, but going well-out of my comfort zone to connect with nature first-hand isn&#x27;t something I can articulate in words or pictures. Also, it&#x27;s nice to disconnect from the world and take some time off for myself.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;my-farewell-to-609&quot;&gt;My Farewell to 609&lt;&#x2F;h2&gt;
+&lt;p&gt;My last memory of the troop was my final meeting as a Boy Scout, occurring about a week before I turned 18. As per tradition, every Scout is asked to give a brief farewell speech before transitioning into an adult. My speech verbatim was the following&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello everybody. Some of you may know me, but to those that don&#x27;t, my name is Daniel Naylor. This is my last meeting as a youth, as my 18th birthday is rapidly approaching. I&#x27;ve been in this Troop since 2014, about 7 years, and I hope you guys will remain here until you age out. I was thinking about what I could talk about: my greatest experiences, my most fond memories, etc., but I’d like to share something else, something that I’ve learned throughout my scouting experiences: try to be as open-minded as you can be.&lt;&#x2F;p&gt;
+&lt;p&gt;What do I mean by that? Don’t dismiss things because they’re unfamiliar. When I first joined, I hated the idea of camping and backpacking, especially for days long. Honestly, I thought it was a waste of time since I could easily access beautiful scenery within seconds on my phone. Yet, I tried them anyways, even though I was thinking to myself &quot;this is a waste of time&quot; while on the trip. It took a while and many, many trips, but I eventually broke out of that closed mindset and learned the value of camping and backpacking and, more importantly, the value of hard work and perseverance.&lt;&#x2F;p&gt;
+&lt;p&gt;I’m not suggesting that camping and backpacking is for everyone, but my main point is to be open minded, and don’t dismiss things you have yet to try. Aside from that, that’s all I really have to say. Thank you all for listening, and have a great rest of your youth.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;As superfluously worded as this is, I still stand by this message. But after turning 18, I pretty much dropped most of my involvement with Troop 609. After all, I was about to graduate high school, and was excited to begin new experiences in college. I was periodically involved with the &lt;a href=&quot;https:&#x2F;&#x2F;oa-scouting.org&#x2F;about&quot;&gt;Order of the Arrow&lt;&#x2F;a&gt; during my undergraduate years, but for the most part, I had left Scouting behind me.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-new-609&quot;&gt;The New 609&lt;&#x2F;h1&gt;
+&lt;p&gt;About a week ago (9&#x2F;9&#x2F;2025), I caught wind of my troop&#x27;s semiannual award ceremony. Having not been in touch with the troop for about 4 years, I figured I&#x27;d attend and greet everyone again. After all, why not see how the troop is doing?&lt;&#x2F;p&gt;
+&lt;p&gt;Upon arrival, I cannot describe my utter shock when I saw everyone again. I knew people aged, but I never really internalized what that meant. The younger scouts I grew up with were now the older scouts. You&#x27;re telling me the troublemakers I remembered were now the people that the younger scouts look up to?&lt;&#x2F;p&gt;
+&lt;p&gt;What especially broke my heart was seeing how small the troop had become. I remember the troop being massive, having 6 patrols at any given time, totaling about 50 people. However, a lot of scouts dropped out after covid. At this ceremony, there were 3 patrols and 20 scouts at best. The troop felt small. Roles like the &lt;a href=&quot;https:&#x2F;&#x2F;troopleader.scouting.org&#x2F;general-troop-information&#x2F;troop-structure&#x2F;troop-positions&#x2F;bugler&#x2F;&quot;&gt;bugler&lt;&#x2F;a&gt; were vacant. My first impressions were that the troop is now a mere skeleton of what it used to be. What happened to all the liveliness I remember growing up with?&lt;&#x2F;p&gt;
+&lt;p&gt;Covid hit scouting &lt;em&gt;hard&lt;&#x2F;em&gt;. Recruitment after covid never recovered to what it used to be. Many troops entirely collapsed and ceased to exist. In fact, another troop merged with 609 after their leadership effectively disappeared. While the pandemic may feel like a distancing memory, the effects of it are still felt and present, as evidenced by troop membership at an all-time low. Saddened about this, I talked to my scoutmaster, who&#x27;s been diligent all these years and still leading the troop.&lt;&#x2F;p&gt;
+&lt;p&gt;Despite these concerns, my scoutmaster assured me there&#x27;s nothing to worry about. While the troop is small, it&#x27;s still as lively as ever, just not in the same way. The frequency and attendance of events are going strong. Maybe the grandeur of going somewhere with 50 like-minded youth is a thing of the past, but the joy of the events is here to stay.&lt;&#x2F;p&gt;
+&lt;p&gt;I checked the &lt;a href=&quot;https:&#x2F;&#x2F;www.troop609.org&#x2F;&quot;&gt;troop&#x27;s website&lt;&#x2F;a&gt; after the meeting, and my scoutmaster was absolutely right. The website is covered with pictures of recent outings, from the short and simple ones to the high adventure treks. Our title of being THEE high adventure troop in Los Angeles County is as strong as I remembered it being.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m very happy that the troop managed to survive the challenges of covid. It brings me joy to know that the experiences I grew up with are no longer a thing of the past. Still, seeing the new composition of members, the new size of the troop, the vacancies in all the roles, I couldn&#x27;t help but think that the troop is approaching its endgame. As they say, all good things must come to an end.&lt;&#x2F;p&gt;
+&lt;p&gt;Maybe I&#x27;m being dramatic and the troop only changed superficially. After all, the core values are still present and strong as ever. To say that it&#x27;s the same is just wrong, but does it need to be? Maybe this is a step in the right direction, and I&#x27;m just too stuck in the past. No matter, I&#x27;m glad 609 is here to stay for the foreseeable future.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Adjusted Judge Score Notes</title>
+        <published>2025-09-15T00:00:00+00:00</published>
+        <updated>2025-09-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://dtnaylor.com/writing/adjusted-score-notes/"/>
+        <id>https://dtnaylor.com/writing/adjusted-score-notes/</id>
+        
+        <content type="html" xml:base="https://dtnaylor.com/writing/adjusted-score-notes/">&lt;h1 id=&quot;introduction-of-the-problem&quot;&gt;Introduction of the Problem&lt;&#x2F;h1&gt;
+&lt;p&gt;During 2023–2025, I was a board member for &lt;a href=&quot;https:&#x2F;&#x2F;www.datascienceucsb.org&#x2F;&quot;&gt;Data Science UCSB&lt;&#x2F;a&gt;. A major event we host is our annual &lt;a href=&quot;https:&#x2F;&#x2F;www.datascienceucsb.org&#x2F;projects&quot;&gt;Project Showcase&lt;&#x2F;a&gt;, where club members present their projects in front of judges, comprised of industry experts, professors, PhD students, etc. Judges are asked to score each project, and we combine their scores via a simple sum to determine a final ranking, using this to distribute cash prizes.&lt;&#x2F;p&gt;
+&lt;p&gt;However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we believed the winners didn&#x27;t deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1-2 points from each other, out of about 60 points total.&lt;&#x2F;p&gt;
+&lt;p&gt;Upon closer inspection, we realized what the problem was. Many judges gave essentially the same score to all projects, particularly higher scores. In other words, many judges exhibited a &lt;em&gt;&lt;strong&gt;positivity bias&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;. Since all judges are weighted equally, this causes the value of an individual point to rise dramatically.&lt;&#x2F;p&gt;
+&lt;p&gt;One could argue that this is not inherently problematic. After all, the projects we select as finalists are going to be the better projects in our (very large) club, so it&#x27;s natural to expect that they are all well-received by judges. Hence, the positivity bias is simply reflecting a &lt;em&gt;&lt;strong&gt;survivorship bias&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; that we the officers create.&lt;&#x2F;p&gt;
+&lt;p&gt;While this is a plausible explanation, we felt that the issue runs deeper. Out of 60 points, a point gap of about 5-10 among the top performers is to be expected. However, when 1st and 2nd place are only 1 point off from each other, when 2nd and 3rd place are 1-2 points off from each other, and so forth, it&#x27;s difficult to conclude anything other than statistical noise.&lt;&#x2F;p&gt;
+&lt;p&gt;Anecdotally, I have heard this exact same problem articulated in many other clubs and judging panels. Thus, I feel justified in saying that there is a problem to be solved that isn&#x27;t a result of the innate survivorship bias with our structure. The point of this blog is to detail, and justify, the solutions I arrived at.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;preliminary-definitions&quot;&gt;Preliminary Definitions&lt;&#x2F;h1&gt;
+&lt;p&gt;Before I can begin articulating my solutions, I must lay out definitions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;toy-data&quot;&gt;Toy Data&lt;&#x2F;h2&gt;
+&lt;p&gt;For illustrating examples, we will use the anonymized raw scores for &lt;strong&gt;Project Showcase 2025&lt;&#x2F;strong&gt;. Judges were asked to score projects in 5 separate categories on a range from 1–9. Hence, the range of a judge&#x27;s raw score is 5–45.&lt;&#x2F;p&gt;
+&lt;div id=&quot;CSVTable&quot; style=&quot;overflow-x: auto;&quot;&gt;&lt;&#x2F;div&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;code.jquery.com&#x2F;jquery-3.6.4.min.js&quot;&gt;&lt;&#x2F;script&gt;  
+&lt;script src=&quot;https:&#x2F;&#x2F;storage.googleapis.com&#x2F;google-code-archive-downloads&#x2F;v2&#x2F;code.google.com&#x2F;jquerycsvtotable&#x2F;jquery.csvToTable.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+$(function() {
+  $(&#x27;#CSVTable&#x27;).CSVToTable(&#x27;&#x2F;misc&#x2F;adjusted-score&#x2F;toy_judge_data.csv&#x27;);
+});
+&lt;&#x2F;script&gt;
+&lt;p&gt;As can be immediately seen, &lt;strong&gt;Judge Delta&lt;&#x2F;strong&gt;&#x27;s scores range from 40–45. In other words, they gave every project near-perfect scores. Similar behavior exists across other judges, albeit with notable outliers.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mathematical-definitions&quot;&gt;Mathematical Definitions&lt;&#x2F;h2&gt;
+&lt;p&gt;We use the index $i$ to refer to projects, and the index $j$ to refer to judges. First, we define the terms&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;$M$: Number of projects&lt;&#x2F;li&gt;
+&lt;li&gt;$N$: Number of judges&lt;&#x2F;li&gt;
+&lt;li&gt;$p_{ij}$: The raw score of project $i$ from judge $j$.
+&lt;ul&gt;
+&lt;li&gt;In my original notes, the $p$ stood for &quot;points&quot;, and I may use &quot;points&quot; to describe &quot;scores&quot;.&lt;&#x2F;li&gt;
+&lt;li&gt;All the raw score data can be thought of as the matrix $P = (p_{ij})$&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To introduce more formal terminology&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 176, 255, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;abstract.svg)&quot;
+    &gt;
+      abstract
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Definition: Scoring Method&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;A &lt;strong&gt;scoring method&lt;&#x2F;strong&gt; is a function $\rho: \mathbb{R}^{M \times N} \to \mathbb{R}^{M}$. The component $\rho_i$ is called the &lt;strong&gt;final score&lt;&#x2F;strong&gt; of project $i$.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Essentially, a scoring method takes raw scores as input, such as the toy data above, and outputs a final score to each project. The standard we used, the &lt;strong&gt;Raw Sum&lt;&#x2F;strong&gt;, was simply
+$$
+\begin{equation}
+\rho_i = \sum_{j=1}^{N} p_{ij}
+\end{equation}
+$$
+While two methods may not always produce the same scores, they may be equal in one crucial way&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 176, 255, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;abstract.svg)&quot;
+    &gt;
+      abstract
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Definition: Equivalent in Ranking&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;Define $(k)_{ \vec{v} }$ as the index of the $k$th largest component of the vector $\vec{v}$, i.e. the index of the $k$th &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Order_statistic&quot;&gt;order statistic&lt;&#x2F;a&gt;, in descending order.&lt;&#x2F;p&gt;
+&lt;p&gt;We say two scoring methods, $\rho$ and $\varrho$, are &lt;strong&gt;equivalent in ranking&lt;&#x2F;strong&gt; if, for every input $P$, $(k)_{\rho(P)} = (k)_{\varrho(P)}$ for every $1 \leq k \leq M$.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;This is a complicated way of saying that both methods always produce the same ranking, even if they don&#x27;t produce the same final scores. For example, (1) is equivalent in ranking to the average judge score, i.e.&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+\varrho_i = \frac{1}{N} \sum_{j=1}^{N} p_{ij}
+$$
+For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking.&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 191, 165, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;tip.svg)&quot;
+    &gt;
+      tip
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;More on Equivalent in Ranking&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;There&#x27;s two details worth mentioning&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;The precise definition of $(k)_{ \vec{v} }$ is intentionally avoided. Without proper care, it may not even be well-defined! What happens in the event of a tie?
+&lt;ul&gt;
+&lt;li&gt;In practice, a tiebreaker is defined. We do not concern ourselves with such details, and simply assume it is a part of the definition of $(k)_{ \vec{v} }$&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Interestingly, equivalent in ranking forms an &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Equivalence_relation&quot;&gt;equivalence relation&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h1 id=&quot;scoring-methods&quot;&gt;Scoring Methods&lt;&#x2F;h1&gt;
+&lt;p&gt;Here we outline the methods I&#x27;ve thought about and proposed. Note that each has its own assumptions, with its own benefits and tradeoffs.&lt;&#x2F;p&gt;
+&lt;p&gt;As a baseline, here are the final scores using (1) as the scoring method&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Table 1: Raw Sum Final Scores&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Finalists&lt;&#x2F;th&gt;&lt;th&gt;Raw Sum&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Project 1&lt;&#x2F;td&gt;&lt;td&gt;406&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 4&lt;&#x2F;td&gt;&lt;td&gt;379&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 2&lt;&#x2F;td&gt;&lt;td&gt;377&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 6&lt;&#x2F;td&gt;&lt;td&gt;374&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 8&lt;&#x2F;td&gt;&lt;td&gt;354&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 3&lt;&#x2F;td&gt;&lt;td&gt;352&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 7&lt;&#x2F;td&gt;&lt;td&gt;328&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 5&lt;&#x2F;td&gt;&lt;td&gt;320&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;These scores have a range of 50–450. As we can see, the data identifies Project 1 as a very clear winner, far surpassing all those below it. Between Projects 2, 4, and 6 though, the effect of the statistical noise becomes much more clear.&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(68, 138, 255, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;note.svg)&quot;
+    &gt;
+      note
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;The Importance of the Raw Data Generating Process&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;This article talks exclusively about turning raw scores into adjusted scores. However, in no way do I endorse any of these ideas as a panacea.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Creating a reasonable system that evaluates projects and translates judge&#x27;s opinions into numbers&lt;&#x2F;strong&gt; is just as, if not more, important than a system that adjusts those numbers into final scores. As they say in machine learning, &quot;garbage in, garbage out&quot;.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;For many of these methods, we will require the following two definitions from statistics&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\mu_j$: Judge $j$&#x27;s raw score &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Arithmetic_mean&quot;&gt;average&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;$\sigma_j$: Judge $j$&#x27;s raw score &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Standard_deviation&quot;&gt;standard deviation&lt;&#x2F;a&gt;.
+&lt;ul&gt;
+&lt;li&gt;Unless otherwise stated, we treat the data as a &lt;strong&gt;sample&lt;&#x2F;strong&gt; instead of a &lt;strong&gt;population&lt;&#x2F;strong&gt;. In those cases, we include &lt;em&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Bessel%27s_correction&quot;&gt;Bessel&#x27;s correction&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;z-score-sum&quot;&gt;$z$-score Sum&lt;&#x2F;h2&gt;
+&lt;p&gt;A rather simple method that makes one fairly mild assumption.&lt;&#x2F;p&gt;
+&lt;p&gt; &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg)&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Assumption: Data as Population&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;The score data for each judge represents a complete population, not a sample.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+This is analogous to the methodology of standardized testing. It&#x27;s customary to treat standardized test scores as a population, not a sample. We need this assumption for the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Standard_score&quot;&gt;$z$-score&lt;&#x2F;a&gt; to be well-defined, otherwise we are in truth defining a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;T-statistic&quot;&gt;$t$-statistic&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The $z$-score of $p_{ij}$ is defined as&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+z_{ij} = \frac{p_{ij} - \mu_j}{\sigma_j}
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Essentially, we treat each raw score as a part of a population of judge $j$&#x27;s scores, and transform them into $z$-scores. We therefore define the adjusted score as&lt;&#x2F;p&gt;
+&lt;p&gt;$$
+\begin{equation}
+\rho_{i}^{z\textrm{-score}} = \sum_{j=1}^{N} z_{ij}
+\end{equation}
+$$&lt;&#x2F;p&gt;
+&lt;p&gt;Applying this transformation to our toy data, we get the ranking&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Table 2: $z$-score Sum Final Scores&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Finalist&lt;&#x2F;th&gt;&lt;th&gt;$z$-score Sum&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Project 1&lt;&#x2F;td&gt;&lt;td&gt;11.702&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 4&lt;&#x2F;td&gt;&lt;td&gt;5.429&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 2&lt;&#x2F;td&gt;&lt;td&gt;4.329&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 6&lt;&#x2F;td&gt;&lt;td&gt;4.328&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 3&lt;&#x2F;td&gt;&lt;td&gt;-2.235&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 8&lt;&#x2F;td&gt;&lt;td&gt;-2.419&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 7&lt;&#x2F;td&gt;&lt;td&gt;-9.711&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 5&lt;&#x2F;td&gt;&lt;td&gt;-11.422&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;At first glance, this gives us what we want wanted. An umambiguous first place and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there&#x27;s more than meets the eye&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;By definition, $z$-scores are &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Dimensionless_quantity&quot;&gt;dimensionless&lt;&#x2F;a&gt;, therefore the final score is dimensionless. There&#x27;s two conflicting interpretations of this:
+&lt;ul&gt;
+&lt;li&gt;On one hand, the final score being dimensionless makes it an objective quantity.&lt;&#x2F;li&gt;
+&lt;li&gt;On the other hand, we are effectively interpreting it as a score, which is contentious as it does not have the same units.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Interestingly, this is almost identical to the ranking of scoring method (1). However, note that Project 3 and Project 8 switched places.&lt;&#x2F;li&gt;
+&lt;li&gt;Unlike Raw Sum score, this has a (theoretically) infinite range. Without prior knowledge of $\{\mu_j\}_{j=1}^{N}, \{\sigma_j\} _{j=1}^{N}$, pinning down the range is incredibly difficult.&lt;&#x2F;li&gt;
+&lt;li&gt;Since we are &lt;strong&gt;DIVIDING&lt;&#x2F;strong&gt; by standard deviation, we are actually &lt;em&gt;uplifting&lt;&#x2F;em&gt; the positivity bias. Judge Delta&#x27;s points are now the most valuable points since they contain the least variability.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The last point is what caused us to reject using this method in Data Science UCSB events. After all, one of our goals was to &lt;em&gt;eliminate&lt;&#x2F;em&gt; positivity bias, not enhance it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;proportional-variance&quot;&gt;Proportional Variance&lt;&#x2F;h2&gt;
+&lt;p&gt;Partially inspired by the &lt;a href=&quot;https:&#x2F;&#x2F;www.statology.org&#x2F;explained-variance&#x2F;&quot;&gt;explained variance&lt;&#x2F;a&gt; metric, the Proportional Variance score seeks to weigh scores based on how much variability each judge introduces.&lt;&#x2F;p&gt;
+&lt;p&gt;For our metric to be well-defined, we need the following assumptions
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg)&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Assumption: Judge Variability&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+This implies that &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Variance&quot;&gt;variance&lt;&#x2F;a&gt; is a quantifier for how &quot;informative&quot; a judge&#x27;s score is.&lt;&#x2F;p&gt;
+&lt;p&gt; &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg)&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Assumption: Judge Independence&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;All judges choose their scores independently.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+By independent, we mean the random variables representing each judge&#x27;s scores are all &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Independence_(probability_theory)#More_than_two_random_variables&quot;&gt;mutually independent&lt;&#x2F;a&gt;. We can interpret each random variable, $S_j$, as &quot;Judge $j$&#x27;s outcomes for Project Showcase 2025&quot;. There&#x27;s certainly more nuance than this, however to avoid being pedantic, we&#x27;ll sweep those details under the rug.&lt;&#x2F;p&gt;
+&lt;p&gt;We want independence to ensure that there is no &quot;overlapping signal&quot; across judges. That is, each judge represents their own opinions and nothing more. Thus, $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ quantifies how much variability judge $j$ introduces in relation to all other judges.&lt;&#x2F;p&gt;
+&lt;p&gt;Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. Because of the prior analysis, there is validity behind interpreting $\omega_j$ as judge $j$&#x27;s introduced variability.&lt;&#x2F;p&gt;
+&lt;p&gt;We define the &lt;strong&gt;Proportional Variance&lt;&#x2F;strong&gt; score as
+$$
+\begin{equation}
+\rho_{i}^{\mathrm{PV}} = \sum_{j=1}^{N} \omega_j p_{ij}
+\end{equation}
+$$
+It&#x27;s important to note that the similarities to explained variance are nominal. While the formula is similar, it is much different fundamentally.&lt;&#x2F;p&gt;
+&lt;p&gt;Applying this method to our scores, we get the following ranking&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Table 3: Proportional Variance Final Scores&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Finalist&lt;&#x2F;th&gt;&lt;th&gt;Prop. Variance&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Project 1&lt;&#x2F;td&gt;&lt;td&gt;40.683&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 2&lt;&#x2F;td&gt;&lt;td&gt;37.518&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 4&lt;&#x2F;td&gt;&lt;td&gt;36.785&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 6&lt;&#x2F;td&gt;&lt;td&gt;36.523&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 8&lt;&#x2F;td&gt;&lt;td&gt;35.113&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 3&lt;&#x2F;td&gt;&lt;td&gt;33.726&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 7&lt;&#x2F;td&gt;&lt;td&gt;32.102&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 5&lt;&#x2F;td&gt;&lt;td&gt;30.559&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;The benefit of this scoring method is it preserves the range, as well as the units, of the raw data. In this example, the range is 5–45, and the units are points.&lt;&#x2F;p&gt;
+&lt;p&gt;Moreover, it reduces the tightness of the scores. If we multiply everything by 10 to bring the range to 50–450, we see that second and third place are off by about 8 points, whereas with the Raw Sum method, they&#x27;re off by 2 points (see &lt;em&gt;Table 1&lt;&#x2F;em&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;As before though, there&#x27;s more that meets the eye&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Saying that independence justifies the interpretation of $\omega_j$ &lt;em&gt;is&lt;&#x2F;em&gt; a bit fallacious. Rather, it&#x27;s more appropriate to say independence &lt;em&gt;inspires&lt;&#x2F;em&gt; this interpretation.
+&lt;ul&gt;
+&lt;li&gt;You can also argue that, being an estimator, this approximates the truth pretty well. After all, it&#x27;s common practice in statistics to replace quantities with estimators. However, this is merely acknowledging an abuse and not justifying it.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The assumption of independence is contentious. In this example, we have that $\sum_{k=1}^{N} \mathrm{Var}(S_k) \approx 163.571$, yet $\mathrm{Var}(\sum_{k=1}^{N} S_k) \approx 810.5$
+&lt;ul&gt;
+&lt;li&gt;One can argue that, if we drop the denominator in $\omega_j$, we obtain a new score method that&#x27;s equivalent in ranking to Proportional Variance. Thus, we can drop the assumption of independence while keeping an essentially identical system.
+&lt;ul&gt;
+&lt;li&gt;However, this messes up both the range and the units. Is it okay to judge a project with units of $\mathrm{points}^3$?&lt;&#x2F;li&gt;
+&lt;li&gt;Also, see $\kappa$-adjusted score for a similar approach&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;In fact, independence is unnecessarily strong&lt;&#x2F;strong&gt; for the interpretation of $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ as introduced variability. &lt;strong&gt;Uncorrelated is sufficient&lt;&#x2F;strong&gt;, as this ensures $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$, hence $\frac{\mathrm{Var}(S_j)}{\mathrm{Var}(\sum_{k=1}^{N} S_k)} = \frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$
+&lt;ul&gt;
+&lt;li&gt;At the cost of a modification, we can drop the assumption altogether. Using &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Principal_component_analysis&quot;&gt;Principal Component Analysis&lt;&#x2F;a&gt;, we can linearly transform the random vector $(S_1, \dots, S_N)$ into $(\hat{S}_1, \dots, \hat{S}_N)$ such that $\hat{S}_i, \hat{S}_j$ are uncorrelated for every $i \neq j$. To obtain a ranking, we apply Proportional Variance on the new dataset induced by $(\hat{S}_1, \dots, \hat{S}_N)$.
+&lt;ul&gt;
+&lt;li&gt;We are essentially transforming the judges into a new, idealized set of judges with uncorrelated opinions. &lt;em&gt;Is this an ethical thing to do?&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Implementing this in code is incredibly simple. Note that all of this is equivalent to performing a change of basis on $P$ before computing its final scores. This is equivalent to finding $\rho^{\mathrm{PV}} (PC)$ where $C$ is the matrix of $P$&#x27;s principal components.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;This method is pretty susceptible to outliers. One deviating score can drastically inflate the variance of a judge.
+&lt;ul&gt;
+&lt;li&gt;We see this behavior with &lt;strong&gt;Judge Foxtrot&lt;&#x2F;strong&gt;. All scores are within 5 points of 35, except one 44 entry.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;As promising and reasonable Proportional Variance seems, it nonetheless has its problems.
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 145, 0, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;warning.svg)&quot;
+    &gt;
+      warning
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Caution: Ramifications of New Approach&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;In point 2 above, I outline a process that drops the assumption of independence altogether by weakening it to zero correlation, then showing that all score data can be manipulated to achieve zero correlation.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Be very careful with this approach&lt;&#x2F;strong&gt;. Aside from the ethical concerns of replacing the judges with idealized versions of themselves, this is ultimately manipulating the data to fit a very specific metric (i.e. uncorrelated). Is this level of preprocessing necessary? If yes, why is the solution to change the raw data and not its generating process?&lt;&#x2F;p&gt;
+&lt;p&gt;These criticisms may apply to all the other methods (e.g. &quot;How is adjusting scores not fitting a specific goal?&quot;). The point of this blog is to address them as best I can. I do not renounce this approach as fundamentally wrong, but &lt;strong&gt;I implore anyone attempting it to offer more justification than I have.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kappa-adjusted-score&quot;&gt;$\kappa$-adjusted Score&lt;&#x2F;h2&gt;
+&lt;p&gt;This is ultimately the scoring method we settled on for use in Data Science UCSB&#x27;s events. The development of this came from modifying the $z$-score Sum method to simultaneously down-weigh positivity bias while also maintaining units of points.&lt;&#x2F;p&gt;
+&lt;p&gt;Before we proceed, we must make two crucial assumptions
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg)&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Assumption: Purely Average Score&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;All judges have a score which they would consistently give to any idealized average project. This &quot;purely average score&quot; is unique to each judge.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+The existence of an &quot;idealized average project&quot; is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person&#x27;s 7&#x2F;10 may be someone else&#x27;s 5&#x2F;10.&lt;&#x2F;p&gt;
+&lt;p&gt;We will use $\mu_j$ as a stand-in for this &quot;purely average score&quot;. This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias).&lt;&#x2F;p&gt;
+&lt;p&gt;I acknowledge this concern, and an easy fix is to slightly modify the assumption to &quot;Purely Average Score among Top Performers&quot;, or &quot;Purely Decent Score&quot;. Note that this implicitly assumes some finalists are below this threshold. In our opinion, we felt that this assumption was equally reasonable for our events.&lt;&#x2F;p&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg)&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;Assumption: Judge Variability&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Like Proportional Variance, we will use standard deviation to weigh points. Unlike Proportional Variance, we include a hyperparameter to tune the strength of this weighting.&lt;&#x2F;p&gt;
+&lt;p&gt;Let $\kappa &amp;gt; -1$. The $\kappa$-adjusted score is defined as&lt;&#x2F;p&gt;
+&lt;div style=&quot;overflow-x: auto;&quot;&gt;
+$$
+\rho_{i}^{\kappa\textrm{-adj}} = \sum_{j=1}^{N} \mathrm{sign}(p_{ij} - \mu_j) \left (\sigma_j^\kappa \left| p_{ij} - \mu_j \right| \right)^{\frac{1}{1 + \kappa}}
+$$
+&lt;&#x2F;div&gt;
+&lt;p&gt;While this definition is complicated, it&#x27;s straightforward to unpack. Treating $\mu_j$ as the &quot;purely average score&quot;, $|p_{ij} - \mu_j|$ captures how many points away a project is from &quot;purely average&quot;. We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data&#x27;s. The purpose of the $\mathrm{sign}$ is to simply avoid issues where we may root a negative number.&lt;&#x2F;p&gt;
+&lt;p&gt;However, there&#x27;s more to the role of $\kappa$ than meets the eye. By design, it&#x27;s intended to quantify how much weight $\sigma_j$ has. Higher $\kappa$ means the weights are larger. However, note that we effectively weigh the score by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, which means that the exponent is always less than 1. Perhaps not the precise desired behavior, but the desired behavior nonetheless.&lt;&#x2F;p&gt;
+&lt;p&gt;More interestingly, this method makes point gains non-linear.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;When $\kappa \in (0, \infty)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a root function, meaning increasing $p_{ij}$ from $\mu_j$ -&amp;gt; $\mu_j + 1$ has more of an increase than $\mu_j + 5$ -&amp;gt; $\mu_j + 6$.&lt;&#x2F;li&gt;
+&lt;li&gt;When $\kappa = 0$, this is linear, and in fact equivalent in ranking to (1).&lt;&#x2F;li&gt;
+&lt;li&gt;When $\kappa \in (-1, 0)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a polynomial, meaning increasing $p_{ij}$ from $\mu_j + 5$ -&amp;gt; $\mu_j + 6$ has more of an increase than $\mu_j$ -&amp;gt; $\mu_j + 1$.&lt;&#x2F;li&gt;
+&lt;li&gt;Lastly, while $\kappa &amp;lt; -1$ is &lt;em&gt;technically&lt;&#x2F;em&gt; defined, it is not interpretable. We would run into a situation where scores close to $\mu_j$ are more valuable than scores far greater than $\mu_j$.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Note that $\mu_j, \sigma_j$ changes if $p_{ij}$ changes. This analysis, while accurate for the most part, is oversimplified. Only small increments to points should be considered.&lt;&#x2F;p&gt;
+&lt;p&gt;Applying this method to our toy data yields&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Table 4: $\kappa$-adjusted Final Scores&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Finalist&lt;&#x2F;th&gt;&lt;th&gt;$1$-adjusted&lt;&#x2F;th&gt;&lt;th&gt;$2$-adjusted&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Project 1&lt;&#x2F;td&gt;&lt;td&gt;40.356&lt;&#x2F;td&gt;&lt;td&gt;39.501&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 4&lt;&#x2F;td&gt;&lt;td&gt;20.136&lt;&#x2F;td&gt;&lt;td&gt;21.055&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 6&lt;&#x2F;td&gt;&lt;td&gt;13.343&lt;&#x2F;td&gt;&lt;td&gt;13.339&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 2&lt;&#x2F;td&gt;&lt;td&gt;11.053&lt;&#x2F;td&gt;&lt;td&gt;9.679&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 3&lt;&#x2F;td&gt;&lt;td&gt;-5.657&lt;&#x2F;td&gt;&lt;td&gt;-4.281&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 8&lt;&#x2F;td&gt;&lt;td&gt;-8.674&lt;&#x2F;td&gt;&lt;td&gt;-8.785&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 7&lt;&#x2F;td&gt;&lt;td&gt;-31.173&lt;&#x2F;td&gt;&lt;td&gt;-30.281&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Project 5&lt;&#x2F;td&gt;&lt;td&gt;-37.502&lt;&#x2F;td&gt;&lt;td&gt;-36.647&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;As with everything else, there&#x27;s deeper criticisms&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Like the $z$-score Sum, it&#x27;s difficult to figure out the range without knowing $\kappa, \{\mu_j\}_{j=1}^{N}, \{\sigma_j\} _{j=1}^{N}$.&lt;&#x2F;li&gt;
+&lt;li&gt;It&#x27;s difficult to choose a good value of $\kappa$. For Data Science UCSB events, we stuck with $\kappa = 1$ and increased if we felt the resulting final scores were too large. This approach suffers the same criticisms as &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Empirical_Bayes_method&quot;&gt;emperical Bayes methods&lt;&#x2F;a&gt;.
+&lt;ul&gt;
+&lt;li&gt;The premise of this criticism is rather presumptuous, as choosing $\kappa$ is effectively choosing the scoring method. What defines a &quot;good&quot; scoring method?&lt;&#x2F;li&gt;
+&lt;li&gt;Still, is there any nuance or cleverness here, or is the choice arbitrary?&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Out of all methods, this one is the most numerically unstable
+&lt;ul&gt;
+&lt;li&gt;Especially for raw scores with large ranges.&lt;&#x2F;li&gt;
+&lt;li&gt;Though not as susceptible to outliers as Proportional Variance since $\sigma_j$ is rooted.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+ &lt;!----&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 191, 165, 0.1)&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;tip.svg)&quot;
+    &gt;
+      tip
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;An Interesting Modification&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;Since we effectively weigh by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, the weights are going to be smaller than $\sigma_j$. It&#x27;s quite strange that $\kappa$ has this effect.&lt;&#x2F;p&gt;
+&lt;p&gt;Motivated from the definition of the $L^p$ norms, let&#x27;s instead define&lt;&#x2F;p&gt;
+&lt;div style=&quot;overflow-x: auto;&quot;&gt;
+$$
+\varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_{j}^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left( p_{ij} - \mu_j \right) \right)
+$$
+&lt;&#x2F;div&gt;
+&lt;p&gt;Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward.&lt;&#x2F;p&gt;
+&lt;p&gt;However, this loses the effect of non-linear point gains, and moreover $\mu_j$ can be dropped without affecting the ranking. Be aware of these changes if you decide to go with this modification.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Still, in spite of these criticisms, we were the most satisfied with this scoring method. We felt that it not only down-weighted the positivity bias present in many judges, but also filtered out noise very well. We also saw the non-linear point gains as a benefit.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;While evaluating these scoring methods is rather tricky, and may even lead to a situation akin to &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Data_dredging&quot;&gt;$p$-hacking&lt;&#x2F;a&gt;, it&#x27;s nonetheless useful to have a number of tools at your disposal. The heuristics we mainly used in Data Science UCSB was&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Do we feel like the new gaps between scores changed in a positive and significant manner?&lt;&#x2F;li&gt;
+&lt;li&gt;Will the judges, participants, and audience accept the new ranking?&lt;&#x2F;li&gt;
+&lt;li&gt;Do we have a legitimate reason for adjusting the judge&#x27;s assessments?&lt;&#x2F;li&gt;
+&lt;li&gt;Do we plan on releasing the scores, and if not, do we need to worry about participants that are well-below the winners?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Obviously, many of these criteria are vague and imprecise. We only ended up using this system twice. Still, we felt like it gives us more peace-of-mind knowing that the winners were chosen more &quot;fairly&quot; and less &quot;arbitrarily&quot;. Whatever that means.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;&#x2F;h1&gt;
+&lt;p&gt;All code for all the discussed methods can be found on GitHub at &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;DanLeEpicMan&#x2F;score-adjuster&quot;&gt;DanLeEpicMan&#x2F;score-adjuster&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The code is released under the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;DanLeEpicMan&#x2F;score-adjuster&#x2F;blob&#x2F;main&#x2F;LICENSE&quot;&gt;MIT License&lt;&#x2F;a&gt;, and as long as you abide by it, you are welcome to use my code however you please. I also encourage expanding upon any ideas I&#x27;ve written here in this blog.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
