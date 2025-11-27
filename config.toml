@@ -122,6 +122,10 @@ name = "Writing"
 url = "$BASE_URL/writing"
 
 [[extra.menu]]
+name = "Misc."
+url = "$BASE_URL/misc"
+
+[[extra.menu]]
 name = "About"
 url = "$BASE_URL/about"
 
