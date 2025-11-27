@@ -1,4 +1,5 @@
 +++
 title='Miscellaneous'
-description='A collection of miscellaneous content.'
+template='misc.html'
+sort_by='weight'
 +++
