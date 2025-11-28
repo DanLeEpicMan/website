@@ -1,4 +1,5 @@
 secrets/
 public/
 .vscode/
-test*
+test*.md
+*.ipynb

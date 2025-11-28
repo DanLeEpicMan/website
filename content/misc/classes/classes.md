@@ -39,93 +39,97 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 
 ### Senior 
 - Spring 2025
+  - <small>**CMPTGCS 20**: Introduction to Python</small>
+  - <small>**HIST 164C**: Civil War and Reconstruction</small>
   - <small>**PSTAT 213C**: Probability Theory</small>
     - <small>*Martingales, martingale convergence, stopping times, optional sampling, optional stopping theorem.*</small>
   - <small>**PSTAT 223C**: Computational Finance</small>
     - <small>*Monte Carlo, Partial Differential Equation simulation, American options*</small>
-  - <small>**HIST 164C**: Civil War and Reconstruction</small>
-  - <small>**CMPTGCS 20**: Introduction to Python</small>
+
 - Winter 2025
+  - <small>**MATHCS 120NT**: Seminar in Number Theory</small>
+  - <small>**PHYS 7A**: Basic Physics</small>
   - <small>**PSTAT 213B**: Probability Theory</small>
     - <small>*Convergence of random variables, laws of large numbers, central limit theorem, large deviations*</small>
   - <small>**PSTAT 223B**: Financial Modeling</small>
     - <small>*Stochastic models in finance, hedging of derivatives in equity, fixed income, and credit markets, portfolio allocation*</small>
-  - <small>**MathCS 120NT**: Seminar in Number Theory</small>
-  - <small>**Phys 7A**: Basic Physics</small>
+
 - Fall 2024
+  - <small>**MATHCS 128**: Transition to Higher Mathematics</small>
+  - <small>**MATH 240A**: Differential Geometry</small>
+    - <small>*Smooth manifolds, Lie groups, smooth functions, vector fields.*</small>
   - <small>**PSTAT 213A**: Stochastic Processes</small>
     - <small>*Discrete and continuous time Markov chains, random walks, branching processes, birth-death processes, Poisson processes, point processes.*</small>
   - <small>**PSTAT 223A**: Stochastic Calculus</small>
     - <small>*Brownian motion, stochastic calculus and stochastic differential equations, diffusion processes, related partial differential equations and Feynman-Kac formula.*</small>
-  - <small>**Math 240**: Differential Geometry</small>
-    - <small>*Smooth manifolds, Lie groups, smooth functions, vector fields.*</small>
-  - <small>**MathCS 128**: Transition to Higher Mathematics</small>
+
 
 ### Junior 
 - Spring 2024
-  - <small>**Math 111C**: Galois Theory</small>
+  - <small>**CH ST 1C**: Chicano Studies</small>
+  - <small>**MATH 111C**: Galois Theory</small>
     - <small>*Fields, field extensions, Galois groups.*</small>
-  - <small>**Math 137A**: Graph Theory</small>
+  - <small>**MATH 137A**: Graph Theory</small>
     - <small>*Paths, circuits, trees, coloring, planarity.*</small>
   - <small>**PSTAT 262MC**: Seminar in Monte Carlo</small>
-  - <small>**Ch St 1C**: Chicano Studies</small>
+
 - Winter 2024
-  - <small>**Math 111B**: Ring Theory</small>
-    - <small>*Ring theory, ideals, factorizations.*</small>
-  - <small>**Math 137A**: Graph Theory</small>
+  - <small>**MATH 111B**: Ring Theory</small>
+    - <small>*Rings, ideals, factorizations.*</small>
+  - <small>**MATH 137A**: Graph Theory</small>
     - <small>*Paths, circuits, trees, coloring, planarity.*</small>
-  - <small>**Math 260HH**: Seminar in Mathematical Machine Learning</small>
+  - <small>**MATH 260HH**: Seminar in Mathematical Machine Learning</small>
   - <small>**PSTAT 215A**: Bayesian Inference</small>
     - <small>*Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.*</small>
 - Fall 2023
-  - <small>**Math 111A**: Group Theory</small>
-    - <small>*Finite groups, homomorphisms, normal subgroups, quotients, direct products and group actions.*</small>
-  - <small>**Math 201A**: Measure Theory</small>
-    - <small>*Measure theory, Lebesgue integration, sigma algebras.*</small>
-  - <small>**Math 206A**:  Matrix Analysis and Computation</small>
+  - <small>**MATH 111A**: Group Theory</small>
+    - <small>*Finite groups, homomorphisms, normal subgroups, quotients, direct products, and group actions.*</small>
+  - <small>**MATH 201A**: Measure Theory</small>
+    - <small>*σ-algebras, measures, Lebesgue integration.*</small>
+  - <small>**MATH 206A**: Matrix Analysis and Computation</small>
     - <small>*Matrix computations, SVD, pseudoinverse, characterization of eigenvalues, perturbation theory.*</small>
   - <small>**PSTAT 207A**: Statistical Theory</small>
     - <small>*Order statistics, estimation theory, likelihood, sufficiency, efficiency, maximum likelihood.*</small>
 
 ### Sophomore
 - Spring 2023
-  - <small>**MathCS 108B**: Linear Algebra</small>
+  - <small>**MATHCS 108B**: Linear Algebra</small>
     - <small>*Inner product spaces, projections, least-squares approximations, canonical form.*</small>  
-  - <small>**Math 118C**: Real Analysis</small>
+  - <small>**MATH 118C**: Real Analysis</small>
     - <small>*Multivariate calculus, differential topology.*</small>
-  - <small>**MathCS 120FO**: Linear Optimization</small>
+  - <small>**MATHCS 120FO**: Linear Optimization</small>
     - <small>*Linear inequalities, convex sets, simplex method.*</small>
-  - <small>**MathCS 122B**: Complex Analysis</small>
+  - <small>**MATHCS 122B**: Complex Analysis</small>
     - <small>*Rouche's theorem, analytic continuation, conformal mapping, infinite products, harmonic functions.*</small>
 - Winter 2023
-  - <small>**MathCS 108A**: Linear Algebra</small>
+  - <small>**MATHCS 108A**: Linear Algebra</small>
     - <small>*Vector spaces and subspaces, span and linear independence, linear maps, eigenvalues and eigenvectors.*</small>  
-  - <small>**Math 118B**: Real Analysis</small>
+  - <small>**MATH 118B**: Real Analysis</small>
     - <small>*Continuity, differentiability, Riemann integrals.*</small>
-  - <small>**MathCS 122A**: Complex Analysis</small>
+  - <small>**MATHCS 122A**: Complex Analysis</small>
     - <small>*Complex differentiation, analytic functions, Cauchy-Riemann equations, classification of singular points, residues.*</small>
-  - <small>**Rg St 4**: Intro to Buddhism</small>
+  - <small>**RG ST 4**: Intro to Buddhism</small>
 - Fall 2022
-  - <small>**Math 104A**: Numerical Analysis</small>
+  - <small>**MATH 104A**: Numerical Analysis</small>
     - <small>*Numerical methods, Newton method, composite integration, splines.*</small>  
-  - <small>**Math 118A**: Real Analysis</small>
+  - <small>**MATH 118A**: Real Analysis</small>
     - <small>*Real numbers, topology of metric spaces, numerical sequences, infinite series.*</small>
-  - <small>**MathCS 121**: Probability Theory</small>
+  - <small>**MATHCS 121**: Probability Theory</small>
     - <small>*Random variables, probability measure.*</small>
-  - <small>**Writ 107J**: Journalism Writing</small>
+  - <small>**WRIT 107J**: Journalism Writing</small>
 
 ### Freshman
 - Spring 2022
-  - <small>**Math 6B**: Multivariable Calculus</small>
-  - <small>**MathCS 120FV**: Game Theory</small>
+  - <small>**MATH 6B**: Multivariable Calculus</small>
+  - <small>**MATHCS 120FV**: Game Theory</small>
     - <small>*Combinatorial game theory, zero-sum games, nim, Nash equilibrium.*</small>
-  - <small>**MathCS 117**: Introduction to Real Analysis</small>
+  - <small>**MATHCS 117**: Introduction to Real Analysis</small>
     - <small>*Limits, sequences and series, continuity.*</small>
 - Winter 2022
-  - <small>**Math 4B**: Differential Equations</small>
-  - <small>**Math 6A**: Multivariable Calculus</small>
-  - <small>**MathCS 101B**: Problem Solving</small>
+  - <small>**MATH 4B**: Differential Equations</small>
+  - <small>**MATH 6A**: Multivariable Calculus</small>
+  - <small>**MATHCS 101B**: Problem Solving II</small>
 - Fall 2021
-  - <small>**Math 4A**: Linear Algebra</small>
-  - <small>**Classics 40**: Greek Mythology</small>
-  - <small>**ARTHI 6F**: Survey of Architecture History</small>
+  - <small>**ARTHI 6F**: History of Architecture</small>  
+  - <small>**CLASS 40**: Greek Mythology</small>
+  - <small>**MATH 4A**: Linear Algebra</small>

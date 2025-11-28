@@ -3,10 +3,10 @@
 
 <h1 class="mb-4">{{ section.title }}</h1>
 
-<p class="mb-12">
-  Welcome! This is a collection of pages that don't quite belong anywhere else. Snoop around and find
-  your favorite ones.
-</p>
+{% set lines = section.description | split(pat="\n") %}
+{% for line in lines %}
+    <p>{{ line }}</p>
+{% endfor %}
 
 {% for path in section.subsections %}
 {% set sub = get_section(path=path) %}
