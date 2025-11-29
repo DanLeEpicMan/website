@@ -10,13 +10,13 @@ description = "Notes and details on my project 'Adjusted Judge Score'"
 
 During 2023–2025, I was a board member for [Data Science UCSB](https://www.datascienceucsb.org/). A major event we host is our annual [Project Showcase](https://www.datascienceucsb.org/projects), where club members present their projects in front of judges, comprised of industry experts, professors, PhD students, etc. Judges are asked to score each project, and we combine their scores via a simple sum to determine a final ranking, using this to distribute cash prizes.
 
-However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we believed the winners didn't deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1-2 points from each other, out of about 60 points total. 
+However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we believed the winners didn't deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1–2 points from each other, out of about 60 points total. 
 
 Upon closer inspection, we realized what the problem was. Many judges gave essentially the same score to all projects, particularly higher scores. In other words, many judges exhibited a ***positivity bias***. Since all judges are weighted equally, this causes the value of an individual point to rise dramatically.
 
 One could argue that this is not inherently problematic. After all, the projects we select as finalists are going to be the better projects in our (very large) club, so it's natural to expect that they are all well-received by judges. Hence, the positivity bias is simply reflecting a ***survivorship bias*** that we the officers create. 
 
-While this is a plausible explanation, we felt that the issue runs deeper. Out of 60 points, a point gap of about 5-10 among the top performers is to be expected. However, when 1st and 2nd place are only 1 point off from each other, when 2nd and 3rd place are 1-2 points off from each other, and so forth, it's difficult to conclude anything other than statistical noise. 
+While this is a plausible explanation, we felt that the issue runs deeper. Out of 60 points, a point gap of about 5-10 among the top performers is to be expected. However, when 1st and 2nd place are only 1 point off from each other, when 2nd and 3rd place are 1–2 points off from each other, and so forth, it's difficult to conclude anything other than statistical noise. 
 
 Anecdotally, I have heard this exact same problem articulated in many other clubs and judging panels. Thus, I feel justified in saying that there is a problem to be solved that isn't a result of the innate survivorship bias with our structure. The point of this blog is to detail, and justify, the solutions I arrived at.
 
@@ -26,7 +26,7 @@ Before I can begin articulating my solutions, I must lay out definitions.
 
 ## Toy Data
 
-For illustrating examples, we will use the anonymized raw scores for **Project Showcase 2025**. Judges were asked to score projects in 5 separate categories on a range from 1–9. Hence, the range of a judge's raw score is 5–45.
+For illustrating examples, we will use the anonymized raw scores for **Project Showcase 2025**. Judges were asked to score projects in 5 separate categories on a range from 1 to 9. Hence, the range of a judge's raw score is 5–45.
 
 <div id="CSVTable" style="overflow-x: auto;"></div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
@@ -38,7 +38,7 @@ $(function() {
 });
 </script>
 
-As can be immediately seen, **Judge Delta**'s scores range from 40–45. In other words, they gave every project near-perfect scores. Similar behavior exists across other judges, albeit with notable outliers.
+As can be immediately seen, **Judge Delta**'s scores range from 40 to 45. In other words, they gave every project near-perfect scores. Similar behavior exists across other judges, albeit with notable outliers.
 
 ## Mathematical Definitions
 
@@ -77,13 +77,19 @@ $$
 For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking. 
 
 {% admonition(type='tip', title='More on Equivalent in Ranking') %}
-There's two details worth mentioning
+There are two details worth mentioning
 1. The precise definition of $(k)\_{ \vec{v} }$ is intentionally avoided. Without proper care, it may not even be well-defined! What happens in the event of a tie?
    - In practice, a tiebreaker is defined. We do not concern ourselves with such details, and simply assume it is a part of the definition of $(k)\_{ \vec{v} }$
 2. Interestingly, equivalent in ranking forms an [equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation).
 {% end %}
 
 # Scoring Methods
+
+{% admonition(type='note', title='The Importance of the Raw Data Generating Process') %}
+This article exclusively talks about methods that produce final scores. However, in no way do I endorse any of these ideas as a panacea.
+
+**Creating a reasonable system that evaluates projects and translates judge's opinions into numbers** is just as, if not more, important than a system that adjusts those numbers into final scores. As they say in machine learning, "garbage in, garbage out". 
+{% end %}
 
 Here we outline the methods I've thought about and proposed. Note that each has its own assumptions, with its own benefits and tradeoffs. 
 
@@ -102,12 +108,6 @@ As a baseline, here are the final scores using (1) as the scoring method
 | Project 5 |   320          |
 
 These scores have a range of 50–450. As we can see, the data identifies Project 1 as a very clear winner, far surpassing all those below it. Between Projects 2, 4, and 6 though, the effect of the statistical noise becomes much more clear. 
-
-{% admonition(type='note', title='The Importance of the Raw Data Generating Process') %}
-This article talks exclusively about turning raw scores into adjusted scores. However, in no way do I endorse any of these ideas as a panacea.
-
-**Creating a reasonable system that evaluates projects and translates judge's opinions into numbers** is just as, if not more, important than a system that adjusts those numbers into final scores. As they say in machine learning, "garbage in, garbage out". 
-{% end %}
 
 For many of these methods, we will require the following two definitions from statistics
 - $\mu_j$: Judge $j$'s raw score [average](https://en.wikipedia.org/wiki/Arithmetic_mean).
@@ -151,8 +151,8 @@ Applying this transformation to our toy data, we get the ranking
 | Project 7 | -9.711        |
 | Project 5 | -11.422       |
 
-At first glance, this gives us what we want wanted. An umambiguous first place and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye
-1. By definition, $z$-scores are [dimensionless](https://en.wikipedia.org/wiki/Dimensionless_quantity), therefore the final score is dimensionless. There's two conflicting interpretations of this:
+At first glance, this gives us what we wanted. Namely, an unambiguous first place, and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye
+1. By definition, $z$-scores are [dimensionless](https://en.wikipedia.org/wiki/Dimensionless_quantity), therefore the final score is dimensionless. There are two conflicting interpretations of this:
    - On one hand, the final score being dimensionless makes it an objective quantity.
    - On the other hand, we are effectively interpreting it as a score, which is contentious as it does not have the same units.
 2. Interestingly, this is almost identical to the ranking of scoring method (1). However, note that Project 3 and Project 8 switched places.
@@ -256,14 +256,14 @@ $$
 $$
 </div>
 
-While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ is to simply avoid issues where we may root a negative number.
+While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ term is to simply avoid issues where we may root a negative number.
 
 However, there's more to the role of $\kappa$ than meets the eye. By design, it's intended to quantify how much weight $\sigma_j$ has. Higher $\kappa$ means the weights are larger. However, note that we effectively weigh the score by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, which means that the exponent is always less than 1. Perhaps not the precise desired behavior, but the desired behavior nonetheless.
 
 More interestingly, this method makes point gains non-linear.
-- When $\kappa \in (0, \infty)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a root function, meaning increasing $p_{ij}$ from $\mu_j$ -> $\mu_j + 1$ has more of an increase than $\mu_j + 5$ -> $\mu_j + 6$.
-- When $\kappa = 0$, this is linear, and in fact equivalent in ranking to (1).
-- When $\kappa \in (-1, 0)$, we see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a polynomial, meaning increasing $p_{ij}$ from $\mu_j + 5$ -> $\mu_j + 6$ has more of an increase than $\mu_j$ -> $\mu_j + 1$.
+- $\kappa \in (0, \infty)$: We see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a root function, meaning increasing $p_{ij}$ from $\mu_j$ → $\mu_j + 1$ has more of an increase than $\mu_j + 5$ → $\mu_j + 6$.
+- $\kappa = 0$: This is linear, and in fact equivalent in ranking to (1).
+- $\kappa \in (-1, 0)$: We see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a polynomial, meaning increasing $p_{ij}$ from $\mu_j + 5$ → $\mu_j + 6$ has more of an increase than $\mu_j$ → $\mu_j + 1$.
 - Lastly, while $\kappa < -1$ is *technically* defined, it is not interpretable. We would run into a situation where scores close to $\mu_j$ are more valuable than scores far greater than $\mu_j$.
 
 Note that $\mu_j, \sigma_j$ changes if $p_{ij}$ changes. This analysis, while accurate for the most part, is oversimplified. Only small increments to points should be considered.
@@ -282,9 +282,9 @@ Applying this method to our toy data yields
 | Project 7 | -31.173        | -30.281        |
 | Project 5 | -37.502        | -36.647        |
 
-As with everything else, there's deeper criticisms
+As with everything else, there are deeper criticisms
 1. Like the $z$-score Sum, it's difficult to figure out the range without knowing $\kappa, \\{\mu_j\\}\_{j=1}^{N}, \\{\sigma_j\\} \_{j=1}^{N}$. 
-2. It's difficult to choose a good value of $\kappa$. For Data Science UCSB events, we stuck with $\kappa = 1$ and increased if we felt the resulting final scores were too large. This approach suffers the same criticisms as [emperical Bayes methods](https://en.wikipedia.org/wiki/Empirical_Bayes_method).
+2. It's difficult to choose a good value of $\kappa$. For Data Science UCSB events, we stuck with $\kappa = 1$ and increased if we felt the resulting final scores were too large. This approach suffers the same criticisms as [empirical Bayes methods](https://en.wikipedia.org/wiki/Empirical_Bayes_method).
     - The premise of this criticism is rather presumptuous, as choosing $\kappa$ is effectively choosing the scoring method. What defines a "good" scoring method?
     - Still, is there any nuance or cleverness here, or is the choice arbitrary?
 3. Out of all methods, this one is the most numerically unstable

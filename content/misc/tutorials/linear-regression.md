@@ -19,7 +19,7 @@ sns.set_theme()
 
 # Introduction 
 
-Welcome to an **Introduction to Linear Regression**! This tutorial is largely adapted from a [similar workshop](https://colab.research.google.com/drive/1FWJCDERu4hlZi4dTsuf2PVleSv9nwdyR?authuser=1) I hosted while I was an officer at [Data Science UCSB](https://www.datascienceucsb.org/). However, I trimmed much of the material in order to simplify the approach, and plan on covering missing topics in future posts.
+Welcome to an **Introduction to Linear Regression**! This tutorial is largely adapted from a [similar workshop](https://colab.research.google.com/drive/1FWJCDERu4hlZi4dTsuf2PVleSv9nwdyR?authuser=1) I hosted while I was an officer at [Data Science UCSB](https://www.datascienceucsb.org/). However, in the interest of simplicity, I trimmed much of the material and modified many explanations.
 
 This guide is intended to introduce the principles behind regression, and present linear regression from a data science angle. I intend this largely for beginners who are new to the field, but have some exposure with freshman-level math (e.g. linear algebra).
 
@@ -31,13 +31,13 @@ I assume that you are comfortable with the following
   - NumPy, Pandas
 - Mathematics
   - Linear Algebra
-    - Vectors, matrices, linear systems, norms
+    - Vectors, matrices, linear systems, norms (length/magnitude)
 
 For the most part, I abstracted away the statistical theory and inference behind linear regression. However, I recognize that doing so misses a large part of the story, especially when it comes to interpretability. I intend to write a follow-up guide with these details included.
 
 ## Data
 
-For ease, I will be using simulated data in all my examples. Note that finding real-world data that works with linear regression is a very simple task.
+For ease, I will be using simulated data in all my examples.
 ```python
 data = pd.DataFrame(
     data=rng.multivariate_normal(
@@ -54,23 +54,25 @@ sns.scatterplot(data, x='X', y='Y')
     <img src='/images/tutorials/linear-regression/data.png' />
 </figure>
 
+ One may object that using simulated data not only begs the question, but also fails to demonstrate applicability. While I agree, finding data compatible with linear regression is incredibly easy. Furthermore, linear regression is so incredibly fundamental that its applicability is not something that needs to be demonstrated.
+
 # What is Regression?
 
-Say we're interested in modeling a relationship between a **reponse**, $Y$, and a bunch of **explanatory** variables $X_1, \dots, X_p$. For example, we may be interested in finding a relationship between
+Say we're interested in modeling a relationship between a **reponse** $Y$, and a bunch of **explanatory** variables $X_1, \dots, X_p$. For example, we may be interested in finding a relationship between
 1. $Y = $ Average traffic accidents in a day
 2. $X_1 = $ Average temperature, $X_2 = $ Day of week, $X_3 = $ Month of year
 
-To write this down mathematically, we are trying to find a function $f$ such that<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a>
+To write this down mathematically, we are trying to find a function $f$ such that
 
 $$
     Y = f(X_1, \dots, X_p) + \epsilon
 $$
 
-Where $\epsilon$ represents an error term. The process of finding such an $f$ that minimizes the error is called **regression**.
+Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> is called **regression**.
 
-<p id='footnote-a' class='opacity-60'><small><b>a</b>: This isn't always true. Regression is really about finding a "best possible" function, where best possible is defined in a clear and tractable way. For our purposes though, let's stick with this framework.</small></p>
+<p id='footnote-a' class='opacity-60'><small><b>a</b>: This isn't always true. Regression is really about finding the "best possible" function, where "best possible" is defined in a clear and tractable way. For our purposes though, let's stick with this framework of minimizing error.</small></p>
 
-## A problem with regression
+## A Problem with Regression
 
 While the problem I outlined above may seem straightforward to solve, it's really vague and broad. For instance, consider the following function
 $$
@@ -93,7 +95,7 @@ To prevent ridiculous solutions like this, we limit ourselves to a certain **cla
    - $\log(x) + y$
    - $y^x$
 
-We can define our class of functions however we want. Above, we explicitly write down the functional form as in (1), write down a condition as in (2), or specify a list as in (3). The class of functions we consider depends heavily on the problem at hand, such as how many inputs there are.
+We can define our class of functions however we want. Above, we explicitly write down the functional form as in (1), write down a condition as in (2), or specify a list as in (3). The class of functions we consider depends heavily on the problem at hand, such as how many inputs there are, and other domain-specific constraints.
 
 Why do we do this? **Aside from filtering out dumb solutions, the problem becomes much more tractable.**
 
@@ -157,7 +159,9 @@ $$
 \end{align*}
 $$
 
-Note that $\mathbf{Y}$ is the vector of **true** values and $\hat{\mathbf{Y}}$ is the vector of **predicted** values. Note that our predictions depend entirely on our coefficients $\vec{\beta}$, i.e. $\hat{\mathbf{Y}} = \mathbf{X}\vec{\beta}$.
+Note that 
+1. $\mathbf{Y}$ is the vector of **true** values and $\hat{\mathbf{Y}}$ is the vector of **predicted** values. 
+2. Our predictions depend entirely on our coefficients $\vec{\beta}$, i.e. $\hat{\mathbf{Y}} = \mathbf{X}\vec{\beta}$.
 
 ## Finding our Coefficients
 
@@ -165,7 +169,7 @@ Ultimately, our goal is to make our predictions $\hat{\mathbf{Y}}$ as close to t
 
 However, there's some nuance here. **What does it mean to "minimize the error vector"?** Another way to pose this issue is
 
-> How do we measure the size of a vector?
+> How do we measure a vector?
 
 ## The Least Squares Approach
 
@@ -225,7 +229,7 @@ Rather than finding a line of best fit, say we instead want to use
 $$
     Y = \beta_0 + \beta_1 X + \dots + \beta_k X^k + \epsilon
 $$
-That is, fit a polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-b'>See footnote b for a brief comment why</a>.
+That is, fit a $k$-degree polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-b'>See footnote b for a brief comment why</a>.
 
 For our example, we will use $k=25$. That is, fit a 25 degree polynomial.
 
@@ -303,7 +307,7 @@ sns.lineplot(test_data, x='X', y=Yhat_test_lobf, color='g', ax=ax[1])
 
 It's fairly clear that the polynomial models does a rather poor job at predicting the new data, especially on the tails. (It's not obvious in the picute, but the right-most point has a prediction in the billions.) While it felt like the polynomial model did a good job with the original data, it does a poor job with everything else.
 
-This phenmonenon is called **overfitting**. Overfitting means that the model fits its **training data** too well, to the point that it's all but useless for outside data. In other words, we dug ourselves into a situation where the model is only telling us what we already know, and nothing more.
+This phenomenon is called **overfitting**. Overfitting means that the model fits its **training data** too well, to the point that it's all but useless for outside data. In other words, we dug ourselves into a situation where the model is only telling us what we already know, and nothing more.
 
 # Model Evaluation
 
@@ -323,7 +327,7 @@ There are many packages that will do this partitioning for you. [Scikit-learn ha
 
 ## $R^2$ Score
 
-The $R^2$ score is a measurement of how well explanatory data predicts the response data. Setting $\bar{y}$ as the average of the responses, $R^2$ is defined as
+The $R^2$ score is a measurement of how well explanatory (inputs) variance predicts the response variance. Setting $\bar{y}$ as the average of the responses, $R^2$ is defined as
 $$
 \begin{align}
     R^2 &= \frac{\sum\_{i=1}^{n} (\hat{y}_i - \bar{y})^2}{\sum\_{i=1}^{n} (y\_i - \bar{y})^2} \\\\
@@ -333,7 +337,9 @@ $$
 $$
 (1) gives us a clear interpretation of $R^2$ as a ratio of variances. More specifically, the numerator is proportional to the variance of the predictions, while the denominator is proportional to the variance of the response variables. In essence, $R^2$ captures the proportion of response variance explained by the predictions.
 
-(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because the numerator is precisely $||E||^{2}$, making its computation much more efficient.
+(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a> because the numerator is precisely $||E||^{2}$, making its computation much more efficient.
+
+<p id='footnote-c' class='opacity-60'><small><b>c</b>: Well, it's preferred because it's more intuitive to write a metric explicitly in terms of error. The connection to $||E||^2$ is not always the reason, as not all statistical software may have this handy.</small></p>
 
 ```python
 print(
@@ -348,20 +354,22 @@ Linear Test Score:     0.85
 Polynomial Test Score: -624851852.84
 ```
 
-As we can see, the polynomial model is performing terribly, achieving a score well-below 0.
+As we can see, the polynomial model is performing terribly, achieving a score well-below 0. Since $R^2$ represents a ratio, anything below 0 indicates a serious misfit<a href='#footnote-d' style='text-decoration: none'><sup class='opacity-60'>d</sup></a>.
 
-However, there is much more to the eye about $R^2$
-1. It's only useful for evaluating performance on your training data, as interpreting it as a ratio between variances relies on this fact. Evaluating it on outside data loses this interpretation, and thus much its value.
+However, there is much more about $R^2$
+1. It's mainly useful for evaluating performance on your training data, as interpreting it as a ratio between variances relies on this fact. Evaluating it on outside data loses this interpretation, and thus much its value.
     - The attentive reader will note that we did precisely this in the above example.
 2. It has very questionable efficacy. Good models can have low $R^2$, and terrible models can have high $R^2$.
-    - In fact, high $R^2$ is a good sign of overfitting.
+    - In fact, high $R^2$ ($>0.95$) is a good sign of overfitting.
 3. $R^2$ says nothing more beyond what's outlined above. It depends on many different things, and using it for model selection is very dubious.
 
-[This](https://stats.stackexchange.com/a/13317) stack exchange answer goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful and dangerous.
+[This](https://stats.stackexchange.com/a/13317) stack exchange answer goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
+
+<p id='footnote-d' class='opacity-60'><small><b>d</b>: This is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.</small></p>
 
 ## Mean Squared Error
 
-The mean squared error is the amount of squared error we can expect in a typical prediction. It is given by<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a>
+The mean squared error is the amount of squared error we can expect in a typical prediction. It is given by<a href='#footnote-e' style='text-decoration: none'><sup class='opacity-60'>e</sup></a>
 $$
     \mathrm{MSE} = \frac{||E||^2}{n}
 $$
@@ -382,11 +390,11 @@ Polynomial Test Score: 869092446.00
 
 One big pitfall of mean squared error is its sensitivity to outliers. This comes from the fact that $\mathrm{big}^2 = \mathrm{bigger}$. In fact, we see this behavior above, since one single datapoint is drastically inflating the MSE for the polynomial model.
 
-It's also important to note the units of MSE, as it's given in units of $Y^2$ rather than $Y$. As a result, interpreting this as a quantity can be rather difficult, requiring us to take its square root (in the same way that we square root variance in order to interpret it as standard deviation).
+It's also important to note the units of MSE, as it's given in units of $Y^2$ rather than $Y$. As a result, interpreting this as a quantity can be rather difficult.
 
 However, in spite of its pitfalls, note that everything in this blog revolves around MSE. After all, when we use least squares, we are defining "best coefficients" in terms of squared error. As before, a useful but dangerous statistic.
 
-<p id='footnote-c' class='opacity-60'><small><b>c</b>: In statistics literature, a more common definition is $\frac{||E||^2}{n - p - 1}$, which is related to Bessel's correction.</small></p>
+<p id='footnote-e' class='opacity-60'><small><b>e</b>: In statistics literature, a more common definition is $\frac{||E||^2}{n - p - 1}$, which is related to Bessel's correction.</small></p>
 
 ## Other Useful Metrics
 
@@ -396,4 +404,4 @@ Going over every evaluation metric available is simply not a good use of our tim
 
 # Conclusion
 
-All this just about summarizes an overview into linear regression. Note that there's a much bigger world I have not mentioned whatsoever. Namely, the statistical inference and interpretability behind linear regression, as well as alternatives to least squares. I intend to write future tutorials covering these topics, particularly regularization and a statistical-based overview.
+All this just about summarizes an overview into linear regression. Yet, there's a much bigger world I have not mentioned whatsoever. Namely, alternatives to least squares, as well as the statistical inference and interpretability behind linear regression. I intend to write future tutorials covering these topics, particularly regularization and a statistical-based overview.
