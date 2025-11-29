@@ -1,6 +1,6 @@
 +++
 title = "Introduction to Linear Regression" 
-description = "An overview of linear regression, including OLS, Ridge, LASSO." 
+description = "An overview of linear regression from a data science angle." 
 date = '2025-11-27'
 +++
 

@@ -1,6 +1,6 @@
 +++
 title='Classes Taken'
-description='Tutorials in things I like'
+description='All my completed classes.'
 weight=2
 render=false
 page_template='pages.html'
