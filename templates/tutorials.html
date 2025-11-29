@@ -1,0 +1,24 @@
+{% extends "index.html" %}<!---->
+{% block main %}<!---->
+
+<h1 class="mb-4">{{ section.title }}</h1>
+
+{% set lines = section.extra.long_description | split(pat="\n") %}
+{% for line in lines %}
+    <p>{{ line }}</p>
+{% endfor %}
+
+
+<div class="pl-6"><ul>
+  {% for page in section.pages %}
+
+    <li>
+      <div class="my-2 flex items-center justify-between">
+        <a class="secondary-link" href="{{ page.permalink }}">{{ page.title }}</a>
+        <time class="font-mono text-sm opacity-60">{{ page.date }}</time>
+      </div>
+    </li>
+
+  {% endfor %}
+</ul></div>
+{% endblock main %}
