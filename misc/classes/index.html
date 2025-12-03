@@ -1,0 +1,554 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Classes Taken - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Classes Taken" />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Classes Taken" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="Classes Taken" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;classes&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;classes&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <main
+      class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg relative mx-auto min-h-[calc(100vh-9rem)] max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+    >
+      
+<article>
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Classes Taken</h1>
+  </header>
+
+  <section><style>
+    ul {
+        margin-top: 0; /* Removes top margin from the entire list */
+        margin-bottom: 0; /* Removes bottom margin from the entire list */
+        padding-left: 20px; /* Adjusts indentation, or set to 0 to remove it */
+    }
+    ul ul {
+        list-style-type: circle
+    }
+    ul ul ul {
+        list-style-type: none;
+        padding-left: 0px
+    }
+</style>
+<p>Listed here is every class I've taken while in school, in descending order. Note the following range of courses</p>
+<ul>
+<li>1–99: Undergraduate, lower division</li>
+<li>100–199: Undergraduate, upper division</li>
+<li>200+: Graduate</li>
+</ul>
+<p>For anyone interested, <a href="https://docs.google.com/spreadsheets/d/1weRRxfZi-ufdfieJTo58H_MCGt9bzeilYJw4FESpXnE/edit?pli=1&amp;gid=0#gid=0">my course planner for my undergraduate degree can be found here.</a></p>
+<h2 id="graduate-degree-uc-irvine">Graduate Degree (UC Irvine)</h2>
+<ul>
+<li>Fall 2025
+<ul>
+<li><small><strong>STATS 200A</strong>: Probability and Statistical Theory</small>
+<ul>
+<li><small><em>Basics of probability theory.</em></small></li>
+</ul>
+</li>
+<li><small><strong>STATS 210</strong>: Statistical Methods I: Linear Models</small>
+<ul>
+<li><small><em>Linear regression, inference, diagnostics.</em></small></li>
+</ul>
+</li>
+<li><small><strong>STATS 295</strong>: Clinical Trials</small>
+<ul>
+<li><small><em>Randomized controlled trials, observational studies, adaptive and pragmatic trial design, causal inference.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="undergraduate-degree-uc-santa-barbara">Undergraduate Degree (UC Santa Barbara)</h2>
+<h3 id="senior">Senior</h3>
+<ul>
+<li>
+<p>Spring 2025</p>
+<ul>
+<li><small><strong>CMPTGCS 20</strong>: Introduction to Python</small></li>
+<li><small><strong>HIST 164C</strong>: Civil War and Reconstruction</small></li>
+<li><small><strong>PSTAT 213C</strong>: Probability Theory</small>
+<ul>
+<li><small><em>Martingales, martingale convergence, stopping times, optional sampling, optional stopping theorem.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223C</strong>: Computational Finance</small>
+<ul>
+<li><small><em>Monte Carlo, Partial Differential Equation simulation, American options</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Winter 2025</p>
+<ul>
+<li><small><strong>MATHCS 120NT</strong>: Seminar in Number Theory</small></li>
+<li><small><strong>PHYS 7A</strong>: Basic Physics</small></li>
+<li><small><strong>PSTAT 213B</strong>: Probability Theory</small>
+<ul>
+<li><small><em>Convergence of random variables, laws of large numbers, central limit theorem, large deviations</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223B</strong>: Financial Modeling</small>
+<ul>
+<li><small><em>Stochastic models in finance, hedging of derivatives in equity, fixed income, and credit markets, portfolio allocation</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Fall 2024</p>
+<ul>
+<li><small><strong>MATHCS 128</strong>: Transition to Higher Mathematics</small></li>
+<li><small><strong>MATH 240A</strong>: Differential Geometry</small>
+<ul>
+<li><small><em>Smooth manifolds, Lie groups, smooth functions, vector fields.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 213A</strong>: Stochastic Processes</small>
+<ul>
+<li><small><em>Discrete and continuous time Markov chains, random walks, branching processes, birth-death processes, Poisson processes, point processes.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223A</strong>: Stochastic Calculus</small>
+<ul>
+<li><small><em>Brownian motion, stochastic calculus and stochastic differential equations, diffusion processes, related partial differential equations and Feynman-Kac formula.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="junior">Junior</h3>
+<ul>
+<li>
+<p>Spring 2024</p>
+<ul>
+<li><small><strong>CH ST 1C</strong>: Chicano Studies</small></li>
+<li><small><strong>MATH 111C</strong>: Galois Theory</small>
+<ul>
+<li><small><em>Fields, field extensions, Galois groups.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 137A</strong>: Graph Theory</small>
+<ul>
+<li><small><em>Paths, circuits, trees, coloring, planarity.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 262MC</strong>: Seminar in Monte Carlo</small></li>
+</ul>
+</li>
+<li>
+<p>Winter 2024</p>
+<ul>
+<li><small><strong>MATH 111B</strong>: Ring Theory</small>
+<ul>
+<li><small><em>Rings, ideals, factorizations.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 137A</strong>: Graph Theory</small>
+<ul>
+<li><small><em>Paths, circuits, trees, coloring, planarity.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 260HH</strong>: Seminar in Mathematical Machine Learning</small></li>
+<li><small><strong>PSTAT 215A</strong>: Bayesian Inference</small>
+<ul>
+<li><small><em>Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Fall 2023</p>
+<ul>
+<li><small><strong>MATH 111A</strong>: Group Theory</small>
+<ul>
+<li><small><em>Finite groups, homomorphisms, normal subgroups, quotients, direct products, and group actions.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 201A</strong>: Measure Theory</small>
+<ul>
+<li><small><em>σ-algebras, measures, Lebesgue integration.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 206A</strong>: Matrix Analysis and Computation</small>
+<ul>
+<li><small><em>Matrix computations, SVD, pseudoinverse, characterization of eigenvalues, perturbation theory.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 207A</strong>: Statistical Theory</small>
+<ul>
+<li><small><em>Order statistics, estimation theory, likelihood, sufficiency, efficiency, maximum likelihood.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sophomore">Sophomore</h3>
+<ul>
+<li>Spring 2023
+<ul>
+<li><small><strong>MATHCS 108B</strong>: Linear Algebra</small>
+<ul>
+<li><small><em>Inner product spaces, projections, least-squares approximations, canonical form.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118C</strong>: Real Analysis</small>
+<ul>
+<li><small><em>Multivariate calculus, differential topology.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 120FO</strong>: Linear Optimization</small>
+<ul>
+<li><small><em>Linear inequalities, convex sets, simplex method.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 122B</strong>: Complex Analysis</small>
+<ul>
+<li><small><em>Rouche's theorem, analytic continuation, conformal mapping, infinite products, harmonic functions.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Winter 2023
+<ul>
+<li><small><strong>MATHCS 108A</strong>: Linear Algebra</small>
+<ul>
+<li><small><em>Vector spaces and subspaces, span and linear independence, linear maps, eigenvalues and eigenvectors.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118B</strong>: Real Analysis</small>
+<ul>
+<li><small><em>Continuity, differentiability, Riemann integrals.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 122A</strong>: Complex Analysis</small>
+<ul>
+<li><small><em>Complex differentiation, analytic functions, Cauchy-Riemann equations, classification of singular points, residues.</em></small></li>
+</ul>
+</li>
+<li><small><strong>RG ST 4</strong>: Intro to Buddhism</small></li>
+</ul>
+</li>
+<li>Fall 2022
+<ul>
+<li><small><strong>MATH 104A</strong>: Numerical Analysis</small>
+<ul>
+<li><small><em>Numerical methods, Newton method, composite integration, splines.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118A</strong>: Real Analysis</small>
+<ul>
+<li><small><em>Real numbers, topology of metric spaces, numerical sequences, infinite series.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 121</strong>: Probability Theory</small>
+<ul>
+<li><small><em>Random variables, probability measure.</em></small></li>
+</ul>
+</li>
+<li><small><strong>WRIT 107J</strong>: Journalism Writing</small></li>
+</ul>
+</li>
+</ul>
+<h3 id="freshman">Freshman</h3>
+<ul>
+<li>Spring 2022
+<ul>
+<li><small><strong>MATH 6B</strong>: Multivariable Calculus</small></li>
+<li><small><strong>MATHCS 120FV</strong>: Game Theory</small>
+<ul>
+<li><small><em>Combinatorial game theory, zero-sum games, nim, Nash equilibrium.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 117</strong>: Introduction to Real Analysis</small>
+<ul>
+<li><small><em>Limits, sequences and series, continuity.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Winter 2022
+<ul>
+<li><small><strong>MATH 4B</strong>: Differential Equations</small></li>
+<li><small><strong>MATH 6A</strong>: Multivariable Calculus</small></li>
+<li><small><strong>MATHCS 101B</strong>: Problem Solving II</small></li>
+</ul>
+</li>
+<li>Fall 2021
+<ul>
+<li><small><strong>ARTHI 6F</strong>: History of Architecture</small></li>
+<li><small><strong>CLASS 40</strong>: Greek Mythology</small></li>
+<li><small><strong>MATH 4A</strong>: Linear Algebra</small></li>
+</ul>
+</li>
+</ul>
+</section>
+</article>
+
+    </main>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by&#x2F;4.0&#x2F;deed.en" rel="noopener" target="_blank">
+      CC BY 4.0
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon & Acknowledgements</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
