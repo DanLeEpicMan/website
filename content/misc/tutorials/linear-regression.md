@@ -160,7 +160,7 @@ $$
 $$
 
 Note that 
-1. $\mathbf{Y}$ is the vector of **true** values and $\hat{\mathbf{Y}}$ is the vector of **predicted** values. 
+1. $\mathbf{Y} = (y_1, \dots, y_n)$ is the vector of **true** values, $\hat{\mathbf{Y}} = (\hat{y}_1, \dots, \hat{y}_n)$ is the vector of **predicted** values, and $E = ( \epsilon_1, \dots, \epsilon_n )$ is the **error** vector. 
 2. Our predictions depend entirely on our coefficients $\vec{\beta}$, i.e. $\hat{\mathbf{Y}} = \mathbf{X}\vec{\beta}$.
 
 ## Finding our Coefficients
