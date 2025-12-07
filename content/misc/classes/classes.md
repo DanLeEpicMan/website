@@ -76,8 +76,8 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 - Winter 2024
   - <small>**MATH 111B**: Ring Theory</small>
     - <small>*Rings, ideals, factorizations.*</small>
-  - <small>**MATH 137A**: Graph Theory</small>
-    - <small>*Paths, circuits, trees, coloring, planarity.*</small>
+  - <small>**MATH 132A**: Optimization</small>
+    - <small>*Constrained and unconstrained optimization, linear search methods, gradient methods, Newton and Quasi-Newton methods.*</small>
   - <small>**MATH 260HH**: Seminar in Mathematical Machine Learning</small>
   - <small>**PSTAT 215A**: Bayesian Inference</small>
     - <small>*Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.*</small>
@@ -120,12 +120,14 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 
 ### Freshman
 - Spring 2022
+  - <small>**INT 84AR**: Honors Seminar in Mathematics</small>
   - <small>**MATH 6B**: Multivariable Calculus</small>
   - <small>**MATHCS 120FV**: Game Theory</small>
     - <small>*Combinatorial game theory, zero-sum games, nim, Nash equilibrium.*</small>
   - <small>**MATHCS 117**: Introduction to Real Analysis</small>
     - <small>*Limits, sequences and series, continuity.*</small>
 - Winter 2022
+  - <small>**INT 84CN**: Honors Seminar in Afrofuturism</small>
   - <small>**MATH 4B**: Differential Equations</small>
   - <small>**MATH 6A**: Multivariable Calculus</small>
   - <small>**MATHCS 101B**: Problem Solving II</small>
