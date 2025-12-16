@@ -51,7 +51,7 @@ data = pd.DataFrame(
 sns.scatterplot(data, x='X', y='Y')
 ```
 <figure>
-    <img src='/images/tutorials/linear-regression/data.png' />
+    <img src='/images/tutorials/linear-regression/data.png'/>
 </figure>
 
  One may object that using simulated data not only begs the question, but also fails to demonstrate applicability. While I agree, finding data compatible with linear regression is incredibly easy. Furthermore, linear regression is so incredibly fundamental that its applicability is not something that needs to be demonstrated.
@@ -68,7 +68,7 @@ $$
     Y = f(X_1, \dots, X_p) + \epsilon
 $$
 
-Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> is called **regression**.
+Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error is called<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> **regression**.
 
 <p id='footnote-a' class='opacity-60'><small><b>a</b>: This isn't always true. Regression is really about finding the "best possible" function, where "best possible" is defined in a clear and tractable way. For our purposes though, let's stick with this framework of minimizing error.</small></p>
 
@@ -160,7 +160,7 @@ $$
 $$
 
 Note that 
-1. $\mathbf{Y}$ is the vector of **true** values and $\hat{\mathbf{Y}}$ is the vector of **predicted** values. 
+1. $\mathbf{Y} = (y_1, \dots, y_n)$ is the vector of **true** values, $\hat{\mathbf{Y}} = (\hat{y}_1, \dots, \hat{y}_n)$ is the vector of **predicted** values, and $E = ( \epsilon_1, \dots, \epsilon_n )$ is the **error** vector. 
 2. Our predictions depend entirely on our coefficients $\vec{\beta}$, i.e. $\hat{\mathbf{Y}} = \mathbf{X}\vec{\beta}$.
 
 ## Finding our Coefficients
@@ -277,6 +277,10 @@ test_data = pd.DataFrame(
 sns.scatterplot(test_data, x='X', y='Y')
 ```
 
+<figure>
+    <img src='/images/tutorials/linear-regression/test_data.png'/>
+</figure>
+
 Note that this data came from the exact same source as the original data. Now, to compare our models over this new, unseen data
 
 ```python
@@ -305,7 +309,7 @@ sns.lineplot(test_data, x='X', y=Yhat_test_lobf, color='g', ax=ax[1])
     <img src='/images/tutorials/linear-regression/poly_vs_lobf_test.png'>
 </figure>
 
-It's fairly clear that the polynomial models does a rather poor job at predicting the new data, especially on the tails. (It's not obvious in the picute, but the right-most point has a prediction in the billions.) While it felt like the polynomial model did a good job with the original data, it does a poor job with everything else.
+It's fairly clear that the polynomial models does a rather poor job at predicting the new data, especially on the tails. (It's not obvious in the picture, but the right-most point has a prediction in the billions.) While it felt like the polynomial model did a good job with the original data, it does a poor job with everything else.
 
 This phenomenon is called **overfitting**. Overfitting means that the model fits its **training data** too well, to the point that it's all but useless for outside data. In other words, we dug ourselves into a situation where the model is only telling us what we already know, and nothing more.
 
@@ -327,7 +331,7 @@ There are many packages that will do this partitioning for you. [Scikit-learn ha
 
 ## $R^2$ Score
 
-The $R^2$ score is a measurement of how well explanatory (inputs) variance predicts the response variance. Setting $\bar{y}$ as the average of the responses, $R^2$ is defined as
+The $R^2$ score is a measurement of how well explanatory variance predicts the response variance. Setting $\bar{y}$ as the average of the responses, $R^2$ is defined as
 $$
 \begin{align}
     R^2 &= \frac{\sum\_{i=1}^{n} (\hat{y}_i - \bar{y})^2}{\sum\_{i=1}^{n} (y\_i - \bar{y})^2} \\\\
@@ -335,11 +339,11 @@ $$
     &\overset{(!)}{=} 1 - \frac{\sum\_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum\_{i=1}^{n} (y\_i - \bar{y})^2}
 \end{align}
 $$
-(1) gives us a clear interpretation of $R^2$ as a ratio of variances. More specifically, the numerator is proportional to the variance of the predictions, while the denominator is proportional to the variance of the response variables. In essence, $R^2$ captures the proportion of response variance explained by the predictions.
+(1) gives us a clear interpretation of $R^2$ as a ratio of variances. More specifically, the numerator is proportional to the variance of the predictions, while the denominator is proportional to the variance of the response variables. In essence, $R^2$ tells us the amount of response variance explained by the predictions.
 
-(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a> because the numerator is precisely $||E||^{2}$, making its computation much more efficient.
+(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because it's more intuitive to write a metric in terms of error<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a>.
 
-<p id='footnote-c' class='opacity-60'><small><b>c</b>: Well, it's preferred because it's more intuitive to write a metric explicitly in terms of error. The connection to $||E||^2$ is not always the reason, as not all statistical software may have this handy.</small></p>
+<p id='footnote-c' class='opacity-60'><small><b>c</b>: Note that the numerator in (2) is precisely $||E||^2$.</small></p>
 
 ```python
 print(
@@ -359,13 +363,13 @@ As we can see, the polynomial model is performing terribly, achieving a score we
 However, there is much more about $R^2$
 1. It's mainly useful for evaluating performance on your training data, as interpreting it as a ratio between variances relies on this fact. Evaluating it on outside data loses this interpretation, and thus much its value.
     - The attentive reader will note that we did precisely this in the above example.
-2. It has very questionable efficacy. Good models can have low $R^2$, and terrible models can have high $R^2$.
+2. It has very questionable efficacy, as "explained variance" is not always a desirable outcome. Good models can have low $R^2$, and terrible models can have high $R^2$.
     - In fact, high $R^2$ ($>0.95$) is a good sign of overfitting.
 3. $R^2$ says nothing more beyond what's outlined above. It depends on many different things, and using it for model selection is very dubious.
 
 [This](https://stats.stackexchange.com/a/13317) stack exchange answer goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
 
-<p id='footnote-d' class='opacity-60'><small><b>d</b>: This is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.</small></p>
+<p id='footnote-d' class='opacity-60'><small><b>d</b>: Intuitively, negative $R^2$ is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.</small></p>
 
 ## Mean Squared Error
 
