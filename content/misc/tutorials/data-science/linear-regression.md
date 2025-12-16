@@ -409,3 +409,7 @@ Going over every evaluation metric available is simply not a good use of our tim
 # Conclusion
 
 All this just about summarizes an overview into linear regression. Yet, there's a much bigger world I have not mentioned whatsoever. Namely, alternatives to least squares, as well as the statistical inference and interpretability behind linear regression. I intend to write future tutorials covering these topics, particularly regularization and a statistical-based overview.
+
+### Acknowledgements
+
+The projection image found under "The Least Squares Approach" section was adapted from Observation Theory: Estimating the Unknown by [TU Delft OpenCourseWare](https://ocw.tudelft.nl/), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
