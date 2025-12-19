@@ -1,6 +1,7 @@
 +++
 title='Statistics'
-sort_by = 'date'
+sort_by = 'weight'
 render = false
+transparent = true
 weight = 2
 +++

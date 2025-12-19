@@ -25,7 +25,7 @@
     <h2>{{ sub.title }}</h2>
     
     <ul>
-      {% for page in sub.pages %}
+      {% for page in sub.pages | reverse %} <!-- Lowest weight is last -->
         <li>
           <div class="my-2 flex items-center justify-between">
             <a class="secondary-link" href="{{ page.permalink }}">{{ page.title }}</a>
