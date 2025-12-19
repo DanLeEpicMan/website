@@ -208,8 +208,8 @@ While $\varepsilon$ (epsilon) may be any positive real number, we typically thin
 Property (1) ensures that the supremum is an upper bound, while property (2) ensures that it is the smallest such upper bound. Intuitively, property (2) says that if we nudge the supremum down by any amount, it will no longer be an upper bound. The same logic applies to the infimum.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/illustration_of_supremum.png" alt="An illustration of the bounds of a set." style="height: 150%"/>
-    <figcaption>A visual illustration of the supremum. If we nudge $\sup M$ to the left by any amount, we can find a blue point greater than it. Hence, it ceases to be an upper bound. Credit to Wikimedia Commons.</figcaption>
+    <img src="/images/tutorials/real-analysis/illustration_of_supremum.png" alt="An illustration of the bounds of a set." style="height: 150px"/>
+    <figcaption>If we nudge $\sup M$ to the left by any amount, we can find a blue point greater than it. Hence, it ceases to be an upper bound. Credit to Wikimedia Commons.</figcaption>
 </figure>
 
 In our previous example of $M = [0, 1)$, we have that $\sup M = 1$ and $\inf M = 0$, since for any $\varepsilon > 0$, we can always find numbers in $M$ that are greater than $1-\varepsilon$ and less than $0+\varepsilon$.
@@ -229,13 +229,189 @@ $$
     A = \\{ x \in \mathbb{Q} : x^2 < 2 \\}
 $$
 
-Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no **smallest** rational upper bound of $A$, as we can always find one that's smaller by the density of rationals in reals.
+Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no **smallest** rational upper bound of $A$.
 
-<p id='footnote-d' class='opacity-60'><small><b>d</b>: No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While it is possible to prove completeness directly, it is well-beyond the scope of this article.</small></p>
+<p id='footnote-d' class='opacity-60'><small><b>d</b>: No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.</small></p>
+
+# Sequences and Limits
+
+By far the most important concept in analysis is that of sequences and limits.
+
+However, we must establish a very important inequality first.
+
+{% admonition(type='tip', title='Triangle Inequality') %}
+
+For all $x, y \in \mathbb{R}$,
+$$
+    |x + y| \leq |x| + |y|
+$$
+
+{% end %}
+
+This says that traveling along a path of length $|x + y|$ is always more efficient than moving along two paths of lengths $|x|$ then $|y|$. While they may be equal when $x$, $y$ are both positive/negative, this becomes an inequality when $x, y$ no longer share a sign.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/triangle_inequality.png" alt="An illustration of the triangle inequality."/>
+    <figcaption>Visually, the triangle inequality says that a detour is never quicker than a straight line. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+<details>
+    <summary>Proof</summary>
+    Observe that
+    $$
+    \begin{aligned}
+        &|x + y| \leq |x| + |y| \\\\
+        \iff &(x + y)^2 \leq (|x| + |y|)^2 \\\\
+        \iff &x^2 + 2xy + y^2 \leq x^2 + 2|xy| + y^2 \\\\
+        \iff &xy \leq |xy|
+    \end{aligned}
+    $$
+    And the last line is true since $a \leq |a|$ always.
+    <p>∎</p>
+</details>
+
+## Sequences
+
+{% admonition(type='note', title='Sequences') %}
+
+A **sequence** $a$ is a function $a: \mathbb{N} \to \mathbb{R}$. We denote the value of the sequence at $n \in \mathbb{N}$ as $a_n = a(n)$. 
+
+The notation $\\{a_n \\}\_{n=1}^{N}$ refers to the set $\\{a\_1, a\_2, \dots, a\_N\\}$. Similarly, $\\{ a\_n \\}\_{n=1}^{\infty} = \\{a\_1, a\_2, \dots \\}$
+
+{% end %}
+
+Thinking of a sequence as a function is rather technical. Truthfully, a sequence is a list of numbers. For instance, the Fibonacci sequence is given by
+$$
+    \\{ F_n \\}_{n=1}^{\infty} = \\{ 1, 1, 2, 3, 5, 8, 13, 21, \dots \\}
+$$
+
+{% admonition(type='note', title='Convergent Sequences') %}
+
+We say that a sequence $a_n$ **converges** to $a \in \mathbb{R}$ if, for every $\varepsilon > 0$, we can find $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+    n \geq N \implies |a_n - a| < \varepsilon
+$$
+
+To denote convergence to $a$, we may write $a_n \to a$ or $\lim\limits_{n \to \infty} a_n = a$. 
+
+If a sequence doesn't converge to any real number, we say it **diverges**.
+
+{% end %}
+
+The notation $N(\varepsilon)$ simply means that $N$ may depend on $\varepsilon$. For example, define the sequence $a_n = \frac{1}{n}$. For any $\varepsilon > 0$, choose $N \in \mathbb{N}$ such that $N > \frac{1}{\varepsilon}$ (possible because $\mathbb{N}$ is unbounded from above). Then we have that
+$$
+    n \geq N \implies \left| a_n - 0 \right| = \frac{1}{n} \leq \frac{1}{N} < \varepsilon
+$$
+Which says precisely that $a_n \to 0$.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/convergence.png" alt="An illustration of convergence."/>
+    <figcaption>As long as $n$ is sufficiently large, we can guarantee that the distance between $a_n$ and $a$ is less than $\varepsilon$. Made with Desmos.</figcaption>
+</figure>
+
+To give an example of divergence, consider the sequence $b_n = (-1)^{n}$. Then we can enumerate $b_n$ as $\\{-1, 1, -1, 1, \dots\\} = \\{ -1, 1 \\}$. Thus, if $b_n \to b$, then either $b = -1$ or $b = 1$.
+
+We first show that $b = 1$ is impossible. By definition of $b_n$,
+$$
+|b_n - 1| = \begin{cases}
+    2 &\textrm{if $n$ is odd} \\\\
+    0 &\textrm{if $n$ is even}
+\end{cases}
+$$
+
+Indeed, if we take $\varepsilon = 0.01$, then we cannot guarantee that $|b_n - 1| < \varepsilon$ **for every $n$ sufficiently large.** No matter how large we make $N$, we can always find some $n \geq N$ such that $|b_n - 1| \geq \varepsilon$. This says precisely that $b_n$ does not converge to $1$, i.e. $b_n \not\to 1$.
+
+The case for $b = -1$ is identical to above. Therefore, $b_n$ diverges.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/divergence.png" alt="An illustration of divergence."/>
+    <figcaption>No matter how large we make $N$, we can always find some $n \geq N$ such that $b_n$ lies outside the green tube. Thus, $b_n \not\to 1$. Made with Desmos.</figcaption>
+</figure>
+
+Note that there is one minor, but very important, detail I'm glossing over.
+
+{% admonition(type='tip', title='Uniqueness of Limits') %}
+
+If $a_n \to a$, then $a$ is unique. More formally, if $a_n \to a$ and $a_n \to b$, then $a = b$.
+
+{% end %}
+
+This essentially means that our notion of convergence is well-defined, and that sequences may only converge to one number (hence, why the $b_n$ example above failed).
+
+<details>
+    <summary>Proof</summary>
+    Assume $a_n \to a$ and $a_n \to b$. Pick any $\varepsilon > 0$. Since $a_n \to a$, we can find $N_a \in \mathbb{N}$ such that
+    $$
+        n \geq N_a \implies |a_n - a| < \frac{\varepsilon}{2}
+    $$
+    Similarly, we can find $N_b \in \mathbb{N}$ such that
+    $$
+        n \geq N_b \implies |a_n - b| < \frac{\varepsilon}{2}
+    $$
+    So when $n \geq \max\{ N_a, N_b \}$, we have
+    $$
+        |a - b| = |(a_n - b) - (a_n - a)| \leq |a_n - a| + |a_n - b| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
+    $$
+    Note that the first inequality is simply the triangle inequality. Therefore, $|a - b| < \varepsilon$ for any $\varepsilon > 0$. Since $\varepsilon$ was arbitrary, we must have that $|a - b| = 0 \implies a = b$
+    <p>∎</p>
+</details>
+
+## Cauchy Sequences
+
+Cauchy sequences, named after famous mathematician [Augustin-Louis Cauchy](https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy), form an incredibly important class of sequences.
+
+{% admonition(type='note', title='Cauchy Sequence') %}
+
+Let $a_n$ be a sequence. We say that $a_n$ is a **Cauchy sequence** if, for every $\varepsilon > 0$, there exists $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+    n, m \geq N \implies |a_n - a_m| < \varepsilon
+$$
+
+{% end %}
+
+Intuitively, a Cauchy sequence is a sequence such that the terms get arbitrarily close to each other. Convergent sequences have this property.
+
+{% admonition(type='tip', title='Convergent Sequences are Cauchy') %}
+
+If $a_n \to a$, then $a_n$ is Cauchy.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    Pick any $\varepsilon > 0$. Since $a_n \to a$, we can find $N \in \mathbb{N}$ such that
+    $$
+        n \geq N \implies |a_n - a| < \frac{\varepsilon}{2}
+    $$
+    Then for any $m, n \geq N$, we have that
+    $$
+    |a_n - a_m| = |(a_n - a) - (a_m - a)| \leq |a_n - a| + |a_m - a| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
+    $$
+    Where the first inequality follows from the triangle inequality.
+    <p>∎</p>
+</details>
+
+Marvelously, Cauchy sequences capture the idea of convergence without invoking convergence. Instead, it relies on the idea of "closeness".
+
+One may ask whether there exists non-convergent Cauchy sequences. The answer is it depends. The answer is also precisely what separates $\mathbb{R}$ from $\mathbb{Q}$.
+
+{% admonition(type='note', title='Complete Spaces') %}
+
+Let $E$ be a subset of $\mathbb{R}$. We say $E$ is **complete**<a href='#footnote-e' style='text-decoration: none'><sup class='opacity-60'>e</sup></a> if every Cauchy sequence in $E$ converges to a point in $E$.
+
+{% end %}
+
+Intuitively, a space is complete if there aren't any "gaps". To be incomplete means that a sequence may approach a hole with nothing in it. As such, $\mathbb{R}$ is complete, while $\mathbb{Q}$ isn't. This is to say that **every Cauchy sequence converges in $\mathbb{R}$, but may not converge in $\mathbb{Q}$.**
+
+<p id='footnote-e' class='opacity-60'><small><b>e</b>: We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.</small></p>
+
+
 
 # Point-Set Topology
 
-While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Viewing things under a topological lens often greatly simplifies ideas and builds good intuition.
+While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Topology is essentially "geometry without distance". Rather than quantifying "closeness" with distance, we quantify "closeness" with open sets.
+
+Viewing things under a topological lens often greatly simplifies problems. Moreover, it builds good intuition.
 
 ## Open Sets
 
@@ -331,8 +507,114 @@ An important relationship between open and closed sets is that they are compleme
     <p>∎</p>
 </details>
 
+## Sequences and Topology
+
+At this point, you may be inclined to ask why topology diversion. After all, there's no obvious connection between the prior discussion and topology.
+    
+I'm here to say that they're really the same thing, just viewed under different lenses. Let's revisit the example
+$$
+    A = \left\\{ \frac{1}{n} : n \in \mathbb{N} \right\\}
+$$
+
+Now define $a_n = \frac{1}{n}$. Then $ \\{ a_n \\}\_{n=1}^{\infty} = A$. We showed that $a_n \to 0$, and that $0$ is the only limit point of $A$. Indeed, these are both saying the same thing. To say $a_n \to 0$ means that $n \geq N \implies |a_n - 0| < \varepsilon$. In other words, if $n \geq N$, the neighborhood $N_\varepsilon (0)$ contains $a_n$.
+
+This observation is formalized with the following theorem
+
+{% admonition(type='tip', title='Topological Convergence') %}
+
+Let $a_n$ be a sequence. Then $a_n \to a$ if and only if every open set $U$ containing $a$ (i.e. $a \in U$ and $U$ is open) also contains all, but finitely many, elements of $a_n$.
+
+{% end %}
+
+Note that "all, but finitely many" is another way of saying $\textrm{There exists $N$ such that for } n \geq N\dots$
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $a_n \to a$, and let $U$ be an open set containing $a$. By definition, we may find some $\varepsilon > 0$ such that $N_\varepsilon (a) \subseteq U$. Pick $N$ such that $n \geq N \implies |a_n - a| < \varepsilon$. Then $n \geq N \implies a_n \in N_\varepsilon (a) \subseteq U$, so $U$ contains all, but finitely many, $a_n$.
+    </p>
+    <p>
+    Now by way of contrapositive, assume $a_n \not\to a$. Then we can find $\varepsilon > 0$ such that $|a_n - a| \geq \varepsilon$ for infinitely many $n$. In other words, the open set $N_\varepsilon (a)$ is missing infinitely many $a_n$. Thus, we found an open set containing $a$ that also fails to contain <b>all, but finitely many</b>, $a_n$.
+    </p>
+    <p>∎</p>
+</details>
+
+This formalizes topology as "geometry without distance", since convergence is characterized entirely by open sets. In other words, we characterize convergence not by distance, but by membership in certain sets.
+
+# Functions and Continuity
+
+Extending all our discussion to functions, and thus making analysis much more applicable beyond sequences.
+
+## Usual Notions of Continuity
+
+There are many definitions of continuity, with some being more useful than others. We focus on 3 of them.
+
+{% admonition(type='note', title='Epsilon-Delta Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every $\varepsilon > 0$, we can find a $\delta = \delta(x_0, \varepsilon) > 0$ such that
+
+$$
+    y \in X \textrm{ and } |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+$$
+
+{% end %}
+
+Note that $\delta = \delta(x_0, \varepsilon)$ means that $\delta$ may depend on both $x_0$ and $\varepsilon$.
+
+Intuively, this definition says the following. For every error-bound $\varepsilon$ we impose in the codomain, we can find a corresponding error-bound $\delta$ in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ **preserves "closeness" at $f(x_0)$**.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.png" alt="An illustration of continuity."/>
+    <figcaption>For every error-bound $\varepsilon$ around $f(x_0)$, we can find a corresponding error-bound $\delta$ around $x_0$. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+While this definition is good, there is another, and more natural in my opinion, way to think of continuity.
+
+{% admonition(type='note', title='Sequential Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every sequence $x_n$ such that $x_n \to x_0$, we have that $f(x_n) \to f(x_0)$. Writing this formally,
+
+$$
+    x_n \to x_0 \implies f(x_n) \to f(x_0)
+$$
+
+{% end %}
+
+This definition has an immediate interpretation. **If a function is continuous at $x_0$, then it preserves sequences that converge to $x_0$**. In other words, a function is continuous if and only if it preserves convergence.
+
+Naturally, I would not be introducing two separate definitions if they weren't really the same thing.
+
+{% admonition(type='tip', title='Sequental and Epsilon-Delta Continuity') %}
+
+A function $f$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it is sequentially continuous at $x_0$
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $f$ is $(\varepsilon, \delta)$-continuous, and let $\varepsilon > 0$. Take any sequence $x_n$ such that $x_n \to x_0$. Since $f$ is $(\varepsilon, \delta)$-continuous, we may find a $\delta$ such that
+    $$
+        |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+    $$
+    Pick $N$ such that $n \geq N \implies |x_n - x_0| < \delta$. Then we have that $|f(x_0) - f(x_n)| < \varepsilon$. Hence, $f(x_n) \to f(x_0)$
+    </p>
+    <p>
+    Now assume $f$ is sequentially continuous at $x_0$, and let $\varepsilon > 0$. 
+    </p>
+    <p>∎</p>
+</details>
+
+
+
+# Conclusion
+
+Note that this tutorial serves as a mild introduction, and misses on a few important topics. In particular, this guide lacks discussion on compact sets and subsequences, both of which are also important to analysis. Notwithstanding, I did not want this guide to run on for too long, so I omitted their discussion.
+
 ### Acknowledgments
 
-1. All Desmos graphs were created by me.
+1. All [Desmos](https://www.desmos.com/) graphs were created by me.
 2. [The illustration of the supremum](https://commons.wikimedia.org/wiki/File:Illustration_of_supremum.svg) is provided by Wikimedia Commons user Stephan Kulla, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-3. [The illustration of open sets](https://commons.wikimedia.org/wiki/Category:Open_sets) was modified by me, originally provided by Wikimedia Commons.
+3. [The triangle inequality illustration](https://commons.wikimedia.org/wiki/File:Vector-triangle-inequality.svg) is provided by Wikimedia Commons user MartinThoma, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+4. [The illustration of open sets](https://commons.wikimedia.org/wiki/Category:Open_sets) was modified by me, originally provided by Wikimedia Commons.
+5. [The illustration of $(\varepsilon, \delta)$-continuity](https://commons.wikimedia.org/wiki/File:Illustration_for_epsilon-delta_definition_of_continuity_4.svg) is provided by Wikimedia Commons.
