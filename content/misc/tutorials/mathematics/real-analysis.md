@@ -1,7 +1,8 @@
 +++
 title = "Real Analysis" 
 description = "An introduction into real analysis." 
-date = '2025-12-16'
+date = '2025-12-19'
+weight = 1
 +++
 
 # Introduction 
@@ -23,6 +24,19 @@ Analysis is tricky for me to define. From Wikipedia:
 Which is true, but not particularly illuminating. Another common definition of analysis is the rigorous undertones of calculus. Perhaps accurate, but still unsatisfying. 
 
 **To me, real analysis is the study of approximation and limiting behavior.** While this is the most simplistic definition, I find it the most intuitive. After all, real analysis is the foundation of much of applied mathematics, which itself is married to approximation.
+
+## Why learn analysis?
+
+This is a question I commonly hear from non-math people, especially people going into statistics or data science programs that require analysis as a course.
+
+Truthfully, you don't *need* analysis for most applications. In fact, many people in industry probably know next-to-nothing about it. In terms of skills useful for a job, analysis is certainly nowhere near the top.
+
+However, broadly labeling analysis as "useless math" is, in my opinion, missing a huge chunk of the story. **Analysis is largely what separates graduate-level (i.e. "advanced") work in statistics & data science from undergraduate-level work.** This is especially true for research in those fields, as well as research in any field adjacent to applied math (e.g. technology, engineering, etc.).
+
+Anyone at the graduate-level is certainly not using analysis in their day-to-day job, so it's wrong to view analysis as something that offers many direct valuable skills. Rather, it offers a level of intuition and a mathematical foundation that enables understanding of much deeper topics. Many advanced topics become incredibly simple with a sufficient math background, and analysis is absolutely fundamental to those advanced topics.
+
+So why study analysis? **Because it makes many things simpler to understand.** Especially if you plan on going into a research-oriented role, as the intuitions become necessary rather than a luxury.
+
 
 # The Basics
 
@@ -650,7 +664,7 @@ Let $f: X \to \mathbb{R}$. Then $f$ is topologically continuous if and only if i
     $$
         f^{-1} \left( N_\varepsilon (f(x_0)) \right) \textrm{ is open}
     $$
-    Since $x_0 \in N_\varepsilon (f(x_0))$, we can find some $\delta > 0$ such that $N_\delta (x_0) \subseteq f^{-1} \left( N_\varepsilon (f(x_0)) \right)$. This says precisely that, if $y \in N_\delta (x_0)$, then we have
+    Since $x_0 \in f^{-1} \left( N_\varepsilon (f(x_0)) \right)$, we can find some $\delta > 0$ such that $N_\delta (x_0) \subseteq f^{-1} \left( N_\varepsilon (f(x_0)) \right)$. This says precisely that, if $y \in N_\delta (x_0)$, then we have
     $$
         |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
     $$

@@ -2,6 +2,7 @@
 title = "Introduction to Linear Regression" 
 description = "An overview of linear regression from a data science angle." 
 date = '2025-11-27'
+weight = 1
 +++
 
 ```python
