@@ -1,0 +1,691 @@
++++
+title = "Real Analysis" 
+description = "An introduction into real analysis." 
+date = '2025-12-16'
++++
+
+# Introduction 
+
+Welcome to my guide on **real analysis**! This is largely based on my notes from courses I took while an undergraduate math major. My goal is to offer an introduction into the subject that is accessible to non-math majors, while still maintaining mathematical rigor. My plan is to cover some (but not all) of the fundamentals, up until differentation and integration theory.
+
+Note that this blog is not meant to supplant a course in analysis. A proper introduction into real analysis will require a textbook. I personally recommend *Understanding Analysis* by Stephen Abbott, or *Principles of Mathematical Analysis* by Walter Rudin. The former is significantly more accessible, while the latter is a gold standard among undergraduate curriculums.
+
+### Prerequisites
+
+Due to the nature of the subject, an above average mathematical maturity is necessary. Familiarity with proofs, set theory, and functions is assumed. Discrete mathematics is typically sufficient for this level of familiarity. These are not details that can be abstracted away, as doing so is antithetical to the goals of real analysis.
+
+# What is Real Analysis?
+
+Analysis is tricky for me to define. From Wikipedia:
+
+> Real analysis studies the behavior of real numbers, sequences and series of real numbers, and real functions.
+
+Which is true, but not particularly illuminating. Another common definition of analysis is the rigorous undertones of calculus. Perhaps accurate, but still unsatisfying. 
+
+**To me, real analysis is the study of approximation and limiting behavior.** While this is the most simplistic definition, I find it the most intuitive. After all, real analysis is the foundation of much of applied mathematics, which itself is married to approximation.
+
+# The Basics
+
+We begin covering real analysis by first discussing different types of numbers.
+
+## Basic Number Systems
+
+{% admonition(type='note', title='The Natural Numbers and Integers') %}
+
+The **natural numbers**, denoted $\mathbb{N}$, are the set of whole numbers, starting from<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> 1. I.e. 
+$$
+    \mathbb{N} = \\{1, 2, 3, \dots \\}
+$$
+
+The **integers**, denoted<a href='#footnote-b' style='text-decoration: none'><sup class='opacity-60'>b</sup></a> $\mathbb{Z}$, are the set of whole numbers, negative numbers, and 0. I.e. 
+$$
+    \mathbb{Z} = \\{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \\}
+$$
+
+{% end %}
+
+Both the natural numbers and integers form the most basic type of number system. In some sense, we can think of them as a starting point.
+
+{% admonition(type='note', title='The Rational Numbers') %}
+
+The **rational numbers**, denoted $\mathbb{Q}$, are the set of ratios of integers, i.e. 
+$$
+    \mathbb{Q} = \left\\{ \frac{a}{b} : a, b \in \mathbb{Z}, b \neq 0 \right\\}
+$$
+Generally, we assume that $a, b$ have no common factors (other than 1).
+
+{% end %}
+
+We call these "rational" numbers because they are a ratio of simpler building blocks, the integers. Indeed, the rational numbers encompass a vast majority of numbers we encounter in everyday life. 
+
+Moreover, the rationals have a nice property called **density**. Between any two rational numbers, there exists another rational. Explicitly, if $r < s$ are both rational, then their average $\frac{r + s}{2}$ is also rational, and $r < \frac{r + s}{2} < s$. In some sense, this means the rationals are "fine", unlike the integers, which are "coarse".
+
+However, despite their ubiquity and density, the rationals do not encompass all numbers.
+
+{% admonition(type='tip', title='Irrationality of $\sqrt{2}$') %}
+
+The number $\sqrt{2}$, defined as the positive number such that $\left(\sqrt{2}\right)^2 = 2$, is not rational.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    Assume the contrary, i.e. that $\sqrt{2}$ is rational. Then by definition,
+    $$
+        \sqrt{2} = \frac{a}{b} \quad \textrm{for } a, b \in \mathbb{Z}, b \neq 0
+    $$
+    Without loss of generality, we may assume that $a, b$ share no common factors. Rearranging the equation, we have that
+    $$
+        2b^2 = a^2
+    $$
+    This implies that $a^2$ is even, therefore $a$ is even (if $a$ weren't even, then $a^2$ can't be even). Thus, $a = 2k$ for some $k \in \mathbb{Z}$. As a result, we must have that
+    $$
+        2b^2 = (2k)^2 = 4k^2 \implies b^2 = 2k^2
+    $$
+    So $b^2$ is even, therefore $b$ is even. This means that $a, b$ share a common factor of 2, contradicting our assumption. Thus, $\sqrt{2}$ is irrational. 
+    <p>∎</p>
+</details>
+
+This "incompleteness" of $\mathbb{Q}$ motivates the definition of the real numbers.
+
+<p id='footnote-a' class='opacity-60'><small><b>a</b>: This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers <b>including</b> 0.</small></p>
+
+<p id='footnote-b' class='opacity-60'><small><b>b</b>: We use $\mathbb{Z}$ for integers because of the German word "Zahlen", meaning "numbers".</small></p>
+
+## The Real Numbers
+
+A proper definition of the real numbers is incredibly technical, and for this article, quite pedantic. We may instead rely on the following intuitive definition.
+
+{% admonition(type='note', title='The Real Numbers') %}
+
+The **real numbers**, denoted $\mathbb{R}$, is the set of all numbers that can be represented with an infinite decimal expansion. E.g. $\sqrt{2} = 1.41421\dots$
+
+{% end %}
+
+It's easy to see that $\mathbb{Q} \subset \mathbb{R}$. Moreover, just like the rationals, the reals have **density**. If $x < y$ are both real numbers, then their average $\frac{x + y}{2}$ is also real, and $x < \frac{x + y}{2} < y$. 
+
+But more importantly, there is a profound relationship between the rationals and the reals.
+
+{% admonition(type='tip', title='Density of the Rationals in the Reals') %}
+
+Between any two real numbers, there exists a rational number. 
+
+Explicitly, if $x < y$ are both real, then there exists $r \in \mathbb{Q}$ such that $x < r < y$.
+
+{% end %}
+
+Unfortunately, we have to be a bit more clever than taking the average, since the average of two reals may not be rational.
+
+<details>
+    <summary>Proof</summary>
+    Let $x < y$ be real numbers. Then $y - x > 0$. Since $\mathbb{N}$ is unbounded<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a> from above, we can find $n \in \mathbb{N}$ such that
+    $$
+    \begin{aligned}
+        &n > \frac{1}{y - x} \\\\
+        \implies &\frac{1}{n} < y - x
+    \end{aligned}
+    $$
+    Let $m \in \mathbb{Z}$ be the largest integer such that $m \leq nx$. Note that $m$ may be negative, and that $\mathbb{Z}$ has no lower bound, so such an $m$ exists. Then we have that
+    $$
+    \begin{aligned}
+        &m \leq nx < m + 1 \\\\
+        \implies &\frac{m}{n} \leq x < \frac{m + 1}{n}
+    \end{aligned}
+    $$
+    Putting this together, we have that
+    $$
+    \begin{aligned}
+        x &< \frac{m + 1}{n} \\\\
+        &= \frac{m}{n} + \frac{1}{n} \\\\
+        &\leq x + \frac{1}{n} \\\\
+        &< x + (y - x) \\\\
+        &= y
+    \end{aligned}
+    $$
+    Which says precisely that $x < \frac{m + 1}{n} < y$. Thus, $r = \frac{m + 1}{n} \in \mathbb{Q}$ is the desired rational number.
+    <p>∎</p>
+</details>
+
+An immediate consequence of this is that **every real number can be approximated by a rational number** to arbitrary precision. For example, $\sqrt{2}$ can be approximated by the rational number $1.41$ to two decimal places, $1.41421$ to five decimal places, and even $1.41421356237309504880$ to twenty decimal places. For any given error threshold and real number $x$, we can always find a rational number $r$ such that the distance between $x$ and $r$ is less than the error threshold.
+
+At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, infimums, and supremums.
+
+<p id='footnote-c' class='opacity-60'><small><b>c</b>: I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.</small></p>
+
+## The Infimum and Supremum
+
+A major concept in real analysis is the idea of bounds.
+
+{% admonition(type='note', title='Upper and Lower Bounds') %}
+
+Let $M$ be a subset of $\mathbb{R}$. We say that $a$ is an **upper bound** of $M$ if
+$$
+    \textrm{For every } x \in M, \quad x \leq a
+$$
+
+Similarly, we say that $b$ is a **lower bound** of $M$ if
+$$
+    \textrm{For every } x \in M, \quad x \geq b
+$$
+
+{% end %}
+
+For instance, let $M = [0, 1)$. Then 2 is an upper bound of $M$, and -1 is a lower bound of $M$.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/upper_lower_bounds.png" alt="An illustration of the bounds of a set." />
+    <figcaption>Lower bound in blue, $M$ in green, and upper bound in red. Made with Desmos.</figcaption>
+</figure>
+
+However, it's not hard to see that we can do better. 1.5 and -0.5 are also upper and lower bounds, respectively. In fact, there are infinitely many upper and lower bounds for $M$. 
+
+This motivates the definitions of the **supremum** and **infimum**, which are Latin for "above" and "below", respectively.
+
+{% admonition(type='note', title='Supremum and Infimum') %}
+
+Let $M$ be a subset of $\mathbb{R}$. The **supremum** of $M$, denoted $\sup M$, is the least upper bound of $M$. More rigorously, $\sup M$ satisfies
+
+$$
+    \begin{aligned}
+        &\textrm{(1) For every } x \in M, &&x \leq \sup M \\\\
+        &\textrm{(2) For every } \varepsilon > 0, &&\sup M - \varepsilon \textrm{ is not an upper bound of } M
+    \end{aligned}
+$$
+
+Similarly, the **infimum** of $M$, denoted $\inf M$, is the greatest lower bound of $M$. More rigorously, $\inf M$ satisfies
+
+$$
+    \begin{aligned}
+        &\textrm{(I) For every } x \in M, &&x \geq \inf M \\\\
+        &\textrm{(II) For every } \varepsilon > 0, &&\inf M + \varepsilon \textrm{ is not a lower bound of } M
+    \end{aligned}
+$$
+
+{% end %}
+
+While $\varepsilon$ (epsilon) may be any positive real number, we typically think of it as an astronomically tiny number.
+
+Property (1) ensures that the supremum is an upper bound, while property (2) ensures that it is the smallest such upper bound. Intuitively, property (2) says that if we nudge the supremum down by any amount, it will no longer be an upper bound. The same logic applies to the infimum.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/illustration_of_supremum.png" alt="An illustration of the bounds of a set." style="height: 150px"/>
+    <figcaption>If we nudge $\sup M$ to the left by any amount, we can find a blue point greater than it. Hence, it ceases to be an upper bound. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+In our previous example of $M = [0, 1)$, we have that $\sup M = 1$ and $\inf M = 0$, since for any $\varepsilon > 0$, we can always find numbers in $M$ that are greater than $1-\varepsilon$ and less than $0+\varepsilon$.
+
+Why do we care about the supremum and infimum? Because this is precisely what separates the real numbers from the rational numbers.
+
+{% admonition(type='tip', title='Completeness of the Reals') %}
+
+If $M$ is a non-empty subset of $\mathbb{R}$ that is bounded above, then $\sup M$ exists and is a unique, real number. We call this the **completeness property**<a href='#footnote-d' style='text-decoration: none'><sup class='opacity-60'>d</sup></a> of the real numbers.
+
+{% end %}
+
+While completeness is stated only in terms of the supremum, it's true for the infimum as well. We can simply consider the set $-M = \\{ -x : x \in M \\}$, and note that $\inf M = -\sup(-M)$.
+
+As we've been alluding to, $\mathbb{Q}$ is not complete. For example, let 
+$$
+    A = \\{ x \in \mathbb{Q} : x^2 < 2 \\}
+$$
+
+Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no **smallest** rational upper bound of $A$.
+
+<p id='footnote-d' class='opacity-60'><small><b>d</b>: No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.</small></p>
+
+# Sequences and Limits
+
+By far the most important concept in analysis is that of sequences and limits.
+
+However, we must first establish a very important inequality.
+
+{% admonition(type='tip', title='Triangle Inequality') %}
+
+For all $x, y \in \mathbb{R}$,
+$$
+    |x + y| \leq |x| + |y|
+$$
+
+{% end %}
+
+This says that traveling along a path of length $|x + y|$ is always more efficient than moving along two paths of lengths $|x|$ then $|y|$. While they may be equal when $x$, $y$ are both positive/negative, this becomes an inequality when $x, y$ no longer share a sign.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/triangle_inequality.png" alt="An illustration of the triangle inequality."/>
+    <figcaption>Visually, the triangle inequality says that a detour is never quicker than a straight line. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+<details>
+    <summary>Proof</summary>
+    Observe that
+    $$
+    \begin{aligned}
+        &|x + y| \leq |x| + |y| \\\\
+        \iff &(x + y)^2 \leq (|x| + |y|)^2 \\\\
+        \iff &x^2 + 2xy + y^2 \leq x^2 + 2|xy| + y^2 \\\\
+        \iff &xy \leq |xy|
+    \end{aligned}
+    $$
+    And the last line is true since $a \leq |a|$ always.
+    <p>∎</p>
+</details>
+
+## Sequences
+
+{% admonition(type='note', title='Sequences') %}
+
+A **sequence** $a$ is a function $a: \mathbb{N} \to \mathbb{R}$. We denote the value of the sequence at $n \in \mathbb{N}$ as $a_n = a(n)$. 
+
+The notation $\\{a_n \\}\_{n=1}^{N}$ refers to the set $\\{a\_1, a\_2, \dots, a\_N\\}$. Similarly, $\\{ a\_n \\}\_{n=1}^{\infty} = \\{a\_1, a\_2, \dots \\}$
+
+{% end %}
+
+Thinking of a sequence as a function is rather technical. Truthfully, a sequence is a list of numbers. For instance, the Fibonacci sequence is given by
+$$
+    \\{ F_n \\}_{n=1}^{\infty} = \\{ 1, 1, 2, 3, 5, 8, 13, 21, \dots \\}
+$$
+
+{% admonition(type='note', title='Convergent Sequences') %}
+
+We say that a sequence $a_n$ **converges** to $a \in \mathbb{R}$ if, for every $\varepsilon > 0$, we can find $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+    n \geq N \implies |a_n - a| < \varepsilon
+$$
+
+To denote convergence to $a$, we may write $a_n \to a$ or $\lim\limits_{n \to \infty} a_n = a$. 
+
+If a sequence doesn't converge to any real number, we say it **diverges**.
+
+{% end %}
+
+The notation $N(\varepsilon)$ simply means that $N$ may depend on $\varepsilon$. For example, define the sequence $a_n = \frac{1}{n}$. For any $\varepsilon > 0$, choose $N \in \mathbb{N}$ such that $N > \frac{1}{\varepsilon}$ (possible because $\mathbb{N}$ is unbounded from above). Then we have that
+$$
+    n \geq N \implies \left| a_n - 0 \right| = \frac{1}{n} \leq \frac{1}{N} < \varepsilon
+$$
+Which says precisely that $a_n \to 0$.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/convergence.png" alt="An illustration of convergence."/>
+    <figcaption>As long as $n$ is sufficiently large, we can guarantee that the distance between $a_n$ and $a$ is less than $\varepsilon$. Made with Desmos.</figcaption>
+</figure>
+
+To give an example of divergence, consider the sequence $b_n = (-1)^{n}$. Then we can enumerate $b_n$ as $\\{-1, 1, -1, 1, \dots\\} = \\{ -1, 1 \\}$. Thus, if $b_n \to b$, then either $b = -1$ or $b = 1$.
+
+We first show that $b = 1$ is impossible. By definition of $b_n$,
+$$
+|b_n - 1| = \begin{cases}
+    2 &\textrm{if $n$ is odd} \\\\
+    0 &\textrm{if $n$ is even}
+\end{cases}
+$$
+
+Indeed, if we take $\varepsilon = 0.01$, then we cannot guarantee that $|b_n - 1| < \varepsilon$ **for every $n$ sufficiently large.** No matter how large we make $N$, we can always find some $n \geq N$ such that $|b_n - 1| \geq \varepsilon$. This says precisely that $b_n$ does not converge to $1$, i.e. $b_n \not\to 1$.
+
+The case for $b = -1$ is identical to above. Therefore, $b_n$ diverges.
+
+<figure>
+    <img src="/images/tutorials/real-analysis/divergence.png" alt="An illustration of divergence."/>
+    <figcaption>No matter how large we make $N$, we can always find some $n \geq N$ such that $b_n$ lies outside the green tube. Thus, $b_n \not\to 1$. Made with Desmos.</figcaption>
+</figure>
+
+Note that there is one minor, but very important, detail I'm glossing over.
+
+{% admonition(type='tip', title='Uniqueness of Limits') %}
+
+If $a_n \to a$, then $a$ is unique. More formally, if $a_n \to a$ and $a_n \to b$, then $a = b$.
+
+{% end %}
+
+This essentially means that our notion of convergence is well-defined, and that sequences may only converge to one number (hence, why the $b_n$ example above failed).
+
+<details>
+    <summary>Proof</summary>
+    Assume $a_n \to a$ and $a_n \to b$. Pick any $\varepsilon > 0$. Since $a_n \to a$, we can find $N_a \in \mathbb{N}$ such that
+    $$
+        n \geq N_a \implies |a_n - a| < \frac{\varepsilon}{2}
+    $$
+    Similarly, we can find $N_b \in \mathbb{N}$ such that
+    $$
+        n \geq N_b \implies |a_n - b| < \frac{\varepsilon}{2}
+    $$
+    So when $n \geq \max\{ N_a, N_b \}$, we have
+    $$
+        |a - b| = |(a_n - b) - (a_n - a)| \leq |a_n - a| + |a_n - b| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
+    $$
+    The first inequality follows from the triangle inequality. Therefore, $|a - b| < \varepsilon$ for <b>any</b> $\varepsilon > 0$. Hence, we must have that $|a - b| = 0 \implies a = b$
+    <p>∎</p>
+</details>
+
+## Cauchy Sequences
+
+Cauchy sequences, named after famous mathematician [Augustin-Louis Cauchy](https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy), form an incredibly important class of sequences.
+
+{% admonition(type='note', title='Cauchy Sequence') %}
+
+Let $a_n$ be a sequence. We say that $a_n$ is a **Cauchy sequence** if, for every $\varepsilon > 0$, there exists $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+    n, m \geq N \implies |a_n - a_m| < \varepsilon
+$$
+
+{% end %}
+
+Intuitively, a sequence is Cauchy if the terms get arbitrarily close to each other. Convergent sequences have this property.
+
+{% admonition(type='tip', title='Convergent Sequences are Cauchy') %}
+
+If $a_n \to a$, then $a_n$ is Cauchy.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    Pick any $\varepsilon > 0$. Since $a_n \to a$, we can find $N \in \mathbb{N}$ such that
+    $$
+        n \geq N \implies |a_n - a| < \frac{\varepsilon}{2}
+    $$
+    Then for any $m, n \geq N$, we have that
+    $$
+    |a_n - a_m| = |(a_n - a) - (a_m - a)| \leq |a_n - a| + |a_m - a| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
+    $$
+    Where the first inequality follows from the triangle inequality.
+    <p>∎</p>
+</details>
+
+Marvelously, Cauchy sequences capture the idea of convergence without invoking convergence. Instead, it relies on the idea of "closeness".
+
+One may ask whether there exists non-convergent Cauchy sequences. The answer is it depends. The answer is also precisely what separates $\mathbb{R}$ from $\mathbb{Q}$.
+
+{% admonition(type='note', title='Complete Spaces') %}
+
+Let $E$ be a subset of $\mathbb{R}$. We say $E$ is **complete**<a href='#footnote-e' style='text-decoration: none'><sup class='opacity-60'>e</sup></a> if every Cauchy sequence in $E$ converges to a point in $E$.
+
+{% end %}
+
+Intuitively, a space is complete if there aren't any "gaps". To be incomplete means that a sequence may approach a hole with nothing in it. As such, $\mathbb{R}$ is complete, while $\mathbb{Q}$ isn't. This is to say that **every Cauchy sequence converges in $\mathbb{R}$, but may not converge in $\mathbb{Q}$.**
+
+<p id='footnote-e' class='opacity-60'><small><b>e</b>: We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.</small></p>
+
+
+
+# Point-Set Topology
+
+While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Viewing things under a topological lens often greatly simplifies problems. Moreover, it builds good intuition.
+
+Topology feels rather abstract. However, it is essentially "geometry without distance". Rather than quantifying "closeness" with distance, we quantify "closeness" with open sets.
+
+## Open Sets
+
+Before we can define an open set, we must first define a neighborhood.
+
+{% admonition(type='note', title='Neighborhood') %}
+
+Let $x \in \mathbb{R}$ and $\varepsilon > 0$. The **neighborhood** of $x$ with radius $\varepsilon$, denoted $N_\varepsilon (x)$, is defined as 
+$$
+    N_\varepsilon (x) = \\{ y \in \mathbb{R} : |y - x| < \varepsilon \\}
+$$
+
+Note that this is simply the open interval $(x - \varepsilon, x + \varepsilon)$.
+
+{% end %}
+
+Sometimes neighborhoods are called **open balls**<a href='#footnote-f' style='text-decoration: none'><sup class='opacity-60'>f</sup></a>, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$. 
+
+{% admonition(type='note', title='Open Sets') %}
+
+Let $U$ be a subset of $\mathbb{R}$. We say that $U$ is **open** if for every $x \in U$, there exists $\varepsilon > 0$ such that $N_\varepsilon (x) \subseteq U$.
+
+In other words, for every $x \in U$, we can find a neighborhood around $x$ that is entirely contained within $U$.
+
+{% end %}
+
+<figure>
+    <img src="/images/tutorials/real-analysis/open_set.png" alt="An illustration of an open set."/>
+    <figcaption>A visual illustration of open sets. If $x \in U$, then we can find a neighborhood around $x$ contained entirely in $U$. Note that this illustration is in 2-dimensions, while all our discussion has been 1-dimensional. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+Intuitively, a set is open if every point has "breathing room" in every direction. Points on the boundary do not have this "breathing room", since any neighborhood around them must include points outside the set.
+
+<p id='footnote-f' class='opacity-60'><small><b>f</b>: The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.</small></p>
+
+
+
+## Closed Sets
+
+To introduce closed sets, we must first define limit points.
+
+{% admonition(type='note', title='Limit Points') %}
+
+Let $M$ be a subset of $\mathbb{R}$. A point $x \in \mathbb{R}$ is a **limit point** of $M$ if for every $\varepsilon > 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $M$, excluding $x$ itself. More formally,
+
+$$
+    \textrm{For every } \varepsilon > 0, \quad (N_\varepsilon (x) \setminus \\{ x \\} ) \cap M \neq \varnothing
+$$
+
+{% end %}
+
+This definition may seem tricky, but the idea is rather simple. Consider the set
+$$
+    A = \\left\\{ \frac{1}{n} : n \in \mathbb{N} \\right\\}
+$$
+Then 0 is a limit point of $A$, since for any $\varepsilon > 0$, we can find $k \in \mathbb{N}$ such that $\frac{1}{k} < \varepsilon$. Thus, $\frac{1}{k} \in N_\varepsilon (0)$. 
+
+<figure>
+    <img src="/images/tutorials/real-analysis/limit_point.png" alt="An illustration of limit points."/>
+    <figcaption>No matter how small a neighborhood around 0 (green), there will always be some elements of $A$ (red) inside it. Made with Desmos.</figcaption>
+</figure>
+
+{% admonition(type='note', title='Closed Sets') %}
+
+Let $C$ be a subset of $\mathbb{R}$. We say that $C$ is **closed** if it contains all of its limit points. More formally, if $x$ is a limit point of $C$, then $x \in C$.
+
+{% end %}
+
+Closed sets are commonly thought of as sets that contain their boundaries. While not fully accurate, it's helpful intuition, since boundary points are precisely the limit points that are not within the "interior" of the set.
+
+Using the previous example, the set
+
+$$
+    \\left\\{ \frac{1}{n} : n \in \mathbb{N} \\right\\} \cup \\{ 0 \\}
+$$
+
+is closed, since it contains its only limit point, 0. Moreover, the interval $[0, 1]$ is closed, since it contains all its limits points (which, coincidentally, is the entire set).
+
+## Open and Closed Sets
+
+An important relationship between open and closed sets is that they are complements of each other.
+
+{% admonition(type='tip', title='Complementarity of Open and Closed Sets') %}
+
+    Let $U$ be a subset of $\mathbb{R}$. Then $U$ is open if and only if $U^c$ is closed.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $U$ is open. Let $x$ be a limit point of $U^c$. Then for every $\varepsilon > 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $U^c$, excluding $x$ itself. Thus, $N_\varepsilon (x) \nsubseteq U$. Since $U$ is open, this implies that $x \notin U$. Therefore, $x \in U^c$, so $U^c$ contains all its limit points.
+    </p>
+    <p>
+    Now assume $U^c$ is closed. Let $x \in U$. Since $U^c$ is closed, $x$ is not a limit point of $U^c$. This must mean that we can find some $\varepsilon > 0$ such that $N_\varepsilon (x)$ contains no points of $U^c$. Thus, $N_\varepsilon (x) \subseteq U$.
+    </p>
+    <p>∎</p>
+</details>
+
+## Sequences and Topology
+
+At this point, you may be inclined to ask why the topology diversion. After all, there's no obvious connection between the prior discussion and topology.
+    
+I'm here to say that they're really the same thing, just viewed under different lenses. Let's revisit the example
+$$
+    A = \left\\{ \frac{1}{n} : n \in \mathbb{N} \right\\}
+$$
+
+Now define $a_n = \frac{1}{n}$. Then $ \\{ a_n \\}\_{n=1}^{\infty} = A$. We showed that $a_n \to 0$, and that $0$ is the only limit point of $A$. Indeed, these are both saying the same thing. To say $a_n \to 0$ means that $n \geq N \implies |a_n - 0| < \varepsilon$. In other words, if $n \geq N$, the neighborhood $N_\varepsilon (0)$ contains $a_n$.
+
+This observation is formalized with the following theorem
+
+{% admonition(type='tip', title='Topological Convergence') %}
+
+Let $a_n$ be a sequence. Then $a_n \to a$ if and only if every open set $U$ containing $a$ also contains all, but finitely many, elements of $a_n$.
+
+{% end %}
+
+Note that "all, but finitely many" is another way of saying $\textrm{There exists $N$ such that for } n \geq N\dots$
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $a_n \to a$, and let $U$ be an open set containing $a$. By definition, we may find some $\varepsilon > 0$ such that $N_\varepsilon (a) \subseteq U$. Pick $N$ such that $n \geq N \implies |a_n - a| < \varepsilon$. Then $n \geq N \implies a_n \in N_\varepsilon (a) \subseteq U$, so $U$ contains all, but finitely many, $a_n$.
+    </p>
+    <p>
+    Now by way of contrapositive, assume $a_n \not\to a$. Then we can find $\varepsilon > 0$ such that $|a_n - a| \geq \varepsilon$ for infinitely many $n$. In other words, the open set $N_\varepsilon (a)$ is missing infinitely many $a_n$. Thus, we found an open set containing $a$ that also fails to contain <b>all, but finitely many</b>, $a_n$.
+    </p>
+    <p>∎</p>
+</details>
+
+This formalizes topology as "geometry without distance", since convergence is characterized entirely by open sets. In other words, we characterize convergence not by distance, but by membership in certain sets.
+
+# Functions and Continuity
+
+Extending all our discussion to functions, and thus making analysis much more applicable beyond sequences.
+
+## Usual Notions of Continuity
+
+There are many definitions of continuity, with some being more useful than others. We focus on 3 of them.
+
+{% admonition(type='note', title='Epsilon-Delta Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every $\varepsilon > 0$, we can find some $\delta = \delta(x_0, \varepsilon) > 0$ such that
+
+$$
+    y \in X \textrm{ and } |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+$$
+
+{% end %}
+
+Note that $\delta = \delta(x_0, \varepsilon)$ means that $\delta$ may depend on both $x_0$ and $\varepsilon$.
+
+Intuively, this definition says the following. For every error-bound $\varepsilon$ of the outputs we impose in the codomain, we can find a corresponding error-bound $\delta$ of the inputs in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ **preserves "closeness" at $f(x_0)$**. Having a tiny bit of error in $x_0$ implies a tiny bit of error in $f(x_0)$ (i.e. no sudden "jumps")
+
+<figure>
+    <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.png" alt="An illustration of continuity."/>
+    <figcaption>For every error-bound $\varepsilon$ around $f(x_0)$, we can find a corresponding error-bound $\delta$ around $x_0$. Credit to Wikimedia Commons.</figcaption>
+</figure>
+
+While this definition is good, there is another, and more natural in my opinion, way to think of continuity.
+
+{% admonition(type='note', title='Sequential Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every sequence $x_n$ such that $x_n \to x_0$, we have that $f(x_n) \to f(x_0)$. Writing this formally,
+
+$$
+    x_n \to x_0 \implies f(x_n) \to f(x_0)
+$$
+
+{% end %}
+
+This definition has an immediate interpretation. **If a function is continuous at $x_0$, then it preserves sequences that converge to $x_0$**. In other words, a function is continuous if and only if it preserves convergence of sequences.
+
+Naturally, I would not introduce two separate definitions if they weren't saying the same thing.
+
+{% admonition(type='tip', title='Sequental and Epsilon-Delta Continuity') %}
+
+A function $f: X \to \mathbb{R}$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it is sequentially continuous at $x_0$
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $f$ is $(\varepsilon, \delta)$-continuous, and let $\varepsilon > 0$. Take any sequence $x_n$ such that $x_n \to x_0$. Since $f$ is $(\varepsilon, \delta)$-continuous, we may find a $\delta$ such that
+    $$
+        |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+    $$
+    Pick $N$ such that $n \geq N \implies |x_n - x_0| < \delta$. Then we have that $|f(x_0) - f(x_n)| < \varepsilon$. Hence, $f(x_n) \to f(x_0)$
+    </p>
+    <p>
+    Now assume $f$ is sequentially continuous at $x_0$. To produce a contradiction, assume $f$ is not $(\varepsilon, \delta)$-continuous at $x_0$. Then there exists some $\varepsilon > 0$ such that, for every $\delta > 0$ and some $y = y(\delta) \in X$, we have
+    $$
+        |x_0 - y| < \delta, \textrm{ yet } |f(x_0) - f(y)| \geq \varepsilon
+    $$
+    Using this fact, we may construct a sequence $x_n$ such that
+    $$
+        |x_0 - x_n| < \frac{1}{n}, \textrm{ yet } |f(x_0) - f(x_n)| \geq \varepsilon
+    $$
+    That is, we specify $\delta = \frac{1}{n}$, and set $x_n$ to be some $y$ that satisfies this condition. By construction, we have that $x_n \to x_0$. Yet since $|f(x_0) - f(x_n)| \geq \varepsilon$ for every $n$, we have that $f(x_n) \not\to f(x_0)$. Then $f$ can't be sequentially continuous, which is a contradiction.
+    </p>
+    <p>∎</p>
+</details>
+
+## Topological Continuity
+
+A more general, and mathematically useful in my opinion, definition of continuity is the topological definition of continuity. This definition motivates many nice generalizations, such as measurable functions.
+
+{% admonition(type='note', title='Topological Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** if, for every open set $U \subseteq \mathbb{R}$, the pre-image $f^{-1} (U) \subseteq X$ is also open.
+
+{% end %}
+
+There are two important things to note here
+1. This is a **global** definition of continuity, whereas the prior two definitions were **local** definitions (i.e. true at a single point).
+2. When the domain $X \neq \mathbb{R}$, the definition of "open" changes slightly, though not significantly. [Those interested should read this stack exchange.](https://math.stackexchange.com/questions/210815/could-someone-explain-the-concept-of-a-set-being-open-relative-to-another-set).
+
+At first glance, it's not obvious why topological continuity is at all related to previous notions of continuity, especially "closeness". The intuition here is the following. 
+
+Understanding topology as "geometry without distance", we interpret open sets as one way to quantify "closeness". When we say that $U \textrm{ open} \implies f^{-1} (U) \textrm{ open}$, we are requiring that any way we decide to quantify closeness in the codomain (namely, through $U$) should correspond to some quantification of closeness in the domain (namely, through $f^{-1} (U)$). In other words, we require that $f$ respects the "closeness" structure of both the domain and codomain.
+
+Another way to see how topological continuity is related is to simply prove that it is equivalent.
+
+{% admonition(type='tip', title='Continuity and Topological Continuity') %}
+
+Let $f: X \to \mathbb{R}$. Then $f$ is topologically continuous if and only if it is $(\epsilon, \delta)$-continuous at every point $x_0 \in X$.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $f$ is topologically continuous. Pick any $x_0 \in X$ and $\varepsilon > 0$. Consider the open set $N_\varepsilon (f(x_0))$. By assumption, we have that
+    $$
+        f^{-1} \left( N_\varepsilon (f(x_0)) \right) \textrm{ is open}
+    $$
+    Since $x_0 \in N_\varepsilon (f(x_0))$, we can find some $\delta > 0$ such that $N_\delta (x_0) \subseteq f^{-1} \left( N_\varepsilon (f(x_0)) \right)$. This says precisely that, if $y \in N_\delta (x_0)$, then we have
+    $$
+        |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+    $$
+    </p>
+    <p>
+    Now assume $f$ is $(\epsilon, \delta)$-continuous at every point $x_0 \in X$. Note that
+    $$
+    \begin{aligned}
+        &|x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon \\\\
+        \iff &y \in N_{\delta} (x_0) \implies f(y) \in N_\varepsilon (f(x_0)) \\\\
+        \iff &f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))
+    \end{aligned}
+    $$
+    Let $U$ be open, and take any $x_0 \in f^{-1} (U)$. Note that $f(x_0) \in U$ by definition. Therefore, we can find $\varepsilon > 0$ such that $N_\varepsilon (f(x_0)) \subseteq U$. By the above statements, we can find $\delta > 0$ such that $f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))$. Thus
+    $$
+    \begin{aligned}
+        &f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0)) \\\\
+        \iff &f^{-1} \left[ f(N_{\delta} (x_0)) \right] \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \\\\
+        \implies &N_{\delta} (x_0) \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \subseteq f^{-1} (U)
+    \end{aligned}
+    $$
+    Which says precisely that $f^{-1} (U)$ is open. Note that in the final implication, we always have that $A \subseteq f^{-1} (f(A))$.
+    </p>
+    <p>∎</p>
+</details>
+
+
+# Conclusion
+
+Note that this tutorial serves as a mild introduction, and misses on a few important topics. In particular, this guide lacks discussion on compact sets, subsequences, and series, all of which are also important to analysis. Notwithstanding, I did not want this guide to run on for too long, so I omitted their discussion.
+
+### Acknowledgments
+
+1. All [Desmos](https://www.desmos.com/) graphs were created by me.
+2. [The illustration of the supremum](https://commons.wikimedia.org/wiki/File:Illustration_of_supremum.svg) is provided by Wikimedia Commons user Stephan Kulla, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+3. [The triangle inequality illustration](https://commons.wikimedia.org/wiki/File:Vector-triangle-inequality.svg) is provided by Wikimedia Commons user MartinThoma, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
+4. [The illustration of open sets](https://commons.wikimedia.org/wiki/Category:Open_sets) was modified by me, originally provided by Wikimedia Commons.
+5. [The illustration of $(\varepsilon, \delta)$-continuity](https://commons.wikimedia.org/wiki/File:Illustration_for_epsilon-delta_definition_of_continuity_4.svg) is provided by Wikimedia Commons.

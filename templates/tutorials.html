@@ -3,22 +3,37 @@
 
 <h1 class="mb-4">{{ section.title }}</h1>
 
-{% set lines = section.extra.long_description | split(pat="\n") %}
-{% for line in lines %}
-    <p>{{ line }}</p>
-{% endfor %}
+<div>
+  <p class="mb-4">
+    Welcome to my tutorials! The purpose of this section is partly to share my knowledge, but mostly to test it. Feel free to send me any feedback :)
+  </p>
+  <p>
+    Loosely, I categorize tutorials into
+    <ol>
+      <li><b>Data Science</b>: Algorithmic and practical. Generally more applied.</li>
+      <li><b>Statistics</b>: Rigorous, but grounded. In between the two.</li>
+      <li><b>Mathematics</b>: Theoretical. Generally more abstract.</li>
+    </ol>
+    However, note that these divisions are arbitrary, and some tutorials may fit into multiple categories.
+  </p>
+</div>
 
 
-<div class="pl-6"><ul>
-  {% for page in section.pages %}
-
-    <li>
-      <div class="my-2 flex items-center justify-between">
-        <a class="secondary-link" href="{{ page.permalink }}">{{ page.title }}</a>
-        <time class="font-mono text-sm opacity-60">{{ page.date }}</time>
-      </div>
-    </li>
-
+<div>
+  {% for sub_path in section.subsections %}
+    {% set sub = get_section(path=sub_path) %}
+    <h2>{{ sub.title }}</h2>
+    
+    <ul>
+      {% for page in sub.pages %}
+        <li>
+          <div class="my-2 flex items-center justify-between">
+            <a class="secondary-link" href="{{ page.permalink }}">{{ page.title }}</a>
+            <time class="font-mono text-sm opacity-60">{{ page.date }}</time>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
   {% endfor %}
-</ul></div>
+</div>
 {% endblock main %}
