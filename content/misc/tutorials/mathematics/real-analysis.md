@@ -52,7 +52,7 @@ The **rational numbers**, denoted $\mathbb{Q}$, are the set of ratios of integer
 $$
     \mathbb{Q} = \left\\{ \frac{a}{b} : a, b \in \mathbb{Z}, b \neq 0 \right\\}
 $$
-Generally, we assume that $a, b$ have no common factors (other than 1), so that each non-zero rational number has a unique representation.
+Generally, we assume that $a, b$ have no common factors (other than 1).
 
 {% end %}
 
@@ -125,7 +125,7 @@ Unfortunately, we have to be a bit more clever than taking the average, since th
         \implies &\frac{1}{n} < y - x
     \end{aligned}
     $$
-    Note that we used the fact that $a > b > 0 \implies \frac{1}{a} < \frac{1}{b}$. Let $m \in \mathbb{Z}$ be the largest integer such that $m \leq nx$. Note that $m$ may be negative, and that $\mathbb{Z}$ has no lower bound, so such an $m$ exists. Then we have that
+    Let $m \in \mathbb{Z}$ be the largest integer such that $m \leq nx$. Note that $m$ may be negative, and that $\mathbb{Z}$ has no lower bound, so such an $m$ exists. Then we have that
     $$
     \begin{aligned}
         &m \leq nx < m + 1 \\\\
@@ -148,7 +148,7 @@ Unfortunately, we have to be a bit more clever than taking the average, since th
 
 An immediate consequence of this is that **every real number can be approximated by a rational number** to arbitrary precision. For example, $\sqrt{2}$ can be approximated by the rational number $1.41$ to two decimal places, $1.41421$ to five decimal places, and even $1.41421356237309504880$ to twenty decimal places. For any given error threshold and real number $x$, we can always find a rational number $r$ such that the distance between $x$ and $r$ is less than the error threshold.
 
-At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, supremum, and infimum.
+At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, infimums, and supremums.
 
 <p id='footnote-c' class='opacity-60'><small><b>c</b>: I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.</small></p>
 
@@ -237,7 +237,7 @@ Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely
 
 By far the most important concept in analysis is that of sequences and limits.
 
-However, we must establish a very important inequality first.
+However, we must first establish a very important inequality.
 
 {% admonition(type='tip', title='Triangle Inequality') %}
 
@@ -352,7 +352,7 @@ This essentially means that our notion of convergence is well-defined, and that 
     $$
         |a - b| = |(a_n - b) - (a_n - a)| \leq |a_n - a| + |a_n - b| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon
     $$
-    Note that the first inequality is simply the triangle inequality. Therefore, $|a - b| < \varepsilon$ for any $\varepsilon > 0$. Since $\varepsilon$ was arbitrary, we must have that $|a - b| = 0 \implies a = b$
+    The first inequality follows from the triangle inequality. Therefore, $|a - b| < \varepsilon$ for <b>any</b> $\varepsilon > 0$. Hence, we must have that $|a - b| = 0 \implies a = b$
     <p>∎</p>
 </details>
 
@@ -369,7 +369,7 @@ $$
 
 {% end %}
 
-Intuitively, a Cauchy sequence is a sequence such that the terms get arbitrarily close to each other. Convergent sequences have this property.
+Intuitively, a sequence is Cauchy if the terms get arbitrarily close to each other. Convergent sequences have this property.
 
 {% admonition(type='tip', title='Convergent Sequences are Cauchy') %}
 
@@ -409,9 +409,9 @@ Intuitively, a space is complete if there aren't any "gaps". To be incomplete me
 
 # Point-Set Topology
 
-While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Topology is essentially "geometry without distance". Rather than quantifying "closeness" with distance, we quantify "closeness" with open sets.
+While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Viewing things under a topological lens often greatly simplifies problems. Moreover, it builds good intuition.
 
-Viewing things under a topological lens often greatly simplifies problems. Moreover, it builds good intuition.
+Topology feels rather abstract. However, it is essentially "geometry without distance". Rather than quantifying "closeness" with distance, we quantify "closeness" with open sets.
 
 ## Open Sets
 
@@ -428,7 +428,7 @@ Note that this is simply the open interval $(x - \varepsilon, x + \varepsilon)$.
 
 {% end %}
 
-Sometimes neighborhoods are called **open balls**, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$.
+Sometimes neighborhoods are called **open balls**<a href='#footnote-f' style='text-decoration: none'><sup class='opacity-60'>f</sup></a>, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$. 
 
 {% admonition(type='note', title='Open Sets') %}
 
@@ -444,6 +444,10 @@ In other words, for every $x \in U$, we can find a neighborhood around $x$ that 
 </figure>
 
 Intuitively, a set is open if every point has "breathing room" in every direction. Points on the boundary do not have this "breathing room", since any neighborhood around them must include points outside the set.
+
+<p id='footnote-f' class='opacity-60'><small><b>f</b>: The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.</small></p>
+
+
 
 ## Closed Sets
 
@@ -499,17 +503,17 @@ An important relationship between open and closed sets is that they are compleme
 <details>
     <summary>Proof</summary>
     <p>
-    Assume $U$ is open. Let $x$ be a limit point of $U^c$. Then for every $\varepsilon > 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $U^c$, excluding $x$ itself. Thus, $N_\varepsilon (x) \nsubseteq U$. since $U$ is open, this implies that $x \notin U$. Therefore, $x \in U^c$, so $U^c$ contains all its limit points, and is therefore closed.
+    Assume $U$ is open. Let $x$ be a limit point of $U^c$. Then for every $\varepsilon > 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $U^c$, excluding $x$ itself. Thus, $N_\varepsilon (x) \nsubseteq U$. Since $U$ is open, this implies that $x \notin U$. Therefore, $x \in U^c$, so $U^c$ contains all its limit points.
     </p>
     <p>
-    Now assume $U^c$ is closed. Let $x \in U$. Since $U^c$ is closed, $x$ is not a limit point of $U^c$. This must mean that we can find some $\varepsilon > 0$ such that $N_\varepsilon (x)$ contains no points of $U^c$. Thus, $N_\varepsilon (x) \subseteq U$, so $U$ is open.
+    Now assume $U^c$ is closed. Let $x \in U$. Since $U^c$ is closed, $x$ is not a limit point of $U^c$. This must mean that we can find some $\varepsilon > 0$ such that $N_\varepsilon (x)$ contains no points of $U^c$. Thus, $N_\varepsilon (x) \subseteq U$.
     </p>
     <p>∎</p>
 </details>
 
 ## Sequences and Topology
 
-At this point, you may be inclined to ask why topology diversion. After all, there's no obvious connection between the prior discussion and topology.
+At this point, you may be inclined to ask why the topology diversion. After all, there's no obvious connection between the prior discussion and topology.
     
 I'm here to say that they're really the same thing, just viewed under different lenses. Let's revisit the example
 $$
@@ -522,7 +526,7 @@ This observation is formalized with the following theorem
 
 {% admonition(type='tip', title='Topological Convergence') %}
 
-Let $a_n$ be a sequence. Then $a_n \to a$ if and only if every open set $U$ containing $a$ (i.e. $a \in U$ and $U$ is open) also contains all, but finitely many, elements of $a_n$.
+Let $a_n$ be a sequence. Then $a_n \to a$ if and only if every open set $U$ containing $a$ also contains all, but finitely many, elements of $a_n$.
 
 {% end %}
 
@@ -551,7 +555,7 @@ There are many definitions of continuity, with some being more useful than other
 
 {% admonition(type='note', title='Epsilon-Delta Continuity') %}
 
-Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every $\varepsilon > 0$, we can find a $\delta = \delta(x_0, \varepsilon) > 0$ such that
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** at $x_0$ if, for every $\varepsilon > 0$, we can find some $\delta = \delta(x_0, \varepsilon) > 0$ such that
 
 $$
     y \in X \textrm{ and } |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
@@ -561,7 +565,7 @@ $$
 
 Note that $\delta = \delta(x_0, \varepsilon)$ means that $\delta$ may depend on both $x_0$ and $\varepsilon$.
 
-Intuively, this definition says the following. For every error-bound $\varepsilon$ we impose in the codomain, we can find a corresponding error-bound $\delta$ in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ **preserves "closeness" at $f(x_0)$**.
+Intuively, this definition says the following. For every error-bound $\varepsilon$ of the outputs we impose in the codomain, we can find a corresponding error-bound $\delta$ of the inputs in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ **preserves "closeness" at $f(x_0)$**. Having a tiny bit of error in $x_0$ implies a tiny bit of error in $f(x_0)$ (i.e. no sudden "jumps")
 
 <figure>
     <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.png" alt="An illustration of continuity."/>
@@ -580,13 +584,13 @@ $$
 
 {% end %}
 
-This definition has an immediate interpretation. **If a function is continuous at $x_0$, then it preserves sequences that converge to $x_0$**. In other words, a function is continuous if and only if it preserves convergence.
+This definition has an immediate interpretation. **If a function is continuous at $x_0$, then it preserves sequences that converge to $x_0$**. In other words, a function is continuous if and only if it preserves convergence of sequences.
 
-Naturally, I would not be introducing two separate definitions if they weren't really the same thing.
+Naturally, I would not introduce two separate definitions if they weren't saying the same thing.
 
 {% admonition(type='tip', title='Sequental and Epsilon-Delta Continuity') %}
 
-A function $f$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it is sequentially continuous at $x_0$
+A function $f: X \to \mathbb{R}$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it is sequentially continuous at $x_0$
 
 {% end %}
 
@@ -600,16 +604,83 @@ A function $f$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it 
     Pick $N$ such that $n \geq N \implies |x_n - x_0| < \delta$. Then we have that $|f(x_0) - f(x_n)| < \varepsilon$. Hence, $f(x_n) \to f(x_0)$
     </p>
     <p>
-    Now assume $f$ is sequentially continuous at $x_0$, and let $\varepsilon > 0$. 
+    Now assume $f$ is sequentially continuous at $x_0$. To produce a contradiction, assume $f$ is not $(\varepsilon, \delta)$-continuous at $x_0$. Then there exists some $\varepsilon > 0$ such that, for every $\delta > 0$ and some $y = y(\delta) \in X$, we have
+    $$
+        |x_0 - y| < \delta, \textrm{ yet } |f(x_0) - f(y)| \geq \varepsilon
+    $$
+    Using this fact, we may construct a sequence $x_n$ such that
+    $$
+        |x_0 - x_n| < \frac{1}{n}, \textrm{ yet } |f(x_0) - f(x_n)| \geq \varepsilon
+    $$
+    That is, we specify $\delta = \frac{1}{n}$, and set $x_n$ to be some $y$ that satisfies this condition. By construction, we have that $x_n \to x_0$. Yet since $|f(x_0) - f(x_n)| \geq \varepsilon$ for every $n$, we have that $f(x_n) \not\to f(x_0)$. Then $f$ can't be sequentially continuous, which is a contradiction.
+    </p>
+    <p>∎</p>
+</details>
+
+## Topological Continuity
+
+A more general, and mathematically useful in my opinion, definition of continuity is the topological definition of continuity. This definition motivates many nice generalizations, such as measurable functions.
+
+{% admonition(type='note', title='Topological Continuity') %}
+
+Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **continuous** if, for every open set $U \subseteq \mathbb{R}$, the pre-image $f^{-1} (U) \subseteq X$ is also open.
+
+{% end %}
+
+There are two important things to note here
+1. This is a **global** definition of continuity, whereas the prior two definitions were **local** definitions (i.e. true at a single point).
+2. When the domain $X \neq \mathbb{R}$, the definition of "open" changes slightly, though not significantly. [Those interested should read this stack exchange.](https://math.stackexchange.com/questions/210815/could-someone-explain-the-concept-of-a-set-being-open-relative-to-another-set).
+
+At first glance, it's not obvious why topological continuity is at all related to previous notions of continuity, especially "closeness". The intuition here is the following. 
+
+Understanding topology as "geometry without distance", we interpret open sets as one way to quantify "closeness". When we say that $U \textrm{ open} \implies f^{-1} (U) \textrm{ open}$, we are requiring that any way we decide to quantify closeness in the codomain (namely, through $U$) should correspond to some quantification of closeness in the domain (namely, through $f^{-1} (U)$). In other words, we require that $f$ respects the "closeness" structure of both the domain and codomain.
+
+Another way to see how topological continuity is related is to simply prove that it is equivalent.
+
+{% admonition(type='tip', title='Continuity and Topological Continuity') %}
+
+Let $f: X \to \mathbb{R}$. Then $f$ is topologically continuous if and only if it is $(\epsilon, \delta)$-continuous at every point $x_0 \in X$.
+
+{% end %}
+
+<details>
+    <summary>Proof</summary>
+    <p>
+    Assume $f$ is topologically continuous. Pick any $x_0 \in X$ and $\varepsilon > 0$. Consider the open set $N_\varepsilon (f(x_0))$. By assumption, we have that
+    $$
+        f^{-1} \left( N_\varepsilon (f(x_0)) \right) \textrm{ is open}
+    $$
+    Since $x_0 \in N_\varepsilon (f(x_0))$, we can find some $\delta > 0$ such that $N_\delta (x_0) \subseteq f^{-1} \left( N_\varepsilon (f(x_0)) \right)$. This says precisely that, if $y \in N_\delta (x_0)$, then we have
+    $$
+        |x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon
+    $$
+    </p>
+    <p>
+    Now assume $f$ is $(\epsilon, \delta)$-continuous at every point $x_0 \in X$. Note that
+    $$
+    \begin{aligned}
+        &|x_0 - y| < \delta \implies |f(x_0) - f(y)| < \varepsilon \\\\
+        \iff &y \in N_{\delta} (x_0) \implies f(y) \in N_\varepsilon (f(x_0)) \\\\
+        \iff &f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))
+    \end{aligned}
+    $$
+    Let $U$ be open, and take any $x_0 \in f^{-1} (U)$. Note that $f(x_0) \in U$ by definition. Therefore, we can find $\varepsilon > 0$ such that $N_\varepsilon (f(x_0)) \subseteq U$. By the above statements, we can find $\delta > 0$ such that $f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))$. Thus
+    $$
+    \begin{aligned}
+        &f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0)) \\\\
+        \iff &f^{-1} \left[ f(N_{\delta} (x_0)) \right] \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \\\\
+        \implies &N_{\delta} (x_0) \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \subseteq f^{-1} (U)
+    \end{aligned}
+    $$
+    Which says precisely that $f^{-1} (U)$ is open. Note that in the final implication, we always have that $A \subseteq f^{-1} (f(A))$.
     </p>
     <p>∎</p>
 </details>
 
 
-
 # Conclusion
 
-Note that this tutorial serves as a mild introduction, and misses on a few important topics. In particular, this guide lacks discussion on compact sets and subsequences, both of which are also important to analysis. Notwithstanding, I did not want this guide to run on for too long, so I omitted their discussion.
+Note that this tutorial serves as a mild introduction, and misses on a few important topics. In particular, this guide lacks discussion on compact sets, subsequences, and series, all of which are also important to analysis. Notwithstanding, I did not want this guide to run on for too long, so I omitted their discussion.
 
 ### Acknowledgments
 
