@@ -7,7 +7,7 @@ weight = 1
 
 # Introduction 
 
-Welcome to my guide on **real analysis**! This is largely based on my notes from courses I took while an undergraduate math major. My goal is to offer an introduction into the subject that is accessible to non-math majors, while still maintaining mathematical rigor. My plan is to cover some (but not all) of the fundamentals, up until differentation and integration theory.
+Welcome to my guide on **real analysis**! This is largely based on my notes from courses I took while an undergraduate math major. My goal is to offer an introduction into the subject that is accessible to non-math majors, while still maintaining mathematical rigor. My plan is to cover some (but not all) of the fundamentals, up until differentiation and integration theory.
 
 Note that this blog is not meant to supplant a course in analysis. A proper introduction into real analysis will require a textbook. I personally recommend *Understanding Analysis* by Stephen Abbott, or *Principles of Mathematical Analysis* by Walter Rudin. The former is significantly more accessible, while the latter is a gold standard among undergraduate curriculums.
 
@@ -643,7 +643,7 @@ Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is **contin
 
 There are two important things to note here
 1. This is a **global** definition of continuity, whereas the prior two definitions were **local** definitions (i.e. true at a single point).
-2. When the domain $X \neq \mathbb{R}$, the definition of "open" changes slightly, though not significantly. [Those interested should read this stack exchange.](https://math.stackexchange.com/questions/210815/could-someone-explain-the-concept-of-a-set-being-open-relative-to-another-set).
+2. When the domain $X \neq \mathbb{R}$, the definition of "open" changes slightly, though not significantly. [Those interested should read this stack exchange.](https://math.stackexchange.com/questions/210815/could-someone-explain-the-concept-of-a-set-being-open-relative-to-another-set)
 
 At first glance, it's not obvious why topological continuity is at all related to previous notions of continuity, especially "closeness". The intuition here is the following. 
 
