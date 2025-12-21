@@ -56,6 +56,8 @@ math = true
 mermaid = false
 # Enable comment support globally.
 comment = false
+# Enable floating table of contents on the right side of the post page.
+side_toc = true
 # The URL of social image.
 social_image = ""
 

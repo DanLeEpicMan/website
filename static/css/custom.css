@@ -1,5 +1,146 @@
+/* Configurable spin animation */
 @keyframes spin-configurable {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Remove bullets from lists */
+.no-bullets {
+  list-style: none;
+  padding-left: 2px;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+  Sidebar table of contents
+  Credit: https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+*/
+
+.section-nav li.active > a {
+  font-weight: 800;
+}
+
+/* Sidebar Navigation */
+
+/* Theme-aware variables for the TOC progress/markers */
+:root {
+  --toc-accent: #4b4b4a; /* light mode fill */
+  --toc-marker: #808080;
+  --toc-marker-current: #b2b2a8;
+}
+
+.dark {
+  --toc-accent: #d4d4d4; /* dark mode fill */
+  --toc-marker: #808080;
+  --toc-marker-current: #5c5d5f;
+}
+
+/* Fade in text on hover */
+.section-nav {
+  --toc-text-opacity: 0;
+}
+
+.section-nav a {
+  opacity: var(--toc-text-opacity);
+  transform: translateX(-6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
+}
+
+.section-nav:hover a,
+.section-nav:focus-within a {
+  --toc-text-opacity: 1;
+}
+
+.section-nav:hover a,
+.section-nav:focus-within a {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* TOC vertical progress bar */
+.section-nav {
+  position: relative;
+  padding-left: 2rem; /* leave space for markers/progress */
+}
+
+/* Make the TOC stretch full viewport height on large screens and scroll internally */
+@media (min-width: 1024px) {
+  .section-nav {
+    height: calc(100vh - 4rem);
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-top: 3.5rem; /* keep spacing from top similar to template */
+    padding-bottom: 1rem;
+  }
+}
+
+.toc-progress {
+  position: absolute;
+  left: 8px;
+  right: auto;
+  top: 3.5rem;
+  bottom: 1rem;
+  width: 6px;
+  display: flex;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.toc-progress::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.04);
+  border-radius: 999px;
+  z-index: 0;
+}
+
+.toc-progress__bar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 0%;
+  background: var(--toc-accent, #000000); /* theme-aware accent */
+  border-radius: 999px;
+  transition: height 120ms linear;
+}
+
+/* Markers for headings positioned along the progress track */
+.toc-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2; /* ensure markers sit above the progress track */
+}
+
+.toc-marker {
+  position: absolute;
+  left: 7px; /* place marker roughly over the progress bar */
+  width: 8px;
+  height: 8px;
+  background: var(--toc-marker, #000000);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+  z-index: 3;
+}
+
+.toc-marker--current {
+  background: var(--toc-marker-current, #000000);
+  left: 6px;
+  width: 10px;
+  height: 10px;
 }
