@@ -69,9 +69,11 @@ $$
     Y = f(X_1, \dots, X_p) + \epsilon
 $$
 
-Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error is called<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> **regression**.
+Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error is called{{ footnote() }} **regression**.
 
-<p id='footnote-a' class='opacity-60'><small><b>a</b>: This isn't always true. Regression is really about finding the "best possible" function, where "best possible" is defined in a clear and tractable way. For our purposes though, let's stick with this framework of minimizing error.</small></p>
+{% footnote_body() %}
+This isn't always true. Regression is really about finding the "best possible" function, where "best possible" is defined in a clear and tractable way. For our purposes though, let's stick with this framework of minimizing error.
+{% end %}
 
 ## A Problem with Regression
 
@@ -102,13 +104,15 @@ Why do we do this? **Aside from filtering out dumb solutions, the problem become
 
 # Linear Regression
 
-When we say **linear** regression, we are restricting ourselves to the class of **linear** functions<a href='#footnote-b' style='text-decoration: none'><sup class='opacity-60'>b</sup></a>. That is, we say that
+When we say **linear** regression, we are restricting ourselves to the class of **linear** functions{{ footnote() }}. That is, we say that
 $$
     Y = \beta_0 + \beta_1 X_1 + \dots + \beta_p X_p + \epsilon
 $$
 And the problem now amounts to finding the coefficients $\vec{\beta} = \left( \beta_0, \dots, \beta_p \right)$ such that $\epsilon$ is as small as possible.
 
-<p id='footnote-b' class='opacity-60'><small><b>b</b>: Actually, linear regression just means we have a linear function in terms of our coefficients. That is, $Y$ is a linear combination of $\beta_0, \dots, \beta_p$</small></p>
+{% footnote_body() %}
+Actually, linear regression just means we have a linear function in terms of our coefficients. That is, $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
+{% end %}
 
 ## The Setup
 
@@ -342,9 +346,11 @@ $$
 $$
 (1) gives us a clear interpretation of $R^2$ as a ratio of variances. More specifically, the numerator is proportional to the variance of the predictions, while the denominator is proportional to the variance of the response variables. In essence, $R^2$ tells us the amount of response variance explained by the predictions.
 
-(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because it's more intuitive to write a metric in terms of error<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a>.
+(2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because it's more intuitive to write a metric in terms of error{{ footnote() }}.
 
-<p id='footnote-c' class='opacity-60'><small><b>c</b>: Note that the numerator in (2) is precisely $||E||^2$.</small></p>
+{% footnote_body() %}
+Note that the numerator in (2) is precisely $||E||^2$.
+{% end %}
 
 ```python
 print(
@@ -359,7 +365,7 @@ Linear Test Score:     0.85
 Polynomial Test Score: -624851852.84
 ```
 
-As we can see, the polynomial model is performing terribly, achieving a score well-below 0. Since $R^2$ represents a ratio, anything below 0 indicates a serious misfit<a href='#footnote-d' style='text-decoration: none'><sup class='opacity-60'>d</sup></a>.
+As we can see, the polynomial model is performing terribly, achieving a score well-below 0. Since $R^2$ represents a ratio, anything below 0 indicates a serious misfit{{ footnote() }}.
 
 However, there is much more about $R^2$
 1. It's mainly useful for evaluating performance on your training data, as interpreting it as a ratio between variances relies on this fact. Evaluating it on outside data loses this interpretation, and thus much its value.
@@ -370,11 +376,13 @@ However, there is much more about $R^2$
 
 [This](https://stats.stackexchange.com/a/13317) stack exchange answer goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
 
-<p id='footnote-d' class='opacity-60'><small><b>d</b>: Intuitively, negative $R^2$ is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.</small></p>
+{% footnote_body() %}
+Intuitively, negative $R^2$ is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.
+{% end %}
 
 ## Mean Squared Error
 
-The mean squared error is the amount of squared error we can expect in a typical prediction. It is given by<a href='#footnote-e' style='text-decoration: none'><sup class='opacity-60'>e</sup></a>
+The mean squared error is the amount of squared error we can expect in a typical prediction. It is given by{{ footnote() }}
 $$
     \mathrm{MSE} = \frac{||E||^2}{n}
 $$
@@ -399,7 +407,9 @@ It's also important to note the units of MSE, as it's given in units of $Y^2$ ra
 
 However, in spite of its pitfalls, note that everything in this blog revolves around MSE. After all, when we use least squares, we are defining "best coefficients" in terms of squared error. As before, a useful but dangerous statistic.
 
-<p id='footnote-e' class='opacity-60'><small><b>e</b>: In statistics literature, a more common definition is $\frac{||E||^2}{n - p - 1}$, which is related to Bessel's correction.</small></p>
+{% footnote_body() %}
+In statistics literature, a more common definition is $\frac{||E||^2}{n - p - 1}$, which is related to Bessel's correction.
+{% end %}
 
 ## Other Useful Metrics
 

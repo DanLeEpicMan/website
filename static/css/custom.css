@@ -11,9 +11,38 @@
   padding-left: 2px;
 }
 
+/* Footnote positioning */
+.footnote {
+  scroll-margin-top: 10vh;
+}
+
+.footnote:target {
+  background: #a2bffe67;
+  transition: all 0.8s ease; 
+}
+
+.footnote_body {
+  scroll-margin-top: 10vh;
+}
+
+.footnote_body:target {
+  padding-left: 4px;
+  padding-bottom: 2px;
+  background: #a2bffe67;
+  transition: all 0.8s ease; 
+}
+
 /* Scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* KaTeX modifier */
+
+.katex-display {
+    overflow-x: auto; /* Adds a horizontal scrollbar only when needed */
+    overflow-y: hidden; /* Hides vertical overflow */
+    white-space: nowrap; /* Ensures the equation stays on a single line */
 }
 
 /*

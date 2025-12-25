@@ -250,11 +250,9 @@ The judges whose individual points are most informative, hence possesses the lea
 Like Proportional Variance, we will use standard deviation to weigh points. Unlike Proportional Variance, we include a hyperparameter to tune the strength of this weighting.
 
 Let $\kappa > -1$. The $\kappa$-adjusted score is defined as
-<div style="overflow-x: auto;">
 $$
 \rho_{i}^{\kappa\textrm{-adj}} = \sum_{j=1}^{N} \mathrm{sign}(p_{ij} - \mu_j) \left (\sigma_j^\kappa \left| p_{ij} - \mu_j \right| \right)^{\frac{1}{1 + \kappa}}
 $$
-</div>
 
 While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ term is to simply avoid issues where we may root a negative number.
 
@@ -295,11 +293,9 @@ As with everything else, there are deeper criticisms
 Since we effectively weigh by $\sigma\_{j}^{\frac{\kappa}{1 + \kappa}}$, the weights are going to be smaller than $\sigma_j$. It's quite strange that $\kappa$ has this effect.
 
 Motivated from the definition of the $L^p$ norms, let's instead define
-<div style="overflow-x: auto;">
 $$
 \varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_{j}^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left( p_{ij} - \mu_j \right) \right)
 $$
-</div>
 
 Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward.
 

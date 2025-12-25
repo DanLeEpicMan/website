@@ -46,12 +46,12 @@ We begin covering real analysis by first discussing different types of numbers.
 
 {% admonition(type='note', title='The Natural Numbers and Integers') %}
 
-The **natural numbers**, denoted $\mathbb{N}$, are the set of whole numbers, starting from<a href='#footnote-a' style='text-decoration: none'><sup class='opacity-60'>a</sup></a> 1. I.e. 
+The **natural numbers**, denoted $\mathbb{N}$, are the set of whole numbers, starting from{{ footnote() }} 1. I.e. 
 $$
     \mathbb{N} = \\{1, 2, 3, \dots \\}
 $$
 
-The **integers**, denoted<a href='#footnote-b' style='text-decoration: none'><sup class='opacity-60'>b</sup></a> $\mathbb{Z}$, are the set of whole numbers, negative numbers, and 0. I.e. 
+The **integers**, denoted{{ footnote() }} $\mathbb{Z}$, are the set of whole numbers, negative numbers, and 0. I.e. 
 $$
     \mathbb{Z} = \\{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \\}
 $$
@@ -84,7 +84,7 @@ The number $\sqrt{2}$, defined as the positive number such that $\left(\sqrt{2}\
 
 {% admonition(type='example', title='Proof: Irrationality of $\sqrt{2}$') %}
 
-Rather than showing that the statement "$\sqrt{2}$ is irrational" is **true**, we show that its contrary, i.e. "$\sqrt{2}$ is rational", must be **false**. In this way, we demonstrate that the statement must be true since its impossible for it to be false. While this logical approach seems rather roundabout, it's a quite useful trick to make a problem more tractable.
+Rather than showing that the statement "$\sqrt{2}$ is irrational" is **true**, we show that its contrary, i.e. "$\sqrt{2}$ is rational", must be **false**. In this way, we demonstrate that the statement must be true since it's impossible for it to be false. While this logical approach seems rather roundabout, it's a quite useful trick to make a problem more tractable.
 
 Now assume the contrary, i.e. that $\sqrt{2}$ is rational. Then by definition of a rational number, we can find two integers $a, b$ such that
 $$
@@ -110,9 +110,13 @@ So $b^2$ is even, therefore by the same logic as above, $b$ is also even. This m
 
 This "incompleteness" of $\mathbb{Q}$ motivates the definition of the real numbers.
 
-<p id='footnote-a' class='opacity-60'><small><b>a</b>: This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers <b>including</b> 0.</small></p>
+{% footnote_body() %}
+This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers <b>including</b> 0.
+{% end %}
 
-<p id='footnote-b' class='opacity-60'><small><b>b</b>: We use $\mathbb{Z}$ for integers because of the German word "Zahlen", meaning "numbers".</small></p>
+{% footnote_body() %}
+We use $\mathbb{Z}$ for integers because of the German word "Zahlen", meaning "numbers".
+{% end %}
 
 ## The Real Numbers
 
@@ -142,7 +146,7 @@ Unfortunately, we have to be a bit more clever than taking the average, since th
 
 Unlike before, we will prove this directly by explicitly constructing a rational number satisfying our statement. However, before we may proceed further, there are two crucial observations that we must make
 
-1. There is no such thing as a "largest" natural number. In other words, the natural numbers grow to infinity. Formally, $\mathbb{N}$ is unbounded<a href='#footnote-c' style='text-decoration: none'><sup class='opacity-60'>c</sup></a> from above.
+1. There is no such thing as a "largest" natural number. In other words, the natural numbers grow to infinity. Formally, $\mathbb{N}$ is unbounded{{ footnote() }} from above.
 2. Similarly, the integers run off to both positive infinity and negative infinity. Formally, $\mathbb{Z}$ is unbounded from below and from above.
 
 Now to prove the theorem, let $x < y$ be any two real numbers. Our goal is to find a rational number between them. First, since the natural numbers are unbounded from above, we can find $n \in \mathbb{N}$ such that
@@ -163,7 +167,7 @@ To produce the second half, let $m \in \mathbb{Z}$ be the largest integer such t
 $$
     m \leq nx < m + 1
 $$
-Why the second inequality? **Because if it didn't hold, then $m + 1 \leq nx$, meaning $m$ is not the <u>largest integer</u> such that $m \leq nx$.** (Recall that adding two integers togethers gives you another integer.) Therefore, we have
+Why the second inequality? **Because if it didn't hold, then $m + 1 \leq nx$, meaning $m$ is not the <u>largest integer</u> such that $m \leq nx$.** (Recall that adding two integers together gives you another integer.) Therefore, we have
 $$
     \frac{m}{n} \leq x < \frac{m+1}{n}
 $$
@@ -187,7 +191,9 @@ An immediate consequence of this is that **every real number can be approximated
 
 At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, infimums, and supremums.
 
-<p id='footnote-c' class='opacity-60'><small><b>c</b>: I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.</small></p>
+{% footnote_body() %}
+I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.
+{% end %}
 
 ## The Infimum and Supremum
 
@@ -255,7 +261,7 @@ Why do we care about the supremum and infimum? Because this is precisely what se
 
 {% admonition(type='tip', title='Completeness of the Reals') %}
 
-If $M$ is a non-empty subset of $\mathbb{R}$ that is bounded above, then $\sup M$ exists and is a unique, real number. We call this the **completeness property**<a href='#footnote-d' style='text-decoration: none'><sup class='opacity-60'>d</sup></a> of the real numbers.
+If $M$ is a non-empty subset of $\mathbb{R}$ that is bounded above, then $\sup M$ exists and is a unique, real number. We call this the **completeness property**{{ footnote() }} of the real numbers.
 
 {% end %}
 
@@ -268,7 +274,9 @@ $$
 
 Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no **smallest** rational upper bound of $A$.
 
-<p id='footnote-d' class='opacity-60'><small><b>d</b>: No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.</small></p>
+{% footnote_body() %}
+No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.
+{% end %}
 
 # Sequences and Limits
 
@@ -455,13 +463,15 @@ One may ask whether there exists non-convergent Cauchy sequences. The answer is 
 
 {% admonition(type='note', title='Complete Spaces') %}
 
-Let $E$ be a subset of $\mathbb{R}$. We say $E$ is **complete**<a href='#footnote-e' style='text-decoration: none'><sup class='opacity-60'>e</sup></a> if every Cauchy sequence in $E$ converges to a point in $E$.
+Let $E$ be a subset of $\mathbb{R}$. We say $E$ is **complete**{{ footnote() }} if every Cauchy sequence in $E$ converges to a point in $E$.
 
 {% end %}
 
 Intuitively, a space is complete if there aren't any "gaps". To be incomplete means that a sequence may approach a hole with nothing in it. As such, $\mathbb{R}$ is complete, while $\mathbb{Q}$ isn't. This is to say that **every Cauchy sequence converges in $\mathbb{R}$, but may not converge in $\mathbb{Q}$.**
 
-<p id='footnote-e' class='opacity-60'><small><b>e</b>: We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.</small></p>
+{% footnote_body() %}
+We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.
+{% end %}
 
 
 
@@ -486,7 +496,7 @@ Note that this is simply the open interval $(x - \varepsilon, x + \varepsilon)$.
 
 {% end %}
 
-Sometimes neighborhoods are called **open balls**<a href='#footnote-f' style='text-decoration: none'><sup class='opacity-60'>f</sup></a>, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$. 
+Sometimes neighborhoods are called **open balls**{{ footnote() }}, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$. 
 
 {% admonition(type='note', title='Open Sets') %}
 
@@ -503,7 +513,9 @@ In other words, for every $x \in U$, we can find a neighborhood around $x$ that 
 
 Intuitively, a set is open if every point has "breathing room" in every direction. Points on the boundary do not have this "breathing room", since any neighborhood around them must include points outside the set.
 
-<p id='footnote-f' class='opacity-60'><small><b>f</b>: The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.</small></p>
+{% footnote_body() %}
+The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.
+{% end %}
 
 
 
@@ -737,7 +749,7 @@ $$
 
 In other words, being $(\varepsilon, \delta)$-continuous is the same as saying that the image of an open ball is contained in another open ball.
 
-Let $U$ be open, and take any $x_0 \in f^{-1} (U)$. Then $f(x_0) \in U$. Since $f$ is $(\varepsilon, \delta)$-continuous at $x_0$, we can find $\varepsilon > 0$ such that $N_\varepsilon (f(x_0)) \subseteq U$. By the above statements, we can find some $\delta > 0$ such that $f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))$. Thus
+Let $U$ be open, and take any $x_0 \in f^{-1} (U)$. Then $f(x_0) \in U$. Since $U$ is open, we can find $\varepsilon > 0$ such that $N_\varepsilon (f(x_0)) \subseteq U$. Moreover, because $f$ is $(\varepsilon, \delta)$-continuous at $x_0$, we can find some $\delta > 0$ such that $f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))$ by the above statements. Thus
 $$
 \begin{aligned}
     &f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0)) \\\\
