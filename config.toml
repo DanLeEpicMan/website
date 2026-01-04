@@ -117,6 +117,10 @@ url = "https://www.instagram.com/danleman1337/"
 name = "steam"
 url = "https://steamcommunity.com/id/danleepicman/"
 
+[[extra.profile.social]]
+name = "rss"
+url = "$BASE_URL/atom.xml"
+
 # The top menu.
 [[extra.menu]]
 name = "Curriculum Vitae"
