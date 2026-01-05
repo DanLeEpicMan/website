@@ -142,8 +142,8 @@ His response was along the lines of
 And you know, he was right. It's easy to say no to an email, but hard to say no to a face. Especially when that face is tied to demonstrated experience. I emailed Karel requesting exactly this: I want to transfer into CCS Math, and I would like to take a few courses to "prove my worth".
 
 He responded to my email positively, and after some back-and-forth, he essentially said{{ footnote() }}
-1. He will allow me to take one course in Winter quarter.
-2. If I do well, he will allow me to take two additional courses in Spring.
+1. He will allow me to take one course in winter quarter.
+2. If I do well, he will allow me to take two additional courses in spring quarter.
 3. It is my responsibility to learn the prerequisites for these courses.
 
 I agreed, and spent all winter break catching myself up to speed. I asked one of my professors for material suggestions, in which he granted me access to an old course containing pre-recorded lectures. As a result, I put my computing ambitions on pause and focused solely on math. 
@@ -154,14 +154,14 @@ Prior to taking these courses, I was used to being at the top of the class, with
 
 The best part though? My classmates never judged me, nor saw me as inferior. I was treated as one of their own, as if I'd been a CCS Math student all along. As a result, my perspective on learning and the world changed substantially. The value of prestige and being "the best" now meant nothing, and I instead focused on learning. Because well, at a certain point, "the best" doesn't make any sense.
 
-Ultimately, as much as I struggled, I did well in all of these courses, and Karel respected me greatly{{ footnote() }}. In the midst of Spring quarter, my transfer application into CCS Math was approved, and I was finally in CCS. Rather than walking by the CCS building every day with feelings of doubt and shame, I can walk by it with a newfound sense of pride and accomplishment.
+Ultimately, as much as I struggled, I did well in all of these courses, and Karel respected me greatly{{ footnote() }}. In the midst of spring quarter, my transfer application into CCS Math was approved, and I was finally in CCS. Rather than walking by the CCS building every day with feelings of doubt and shame, I can walk by it with a newfound sense of pride and accomplishment.
 
 {% footnote_body() %}
 As of writing, CCS has two math advisors. He told me to speak with the advisor I hadn't interacted with yet.
 {% end %}
 
 {% footnote_body() %}
-For those curious, Karel allowed me to take a mock math research class in Winter, then Game Theory and Real Analysis in Spring. The "prerequisites" were discrete mathematics.
+For those curious, Karel allowed me to take a mock math research class in winter, then Game Theory and Real Analysis in spring. The "prerequisites" were discrete mathematics.
 {% end %}
 
 {% footnote_body() %}
@@ -199,7 +199,7 @@ For a while, I also treated it as the least remarkable. But that's not really a 
 
 ## My Not-So-New Living Situation
 
-I hadn't managed to find an apartment for my sophomore year, so I was still in the dorms. Frustratingly, my room assignment changed only by 1 number. I went from Room 1141 to Room 2141. A part of me was disappointed, since my living situation was more or less the same, offering no new experiences in an otherwise adventerous time of my life.
+I hadn't managed to find an apartment for my sophomore year, so I was still in the dorms. Frustratingly, my room assignment was not only in the same building, it changed only by 1 number. I went from Room 1141 to Room 2141. A part of me was disappointed, since my living situation was more or less the same, offering no new experiences in an otherwise adventerous time of my life.
 
 However, my roommates this time around were amazing. We all got along very well and enjoyed each other's company. The quality of the room was certainly much better, and I deeply appreciate them for it. While we didn't hang out very often, we still interact with each other to this day.
 
@@ -347,7 +347,7 @@ The first quarter of senior year was the most stressful quarter of my entire col
 
 Why? Four reasons
 1. I took on the role of "Internal Vice President" for Data Science UCSB, which led the technical wing. It was much more demanding than I had anticipated.
-    - I should note that, while an executive role that didn't exist last year, no autonomy was lost among any of the technical officers.
+    - I should note that, while a new executive role, no autonomy was lost among any of the technical officers.
     - We also were re-evaluating many of our ideas in the year prior, though fortunately we had a larger team which made it more manageable. 
 2. I decided to enroll into PSTAT 223A, despite not taking its prerequisites PSTAT 213BC.
     - In fact, I was enrolled in 3 graduate courses.
@@ -361,7 +361,7 @@ Expanding our ideas in Data Science UCSB was challenging. We agreed that, while 
     <figcaption>The Directors of Technical Development at one of our last events.</figcaption>
 </figure>
 
-As difficult as contributing to the club may have been, it pales in comparison to my courses. PSTAT 223A was by far the most difficult class I have ever taken. However, it was also one of the most interesting, rivaled only by PSTAT 215A with Franks. The professor, Dr. Jean-Pierre Fouque, whom I will refer to as JP, was easily one of my best professors. Aside from explaining the subject very well, the structure of the class was very interesting. The course focused on stochastic calculus, which opened my eyes to mathematical modeling.
+As difficult as contributing to the club may have been, it pales in comparison to my courses. PSTAT 223A was by far the most difficult class I have ever taken. However, it was also one of the most interesting, rivaled only by PSTAT 215A with Franks. The professor, Dr. Jean-Pierre Fouque, whom I will refer to as JP, was easily one of my best professors. Aside from explaining the subject very well, JP structured the class very interestingly. The course focused on stochastic calculus, which opened my eyes to mathematical modeling. JP was a major name in mathematical finance after all, a field deeply rooted with the material, and was easily one of the best professors to teach it.
 
 To make matters worse, the stress of grad school hit me hard. While I spent some of the summer coming up with decent generic application material, the tricky part was finding schools and, more importantly, identifying professors who matched my interests. At the time (and as of writing), my interests were incredibly broad, and having only 1 year of experience up until this point, also fairly vague. I did not want to add another stressor of the GRE, so I filtered out many programs to land my roles.
 
@@ -369,11 +369,11 @@ Retrospectively, while my generic application was solid, my effort at tailoring 
 
 ## The Homestretch
 
-After my fall quarter ended, things died down substantially. And for those last six months of undergrad, I felt great solace. All my stressors and worries had passed, and now I was just focusing on the things that interested me, academically and socially, until I graduated. Of course, I was worried about my future, and if I would even get into grad school. But I was happy knowing that all that's left is to make the most out of college.
+After my fall quarter ended, things calmed down substantially. And for those last six months of undergrad, I felt great solace. All my stressors and worries had passed, and now I was just focusing on the things that interested me, academically and socially, until I graduated. Of course, I was worried about my future, and if I would even get into grad school. But I was happy knowing that all that's left is to make the most out of college.
 
 <figure>
     <img src="/images/college-experience/admission_party.webp">
-    <figcaption>Despite my worries, I ended up getting into my top choice. Yibo (left of me from camera's POV) and I celebrated our acceptance with our friends at KBBQ.</figcaption>
+    <figcaption>Despite my worries, I ended up getting into my top choice. Yibo (left of me from camera's POV) and I celebrated our acceptance with our friends at KBBQ. Now, there was nothing left to worry about.</figcaption>
 </figure>
 
 My social life was at an all-time high, as my roommates and I moved to a newer (and more spacious) apartment. The living room was especially nice, as it made hanging out very easy. Every Wednesday night I invited my friends to play games together. Why Wednesday? It was the only time that worked for us.
@@ -383,7 +383,7 @@ My social life was at an all-time high, as my roommates and I moved to a newer (
     <figcaption>Playing with my friends in the apartment. We played all sorts of things, primarily <i>Super Smash Bros. Ultimate</i>, though this time we decided on <i>Muffin Time</i> (again).</figcaption>
 </figure>
 
-Those six months felt like a bliss. In many ways, things were going incredibly well{{ footnote() }}. All my worries of falling behind disappeared entirely. [The university even wrote an article about me.](https://news.ucsb.edu/2025/021894/ucsb-math-graduate-charts-his-next-move) Most of my courses were exclusively ones I wanted to take, except for introductory physics (PHYS 7A). My involvement, both in extracurriculars and social activities, was prolific.
+Those six months felt like a bliss. In many ways, things were going incredibly well{{ footnote() }}. All my worries of falling behind disappeared entirely. [The university even wrote an article about me.](https://news.ucsb.edu/2025/021894/ucsb-math-graduate-charts-his-next-move) Most of my courses were exclusively ones I wanted to take, except for introductory physics (PHYS 7A). My involvement, both in extracurriculars and social activities, was prolific. At last, everything I did was for myself, and myself only.
 
 {% footnote_body() %}
 Karel, my CCS math advisor, reached out to me in the beginning of winter quarter. He asked if I could be a grader for his optimization class, Math 132A. I was happy to be invited, and accepted the offer. Upon the start of spring quarter, the Math Department reached out to me and asked if I would be willing to grade for Math 132B. The offer left me feeling very excited knowing I did a good job in their eyes.
@@ -395,19 +395,19 @@ But alas, six months is not a very long time, and it ended just as quickly as it
 
 <figure>
     <img src="/images/college-experience/graduation.webp">
-    <figcaption>Graduating alongside my peers in CCS, featuring one of the math advisors. All of us were going to graduate school immediately after graduating.</figcaption>
+    <figcaption>Graduating alongside my peers in CCS, featuring one of the math advisors and one of our already-graduated friends. All of us were going to graduate school immediately after graduating.</figcaption>
 </figure>
 
 Frustratingly, we graduated on the weekend in between Week 10 and finals week, so we were still required to do finals even after graduation. I wasn't worried about any of them, but to say I was irked would be a grand understatement.
 
-My last time on campus{{ footnote() }} was Friday, June 13th. One of our courses didn't have a final, instead a final homework assignment the professor requested to be turned in on paper. I entered his office, chatted with him briefly, and bid him farewell and a good summer. This was my last moment as an undergrad, and I felt bittersweet. I decided to reward myself by going to the nearby snack shop, The Arbor.
+My last time on campus{{ footnote() }} was Friday, June 13th. One of my courses didn't have a final, instead a final homework assignment the professor requested to be turned in on paper. I entered his office, chatted with him briefly, and bid him farewell and a good summer. This was my last moment as an undergrad, and I felt bittersweet. I decided to reward myself by going to the nearby snack shop, The Arbor.
 
 <figure>
     <img src="/images/college-experience/gum.webp" style="width: 50%">
     <figcaption>I was left with a pleasant surprise upon sitting down.</figcaption>
 </figure>
 
-As the picture above shows, I got gum stuck to my pants as soon as I sat down. And you know, it reminded me of how I began college: by bending my lanyard's ring. A mix of both obliviousness and misfortune. I guess some things never change, do they?
+And just as my luck would have it, I got gum stuck to my pants as soon as I sat down. And you know, it reminded me of how I began college: by bending my lanyard's ring. A mix of both obliviousness and misfortune. I guess some things never change, do they?
 
 Alas, I bid my final farewell to UCSB, excited to begin a new journey at UCI.
 
@@ -421,7 +421,7 @@ Except a graduation ceremony I attended on June 14th, though I didn't enter camp
 
 # Closing Remarks
 
-To all that has read this far, I appreciate it. Keep in mind that there are many experiences and events I was unable to mention. This is merely an approximation, not a proper retelling, of my college experience. Doing so would require me to verbally tell the story, which itself will still be reductive one way or another.
+To all that have read this far, I appreciate it. Keep in mind that there are many experiences and events I was unable to mention. This is merely an approximation, not a proper retelling, of my college experience. Doing so would require me to verbally tell the story, which itself will still be reductive one way or another.
 
 For anyone reading this blog for advice, there are a few key takeaways I want to highlight.
 
