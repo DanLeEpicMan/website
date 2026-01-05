@@ -50,10 +50,6 @@ html {
   Credit: https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
 */
 
-.section-nav li.active > a {
-  font-weight: 800;
-}
-
 /* Sidebar Navigation */
 
 /* Theme-aware variables for the TOC progress/markers */
@@ -69,9 +65,18 @@ html {
   --toc-marker-current: #5c5d5f;
 }
 
-/* Fade in text on hover */
+/* 
+  Fade in text on hover
+  & TOC vertical progress bar 
+*/
 .section-nav {
+  position: relative;
+  padding-left: 2rem; /* leave space for markers/progress */
   --toc-text-opacity: 0;
+}
+
+.section-nav li.active > a {
+  font-weight: 800;
 }
 
 .section-nav a {
@@ -93,20 +98,34 @@ html {
   pointer-events: auto;
 }
 
-/* TOC vertical progress bar */
-.section-nav {
-  position: relative;
-  padding-left: 2rem; /* leave space for markers/progress */
-}
-
 /* Make the TOC stretch full viewport height on large screens and scroll internally */
 @media (min-width: 1024px) {
   .section-nav {
     height: calc(100vh - 4rem);
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow: hidden; /* keep progress/markers fixed while inner list scrolls */
     padding-top: 3.5rem; /* keep spacing from top similar to template */
     padding-bottom: 1rem;
+    -ms-overflow-style: none; /* hide scrollbar in IE/Edge while keeping scroll */
+    scrollbar-width: none; /* hide scrollbar in Firefox while keeping scroll */
+  }
+
+  /* hide scrollbar in WebKit while keeping scroll */
+  .section-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Scroll the list only so the progress bar stays fixed */
+  .section-nav > small {
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* hide scrollbar in IE/Edge while keeping scroll */
+    scrollbar-width: none; /* hide scrollbar in Firefox while keeping scroll */
+  }
+
+  .section-nav > small::-webkit-scrollbar {
+    display: none;
   }
 }
 
