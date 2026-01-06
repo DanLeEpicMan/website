@@ -5,14 +5,14 @@ description = "Reflecting on my Boy Scout troop after a long period of absence."
 [taxonomies] 
 "writing/tags" = ["blog"] 
 [extra]
-cover.image = "/images/changing-time/cover.jpg"
+cover.image = "/images/changing-time/cover.webp"
 cover.alt = "Staring into the distance"
 +++
 
 As many people familiar with me know, I was a Boy Scout for most of my youth. I joined [Troop 609](https://www.troop609.org/) in 2014, and was incredibly active, going on almost every single one of the outings and events. My troop was famous in Los Angeles County for being **THEE** high adventure troop, and to this day, it still maintains that title. 
 
 <figure>
-    <img src="/images/changing-time/summit_to_whitney.jpg" alt="Approaching Mount Whitney">
+    <img src="/images/changing-time/summit_to_whitney.webp" alt="Approaching Mount Whitney">
     <figcaption>Approaching the top of Mount Whitney in 2019</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ From the day I joined Troop 609 in 2014, until the onset of COVID-19, I was *ver
 Troops are organized into [patrols](https://troopleader.scouting.org/general-troop-information/troop-structure/the-patrol/), and during my time the troop had about 6 active patrols at any given moment, totaling approximately 50 scouts. I was a part of the Blackbird Patrol, named after [the plane of the same name](https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird).
 
 <figure>
-    <img src="/images/changing-time/blackbird_patrol.jpg" alt="Blackbird Patrol">
+    <img src="/images/changing-time/blackbird_patrol.webp" alt="Blackbird Patrol">
     <figcaption>The Blackbird Patrol in 2017</figcaption>
 </figure>
 
@@ -52,14 +52,14 @@ I looked forward to these meetings greatly. It was an opportunity to not only in
 The real joy of Boy Scouts, however, was the outings. For most troops, this meant something very simple. For example, a hike lasting around 5–10 miles, or driving to a camping ground and spending a day or two there to enjoy the scenery. We dubbed the latter "car camping" since we typically didn't travel very far from the cars. 
 
 <figure>
-    <img src="/images/changing-time/running_springs.jpg" alt="Running Springs">
+    <img src="/images/changing-time/running_springs.webp" alt="Running Springs">
     <figcaption>A car camping trip at Running Springs (Jan. 2021). We came here to play in the snow and learn about survival at near-freezing temperatures.</figcaption>
 </figure>
 
 Troop 609 certainly had outings like this, and they formed the bulk of our outings. After all, they had the most broad appeal. For many scouts in my troop, these outings were the extent of their involvement. Of course, there's nothing inherently wrong with that, but in my opinion, they missed out on more exciting adventures.
 
 <figure>
-    <img src="/images/changing-time/urban_day_hike.jpg" alt="Urban Day Hike">
+    <img src="/images/changing-time/urban_day_hike.webp" alt="Urban Day Hike">
     <figcaption>Outdoors isn't always nature! Every year we had an "Urban Day Hike" where we would hike around Los Angeles. Pictured above is the OOMO Cube in Little Tokyo.</figcaption>
 </figure>
 
@@ -68,21 +68,21 @@ Troop 609 certainly had outings like this, and they formed the bulk of our outin
 By far what defined Troop 609's identity was its regularly scheduled high adventure treks. These trips often lasted 3 days minimum and were arduous. We hosted several of these trips a year, most notably during the summer and winter when all the scouts were on break.
 
 <figure>
-    <img src="/images/changing-time/forest_hiking.JPG" alt="Backpacking through the forest">
+    <img src="/images/changing-time/forest_hiking.webp" alt="Backpacking through the forest">
     <figcaption>Despite our fatigue, knowing that civilization is nowhere near, we inch towards our monumental goal. Part of my Mt. Whitney trip in 2019.</figcaption>
 </figure>
 
 These trips were always my favorite, as we went to places inaccessible to most people. The sights we saw were unlike anything else. It truly is a unique experience to venture out in nature to a place mostly untouched by humans.
 
 <figure>
-    <img src="/images/changing-time/silver_knapsack.jpg" alt="Silver knapsack">
+    <img src="/images/changing-time/silver_knapsack.webp" alt="Silver knapsack">
     <figcaption>Not even COVID stopped us from trekking the Silver Knapsack in June 2020!</figcaption>
 </figure>
 
 While backpacking constituted a majority of our treks, it certainly wasn't the only high adventure we did. Another notable trip was canoeing 50 miles down the Colorado River, starting from Hoover Dam. A truly unique experience I'll probably never get again.
 
 <figure>
-    <img src="/images/changing-time/colorado_river.jpg" alt="Floating down the Colorado River.">
+    <img src="/images/changing-time/colorado_river.webp" alt="Floating down the Colorado River.">
     <figcaption>Floating down the Colorado River in August 2018. The air was hot and the water was ice cold. Felt amazing to stop and swim.</figcaption>
 </figure>
 
@@ -119,3 +119,9 @@ I checked the [troop's website](https://www.troop609.org/) after the meeting, an
 I'm very happy that the troop managed to survive the challenges of covid. It brings me joy to know that the experiences I grew up with are no longer a thing of the past. Still, seeing the new composition of members, the new size of the troop, the vacancies in all the roles, I couldn't help but think that the troop is approaching its endgame. As they say, all good things must come to an end. 
 
 Maybe I'm being dramatic and the troop only changed superficially. After all, the core values are still present and strong as ever. To say that it's the same is just wrong, but does it need to be? Maybe this is a step in the right direction, and I'm just too stuck in the past. No matter, I'm glad 609 is here to stay for the foreseeable future.
+
+# Acknowledgements
+
+Many of these pictures, and video, were taken by myself and other members of Troop 609. Special thanks to them.
+
+These pictures and videos are not to be used without permission. The creative commons license applies only to the text of this blog post.

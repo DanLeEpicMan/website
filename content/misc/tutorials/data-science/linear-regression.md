@@ -52,7 +52,7 @@ data = pd.DataFrame(
 sns.scatterplot(data, x='X', y='Y')
 ```
 <figure>
-    <img src='/images/tutorials/linear-regression/data.png'/>
+    <img src='/images/tutorials/linear-regression/data.webp'/>
 </figure>
 
  One may object that using simulated data not only begs the question, but also fails to demonstrate applicability. While I agree, finding data compatible with linear regression is incredibly easy. Furthermore, linear regression is so incredibly fundamental that its applicability is not something that needs to be demonstrated.
@@ -183,7 +183,7 @@ The least squares approach tells us that **we should measure the error vector us
 Why? **Because doing so minimizes the distance between $\mathbf{Y}$ and $\hat{\mathbf{Y}}$.**
 
 <figure>
-    <img src='/images/tutorials/linear-regression/ols_visualization.png'/>
+    <img src='/images/tutorials/linear-regression/ols_visualization.webp'/>
     <caption><small>Note that this is a visual aid. In practice, these vectors have hundreds of dimensions, so "distance" has no physical meaning.</small></caption>
 </figure>
 
@@ -225,7 +225,7 @@ sns.lineplot(data, x='X', y=Yhat_lobf, color='r')
 `Y = -0.46 + 0.85 X`
 
 <figure>
-    <img src='/images/tutorials/linear-regression/line_of_best_fit.png'/>
+    <img src='/images/tutorials/linear-regression/line_of_best_fit.webp'/>
 </figure>
 
 ## Polynomial Regression
@@ -259,7 +259,7 @@ sns.lineplot(data, x='X', y=Yhat_lobf, color='g', ax=ax[1])
 ```
 
 <figure>
-    <img src='/images/tutorials/linear-regression/poly_vs_lobf.png'>
+    <img src='/images/tutorials/linear-regression/poly_vs_lobf.webp'>
 </figure>
 
 # The Problem of Overfitting
@@ -283,7 +283,7 @@ sns.scatterplot(test_data, x='X', y='Y')
 ```
 
 <figure>
-    <img src='/images/tutorials/linear-regression/test_data.png'/>
+    <img src='/images/tutorials/linear-regression/test_data.webp'/>
 </figure>
 
 Note that this data came from the exact same source as the original data. Now, to compare our models over this new, unseen data
@@ -311,7 +311,7 @@ sns.lineplot(test_data, x='X', y=Yhat_test_lobf, color='g', ax=ax[1])
 ```
 
 <figure>
-    <img src='/images/tutorials/linear-regression/poly_vs_lobf_test.png'>
+    <img src='/images/tutorials/linear-regression/poly_vs_lobf_test.webp'>
 </figure>
 
 It's fairly clear that the polynomial models does a rather poor job at predicting the new data, especially on the tails. (It's not obvious in the picture, but the right-most point has a prediction in the billions.) While it felt like the polynomial model did a good job with the original data, it does a poor job with everything else.

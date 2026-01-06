@@ -85,7 +85,7 @@ My name is Daniel, and I'm a Statistics PhD student at the University of Califor
 Here I record my work, personal projects, and other random thoughts. Feel free to reach out to me!
 """
 # The URL of avatar.
-avatar_url = "images/headshot.png"
+avatar_url = "images/headshot.webp"
 # Invert color in dark mode.
 avatar_invert = false
 # Profile circle settings

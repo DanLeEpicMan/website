@@ -216,7 +216,7 @@ $$
 For instance, let $M = [0, 1)$. Then 2 is an upper bound of $M$, and -1 is a lower bound of $M$.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/upper_lower_bounds.png" alt="An illustration of the bounds of a set." />
+    <img src="/images/tutorials/real-analysis/upper_lower_bounds.webp" alt="An illustration of the bounds of a set." />
     <figcaption>Lower bound in blue, $M$ in green, and upper bound in red. Made with Desmos.</figcaption>
 </figure>
 
@@ -251,7 +251,7 @@ While $\varepsilon$ (epsilon) may be any positive real number, we typically thin
 Property (1) ensures that the supremum is an upper bound, while property (2) ensures that it is the smallest such upper bound. Intuitively, property (2) says that if we nudge the supremum down by any amount, it will no longer be an upper bound. The same logic applies to the infimum.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/illustration_of_supremum.png" alt="An illustration of the bounds of a set." style="height: 150px"/>
+    <img src="/images/tutorials/real-analysis/illustration_of_supremum.webp" alt="An illustration of the bounds of a set." style="height: 150px"/>
     <figcaption>If we nudge $\sup M$ to the left by any amount, we can find a blue point greater than it. Hence, it ceases to be an upper bound. Credit to Wikimedia Commons.</figcaption>
 </figure>
 
@@ -296,7 +296,7 @@ $$
 This says that traveling along a path of length $|x + y|$ is always more efficient than moving along two paths of lengths $|x|$ then $|y|$. While they may be equal when $x$, $y$ are both positive/negative, this becomes an inequality when $x, y$ no longer share a sign.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/triangle_inequality.png" alt="An illustration of the triangle inequality."/>
+    <img src="/images/tutorials/real-analysis/triangle_inequality.webp" alt="An illustration of the triangle inequality."/>
     <figcaption>Visually, the triangle inequality says that a detour is never quicker than a straight line. Credit to Wikimedia Commons.</figcaption>
 </figure>
 
@@ -350,7 +350,7 @@ $$
 Which says precisely that $a_n \to 0$.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/convergence.png" alt="An illustration of convergence."/>
+    <img src="/images/tutorials/real-analysis/convergence.webp" alt="An illustration of convergence."/>
     <figcaption>As long as $n$ is sufficiently large, we can guarantee that the distance between $a_n$ and $a$ is less than $\varepsilon$. Made with Desmos.</figcaption>
 </figure>
 
@@ -369,7 +369,7 @@ Indeed, if we take $\varepsilon = 0.01$, then we cannot guarantee that $|b_n - 1
 The case for $b = -1$ is identical to above. Therefore, $b_n$ diverges.
 
 <figure>
-    <img src="/images/tutorials/real-analysis/divergence.png" alt="An illustration of divergence."/>
+    <img src="/images/tutorials/real-analysis/divergence.webp" alt="An illustration of divergence."/>
     <figcaption>No matter how large we make $N$, we can always find some $n \geq N$ such that $b_n$ lies outside the green tube. Thus, $b_n \not\to 1$. Made with Desmos.</figcaption>
 </figure>
 
@@ -507,7 +507,7 @@ In other words, for every $x \in U$, we can find a neighborhood around $x$ that 
 {% end %}
 
 <figure>
-    <img src="/images/tutorials/real-analysis/open_set.png" alt="An illustration of an open set."/>
+    <img src="/images/tutorials/real-analysis/open_set.webp" alt="An illustration of an open set."/>
     <figcaption>A visual illustration of open sets. If $x \in U$, then we can find a neighborhood around $x$ contained entirely in $U$. Note that this illustration is in 2-dimensions, while all our discussion has been 1-dimensional. Credit to Wikimedia Commons.</figcaption>
 </figure>
 
@@ -540,7 +540,7 @@ $$
 Then 0 is a limit point of $A$, since for any $\varepsilon > 0$, we can find $k \in \mathbb{N}$ such that $\frac{1}{k} < \varepsilon$. Thus, $\frac{1}{k} \in N_\varepsilon (0)$. 
 
 <figure>
-    <img src="/images/tutorials/real-analysis/limit_point.png" alt="An illustration of limit points."/>
+    <img src="/images/tutorials/real-analysis/limit_point.webp" alt="An illustration of limit points."/>
     <figcaption>No matter how small a neighborhood around 0 (green), there will always be some elements of $A$ (red) inside it. Made with Desmos.</figcaption>
 </figure>
 
@@ -646,7 +646,7 @@ Note that $\delta = \delta(x_0, \varepsilon)$ means that $\delta$ may depend on 
 Intuively, this definition says the following. For every error-bound $\varepsilon$ of the outputs we impose in the codomain, we can find a corresponding error-bound $\delta$ of the inputs in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ **preserves "closeness" at $f(x_0)$**. Having a tiny bit of error in $x_0$ implies a tiny bit of error in $f(x_0)$ (i.e. no sudden "jumps")
 
 <figure>
-    <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.png" alt="An illustration of continuity."/>
+    <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.webp" alt="An illustration of continuity."/>
     <figcaption>For every error-bound $\varepsilon$ around $f(x_0)$, we can find a corresponding error-bound $\delta$ around $x_0$. Credit to Wikimedia Commons.</figcaption>
 </figure>
 
