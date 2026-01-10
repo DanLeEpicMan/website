@@ -42,16 +42,17 @@ Presented here are many quotes in which I find interesting. This is inspired by 
 
 # Life, Morals, & Ethics
 
-- ***"Rejection is redirection."*** - Bryant McGill
+- ***"Rejection is redirection."*** - Popular mantra
 - ***"If you're tired of starting over, then stop giving up."*** - Shia LaBeouf
 - ***"Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom."*** - Viktor Frankl
 - ***"If I have done the public any service... 'tis due to nothing but industry and a patient thought."*** - Isaac Newton
 - ***"As long as you will have a feeling of shame, you will not lightly commit sins."*** - Moses
 - ***"And whosoever saves a life, it is as though he had saved the entire world."*** - Talmud (Jewish text)
 - ***"You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty."*** - Mahatma Gandhi
-- ***"Even statues crack, and when you fall, no one will dare to catch you."*** - Naomi Shihab Nye
+- ***"Even statues crack, and when you fall, no one will dare to catch you."*** - Anonymous
 - ***"Whatever you do will be insignificant, but it is very important that you do it."***
-  - Often attributed to Mahatma Gandhi, though there's no evidence he ever said it.
+  - Often attributed to Mahatma Gandhi, though its first appearance is an advertisement.
+- ***"The weak can never forgive. Forgiveness is the attribute of strong."*** - Mahatma Gandhi
 
 
 # Religion
@@ -62,6 +63,8 @@ Presented here are many quotes in which I find interesting. This is inspired by 
 - ***"Sir, an equation has no meaning for me unless it expresses a thought of GOD."*** - Srinivasa Ramanujan
 - ***"There probably is a God. Many things are easier to explain if there is than if there isn't."*** - John von Neumann
 - ***"In reality, there are as many religions as there are individuals."*** - Mahatma Gandhi
+- ***"I don't reject Christ. I love Christ. It's just that so many of you Christians are so unlike Christ."*** - Mahatma Gandhi
+- ***"It's storytelling. This church building... has more in common with Disneyland than Notre Dame. And the rites and the rituals and the costumes... all of it. It's storytelling. I guess the question is, do these stories convince us of a lie? Or do they resonate with something deep inside us that is profoundly true... that we can't express any other way except storytelling?"*** - Wake Up Dead Man
 
 # Meta-Quotes
 
