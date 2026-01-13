@@ -15,9 +15,9 @@ However, while we all may share it, everyone's college experience is different. 
 
 How would I label mine? Well, I don't feel like I should. Any attempt to put a label on my college experience will be reductive in some way. Saying it was a good time of my life neglects my lows. Saying it was a regretful time of my life neglects my accomplishments. Saying it was *just* a time of my life neglects the underlying experiences. 
 
-No group of labels can possibly capture everything. Thus, I feel the best way to share it is to simply tell the story. While a blog certainly will fail to capture everything, I feel as if it's the best way to do so. After all,
+No group of labels can possibly capture everything. Thus, I feel the best way to share it is to simply tell the story. While a blog certainly will fail to capture everything, I feel as if it's one of the best ways to do so. After all,
 
-> Truth is much too complicated to allow anything but approximations{{ footnote() }}
+> Truth... is much too complicated to allow anything but approximations{{ footnote() }}
 
 {% footnote_body() %}
 John von Neumann
@@ -25,7 +25,7 @@ John von Neumann
 
 # Preparing for College
 
-While I was in high school, I knew I wanted to attend a prestigious university, ideally in California. My dream was simple: study Computer Science, and use the prestige of the university to land a software engineering (SWE) role. Specifically, I wanted to work at Google's Santa Monica facility on Venice Beach, since I had toured it in 2019 and loved the culture and location. I applied to the following schools{{ footnote() }}, all for Computer Science. My acceptances are emphasized
+While I was in high school, I knew I wanted to attend a prestigious university, ideally in California. My dream was simple: study computer science, and use the prestige of the university to land a software engineering (SWE) role. Specifically, I wanted to work at Google's Santa Monica facility on Venice Beach, since I had toured it in 2019 and loved the culture and location. I applied to the following schools{{ footnote() }}, all for computer science. My acceptances are emphasized
 
 1. Yale University
 2. CalTech
@@ -36,7 +36,7 @@ While I was in high school, I knew I wanted to attend a prestigious university, 
 7. ***Cal Poly Pomona***
 8. Cal Poly San Luis Obispo
 
-I applied to UCSB as a double major in Math and Computer Science at the College of Creative Studies, on advice from my father. Ultimately, I was rejected from CCS, and also from Computer Science, instead being admitted as a mathematics major to the College of Letters & Science.
+I applied to UCSB as a double major in math and computer science at the College of Creative Studies, on advice from my father. Ultimately, I was rejected from CCS, and also from computer science, instead being admitted as a mathematics major to the College of Letters & Science.
 
 In the end, I was debating between the following three options
 1. UCSD: Computer Science
@@ -71,13 +71,13 @@ I arrived onto campus for the first time at around midday, where my parents and 
     <figcaption>The state of my dorm on an average day in freshman year.</figcaption>
 </figure>
 
-After bidding my parents farewell, the first thing I did was bend my lanyard's ring. I unlocked my door, forgetting to remove the key from the lock, and walked forward, causing my lanyard to snag on the ring and blend it slightly. To say I was utterly disappointed with myself would be an understatement, as this is the very first thing I've accomplished upon being given independence. Fortunately, my roommate Jackson was kind enough to lend me some pliers, and I was able to fix it pretty easily.
+After bidding my parents farewell, the first thing I did was bend my lanyard's ring. I unlocked my door, forgetting to remove the key from the lock, and walked forward, causing my lanyard to snag on the ring and bend it slightly. To say I was utterly disappointed with myself would be an understatement, as this is the very first thing I've accomplished upon being given independence. Fortunately, my roommate Jackson was kind enough to lend me some pliers, and I was able to fix it pretty easily.
 
 Jackson and I got along very well. Our living habits weren't the most compatible, but we were able to work through it together very easily. He was never a major bother for me, and I imagine that I was never a major bother for him. While we didn't spend time together outside our dorm, we still talked pretty often and enjoyed each other's company. Although our other roommate, whom I will not name, lacked this harmony. 
 
-For the most part, he was a recluse, keeping to himself most the time. He was never a major bother socially. His cleanliness was a major bother though. I remember him being in his bed for about 20 hours a day, having never washed his bedsheets a single time during the entire schoolyear. Moreover, he showered incredibly inconsistently. To say our room smelled would be a gross understatement. Jackson and I protested to our roommate several times, all to no avail. Eventually, Jackson got so fed up with this that he frequently bought Febreze Air Fresheners simply to make the room bearable to stay in. Retrospectively, I appreciated Jackson standing up for the things that I was too cowardly to broach.
+For the most part, my unnamed roommate was a recluse, keeping to himself most the time. He was never a major bother socially. His cleanliness was a major bother though. I remember him being in his bed for about 20 hours a day, having never washed his bedsheets a single time during the entire school year. Moreover, he showered incredibly inconsistently. To say our room smelled would be a gross understatement. Jackson and I protested to our roommate several times, all to no avail. Eventually, Jackson got so fed up with this that he frequently bought Febreze Air Fresheners simply to make the room bearable to stay in. Retrospectively, I appreciated Jackson standing up for the things that I was too cowardly to broach.
 
-Ironically, it was my unnamed roomate's dirtiness that inspired me to remain clean. I made it a crucial point to never allow myself to become as unbearable of a person as he was. I never saw myself as a filthy person, but this experience most certainly strayed me from a path of ever becoming one.
+Ironically, it was my unnamed roommate's dirtiness that inspired me to remain clean. I made it a crucial point to never allow myself to become as unbearable of a person as he was. I never saw myself as a filthy person, but this experience most certainly strayed me from a path of ever becoming one.
 
 Aside from my roommate situation, the dorms were okay. The central location was a major bonus, as well as the proximity of all my friends. Being able to run into people and make plans on a whim is an unforgettable experience. 
 
@@ -109,7 +109,7 @@ My first goal was to make friends, as all my friends from high school went to di
 
 I ended up making friends at a Ki Aikido Martial Arts class hosted by the recreation center.
 
-Why did I sign up for Ki Aikido, of all things? I honestly couldn't tell you. I think the underlying philosophy of harmony, calmness, and redirecting aggressive energy deeply resonated with me. Embarassingly, I showed up 40 minutes late to the first lesson. Not because I was legitimately late, but because I couldn't find the room it was being hosted in.
+Why did I sign up for Ki Aikido, of all things? I honestly couldn't tell you. I think the underlying philosophy of harmony, calmness, and redirecting aggressive energy deeply resonated with me. Embarrassingly, I showed up 40 minutes late to the first lesson. Not because I was legitimately late, but because I couldn't find the room it was being hosted in.
 
 Nevertheless, I made three great friends in Aikido: Antonia, Jessica, and Josephine. They became my primary friend group, in which we dubbed ourselves the "Saturday Crew" since we always hung out on Saturday.
 
@@ -136,7 +136,7 @@ His response was along the lines of
 
 <figure>
     <img src="/images/college-experience/freshman_ambition.webp">
-    <figcaption>While that night was cloudly, it had a certain clarity to it.</figcaption>
+    <figcaption>While that night was cloudy, it had a certain clarity to it.</figcaption>
 </figure>
 
 And you know, he was right. It's easy to say no to an email, but hard to say no to a face. Especially when that face is tied to demonstrated experience. I emailed Karel requesting exactly this: I want to transfer into CCS Math, and I would like to take a few courses to "prove my worth".
@@ -174,7 +174,7 @@ Having successfully transferred into CCS Math, my next goal was to double major 
 
 Like any freshman trying to break into tech, I was trying to find an internship. I learned the hard way that many companies don't like hiring freshmen, so it's incredibly competitive, and unlikely as someone who wasn't in a tech major. However, through Data Science UCSB, I got involved with an informal project that sufficed my desires.
 
-The project was essentially the upgrading, development, and maintanence of a Discord bot serving the UCSB general server. The purpose of the project was to equip club members with skills needed for pivoting to SWE roles. It was very small in scope, but despite this, there was an interviewing process{{ footnote() }}, so it felt fairly formal.
+The project was essentially the upgrading, development, and maintenance of a Discord bot serving the UCSB general server. The purpose of the project was to equip club members with skills needed for pivoting to SWE roles. It was very small in scope, but despite this, there was an interviewing process{{ footnote() }}, so it felt fairly formal.
 
 To be completely honest, I was surprised that I was chosen for the role. Perhaps I perfectly matched the background of a non-CS major trying to pivot into CS. Nevertheless, that summer I devoted about 4–6 hours a week working on it, while also working as a tutor on the side.
 
@@ -199,7 +199,7 @@ For a while, I also treated it as the least remarkable. But that's not really a 
 
 ## My Not-So-New Living Situation
 
-I hadn't managed to find an apartment for my sophomore year, so I was still in the dorms. Frustratingly, my room assignment was not only in the same building, it changed only by 1 number. I went from Room 1141 to Room 2141. A part of me was disappointed, since my living situation was more or less the same, offering no new experiences in an otherwise adventerous time of my life.
+I hadn't managed to find an apartment for my sophomore year, so I was still in the dorms. Frustratingly, my room assignment was not only in the same building, it changed only by 1 number. I went from Room 1141 to Room 2141. A part of me was disappointed, since my living situation was more or less the same, offering no new experiences in an otherwise adventurous time of my life.
 
 However, my roommates this time around were amazing. We all got along very well and enjoyed each other's company. The quality of the room was certainly much better, and I deeply appreciate them for it. While we didn't hang out very often, we still interact with each other to this day.
 
@@ -300,7 +300,7 @@ To make matters worse, almost as soon as the quarter started, our technical lead
     <figcaption>A general officer meeting at Data Science UCSB.</figcaption>
 </figure>
 
-Luckily, all 3 of us got along very well, and quickly identified our niches. We understood all our strengths and shortcomings, and redirected club members to the correct club person.
+Luckily, all 3 of us got along very well, and quickly identified our niches. We understood all our strengths and shortcomings, and redirected curious club members to the appropriate officer.
 
 Moreover, hosting workshops and mentoring projects wasn't nearly as bad as I thought. My course knowledge, summer experience, and especially math background proved incredibly useful. The nice thing about teaching is you understand the material far better and identify your misconceptions. 
 
@@ -310,11 +310,11 @@ However, while Data Science UCSB did a good job at exposing myself to new ideas,
 
 ## An Ascending Social Life
 
-Having my own apartment immensely improved my well-being. Aside from finally having my own kitchen and bathroom, I was in an environment constantly surrounded by friends. My prior roomates Jackson, Bryar, and Sam were all great, don't get me wrong, but I never bonded with them as friends like I did with my roommates.
+Having my own apartment immensely improved my well-being. Aside from finally having my own kitchen and bathroom, I was in an environment constantly surrounded by friends. My prior roommates Jackson, Bryar, and Sam were all great, don't get me wrong, but I never bonded with them as friends like I did with my roommates.
 
 It was especially nice to be able to cook meals and share it with everyone. I grew quite fond of cooking while I was in the apartment, as it served as a pleasant way to pass time while I had nothing else to do.
 
-Outside my roommates, I bonded incredibly well with the board members of Data Science UCSB. Seeing everyone regularly was very nice, especially Tanay, Mitali, and I. We all had to work closely together since much of our work was entirely experimental, constantly needing reassessment and modifications.
+Outside my roommates, I bonded incredibly well with the board members of Data Science UCSB. Seeing everyone regularly was very nice, especially Tanay and Mitali. We had to work closely together since much of our work was entirely experimental, constantly needing reassessment and modifications.
 
 And lastly, I made great friends at tabletop gaming club, beyond my roommates. We hung out fairly often, typically around twice a week.
 
@@ -331,7 +331,7 @@ One of the graduation requirements for CCS was to engage in some form of researc
 
 Instead, I worked on a project with Franks. Going into detail will require a blog post in and of itself, but the gist of the project is we wanted to propose alternative ways to quantify the skill of NBA basketball players. Our idea was to use the tools of causal inference, and try to determine the "causal effect" of each player on point differentials.
 
-While we weren't able to achieve our goal{{ footnote() }}, I learned immensely from this project. Although, I held myself to a riducously high standard, always fearing I was disappointing Franks. I learned the hard way just how much disconnect there is between graduate courses and real-world projects at the same level. As much as I may have panicked and potentially stressed him out, I think we bonded well during it.
+While we weren't able to achieve our goal{{ footnote() }}, I learned immensely from this project. Although, I held myself to a ridiculously high standard, always fearing I was disappointing Franks. I learned the hard way just how much disconnect there is between graduate courses and real-world projects at the same level. As much as I may have panicked and potentially stressed him out, I think we bonded well during it.
 
 {% footnote_body() %}
 The bottleneck of the project was evaluation. We couldn't figure out a good way to benchmark our metrics with the industry standard's metrics, since they were fundamentally very different for our target audience. For ad hoc evaluations, we used RMSE, in which the null model that predicts 0 skill for everyone performed the best.
@@ -361,9 +361,9 @@ Expanding our ideas in Data Science UCSB was challenging. We agreed that, while 
     <figcaption>The Directors of Technical Development at one of our last events.</figcaption>
 </figure>
 
-As difficult as contributing to the club may have been, it pales in comparison to my courses. PSTAT 223A was by far the most difficult class I have ever taken. However, it was also one of the most interesting, rivaled only by PSTAT 215A with Franks. The professor, Dr. Jean-Pierre Fouque, whom I will refer to as JP, was easily one of my best professors. Aside from explaining the subject very well, JP structured the class very interestingly. The course focused on stochastic calculus, which opened my eyes to mathematical modeling. JP was a major name in mathematical finance after all, a field deeply rooted with the material, and was easily one of the best professors to teach it.
+As difficult as contributing to the club may have been, it pales in comparison to my courses. PSTAT 223A, stochastic calculus, was by far the most difficult class I have ever taken. However, it was also one of the most interesting, rivaled only by PSTAT 215A with Franks. The professor, Dr. Jean-Pierre Fouque, whom I will refer to as JP, was easily one of my best professors. Aside from explaining the subject very well, JP structured the class very interestingly. It opened my eyes to mathematical modeling. JP is a major name in mathematical finance, a field deeply rooted with the material, so he was easily one of the best professors to teach it.
 
-To make matters worse, the stress of grad school hit me hard. While I spent some of the summer coming up with decent generic application material, the tricky part was finding schools and, more importantly, identifying professors who matched my interests. At the time (and as of writing), my interests were incredibly broad, and having only 1 year of experience up until this point, also fairly vague. I did not want to add another stressor of the GRE, so I filtered out many programs to land my roles.
+To pile onto my stress, grad school applications hit me hard. While I spent some of the summer coming up with decent generic application material, the tricky part was finding schools and, more importantly, identifying professors who matched my interests. At the time (and as of writing), my interests were incredibly broad, and having only 1 year of experience up until this point, also fairly vague. I did not want to add another stressor of the GRE, so I was forced to filter out many programs that interested me.
 
 Retrospectively, while my generic application was solid, my effort at tailoring the applications towards the individual schools left much room for improvement. Moreover, I should have reached out to professors during the summer about potential interests. But pondering over these concerns is fruitless, since UC Irvine was my top choice to begin with, the school I ultimately ended up at.
 
@@ -398,16 +398,16 @@ But alas, six months is not a very long time, and it ended just as quickly as it
     <figcaption>Graduating alongside my peers in CCS, featuring one of the math advisors and one of our already-graduated friends. All of us were going to graduate school immediately after graduating.</figcaption>
 </figure>
 
-Frustratingly, we graduated on the weekend in between Week 10 and finals week, so we were still required to do finals even after graduation. I wasn't worried about any of them, but to say I was irked would be a grand understatement.
+Frustratingly, we graduated on the weekend in between Week 10 and finals week, so we were still required to do finals. While I wasn't worried about any of them, to say I was irked would be a grand understatement.
 
-My last time on campus{{ footnote() }} was Friday, June 13th. One of my courses didn't have a final, instead a final homework assignment the professor requested to be turned in on paper. I entered his office, chatted with him briefly, and bid him farewell and a good summer. This was my last moment as an undergrad, and I felt bittersweet. I decided to reward myself by going to the nearby snack shop, The Arbor.
+My last time on campus{{ footnote() }} was Friday, June 13th, 2025. One of my courses didn't have a final exam, instead a final homework assignment the professor requested to be turned in on paper. I entered his office, chatted with him briefly, and bid him farewell and a good summer. This was my last moment as an undergrad, and I felt bittersweet. I decided to reward myself by going to the nearby snack shop, The Arbor.
 
 <figure>
     <img src="/images/college-experience/gum.webp" style="width: 50%">
     <figcaption>I was left with a pleasant surprise upon sitting down.</figcaption>
 </figure>
 
-And just as my luck would have it, I got gum stuck to my pants as soon as I sat down. And you know, it reminded me of how I began college: by bending my lanyard's ring. A mix of both obliviousness and misfortune. I guess some things never change, do they?
+And just as my luck would have it, I got gum stuck to my pants as soon as I sat down. And you know, it reminded me of how I began college, by bending my lanyard's ring. A mix of both obliviousness and misfortune. I guess some things never change, do they?
 
 Alas, I bid my final farewell to UCSB, excited to begin a new journey at UCI.
 
@@ -421,12 +421,12 @@ Except a graduation ceremony I attended on June 14th, though I didn't enter camp
 
 # Closing Remarks
 
-To all that have read this far, I appreciate it. Keep in mind that there are many experiences and events I was unable to mention. This is merely an approximation, not a proper retelling, of my college experience. Doing so would require me to verbally tell the story, which itself will still be reductive one way or another.
+To all that have read this far, I appreciate it. Keep in mind that there are many experiences and events I was unable to mention. This is merely an approximation, not a proper retelling, of my college experience. Doing so would require me to verbally tell the story.
 
 For anyone reading this blog for advice, there are a few key takeaways I want to highlight.
 
 1. There is no "proper" college experience. If you ask anyone else to retell theirs, it will be dramatically different from mine. Worry not about doing what other people consider right, but what you consider worthy.
-   - The worst thing you can do is use this blog as a "template" for your own experiences. Don't do that. You will be missing out on the whole point of independence. 
+   - The worst thing you can do is use this blog as a template for your own experiences. Don't do that. You will be missing out on the whole point of independence. 
 2. There are several themes throughout this blog, namely perseverance, determination, and most notably, luck. It's easy to conclude that, while I was a hard worker, my success is a product of luck in my early formative years. This is a good point, but also one that neglects one crucial fact: **I am only telling the highlights, both highs and lows, of my story**. 
    - For the most part, the reason *why* I was lucky was simply because I forced myself to do several things and kept the ones that stuck. I have not written about, nor mentioned, many of those things. Trying a select few things and waiting for something to happen only works for a small group of fortunate people.
    - As I like to tell many of my friends{{ footnote() }}, "Never compare your average life to other people's highlights." You don't know my average life, just my peaks and valleys.
@@ -443,3 +443,7 @@ I didn't come up with the original quote. I heard a bastardized version of it on
 {% footnote_body() %}
 Do not get the impression that I'm denouncing computer science, or any field adjacent to a job, as "pursuits of dollar signs". I am simply acknowledging that such fields were not good for me. This may not be the case for you, or most CS majors for that matter.
 {% end %}
+
+# Acknowledgements
+
+I obtained permission from my friends to use their images in this blog, and I appreciate them for it.
