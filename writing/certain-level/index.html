@@ -1,0 +1,609 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    A Certain Level of Arrogance - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Comments on a common trait I encounter." />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="A Certain Level of Arrogance" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="Comments on a common trait I encounter." />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;certain-level&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;certain-level&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#what-is-this-certain-level-of-arrogance">What is this &quot;certain level of arrogance&quot;?</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#datadrip">DataDrip</a>
+          </li>
+          
+          <li>
+            <a href="#a-precise-definition">A Precise Definition</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#where-does-it-come-from-why-is-it-over-represented-in-tech">Where does it come from? Why is it over-represented in tech?</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#raising-the-bar">Raising the Bar</a>
+          </li>
+          
+          <li>
+            <a href="#difficulty-imbalance">Difficulty Imbalance</a>
+          </li>
+          
+          <li>
+            <a href="#demands-of-industry">Demands of Industry</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#final-remarks">Final Remarks</a>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">A Certain Level of Arrogance</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-10-04</time>
+  <span class="mx-1">&middot;</span>
+  <span>11min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span class="ml-2">Table of Contents</span>
+    </summary>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#what-is-this-certain-level-of-arrogance">What is this &quot;certain level of arrogance&quot;?</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#datadrip">DataDrip</a>
+          </li>
+          
+          <li>
+            <a href="#a-precise-definition">A Precise Definition</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#where-does-it-come-from-why-is-it-over-represented-in-tech">Where does it come from? Why is it over-represented in tech?</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#raising-the-bar">Raising the Bar</a>
+          </li>
+          
+          <li>
+            <a href="#difficulty-imbalance">Difficulty Imbalance</a>
+          </li>
+          
+          <li>
+            <a href="#demands-of-industry">Demands of Industry</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#final-remarks">Final Remarks</a>
+        
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+
+<!---->
+
+  <!-- Content -->
+  <section><p>During my two years as an officer of <a rel="noopener" target="_blank" href="https://www.datascienceucsb.org/">Data Science UCSB</a>, I frequently interacted with hundreds of club members, predominantly <a rel="noopener" target="_blank" href="https://catalog.ucsb.edu/programs/BSSTSDS">Statistics &amp; Data Science</a> <em>(SDS)</em> and <a rel="noopener" target="_blank" href="https://www.cs.ucsb.edu/">Computer Science</a> <em>(CS)</em> majors. Most of them were awesome, either ambitious beginners wanting to learn more, or seasoned veterans tackling interesting projects.</p>
+<p>But in a few rare occasions, I encountered people who possessed a certain level of arrogance. Every major has their fair share of unpleasant people, but CS and SDS especially had an over-representation of them. While a vocal minority, I have experienced this trait disproportionately first-hand. After having talked about it with so many people around me, I can't help but feel that there's an underlying reason behind it.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(255, 23, 68, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/danger.svg)"
+    >
+      danger
+    </div>
+    <span><strong>Take What I Say Lightly</strong></span>
+  </div>
+  <div class="pl-4"><p>I am not writing this blog with the intention of insulting anyone. Rather, I write this to illustrate an unproductive and downright unpleasant mindset I encountered more often than I can tolerate. My hope is to both bring this topic to light, and to steer people away from it.</p>
+<p>As much as I may seem to speak in absolutes, this is definitely not the case. It is not my intention to slander anyone, nor to suggest that they are inferior. Many of my greatest friends come from CS and SDS backgrounds. What I am focusing on, however, is a very vocal <strong>minority</strong> that unfortunately is over-represented in these fields.</p>
+</div>
+</div>
+<h1 id="what-is-this-certain-level-of-arrogance">What is this "certain level of arrogance"?</h1>
+<p>To introduce what I mean, allow me to explain by way of example. But rather than focusing on a negative example illustrating arrogance, I'll focus on a positive example illustrating the exact opposite. In this way, I can hone in on elements neglected by this arrogance.</p>
+<p><em>Note: I obtained permission from the project members to write about their project. However, in the interest of privacy, I will not disclose anything more than the project itself.</em></p>
+<h2 id="datadrip">DataDrip</h2>
+<p>DataDrip was a project in Data Science UCSB. It was one of the finalists for Project Showcase 2025, ultimately winning a cash prize. The premise of this project is that you submit a picture of your face, and it returns a wardrobe of fashion items. In essence, the project is finding <a rel="noopener" target="_blank" href="https://www.kontentino.com/social-media-urban-dictionary/drip/">"drip"</a> that will complement you.</p>
+<p>While at first glance this may seem questionable, the project was very well-thought-out. Color analysis motivates the entire approach, namely the <a rel="noopener" target="_blank" href="https://www.washingtonpost.com/lifestyle/style/color-analysis-what-looks-best-on-you/2021/08/16/16174e96-f92a-11eb-9c0e-97e29906a970_story.html">four seasons categorization</a>. The idea here is that skin tone determines what "season" you are, which narrows down a list of suitable clothing items. My understanding of the project is it extracts facial features into embeddings via a pre-trained model, and from there uses heuristics to both classify a user's season and create a list of clothes.</p>
+<p>Aside from being an impressive project, I have a few key praises</p>
+<ol>
+<li>The members were pretty technical people, and for the most part, this was an entirely technical project.
+<ul>
+<li>That is, the members simply applied the analysis and methodology of experts, rather than trying to do everything themselves.</li>
+<li>To be more specific, <strong>the project members did not masquerade as experts in non-technical fields they have little exposure with.</strong></li>
+</ul>
+</li>
+<li>All ethical concerns, such as biases in training data and use of external tools/methods, were approached carefully. They were very keen on ensuring that this is not only a useful tool, <strong>but an ethically sound one too</strong>.</li>
+<li>The team all chose to work in an area they had a deep interest in, rather than choosing something with several buzzwords just to put on a resume.</li>
+</ol>
+<h2 id="a-precise-definition">A Precise Definition</h2>
+<p>The arrogance I describe is pretty much the antithesis of every praise I outlined above. <strong>It takes a certain level of arrogance to completely neglect non-technical skills and assume you can fulfill the same roles as an expert.</strong> That is, to assume that because you <em>can</em> build a solution with technology, you can thus put an end to the problem at hand without much repercussion.</p>
+<p>Somewhat related is the shallow pursuit of achievements. Namely, working on a project not because of interest or skill development, but because of resume embellishment, and nothing more. In essence, <strong>this certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.</strong> I must stress that I am not at all speaking to the intimidation or confusion many beginners feel, that is entirely separate.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>An Important Clarification</strong></span>
+  </div>
+  <div class="pl-4"><p>It's important to clarify that I'm not suggesting absolute care of every detail is necessary. I frequently use technologies like <a rel="noopener" target="_blank" href="https://pandas.pydata.org/">pandas</a>, <a rel="noopener" target="_blank" href="https://pytorch.org/">PyTorch</a>, <a rel="noopener" target="_blank" href="https://numpy.org/">NumPy</a>, &amp; <a rel="noopener" target="_blank" href="https://git-scm.com/">git</a> in my work. I cannot explain how they work beyond vague simplifications. And frankly, I'm not interested in improving this understanding.</p>
+<p>However, I must acknowledge that I am <strong>only</strong> qualified at applying these technologies for specific tasks at an abstracted level, and nothing more. That is, I am not an expert in low-level design. Perhaps those skills are easy for me to acquire, but that does not make me good at them, nor does it mean I am capable of taking on a role requiring such skills.</p>
+</div>
+</div>
+<h1 id="where-does-it-come-from-why-is-it-over-represented-in-tech">Where does it come from? Why is it over-represented in tech?</h1>
+<p>The over-representation of this mindset in SDS, CS, and even math is something I've noticed throughout all of my undergrad. I don't claim to understand this entirely, but I have a couple ideas.</p>
+<h2 id="raising-the-bar">Raising the Bar</h2>
+<p>As any undergrad can tell you, getting into Computer Science and Data Science programs is <em>really</em> competitive. You have to achieve nearly perfect marks in advanced high school courses, as well as stellar extracurriculars, to have a chance at moderately prestigious universities. As a result, anyone in such a program is going to be academically capable.</p>
+<p>Combine this academic capability with the <a rel="noopener" target="_blank" href="https://dailynexus.com/2024-09-06/ucsb-awards-majority-a-grades-for-fifth-consecutive-school-year/">overall trend of grade inflation</a>, and it suddenly makes maintaining these perfect marks within reach. Easy? Of course not. But for an academically gifted individual who already knows how to optimize grade performance, it suddenly becomes an accessible task to maintain a near-perfect record.</p>
+<p>And well, this naturally develops such an arrogance. After all, if you're good at nearly every class you've taken, surely that must mean you're good at most things. Especially if you're studying a field that's used everywhere in life.</p>
+<p>Yet there's a fundamental issue with this. Tech majors primarily study non-tech skills through high school, lower division, and general education coursework, which are <strong>introductory</strong> in nature. For the most part, intro classes only offer a brief, simplified overview.</p>
+<p>Furthermore, while technology is applicable to virtually every field, that doesn't mean a tech degree teaches you these applications. A perfect comparison is mathematics. Does being a math major make me good at all engineering and sciences? After all, math is even more ubiquitous than technology.</p>
+<h2 id="difficulty-imbalance">Difficulty Imbalance</h2>
+<p>The aforementioned raised bar isn't a result of pure chance. After all, CS and SDS are known for being difficult majors, and their skills are nothing to scoff at.</p>
+<p>In general, it is true, though not universally true, that the skills of a tech major are relatively more difficult to learn than the skills of other non-tech majors, particularly non-STEM fields. However, <strong>that doesn't mean those other skills are trivial, or that they are easy to learn.</strong> For example, something like policy analysis does not have a very high barrier to entry, but becoming a skilled analyst requires years of experience that's completely orthogonal to tech experiences.</p>
+<p>And moreover, I partially dispute the premise of this observation. While I agree that tech degrees are generally more work than non-tech, mostly non-STEM, degrees, <strong>they ultimately test completely different skills</strong>. For instance, humanities skills are much different than technology skills. It's very much possible to be good in one and awful in the other. In fact, I would argue that a substantial amount of STEM people have awful humanities skills.</p>
+<p>Furthermore, the barrier of entry for using technology becomes lower every year. Tech skills are increasingly becoming more accessible to those in other degrees, and even those without degrees.</p>
+<p>Granted, using technology is not at all what a tech degree prepares you for. Saying such a thing is no different from saying mathematics teaches you how to add numbers together, or that literature teaches you how to read. But this leads me directly into my broader criticism.</p>
+<blockquote>
+<p>This certain level of arrogance encompasses the negligence of skill acquisition and methodology, and focuses only on results.</p>
+</blockquote>
+<p>Truth of the matter is that many of these people who neglect non-tech skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that's effectively what these people get out of it.</p>
+<h2 id="demands-of-industry">Demands of Industry</h2>
+<p>To say everything above as-is, without consideration of the demands from jobs, is a gross oversimplification, and quite frankly, ignorant. As with anything, there's another side to the story.</p>
+<p>In reality, the demands of industry are almost entirely applied skills. Abstract knowledge, as well as non-tech domain knowledge, often have little value in the workforce, at least for jobs below the graduate-degree level. Using, designing, and implementing technology is what defines a job in tech. I suspect that many people who fall into this arrogance simply optimize their experiences around getting a job. And well, I can't blame them. It's hard to not be frustrated when you are well-aware that what you study is not directly relevant to what you will work as.</p>
+<p>However, the bar for a "coding studies" major, i.e. those whose only learning focus is to apply technology and nothing more, becomes lower each year. The barrier for implementing many technologies is not high, and is easy to independently learn online. Moreover, with the onset of LLMs, it's easy to automate these repetitive tasks at scale.</p>
+<p>All this to say that jobs at the level of "coding studies" don't require a degree to begin with. A degree offers much more. Aside from breadth in the field, it hones ingenuity through carefully approached projects and abstract knowledge. The value of projects is straightforward, and not exclusive to degrees, but the abstract knowledge has a much deeper role. It begets a profound understanding of problem-solving, offering an intuition that's immensely valuable no matter the role. This intuition and ingenuity is incredibly difficult to replace, and is what makes many people valuable in the workforce.</p>
+<p>Naturally, I must admit my biases as a mathematician. My undergraduate degree was almost entirely abstract knowledge, and the few applications I encountered in my courses were very adjacent to theory. It's very easy for me to overvalue abstract knowledge and undervalue everything else.</p>
+<p>Notwithstanding, to say I'm judging from the sidelines is utterly wrong. It was precisely my experiences as a mentor of several applied projects that led me to these conclusions. The projects that stood out, such as DataDrip, were successful not because of their technical skills alone, but because they approached the problem with care, and respected the non-technical aspects of the problem.</p>
+<p>Moreover, domain expertise is incredibly valuable, especially in data science. Such expertise is predominantly non-technical skills, such as scientific knowledge or humanities-adjacent skills. Overall, in my opinion, those in school studying "coding studies" are completely missing the point of their degree.</p>
+<h1 id="final-remarks">Final Remarks</h1>
+<p>So why did I write this blog? Because I've had this exact conversation with so many people around me. It's gotten to a point where I feel like articulating the frustrations has some value.</p>
+<p>To say this behavior is confined to tech majors in school is just wrong. Much of this discussion translates well into the "tech bro" phenomenon. <a rel="noopener" target="_blank" href="https://www.404media.co/how-teas-founder-convinced-millions-of-women-to-spill-their-secrets-then-exposed-them-to-the-world/">Here's an example from recent history</a>. Furthermore, I get this impression from many STEM majors, such as math and physics, though to a lesser extent.</p>
+<p>My hope is that someone will read this and receive clarity. Or better yet, realize the kind of path they were traveling on. After all, I was exactly like this as a freshman. But it wasn't until my introduction to math, something I truly enjoyed, that I realized chasing dollar signs maybe isn't a good idea.</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col">
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tags </span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://dtnaylor.com/writing/tags/blog/"
+      >blog</a
+    >
+    
+  </div>
+  
+</footer>
+
+<!---->
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  <a
+    class="block-hover-mask flex min-w-[50%] grow items-center rounded-l-md p-6 pr-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;changing-time&#x2F;"
+    ><span class="mr-1.5">←</span><span>How My Troop Has Changed</span></a
+  >
+  <!---->
+  
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;college-experience&#x2F;"
+    ><span>My College Experience</span><span class="ml-1.5">→</span></a
+  >
+  
+</nav>
+
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by&#x2F;4.0&#x2F;deed.en" rel="noopener" target="_blank">
+      CC BY 4.0
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon & License</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

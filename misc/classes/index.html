@@ -1,0 +1,643 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Classes Taken - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Classes Taken" />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Classes Taken" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="Classes Taken" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;classes&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;classes&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#graduate-degree-uc-irvine">Graduate Degree (UC Irvine)</a>
+        
+      </li>
+      
+      <li>
+        <a href="#undergraduate-degree-uc-santa-barbara">Undergraduate Degree (UC Santa Barbara)</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#senior">Senior</a>
+          </li>
+          
+          <li>
+            <a href="#junior">Junior</a>
+          </li>
+          
+          <li>
+            <a href="#sophomore">Sophomore</a>
+          </li>
+          
+          <li>
+            <a href="#freshman">Freshman</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Classes Taken</h1>
+  </header>
+
+  <section><style>
+    ul {
+        margin-top: 0; /* Removes top margin from the entire list */
+        margin-bottom: 0; /* Removes bottom margin from the entire list */
+        padding-left: 20px; /* Adjusts indentation, or set to 0 to remove it */
+    }
+    ul ul {
+        list-style-type: circle
+    }
+    ul ul ul {
+        list-style-type: none;
+        padding-left: 0px
+    }
+</style>
+<p>Listed here is every class I've taken while in school, in descending order. Note the following range of courses</p>
+<ul>
+<li>1–99: Undergraduate, lower division</li>
+<li>100–199: Undergraduate, upper division</li>
+<li>200+: Graduate</li>
+</ul>
+<p>For anyone interested, <a rel="noopener" target="_blank" href="https://docs.google.com/spreadsheets/d/1weRRxfZi-ufdfieJTo58H_MCGt9bzeilYJw4FESpXnE/edit?pli=1&amp;gid=0#gid=0">my course planner for my undergraduate degree can be found here.</a></p>
+<h2 id="graduate-degree-uc-irvine">Graduate Degree (UC Irvine)</h2>
+<ul>
+<li>Fall 2025
+<ul>
+<li><small><strong>STATS 200A</strong>: Probability and Statistical Theory <em>(Dr. Wenzhuo Zhou)</em></small>
+<ul>
+<li><small><em>Basics of probability theory.</em></small></li>
+</ul>
+</li>
+<li><small><strong>STATS 210</strong>: Statistical Methods I: Linear Models <em>(Dr. Zhaoxia Yu)</em> </small>
+<ul>
+<li><small><em>Linear regression, inference, diagnostics.</em></small></li>
+</ul>
+</li>
+<li><small><strong>STATS 295</strong>: Clinical Trials <em>(Dr. Hengrui Cai)</em></small>
+<ul>
+<li><small><em>Randomized controlled trials, observational studies, adaptive and pragmatic trial design, causal inference.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="undergraduate-degree-uc-santa-barbara">Undergraduate Degree (UC Santa Barbara)</h2>
+<h3 id="senior">Senior</h3>
+<ul>
+<li>
+<p>Spring 2025</p>
+<ul>
+<li><small><strong>CMPTGCS 20</strong>: Introduction to Python <em>(Dr. Richert Wang)</em></small></li>
+<li><small><strong>HIST 164C</strong>: Civil War and Reconstruction <em>(Dr. John Majewski)</em></small></li>
+<li><small><strong>PSTAT 213C</strong>: Probability Theory <em>(Dr. Ruimeng Hu)</em></small>
+<ul>
+<li><small><em>Martingales, martingale convergence, stopping times, optional sampling, optional stopping theorem.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223C</strong>: Computational Finance <em>(Dr. Mike Ludkovski)</em></small>
+<ul>
+<li><small><em>Monte Carlo, Partial Differential Equation simulation, American options</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Winter 2025</p>
+<ul>
+<li><small><strong>MATHCS 120NT</strong>: Seminar in Number Theory <em>(Dr. Yitang Zhang)</em></small></li>
+<li><small><strong>PHYS 7A</strong>: Basic Physics <em>(Dr. Georgios Koutroulakis)</em></small></li>
+<li><small><strong>PSTAT 213B</strong>: Probability Theory <em>(Dr. Ruimeng Hu)</em></small>
+<ul>
+<li><small><em>Convergence of random variables, laws of large numbers, central limit theorem, large deviations</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223B</strong>: Financial Modeling <em>(Dr. Jean-Pierre Fouque)</em></small>
+<ul>
+<li><small><em>Stochastic models in finance, hedging of derivatives in equity, fixed income, and credit markets, portfolio allocation</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Fall 2024</p>
+<ul>
+<li><small><strong>MATHCS 128</strong>: Transition to Higher Mathematics <em>(Dr. Karel Casteels)</em></small></li>
+<li><small><strong>MATH 240A</strong>: Differential Geometry <em>(Dr. Matthias Wink)</em></small>
+<ul>
+<li><small><em>Smooth manifolds, Lie groups, smooth functions, vector fields.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 213A</strong>: Stochastic Processes <em>(Dr. Tomoyuki Ichiba)</em></small>
+<ul>
+<li><small><em>Discrete and continuous time Markov chains, random walks, branching processes, birth-death processes, Poisson processes, point processes.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 223A</strong>: Stochastic Calculus <em>(Dr. Jean-Pierre Fouque)</em></small>
+<ul>
+<li><small><em>Brownian motion, stochastic calculus and stochastic differential equations, diffusion processes, related partial differential equations and Feynman-Kac formula.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="junior">Junior</h3>
+<ul>
+<li>
+<p>Spring 2024</p>
+<ul>
+<li><small><strong>CH ST 1C</strong>: Chicano Studies <em>(Dr. Dolores Inés Casillas)</em></small></li>
+<li><small><strong>MATH 111C</strong>: Galois Theory <em>(Dr. Zheng Liu)</em></small>
+<ul>
+<li><small><em>Fields, field extensions, Galois groups.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 137A</strong>: Graph Theory <em>(Dr. Karel Casteels)</em></small>
+<ul>
+<li><small><em>Paths, circuits, trees, coloring, planarity.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 262MC</strong>: Seminar in Monte Carlo <em>(Dr. Alexander Shkolnik)</em></small></li>
+</ul>
+</li>
+<li>
+<p>Winter 2024</p>
+<ul>
+<li><small><strong>MATH 111B</strong>: Ring Theory <em>(Dr. Zheng Liu)</em></small>
+<ul>
+<li><small><em>Rings, ideals, factorizations.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 132A</strong>: Optimization <em>(Dr. Karel Casteels)</em></small>
+<ul>
+<li><small><em>Constrained and unconstrained optimization, linear search methods, gradient methods, Newton and Quasi-Newton methods.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 260HH</strong>: Seminar in Mathematical Machine Learning <em>(Dr. Paul Atzberger)</em></small></li>
+<li><small><strong>PSTAT 215A</strong>: Bayesian Inference <em>(Dr. Alexander Franks)</em></small>
+<ul>
+<li><small><em>Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Fall 2023</p>
+<ul>
+<li><small><strong>MATH 111A</strong>: Group Theory <em>(Dr. Darren Long)</em></small>
+<ul>
+<li><small><em>Finite groups, homomorphisms, normal subgroups, quotients, direct products, and group actions.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 201A</strong>: Measure Theory <em>(Dr. Katy Craig)</em></small>
+<ul>
+<li><small><em>σ-algebras, measures, Lebesgue integration.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 206A</strong>: Matrix Analysis and Computation <em>(Dr. Shivkumar Chandrasekaran)</em></small>
+<ul>
+<li><small><em>Matrix computations, SVD, pseudoinverse, characterization of eigenvalues, perturbation theory.</em></small></li>
+</ul>
+</li>
+<li><small><strong>PSTAT 207A</strong>: Statistical Theory <em>(Dr. Andrew Carter)</em></small>
+<ul>
+<li><small><em>Order statistics, estimation theory, likelihood, sufficiency, efficiency, maximum likelihood.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="sophomore">Sophomore</h3>
+<ul>
+<li>Spring 2023
+<ul>
+<li><small><strong>MATHCS 108B</strong>: Linear Algebra <em>(Dr. Karel Casteels)</em></small>
+<ul>
+<li><small><em>Inner product spaces, projections, least-squares approximations, canonical form.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118C</strong>: Real Analysis <em>(Dr. Darren Long)</em></small>
+<ul>
+<li><small><em>Multivariate calculus, differential topology.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 120FO</strong>: Linear Optimization <em>(Dr. Maria Isabel Bueno Cachadina)</em></small>
+<ul>
+<li><small><em>Linear inequalities, convex sets, simplex method.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 122B</strong>: Complex Analysis <em>(Dr. Gustavo Ponce)</em></small>
+<ul>
+<li><small><em>Rouche's theorem, analytic continuation, conformal mapping, infinite products, harmonic functions.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Winter 2023
+<ul>
+<li><small><strong>MATHCS 108A</strong>: Linear Algebra <em>(Dr. Karel Casteels)</em></small>
+<ul>
+<li><small><em>Vector spaces and subspaces, span and linear independence, linear maps, eigenvalues and eigenvectors.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118B</strong>: Real Analysis <em>(Dr. Gustavo Ponce)</em></small>
+<ul>
+<li><small><em>Continuity, differentiability, Riemann integrals.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 122A</strong>: Complex Analysis <em>(Dr. Gustavo Ponce)</em></small>
+<ul>
+<li><small><em>Complex differentiation, analytic functions, Cauchy-Riemann equations, classification of singular points, residues.</em></small></li>
+</ul>
+</li>
+<li><small><strong>RG ST 4</strong>: Intro to Buddhism <em>(Dr. Gregory Hillis)</em></small></li>
+</ul>
+</li>
+<li>Fall 2022
+<ul>
+<li><small><strong>MATH 104A</strong>: Numerical Analysis <em>(Dr. Xu Yang)</em></small>
+<ul>
+<li><small><em>Numerical methods, Newton method, composite integration, splines.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATH 118A</strong>: Real Analysis <em>(Dr. Geunho Lim)</em></small>
+<ul>
+<li><small><em>Real numbers, topology of metric spaces, numerical sequences, infinite series.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 121</strong>: Probability Theory <em>(Dr. Alexander Shkolnik)</em></small>
+<ul>
+<li><small><em>Random variables, probability measure.</em></small></li>
+</ul>
+</li>
+<li><small><strong>WRIT 107J</strong>: Journalism Writing <em>(Dr. Paul Mena)</em></small></li>
+</ul>
+</li>
+</ul>
+<h3 id="freshman">Freshman</h3>
+<ul>
+<li>Spring 2022
+<ul>
+<li><small><strong>INT 84AR</strong>: Honors Seminar in Mathematics <em>(Dr. Dennis Labutin)</em></small></li>
+<li><small><strong>MATH 6B</strong>: Multivariable Calculus <em>(Dr. Wenchuan Tian)</em></small></li>
+<li><small><strong>MATHCS 120FV</strong>: Game Theory <em>(Dr. Karel Casteels)</em></small>
+<ul>
+<li><small><em>Combinatorial game theory, zero-sum games, nim, Nash equilibrium.</em></small></li>
+</ul>
+</li>
+<li><small><strong>MATHCS 117</strong>: Introduction to Real Analysis <em>(Dr. Dennis Labutin)</em></small>
+<ul>
+<li><small><em>Limits, sequences and series, continuity.</em></small></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Winter 2022
+<ul>
+<li><small><strong>INT 84CN</strong>: Honors Seminar in Afrofuturism <em>(Dr. Michelle Petty-Grue)</em></small></li>
+<li><small><strong>MATH 4B</strong>: Differential Equations <em>(Dr. Paul Atzberger)</em></small></li>
+<li><small><strong>MATH 6A</strong>: Multivariable Calculus <em>(Dr. Wenchuan Tian)</em></small></li>
+<li><small><strong>MATHCS 101B</strong>: Problem Solving II <em>(Dr. Karel Casteels)</em></small></li>
+</ul>
+</li>
+<li>Fall 2021
+<ul>
+<li><small><strong>ARTHI 6F</strong>: History of Architecture <em>(Dr. Richard Wittman)</em></small></li>
+<li><small><strong>CLASS 40</strong>: Greek Mythology <em>(Dr. Helen Morales)</em></small></li>
+<li><small><strong>MATH 4A</strong>: Linear Algebra <em>(Dr. Francesc Castella)</em></small></li>
+</ul>
+</li>
+</ul>
+</section>
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by&#x2F;4.0&#x2F;deed.en" rel="noopener" target="_blank">
+      CC BY 4.0
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon & License</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
