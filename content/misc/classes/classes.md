@@ -27,8 +27,24 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 
 ## Graduate Degree (UC Irvine)
 
+- Spring 2026
+  - <small>**STATS 200C**: Probability and Statistical Theory III *(Dr. Zhaoxia Yu)*<small>
+    - <small>*Interval estimation, hypothesis testing, decision theory, basic linear model theory.*</small>
+  - <small>**STATS 212**: Statistical Methods III: Methods for Correlated Data *(Dr. Tianchen Qian)*<small>
+    - <small>*Repeated measures ANOVA, linear mixed models, non-linear mixed effects models, and generalized estimating equations.*</small>
+  - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*<small>
+    - <small>*Entropy, mutual information, asymptotic equipartition property, entropy rates of a stochastic process, data compression, channel capacity, differential entropy, the Gaussian channel.*</small>
+- Winter 2026
+  - <small>**STATS 200B**: Probability and Statistical Theory II *(Dr. Bin Nan)*<small>
+    - <small>*Sufficient statistics, point estimates, maximum likelihood, minimum variance estimators, confidence intervals, hypothesis testing*</small>
+  - <small>**STATS 205**: Bayesian Data Analysis *(Dr. Veronica Berrocal)*<small>
+    - <small>*Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.*</small>
+  - <small>**STATS 211**: Statistical Methods II: Generalized Linear Models *(Dr. Daniel Gillen)*<small>
+    - <small>*Theory and application of generalized linear models.*</small>
+  - <small>**STATS 295**: Spatial Statistics *(Dr. Veronica Berrocal)*<small>
+    - <small>*Spatial and correlated data, semi-variogram estimation, Gaussian Processes, Bayesian methods*</small>
 - Fall 2025
-  - <small>**STATS 200A**: Probability and Statistical Theory *(Dr. Wenzhuo Zhou)*</small>
+  - <small>**STATS 200A**: Probability and Statistical Theory I *(Dr. Wenzhuo Zhou)*</small>
     - <small>*Basics of probability theory.*</small>
   - <small>**STATS 210**: Statistical Methods I: Linear Models *(Dr. Zhaoxia Yu)* </small>
     - <small>*Linear regression, inference, diagnostics.*</small>
