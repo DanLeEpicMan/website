@@ -1,0 +1,1730 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Real Analysis - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="An introduction into real analysis." />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Real Analysis" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="An introduction into real analysis." />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;tutorials&#x2F;mathematics&#x2F;real-analysis&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;tutorials&#x2F;mathematics&#x2F;real-analysis&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#introduction">Introduction</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#prerequisites">Prerequisites</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#what-is-real-analysis">What is Real Analysis?</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#why-learn-analysis">Why learn analysis?</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#the-basics">The Basics</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#basic-number-systems">Basic Number Systems</a>
+          </li>
+          
+          <li>
+            <a href="#the-real-numbers">The Real Numbers</a>
+          </li>
+          
+          <li>
+            <a href="#the-infimum-and-supremum">The Infimum and Supremum</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#sequences-and-limits">Sequences and Limits</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#sequences">Sequences</a>
+          </li>
+          
+          <li>
+            <a href="#cauchy-sequences">Cauchy Sequences</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#point-set-topology">Point-Set Topology</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#open-sets">Open Sets</a>
+          </li>
+          
+          <li>
+            <a href="#closed-sets">Closed Sets</a>
+          </li>
+          
+          <li>
+            <a href="#open-and-closed-sets">Open and Closed Sets</a>
+          </li>
+          
+          <li>
+            <a href="#sequences-and-topology">Sequences and Topology</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#functions-and-continuity">Functions and Continuity</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#usual-notions-of-continuity">Usual Notions of Continuity</a>
+          </li>
+          
+          <li>
+            <a href="#topological-continuity">Topological Continuity</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#conclusion">Conclusion</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#acknowledgments">Acknowledgments</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Real Analysis</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-12-19</time>
+  <span class="mx-1">&middot;</span>
+  <span>34min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span class="ml-2">Table of Contents</span>
+    </summary>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#introduction">Introduction</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#prerequisites">Prerequisites</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#what-is-real-analysis">What is Real Analysis?</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#why-learn-analysis">Why learn analysis?</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#the-basics">The Basics</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#basic-number-systems">Basic Number Systems</a>
+          </li>
+          
+          <li>
+            <a href="#the-real-numbers">The Real Numbers</a>
+          </li>
+          
+          <li>
+            <a href="#the-infimum-and-supremum">The Infimum and Supremum</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#sequences-and-limits">Sequences and Limits</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#sequences">Sequences</a>
+          </li>
+          
+          <li>
+            <a href="#cauchy-sequences">Cauchy Sequences</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#point-set-topology">Point-Set Topology</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#open-sets">Open Sets</a>
+          </li>
+          
+          <li>
+            <a href="#closed-sets">Closed Sets</a>
+          </li>
+          
+          <li>
+            <a href="#open-and-closed-sets">Open and Closed Sets</a>
+          </li>
+          
+          <li>
+            <a href="#sequences-and-topology">Sequences and Topology</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#functions-and-continuity">Functions and Continuity</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#usual-notions-of-continuity">Usual Notions of Continuity</a>
+          </li>
+          
+          <li>
+            <a href="#topological-continuity">Topological Continuity</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#conclusion">Conclusion</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#acknowledgments">Acknowledgments</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="introduction">Introduction</h1>
+<p>Welcome to my guide on <strong>real analysis</strong>! This is largely based on my notes from courses I took while an undergraduate math major. My goal is to offer an introduction into the subject that is accessible to non-math majors, while still maintaining mathematical rigor. My plan is to cover some (but not all) of the fundamentals, up until differentiation and integration theory.</p>
+<p>Note that this blog is not meant to supplant a course in analysis. A proper introduction into real analysis will require a textbook. I personally recommend <em>Understanding Analysis</em> by Stephen Abbott, or <em>Principles of Mathematical Analysis</em> by Walter Rudin. The former is significantly more accessible, while the latter is a gold standard among undergraduate curriculums.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Due to the nature of the subject, an above average mathematical maturity is necessary. Familiarity with proofs, set theory, and functions is assumed. Discrete mathematics is typically sufficient for this level of familiarity. These are not details that can be abstracted away, as doing so is antithetical to the goals of real analysis.</p>
+<h1 id="what-is-real-analysis">What is Real Analysis?</h1>
+<p>Analysis is tricky for me to define. From Wikipedia:</p>
+<blockquote>
+<p>Real analysis studies the behavior of real numbers, sequences and series of real numbers, and real functions.</p>
+</blockquote>
+<p>Which is true, but not particularly illuminating. Another common definition of analysis is the rigorous undertones of calculus. Perhaps accurate, but still unsatisfying.</p>
+<p><strong>To me, real analysis is the study of approximation and limiting behavior.</strong> While this is the most simplistic definition, I find it the most intuitive. After all, real analysis is the foundation of much of applied mathematics, which itself is married to approximation.</p>
+<h2 id="why-learn-analysis">Why learn analysis?</h2>
+<p>This is a question I commonly hear from non-math people, especially people going into statistics or data science programs that require analysis as a course.</p>
+<p>Truthfully, you don't <em>need</em> analysis for most applications. In fact, many people in industry probably know next-to-nothing about it. In terms of skills useful for a job, analysis is certainly nowhere near the top.</p>
+<p>However, broadly labeling analysis as "useless math" is, in my opinion, missing a huge chunk of the story. <strong>Analysis is largely what separates graduate-level (i.e. "advanced") work in statistics &amp; data science from undergraduate-level work.</strong> This is especially true for research in those fields, as well as research in any field adjacent to applied math (e.g. technology, engineering, etc.).</p>
+<p>Anyone at the graduate-level is certainly not using analysis in their day-to-day job, so it's wrong to view analysis as something that offers many direct valuable skills. Rather, it offers a level of intuition and a mathematical foundation that enables understanding of much deeper topics. Many advanced topics become incredibly simple with a sufficient math background, and analysis is absolutely fundamental to those advanced topics.</p>
+<p>So why study analysis? <strong>Because it makes many things simpler to understand.</strong> Especially if you plan on going into a research-oriented role, as the intuitions become necessary rather than a luxury.</p>
+<h1 id="the-basics">The Basics</h1>
+<p>We begin covering real analysis by first discussing different types of numbers.</p>
+<h2 id="basic-number-systems">Basic Number Systems</h2>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>The Natural Numbers and Integers</strong></span>
+  </div>
+  <div class="pl-4"><p>The <strong>natural numbers</strong>, denoted $\mathbb{N}$, are the set of whole numbers, starting from<sup class='opacity-60 footnote' id='footnote-1'><a href='#footnote-body-1' style='text-decoration: none'>1</a></sup> 1. I.e.
+$$
+\mathbb{N} = \{1, 2, 3, \dots \}
+$$</p>
+<p>The <strong>integers</strong>, denoted<sup class='opacity-60 footnote' id='footnote-2'><a href='#footnote-body-2' style='text-decoration: none'>2</a></sup> $\mathbb{Z}$, are the set of whole numbers, negative numbers, and 0. I.e.
+$$
+\mathbb{Z} = \{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \}
+$$</p>
+</div>
+</div>
+<p>Both the natural numbers and integers form the most basic type of number system. In some sense, we can think of them as a starting point.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>The Rational Numbers</strong></span>
+  </div>
+  <div class="pl-4"><p>The <strong>rational numbers</strong>, denoted $\mathbb{Q}$, are the set of ratios of integers, i.e.
+$$
+\mathbb{Q} = \left\{ \frac{a}{b} : a, b \in \mathbb{Z}, b \neq 0 \right\}
+$$
+Generally, we assume that $a, b$ have no common factors (other than 1).</p>
+</div>
+</div>
+<p>We call these "rational" numbers because they are a ratio of simpler building blocks, the integers. Indeed, the rational numbers encompass a vast majority of numbers we encounter in everyday life.</p>
+<p>Moreover, the rationals have a nice property called <strong>density</strong>. Between any two rational numbers, there exists another rational. Explicitly, if $r &lt; s$ are both rational, then their average $\frac{r + s}{2}$ is also rational, and $r &lt; \frac{r + s}{2} &lt; s$. In some sense, this means the rationals are "fine", unlike the integers, which are "coarse".</p>
+<p>However, despite their ubiquity and density, the rationals do not encompass all numbers.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Irrationality of $\sqrt{2}$</strong></span>
+  </div>
+  <div class="pl-4"><p>The number $\sqrt{2}$, defined as the positive number such that $\left(\sqrt{2}\right)^2 = 2$, is not rational.</p>
+</div>
+</div>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Irrationality of $\sqrt{2}$</strong></span>
+  </div>
+  <div class="pl-4"><p>Rather than showing that the statement "$\sqrt{2}$ is irrational" is <strong>true</strong>, we show that its contrary, i.e. "$\sqrt{2}$ is rational", must be <strong>false</strong>. In this way, we demonstrate that the statement must be true since it's impossible for it to be false. While this logical approach seems rather roundabout, it's a quite useful trick to make a problem more tractable.</p>
+<p>Now assume the contrary, i.e. that $\sqrt{2}$ is rational. Then by definition of a rational number, we can find two integers $a, b$ such that
+$$
+\sqrt{2} = \frac{a}{b} \quad \textrm{for } a, b \in \mathbb{Z}, b \neq 0
+$$</p>
+<p>As we noted earlier, we may assume that $a, b$ share no common factors other than 1. <strong>This step is crucial.</strong></p>
+<p>Rearranging the equation above, we have that
+$$
+2b^2 = a^2
+$$</p>
+<p>Therefore, $a^2$ is a multiple of 2, so it is even. Since $a^2$ is even, we must have that $a$ is even. To see this, we note that if $a$ weren't even, then it isn't a multiple of 2, so $a^2$ could not possibly be a multiple of 2.</p>
+<p>Thus, since $a$ is even, we can write it as 2 times some integer. Formally, $a = 2k$ for some $k \in \mathbb{Z}$. As a result, we must have that
+$$
+2b^2 = (2k)^2 = 4k^2 \implies b^2 = 2k^2
+$$
+So $b^2$ is even, therefore by the same logic as above, $b$ is also even. This means that $a, b$ share a common factor of 2. <strong>But we assumed earlier that $a, b$ do not share any factors, other than 1</strong>. This is a contradiction, so it's impossible for $\sqrt{2}$ to be rational. Thus, $\sqrt{2}$ is irrational.</p>
+</div>
+</div>
+<p>This "incompleteness" of $\mathbb{Q}$ motivates the definition of the real numbers.</p>
+<p 
+    id='footnote-body-1' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-1" style="text-decoration: none"><b>1</b></a>: This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers <b>including</b> 0.
+    </small>
+</p>
+</a><p 
+    id='footnote-body-2' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-2" style="text-decoration: none"><b>2</b></a>: We use $\mathbb{Z}$ for integers because of the German word "Zahlen", meaning "numbers".
+    </small>
+</p>
+</a><h2 id="the-real-numbers">The Real Numbers</h2>
+<p>A proper definition of the real numbers is incredibly technical, and for this article, quite pedantic. We may instead rely on the following intuitive definition.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>The Real Numbers</strong></span>
+  </div>
+  <div class="pl-4"><p>The <strong>real numbers</strong>, denoted $\mathbb{R}$, is the set of all numbers that can be represented with an infinite decimal expansion. E.g. $\sqrt{2} = 1.41421\dots$</p>
+</div>
+</div>
+<p>It's easy to see that $\mathbb{Q} \subset \mathbb{R}$. Moreover, just like the rationals, the reals have <strong>density</strong>. If $x &lt; y$ are both real numbers, then their average $\frac{x + y}{2}$ is also real, and $x &lt; \frac{x + y}{2} &lt; y$.</p>
+<p>But more importantly, there is a profound relationship between the rationals and the reals.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Density of the Rationals in the Reals</strong></span>
+  </div>
+  <div class="pl-4"><p>Between any two real numbers, there exists a rational number.</p>
+<p>Explicitly, if $x &lt; y$ are both real, then there exists $r \in \mathbb{Q}$ such that $x &lt; r &lt; y$.</p>
+</div>
+</div>
+<p>Unfortunately, we have to be a bit more clever than taking the average, since the average of two reals may not be rational.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Density of the Rationals in the Reals</strong></span>
+  </div>
+  <div class="pl-4"><p>Unlike before, we will prove this directly by explicitly constructing a rational number satisfying our statement. However, before we may proceed further, there are two crucial observations that we must make</p>
+<ol>
+<li>There is no such thing as a "largest" natural number. In other words, the natural numbers grow to infinity. Formally, $\mathbb{N}$ is unbounded<sup class='opacity-60 footnote' id='footnote-3'><a href='#footnote-body-3' style='text-decoration: none'>3</a></sup> from above.</li>
+<li>Similarly, the integers run off to both positive infinity and negative infinity. Formally, $\mathbb{Z}$ is unbounded from below and from above.</li>
+</ol>
+<p>Now to prove the theorem, let $x &lt; y$ be any two real numbers. Our goal is to find a rational number between them. First, since the natural numbers are unbounded from above, we can find $n \in \mathbb{N}$ such that
+$$
+n &gt; \frac{1}{y - x}
+$$</p>
+<p>There is no trickery here, we simply take any natural number greater than $\frac{1}{y - x}$ (the reason for this will be clear shortly). Note that since $x &lt; y$, $\frac{1}{y-x} &gt; 0$.</p>
+<p>Recall from basic algebra that if $a &gt; b &gt; 0$, then $\frac{1}{a} &lt; \frac{1}{b}$. Therefore,
+$$
+\frac{1}{n} &lt; y - x
+$$</p>
+<p>This gives one half of the rational number we want.</p>
+<p>To produce the second half, let $m \in \mathbb{Z}$ be the largest integer such that $m \leq nx$. Since $\mathbb{Z}$ is unbounded from below, such an $m$ exists. Then this tells us that
+$$
+m \leq nx &lt; m + 1
+$$
+Why the second inequality? <strong>Because if it didn't hold, then $m + 1 \leq nx$, meaning $m$ is not the <u>largest integer</u> such that $m \leq nx$.</strong> (Recall that adding two integers together gives you another integer.) Therefore, we have
+$$
+\frac{m}{n} \leq x &lt; \frac{m+1}{n}
+$$</p>
+<p>Putting everything together, we have that
+$$
+\begin{aligned}
+x &amp;&lt; \frac{m + 1}{n} \\
+&amp;= \frac{m}{n} + \frac{1}{n} &amp;&amp;\left( \textrm{Splitting the fracion} \right) \\
+&amp;\leq x + \frac{1}{n} &amp;&amp;\left( \frac{m}{n} \leq x \right) \\
+&amp;&lt; x + (y - x) &amp;&amp;\left( \frac{1}{n} &lt; y - x \right)\\
+&amp;= y
+\end{aligned}
+$$</p>
+<p>Which says precisely that $x &lt; \frac{m + 1}{n} &lt; y$. Thus, $r = \frac{m + 1}{n} \in \mathbb{Q}$ is the desired rational number.</p>
+</div>
+</div>
+<p>An immediate consequence of this is that <strong>every real number can be approximated by a rational number</strong> to arbitrary precision. For example, $\sqrt{2}$ can be approximated by the rational number $1.41$ to two decimal places, $1.41421$ to five decimal places, and even $1.41421356237309504880$ to twenty decimal places. For any given error threshold and real number $x$, we can always find a rational number $r$ such that the distance between $x$ and $r$ is less than the error threshold.</p>
+<p>At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, infimums, and supremums.</p>
+<p 
+    id='footnote-body-3' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-3" style="text-decoration: none"><b>3</b></a>: I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.
+    </small>
+</p>
+</a><h2 id="the-infimum-and-supremum">The Infimum and Supremum</h2>
+<p>A major concept in real analysis is the idea of bounds.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Upper and Lower Bounds</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $M$ be a subset of $\mathbb{R}$. We say that $a$ is an <strong>upper bound</strong> of $M$ if
+$$
+\textrm{For every } x \in M, \quad x \leq a
+$$</p>
+<p>Similarly, we say that $b$ is a <strong>lower bound</strong> of $M$ if
+$$
+\textrm{For every } x \in M, \quad x \geq b
+$$</p>
+</div>
+</div>
+<p>For instance, let $M = [0, 1)$. Then 2 is an upper bound of $M$, and -1 is a lower bound of $M$.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/upper_lower_bounds.webp" alt="An illustration of the bounds of a set." />
+    <figcaption>Lower bound in blue, $M$ in green, and upper bound in red. Made with Desmos.</figcaption>
+</figure>
+<p>However, it's not hard to see that we can do better. 1.5 and -0.5 are also upper and lower bounds, respectively. In fact, there are infinitely many upper and lower bounds for $M$.</p>
+<p>This motivates the definitions of the <strong>supremum</strong> and <strong>infimum</strong>, which are Latin for "above" and "below", respectively.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Supremum and Infimum</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $M$ be a subset of $\mathbb{R}$. The <strong>supremum</strong> of $M$, denoted $\sup M$, is the least upper bound of $M$. More rigorously, $\sup M$ satisfies</p>
+<p>$$
+\begin{aligned}
+&amp;\textrm{(1) For every } x \in M, &amp;&amp;x \leq \sup M \\
+&amp;\textrm{(2) For every } \varepsilon &gt; 0, &amp;&amp;\sup M - \varepsilon \textrm{ is not an upper bound of } M
+\end{aligned}
+$$</p>
+<p>Similarly, the <strong>infimum</strong> of $M$, denoted $\inf M$, is the greatest lower bound of $M$. More rigorously, $\inf M$ satisfies</p>
+<p>$$
+\begin{aligned}
+&amp;\textrm{(I) For every } x \in M, &amp;&amp;x \geq \inf M \\
+&amp;\textrm{(II) For every } \varepsilon &gt; 0, &amp;&amp;\inf M + \varepsilon \textrm{ is not a lower bound of } M
+\end{aligned}
+$$</p>
+</div>
+</div>
+<p>While $\varepsilon$ (epsilon) may be any positive real number, we typically think of it as an astronomically tiny number.</p>
+<p>Property (1) ensures that the supremum is an upper bound, while property (2) ensures that it is the smallest such upper bound. Intuitively, property (2) says that if we nudge the supremum down by any amount, it will no longer be an upper bound. The same logic applies to the infimum.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/illustration_of_supremum.webp" alt="An illustration of the bounds of a set." style="height: 150px"/>
+    <figcaption>If we nudge $\sup M$ to the left by any amount, we can find a blue point greater than it. Hence, it ceases to be an upper bound. Credit to Wikimedia Commons.</figcaption>
+</figure>
+<p>In our previous example of $M = [0, 1)$, we have that $\sup M = 1$ and $\inf M = 0$, since for any $\varepsilon &gt; 0$, we can always find numbers in $M$ that are greater than $1-\varepsilon$ and less than $0+\varepsilon$.</p>
+<p>Why do we care about the supremum and infimum? Because this is precisely what separates the real numbers from the rational numbers.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Completeness of the Reals</strong></span>
+  </div>
+  <div class="pl-4"><p>If $M$ is a non-empty subset of $\mathbb{R}$ that is bounded above, then $\sup M$ exists and is a unique, real number. We call this the <strong>completeness property</strong><sup class='opacity-60 footnote' id='footnote-4'><a href='#footnote-body-4' style='text-decoration: none'>4</a></sup> of the real numbers.</p>
+</div>
+</div>
+<p>While completeness is stated only in terms of the supremum, it's true for the infimum as well. We can simply consider the set $-M = \{ -x : x \in M \}$, and note that $\inf M = -\sup(-M)$.</p>
+<p>As we've been alluding to, $\mathbb{Q}$ is not complete. For example, let
+$$
+A = \{ x \in \mathbb{Q} : x^2 &lt; 2 \}
+$$</p>
+<p>Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no <strong>smallest</strong> rational upper bound of $A$.</p>
+<p 
+    id='footnote-body-4' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-4" style="text-decoration: none"><b>4</b></a>: No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.
+    </small>
+</p>
+</a><h1 id="sequences-and-limits">Sequences and Limits</h1>
+<p>By far the most important concept in analysis is that of sequences and limits.</p>
+<p>However, we must first establish a very important inequality.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Triangle Inequality</strong></span>
+  </div>
+  <div class="pl-4"><p>For all $x, y \in \mathbb{R}$,
+$$
+|x + y| \leq |x| + |y|
+$$</p>
+</div>
+</div>
+<p>This says that traveling along a path of length $|x + y|$ is always more efficient than moving along two paths of lengths $|x|$ then $|y|$. While they may be equal when $x$, $y$ are both positive/negative, this becomes an inequality when $x, y$ no longer share a sign.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/triangle_inequality.webp" alt="An illustration of the triangle inequality."/>
+    <figcaption>Visually, the triangle inequality says that a detour is never quicker than a straight line. Credit to Wikimedia Commons.</figcaption>
+</figure>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Triangle Inequality</strong></span>
+  </div>
+  <div class="pl-4"><p>Observe that
+$$
+\begin{aligned}
+&amp;|x + y| \leq |x| + |y| \\
+\iff &amp;(x + y)^2 \leq (|x| + |y|)^2 \\
+\iff &amp;x^2 + 2xy + y^2 \leq x^2 + 2|xy| + y^2 \\
+\iff &amp;xy \leq |xy|
+\end{aligned}
+$$
+And the last line is always true since $a \leq |a|$. So the triangle is equivalent to a statement that's always true, therefore the triangle inequality is always true.</p>
+</div>
+</div>
+<h2 id="sequences">Sequences</h2>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Sequences</strong></span>
+  </div>
+  <div class="pl-4"><p>A <strong>sequence</strong> $a$ is a function $a: \mathbb{N} \to \mathbb{R}$. We denote the value of the sequence at $n \in \mathbb{N}$ as $a_n = a(n)$.</p>
+<p>The notation $\{a_n \}_{n=1}^{N}$ refers to the set $\{a_1, a_2, \dots, a_N\}$. Similarly, $\{ a_n \}_{n=1}^{\infty} = \{a_1, a_2, \dots \}$</p>
+</div>
+</div>
+<p>Thinking of a sequence as a function is rather technical. Truthfully, a sequence is a list of numbers. For instance, the Fibonacci sequence is given by
+$$
+\{ F_n \}_{n=1}^{\infty} = \{ 1, 1, 2, 3, 5, 8, 13, 21, \dots \}
+$$</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Convergent Sequences</strong></span>
+  </div>
+  <div class="pl-4"><p>We say that a sequence $a_n$ <strong>converges</strong> to $a \in \mathbb{R}$ if, for every $\varepsilon &gt; 0$, we can find $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+n \geq N \implies |a_n - a| &lt; \varepsilon
+$$</p>
+<p>To denote convergence to $a$, we may write $a_n \to a$ or $\lim\limits_{n \to \infty} a_n = a$.</p>
+<p>If a sequence doesn't converge to any real number, we say it <strong>diverges</strong>.</p>
+</div>
+</div>
+<p>The notation $N(\varepsilon)$ simply means that $N$ may depend on $\varepsilon$. For example, define the sequence $a_n = \frac{1}{n}$. For any $\varepsilon &gt; 0$, choose $N \in \mathbb{N}$ such that $N &gt; \frac{1}{\varepsilon}$ (possible because $\mathbb{N}$ is unbounded from above). Then we have that
+$$
+n \geq N \implies \left| a_n - 0 \right| = \frac{1}{n} \leq \frac{1}{N} &lt; \varepsilon
+$$
+Which says precisely that $a_n \to 0$.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/convergence.webp" alt="An illustration of convergence."/>
+    <figcaption>As long as $n$ is sufficiently large, we can guarantee that the distance between $a_n$ and $a$ is less than $\varepsilon$. Made with Desmos.</figcaption>
+</figure>
+<p>To give an example of divergence, consider the sequence $b_n = (-1)^{n}$. Then we can enumerate $b_n$ as $\{-1, 1, -1, 1, \dots\} = \{ -1, 1 \}$. Thus, if $b_n \to b$, then either $b = -1$ or $b = 1$.</p>
+<p>We first show that $b = 1$ is impossible. By definition of $b_n$,
+$$
+|b_n - 1| = \begin{cases}
+2 &amp;\textrm{if $n$ is odd} \\
+0 &amp;\textrm{if $n$ is even}
+\end{cases}
+$$</p>
+<p>Indeed, if we take $\varepsilon = 0.01$, then we cannot guarantee that $|b_n - 1| &lt; \varepsilon$ <strong>for every $n$ sufficiently large.</strong> No matter how large we make $N$, we can always find some $n \geq N$ such that $|b_n - 1| \geq \varepsilon$. This says precisely that $b_n$ does not converge to $1$, i.e. $b_n \not\to 1$.</p>
+<p>The case for $b = -1$ is identical to above. Therefore, $b_n$ diverges.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/divergence.webp" alt="An illustration of divergence."/>
+    <figcaption>No matter how large we make $N$, we can always find some $n \geq N$ such that $b_n$ lies outside the green tube. Thus, $b_n \not\to 1$. Made with Desmos.</figcaption>
+</figure>
+<p>Note that there is one minor, but very important, detail I'm glossing over.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Uniqueness of Limits</strong></span>
+  </div>
+  <div class="pl-4"><p>If $a_n \to a$, then $a$ is unique. More formally, if $a_n \to a$ and $a_n \to b$, then $a = b$.</p>
+</div>
+</div>
+<p>This essentially means that our notion of convergence is well-defined, and that sequences may only converge to one number (hence, why the $b_n$ example above failed).</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Uniqueness of Limits</strong></span>
+  </div>
+  <div class="pl-4"><p>Assume $a_n \to a$ and $a_n \to b$. To prove the statement, we simply need to show that $a = b$. That is, $a_n$ always converges to the same number.</p>
+<p>We appeal to the definition of convergence. Pick any $\varepsilon &gt; 0$. Since $a_n \to a$, we can find $N_a \in \mathbb{N}$ such that
+$$
+n \geq N_a \implies |a_n - a| &lt; \frac{\varepsilon}{2}
+$$</p>
+<p>Note that $\frac{\varepsilon}{2}$ is simply just another number. Similarly, since $a_n \to b$, we can find $N_b \in \mathbb{N}$ such that
+$$
+n \geq N_b \implies |a_n - b| &lt; \frac{\varepsilon}{2}
+$$</p>
+<p>We don't know whether $N_a$ and $N_b$ are the same, since $a_n \to a$ and $a_n \to b$ are separate statements. However, since convergence only relies on $n$ being <strong>greater</strong> than them, it really doesn't matter. Both statements are true as long as $n$ is greater than $N_a$ <em>and</em> $N_b$.</p>
+<p>So when $n \geq \max\{ N_a, N_b \}$, we have
+$$
+\begin{aligned}
+|a - b| &amp;= |(a_n - b) - (a_n - a)|  &amp;&amp;\left( \textrm{Adding and subtracting $a_n$} \right) \\
+&amp;\leq |a_n - a| + |a_n - b| &amp;&amp;\left( \textrm{Triangle Inequality} \right) \\
+&amp;&lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} &amp;&amp;\left( \textrm{Both terms less than } \frac{\varepsilon}{2} \right) \\
+&amp;= \varepsilon
+\end{aligned}
+$$</p>
+<p>Note that $|a - b|$ is independent of $n$. Therefore, $|a - b| &lt; \varepsilon$ for <b>any</b> $\varepsilon &gt; 0$.</p>
+<p>Since $|a - b|$ is independent of $\varepsilon$, it can be made arbitrarily small while also remaining constant. This is only possible when $|a - b| = 0$. In other words, $a - b = 0 \iff a = b$</p>
+</div>
+</div>
+<h2 id="cauchy-sequences">Cauchy Sequences</h2>
+<p>Cauchy sequences, named after famous mathematician <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy">Augustin-Louis Cauchy</a>, form an incredibly important class of sequences.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Cauchy Sequence</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $a_n$ be a sequence. We say that $a_n$ is a <strong>Cauchy sequence</strong> if, for every $\varepsilon &gt; 0$, there exists $N = N(\varepsilon) \in \mathbb{N}$ such that
+$$
+n, m \geq N \implies |a_n - a_m| &lt; \varepsilon
+$$</p>
+</div>
+</div>
+<p>Intuitively, a sequence is Cauchy if the terms get arbitrarily close to each other. Convergent sequences have this property.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Convergent Sequences are Cauchy</strong></span>
+  </div>
+  <div class="pl-4"><p>If $a_n \to a$, then $a_n$ is Cauchy.</p>
+</div>
+</div>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Convergent Sequences are Cauchy</strong></span>
+  </div>
+  <div class="pl-4"><p>Pick any $\varepsilon &gt; 0$. Since $a_n \to a$, we can find $N \in \mathbb{N}$ such that
+$$
+n \geq N \implies |a_n - a| &lt; \frac{\varepsilon}{2}
+$$</p>
+<p>Then for any $m, n \geq N$, we have that
+$$
+\begin{aligned}
+|a_n - a_m| &amp;= |(a_n - a) - (a_m - a)| &amp;&amp;\left( \textrm{Adding and subtracting } a \right) \\
+&amp;\leq |a_n - a| + |a_m - a|  &amp;&amp;\left( \textrm{Triangle Inequality} \right) \\
+&amp;&lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2} &amp;&amp;\left( \textrm{Both terms less than } \frac{\varepsilon}{2} \right) \\
+&amp;= \varepsilon
+\end{aligned}
+$$</p>
+<p>Therefore, $m, n \geq N \implies |a_m - a_n| &lt; \varepsilon$, which says precisely that $a_n$ is Cauchy.</p>
+</div>
+</div>
+<p>Marvelously, Cauchy sequences capture the idea of convergence without invoking convergence. Instead, it relies on the idea of "closeness".</p>
+<p>One may ask whether there exists non-convergent Cauchy sequences. The answer is it depends. The answer is also precisely what separates $\mathbb{R}$ from $\mathbb{Q}$.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Complete Spaces</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $E$ be a subset of $\mathbb{R}$. We say $E$ is <strong>complete</strong><sup class='opacity-60 footnote' id='footnote-5'><a href='#footnote-body-5' style='text-decoration: none'>5</a></sup> if every Cauchy sequence in $E$ converges to a point in $E$.</p>
+</div>
+</div>
+<p>Intuitively, a space is complete if there aren't any "gaps". To be incomplete means that a sequence may approach a hole with nothing in it. As such, $\mathbb{R}$ is complete, while $\mathbb{Q}$ isn't. This is to say that <strong>every Cauchy sequence converges in $\mathbb{R}$, but may not converge in $\mathbb{Q}$.</strong></p>
+<p 
+    id='footnote-body-5' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-5" style="text-decoration: none"><b>5</b></a>: We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.
+    </small>
+</p>
+</a><h1 id="point-set-topology">Point-Set Topology</h1>
+<p>While this section is a bit of a diversion from the prior, point-set topology is fundamental to real analysis. Viewing things under a topological lens often greatly simplifies problems. Moreover, it builds good intuition.</p>
+<p>Topology feels rather abstract. However, it is essentially "geometry without distance". Rather than quantifying "closeness" with distance, we quantify "closeness" with open sets.</p>
+<h2 id="open-sets">Open Sets</h2>
+<p>Before we can define an open set, we must first define a neighborhood.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Neighborhood</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $x \in \mathbb{R}$ and $\varepsilon &gt; 0$. The <strong>neighborhood</strong> of $x$ with radius $\varepsilon$, denoted $N_\varepsilon (x)$, is defined as
+$$
+N_\varepsilon (x) = \{ y \in \mathbb{R} : |y - x| &lt; \varepsilon \}
+$$</p>
+<p>Note that this is simply the open interval $(x - \varepsilon, x + \varepsilon)$.</p>
+</div>
+</div>
+<p>Sometimes neighborhoods are called <strong>open balls</strong><sup class='opacity-60 footnote' id='footnote-6'><a href='#footnote-body-6' style='text-decoration: none'>6</a></sup>, as $N_\varepsilon (x)$ is quite literally an open 1-dimensional ball of radius $\varepsilon$ centered at $x$.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Open Sets</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $U$ be a subset of $\mathbb{R}$. We say that $U$ is <strong>open</strong> if for every $x \in U$, there exists $\varepsilon &gt; 0$ such that $N_\varepsilon (x) \subseteq U$.</p>
+<p>In other words, for every $x \in U$, we can find a neighborhood around $x$ that is entirely contained within $U$.</p>
+</div>
+</div>
+<figure>
+    <img src="/images/tutorials/real-analysis/open_set.webp" alt="An illustration of an open set."/>
+    <figcaption>A visual illustration of open sets. If $x \in U$, then we can find a neighborhood around $x$ contained entirely in $U$. Note that this illustration is in 2-dimensions, while all our discussion has been 1-dimensional. Credit to Wikimedia Commons.</figcaption>
+</figure>
+<p>Intuitively, a set is open if every point has "breathing room" in every direction. Points on the boundary do not have this "breathing room", since any neighborhood around them must include points outside the set.</p>
+<p 
+    id='footnote-body-6' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-6" style="text-decoration: none"><b>6</b></a>: The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.
+    </small>
+</p>
+</a><h2 id="closed-sets">Closed Sets</h2>
+<p>To introduce closed sets, we must first define limit points.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Limit Points</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $M$ be a subset of $\mathbb{R}$. A point $x \in \mathbb{R}$ is a <strong>limit point</strong> of $M$ if for every $\varepsilon &gt; 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $M$, excluding $x$ itself. More formally,</p>
+<p>$$
+\textrm{For every } \varepsilon &gt; 0, \quad (N_\varepsilon (x) \setminus \{ x \} ) \cap M \neq \varnothing
+$$</p>
+</div>
+</div>
+<p>This definition may seem tricky, but the idea is rather simple. Consider the set
+$$
+A = \left\{ \frac{1}{n} : n \in \mathbb{N} \right\}
+$$
+Then 0 is a limit point of $A$, since for any $\varepsilon &gt; 0$, we can find $k \in \mathbb{N}$ such that $\frac{1}{k} &lt; \varepsilon$. Thus, $\frac{1}{k} \in N_\varepsilon (0)$.</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/limit_point.webp" alt="An illustration of limit points."/>
+    <figcaption>No matter how small a neighborhood around 0 (green), there will always be some elements of $A$ (red) inside it. Made with Desmos.</figcaption>
+</figure>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Closed Sets</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $C$ be a subset of $\mathbb{R}$. We say that $C$ is <strong>closed</strong> if it contains all of its limit points. More formally, if $x$ is a limit point of $C$, then $x \in C$.</p>
+</div>
+</div>
+<p>Closed sets are commonly thought of as sets that contain their boundaries. While not fully accurate, it's helpful intuition, since boundary points are precisely the limit points that are not within the "interior" of the set.</p>
+<p>Using the previous example, the set</p>
+<p>$$
+\left\{ \frac{1}{n} : n \in \mathbb{N} \right\} \cup \{ 0 \}
+$$</p>
+<p>is closed, since it contains its only limit point, 0. Moreover, the interval $[0, 1]$ is closed, since it contains all its limits points (which, coincidentally, is the entire set).</p>
+<h2 id="open-and-closed-sets">Open and Closed Sets</h2>
+<p>An important relationship between open and closed sets is that they are complements of each other.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Complementarity of Open and Closed Sets</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $U$ be a subset of $\mathbb{R}$. Then $U$ is open if and only if $U^c$ is closed.</p>
+</div>
+</div>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Complementarity of Open and Closed Sets</strong></span>
+  </div>
+  <div class="pl-4"><p>We really have two statements to prove. Namely, that $U \textrm{ open} \implies U^c \textrm{ closed}$ and $U \textrm{ open} \impliedby U^c \textrm{ closed}$</p>
+<p>($\implies$): Assume $U$ is open. We have to show that $U^c$ contains all its limit points, so let $x$ be any limit point of $U^c$.</p>
+<p>By definition of a limit point, for every $\varepsilon &gt; 0$, the neighborhood $N_\varepsilon (x)$ contains at least one point of $U^c$, excluding $x$ itself. This means that $N_\varepsilon (x) \nsubseteq U$ for every $\varepsilon &gt; 0$. Since $U$ is open, $x \notin U$. Therefore, $x \in U^c$, so $U^c$ contains all its limit points.</p>
+<p>(If the explanation for $x \notin U$ didn't make sense, here's an intuitive explanation. Since $U$ is open, every point in $U$ must have "breathing room". We showed that $x$ lacks this "breathing room", so $x$ cannot be in $U$.)</p>
+<p>($\impliedby$): Now assume $U^c$ is closed. We have to show that every point in $U$ has "breathing room".</p>
+<p>Let $x \in U$. Since $U^c$ is closed, it contains all its limit points, so $x$ is <strong>not a limit point</strong> of $U^c$. This must mean that we can find some $\varepsilon &gt; 0$ such that $N_\varepsilon (x)$ contains no points of $U^c$. Thus, $N_\varepsilon (x) \subseteq U$. This says precisely that $U$ is open.</p>
+</div>
+</div>
+<h2 id="sequences-and-topology">Sequences and Topology</h2>
+<p>At this point, you may be inclined to ask why the topology diversion. After all, there's no obvious connection between the prior discussion and topology.</p>
+<p>I'm here to say that they're really the same thing, just viewed under different lenses. Let's revisit the example
+$$
+A = \left\{ \frac{1}{n} : n \in \mathbb{N} \right\}
+$$</p>
+<p>Now define $a_n = \frac{1}{n}$. Then $ \{ a_n \}_{n=1}^{\infty} = A$. We showed that $a_n \to 0$, and that $0$ is the only limit point of $A$. Indeed, these are both saying the same thing. To say $a_n \to 0$ means that $n \geq N \implies |a_n - 0| &lt; \varepsilon$. In other words, if $n \geq N$, the neighborhood $N_\varepsilon (0)$ contains $a_n$.</p>
+<p>This observation is formalized with the following theorem</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Topological Convergence</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $a_n$ be a sequence. Then $a_n \to a$ if and only if every open set $U$ containing $a$ also contains all, but finitely many, elements of $a_n$.</p>
+</div>
+</div>
+<p>Note that "all, but finitely many" is another way of saying $\textrm{There exists $N$ such that for } n \geq N\dots$</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Topological Convergence</strong></span>
+  </div>
+  <div class="pl-4"><p>As before, we really have two statements to prove.</p>
+<p>($\implies$): Assume $a_n \to a$, and let $U$ be an open set containing $a$. We must show that $U$ contains all, but finitely many, elements of $a_n$.</p>
+<p>Since $U$ is open, we may find some $\varepsilon &gt; 0$ such that $N_\varepsilon (a) \subseteq U$. Moreover, since $a_n \to a$, we can find $N$ such that $n \geq N \implies |a_n - a| &lt; \varepsilon$. Then $n \geq N \implies a_n \in N_\varepsilon (a) \subseteq U$, so $U$ contains all, but finitely many, $a_n$.</p>
+<p>($\impliedby$): Assume every open set containing $a$ also contains all, but finitely many, elements of $a_n$. We will proceed by contradiction and show that the contrary is impossible.</p>
+<p>So assume $a_n \not\to a$. Then we can find $\varepsilon &gt; 0$ such that $|a_n - a| \geq \varepsilon$ for infinitely many $n$. In other words, the open set $N_\varepsilon (a)$ is missing infinitely many $a_n$. Thus, we found an open set containing $a$, yet fails to contain <b>all, but finitely many</b>, $a_n$. This is a contradiction, and hence we must have that $a_n \to a$.</p>
+</div>
+</div>
+<p>This formalizes topology as "geometry without distance", since convergence is characterized entirely by open sets. In other words, we characterize convergence not by distance, but by membership in certain sets.</p>
+<h1 id="functions-and-continuity">Functions and Continuity</h1>
+<p>Extending all our discussion to functions, and thus making analysis much more applicable beyond sequences.</p>
+<h2 id="usual-notions-of-continuity">Usual Notions of Continuity</h2>
+<p>There are many definitions of continuity, with some being more useful than others. We focus on 3 of them.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>$(\varepsilon, \delta)$ Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is <strong>continuous</strong> at $x_0$ if, for every $\varepsilon &gt; 0$, we can find some $\delta = \delta(x_0, \varepsilon) &gt; 0$ such that</p>
+<p>$$
+y \in X \textrm{ and } |x_0 - y| &lt; \delta \implies |f(x_0) - f(y)| &lt; \varepsilon
+$$</p>
+</div>
+</div>
+<p>Note that $\delta = \delta(x_0, \varepsilon)$ means that $\delta$ may depend on both $x_0$ and $\varepsilon$.</p>
+<p>Intuively, this definition says the following. For every error-bound $\varepsilon$ of the outputs we impose in the codomain, we can find a corresponding error-bound $\delta$ of the inputs in the domain. In other words, saying that $f$ is continuous at $x_0$ is saying that $f$ <strong>preserves "closeness" at $f(x_0)$</strong>. Having a tiny bit of error in $x_0$ implies a tiny bit of error in $f(x_0)$ (i.e. no sudden "jumps")</p>
+<figure>
+    <img src="/images/tutorials/real-analysis/epsilon_delta_continuity.webp" alt="An illustration of continuity."/>
+    <figcaption>For every error-bound $\varepsilon$ around $f(x_0)$, we can find a corresponding error-bound $\delta$ around $x_0$. Credit to Wikimedia Commons.</figcaption>
+</figure>
+<p>While this definition is good, there is another, and more natural in my opinion, way to think of continuity.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Sequential Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is <strong>continuous</strong> at $x_0$ if, for every sequence $x_n$ such that $x_n \to x_0$, we have that $f(x_n) \to f(x_0)$. Writing this formally,</p>
+<p>$$
+x_n \to x_0 \implies f(x_n) \to f(x_0)
+$$</p>
+</div>
+</div>
+<p>This definition has an immediate interpretation. <strong>If a function is continuous at $x_0$, then it preserves sequences that converge to $x_0$</strong>. In other words, a function is continuous if and only if it preserves convergence of sequences.</p>
+<p>Naturally, I would not introduce two separate definitions if they weren't saying the same thing.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Sequental and $(\varepsilon, \delta)$ Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>A function $f: X \to \mathbb{R}$ is $(\varepsilon, \delta)$-continuous at $x_0$ if and only if it is sequentially continuous at $x_0$</p>
+</div>
+</div>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Sequental and $(\varepsilon, \delta)$ Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>($\implies$): Assume $f$ is $(\varepsilon, \delta)$-continuous, and let $\varepsilon &gt; 0$. Take any sequence $x_n$ such that $x_n \to x_0$. We must show that $f(x_n) \to f(x_0)$.</p>
+<p>Since $f$ is $(\varepsilon, \delta)$-continuous, we may find a $\delta$ such that
+$$
+|x_0 - y| &lt; \delta \implies |f(x_0) - f(y)| &lt; \varepsilon
+$$
+Since $x_n \to x_0$, we can find $N$ such that $n \geq N \implies |x_n - x_0| &lt; \delta$. Then we have that $n \geq N \implies |f(x_0) - f(x_n)| &lt; \varepsilon$. Hence, $f(x_n) \to f(x_0)$</p>
+<p>($\impliedby$): Assume $f$ is sequentially continuous at $x_0$. Similar to the topological convergence proof above, we will proceed by contradiction and show that we can violate the requirement $x_n \to x_0 \implies f(x_n) \to x_0$.</p>
+<p>So assume $f$ is not $(\varepsilon, \delta)$-continuous at $x_0$. Then there exists some $\varepsilon &gt; 0$ such that, for every $\delta &gt; 0$ and some $y = y(\delta) \in X$, we have
+$$
+|x_0 - y| &lt; \delta, \textrm{ yet } |f(x_0) - f(y)| \geq \varepsilon
+$$
+Using this fact, we may construct a sequence $x_n$ such that
+$$
+|x_0 - x_n| &lt; \frac{1}{n}, \textrm{ yet } |f(x_0) - f(x_n)| \geq \varepsilon
+$$
+That is, we specify $\delta = \frac{1}{n}$, and set $x_n$ to be some $y$ that satisfies this condition. By construction, we have that $x_n \to x_0$. Yet since $|f(x_0) - f(x_n)| \geq \varepsilon$ for every $n$, we have that $f(x_n) \not\to f(x_0)$. Then $f$ can't be sequentially continuous, which is a contradiction.</p>
+</div>
+</div>
+<h2 id="topological-continuity">Topological Continuity</h2>
+<p>A more general, and mathematically useful in my opinion, definition of continuity is the topological definition of continuity. This definition motivates many nice generalizations, such as measurable functions.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>Topological Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $f: X \to \mathbb{R}$ where $X \subseteq \mathbb{R}$. We say $f$ is <strong>continuous</strong> if, for every open set $U \subseteq \mathbb{R}$, the pre-image $f^{-1} (U) \subseteq X$ is also open.</p>
+</div>
+</div>
+<p>There are two important things to note here</p>
+<ol>
+<li>This is a <strong>global</strong> definition of continuity, whereas the prior two definitions were <strong>local</strong> definitions (i.e. true at a single point).</li>
+<li>When the domain $X \neq \mathbb{R}$, the definition of "open" changes slightly, though not significantly. <a rel="noopener" target="_blank" href="https://math.stackexchange.com/questions/210815/could-someone-explain-the-concept-of-a-set-being-open-relative-to-another-set">Those interested should read this stack exchange.</a></li>
+</ol>
+<p>At first glance, it's not obvious why topological continuity is at all related to previous notions of continuity, especially "closeness". The intuition here is the following.</p>
+<p>Understanding topology as "geometry without distance", we interpret open sets as one way to quantify "closeness". When we say that $U \textrm{ open} \implies f^{-1} (U) \textrm{ open}$, we are requiring that any way we decide to quantify closeness in the codomain (namely, through $U$) should correspond to some quantification of closeness in the domain (namely, through $f^{-1} (U)$). In other words, we require that $f$ respects the "closeness" structure of both the domain and codomain.</p>
+<p>Another way to see how topological continuity is related is to simply prove that it is equivalent.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>Continuity and Topological Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>Let $f: X \to \mathbb{R}$. Then $f$ is topologically continuous if and only if it is $(\varepsilon, \delta)$-continuous at every point $x_0 \in X$.</p>
+</div>
+</div>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>Proof: Continuity and Topological Continuity</strong></span>
+  </div>
+  <div class="pl-4"><p>($\implies$): Assume $f$ is topologically continuous. Pick any $x_0 \in X$. We must show that $f$ is $(\varepsilon, \delta)$-continuous at $x_0$.</p>
+<p>So let $\varepsilon &gt; 0$. Consider the open set $N_\varepsilon (f(x_0))$. By assumption, we have that
+$$
+f^{-1} \left( N_\varepsilon (f(x_0)) \right) \textrm{ is open}
+$$</p>
+<p>Since $x_0 \in f^{-1} \left( N_\varepsilon (f(x_0)) \right)$, we can find some $\delta &gt; 0$ such that $N_\delta (x_0) \subseteq f^{-1} \left( N_\varepsilon (f(x_0)) \right)$. This says precisely that, if $y \in N_\delta (x_0)$, then we have
+$$
+|x_0 - y| &lt; \delta \implies |f(x_0) - f(y)| &lt; \varepsilon
+$$</p>
+<p>Meaning $f$ is $(\varepsilon, \delta)$-continuous at $x_0$.</p>
+<p>($\impliedby$): Assume $f$ is $(\varepsilon, \delta)$-continuous at every $x_0 \in X$. For ease, we may rewrite the definition of $(\varepsilon, \delta)$-continuous as follows
+$$
+\begin{aligned}
+&amp;|x_0 - y| &lt; \delta \implies |f(x_0) - f(y)| &lt; \varepsilon \\
+\iff &amp;y \in N_{\delta} (x_0) \implies f(y) \in N_\varepsilon (f(x_0)) \\
+\iff &amp;f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))
+\end{aligned}
+$$</p>
+<p>In other words, being $(\varepsilon, \delta)$-continuous is the same as saying that the image of an open ball is contained in another open ball.</p>
+<p>Let $U$ be open, and take any $x_0 \in f^{-1} (U)$. Then $f(x_0) \in U$. Since $U$ is open, we can find $\varepsilon &gt; 0$ such that $N_\varepsilon (f(x_0)) \subseteq U$. Moreover, because $f$ is $(\varepsilon, \delta)$-continuous at $x_0$, we can find some $\delta &gt; 0$ such that $f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0))$ by the above statements. Thus
+$$
+\begin{aligned}
+&amp;f(N_{\delta} (x_0)) \subseteq N_\varepsilon (f(x_0)) \\
+\iff &amp;f^{-1} \left[ f(N_{\delta} (x_0)) \right] \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \\
+\implies &amp;N_{\delta} (x_0) \subseteq f^{-1} \left[ N_\varepsilon (f(x_0)) \right] \subseteq f^{-1} (U) &amp;&amp; \left[ \textrm{For any set $A$, }A \subseteq f^{-1} (f(A)) \right]
+\end{aligned}
+$$</p>
+<p>Which says precisely that for every $x_0$, we can find a neighborhood around $x_0$ such that $N_{\delta} (x_0) \subseteq f^{-1} (U)$. Therefore, $f^{-1} (U)$ is open.</p>
+</div>
+</div>
+<h1 id="conclusion">Conclusion</h1>
+<p>Note that this tutorial serves as an introduction, and misses on a few important topics. In particular, this guide lacks discussion on compact sets, subsequences, and series, all of which are also important to analysis. Notwithstanding, I did not want this guide to run on for too long, so I omitted their discussion.</p>
+<p>Feel free to reach out to me if anything is confusing or poorly explained. I appreciate any and all feedback :)</p>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<ol>
+<li>All <a rel="noopener" target="_blank" href="https://www.desmos.com/">Desmos</a> graphs were created by me.</li>
+<li><a rel="noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Illustration_of_supremum.svg">The illustration of the supremum</a> is provided by Wikimedia Commons user Stephan Kulla, <a rel="noopener" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+<li><a rel="noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Vector-triangle-inequality.svg">The triangle inequality illustration</a> is provided by Wikimedia Commons user MartinThoma, <a rel="noopener" target="_blank" href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></li>
+<li><a rel="noopener" target="_blank" href="https://commons.wikimedia.org/wiki/Category:Open_sets">The illustration of open sets</a> was modified by me, originally provided by Wikimedia Commons.</li>
+<li><a rel="noopener" target="_blank" href="https://commons.wikimedia.org/wiki/File:Illustration_for_epsilon-delta_definition_of_continuity_4.svg">The illustration of $(\varepsilon, \delta)$-continuity</a> is provided by Wikimedia Commons.</li>
+</ol>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<!---->
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  <!---->
+  
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;tutorials&#x2F;data-science&#x2F;linear-regression&#x2F;"
+    ><span>Introduction to Linear Regression</span><span class="ml-1.5">→</span></a
+  >
+  
+</nav>
+
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by&#x2F;4.0&#x2F;deed.en" rel="noopener" target="_blank">
+      CC BY 4.0
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon & License</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

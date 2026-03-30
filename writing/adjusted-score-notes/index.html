@@ -1,0 +1,1000 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Adjusted Judge Score Notes - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Notes and details on my project &#x27;Adjusted Judge Score&#x27;" />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adjusted Judge Score Notes" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="Notes and details on my project &#x27;Adjusted Judge Score&#x27;" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;adjusted-score-notes&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;adjusted-score-notes&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#introduction-of-the-problem">Introduction of the Problem</a>
+        
+      </li>
+      
+      <li>
+        <a href="#preliminary-definitions">Preliminary Definitions</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#toy-data">Toy Data</a>
+          </li>
+          
+          <li>
+            <a href="#mathematical-definitions">Mathematical Definitions</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#scoring-methods">Scoring Methods</a>
+        
+        <ul class="no-bullets">
+          
+          <li>
+            <a href="#z-score-sum">$z$-score Sum</a>
+          </li>
+          
+          <li>
+            <a href="#proportional-variance">Proportional Variance</a>
+          </li>
+          
+          <li>
+            <a href="#kappa-adjusted-score">$\kappa$-adjusted Score</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#conclusion">Conclusion</a>
+        
+      </li>
+      
+      <li>
+        <a href="#code">Code</a>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Adjusted Judge Score Notes</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2025-09-15</time>
+  <span class="mx-1">&middot;</span>
+  <span>19min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span class="ml-2">Table of Contents</span>
+    </summary>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#introduction-of-the-problem">Introduction of the Problem</a>
+        
+      </li>
+      
+      <li>
+        <a href="#preliminary-definitions">Preliminary Definitions</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#toy-data">Toy Data</a>
+          </li>
+          
+          <li>
+            <a href="#mathematical-definitions">Mathematical Definitions</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#scoring-methods">Scoring Methods</a>
+        
+        <ul>
+          
+          <li>
+            <a href="#z-score-sum">$z$-score Sum</a>
+          </li>
+          
+          <li>
+            <a href="#proportional-variance">Proportional Variance</a>
+          </li>
+          
+          <li>
+            <a href="#kappa-adjusted-score">$\kappa$-adjusted Score</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        <a href="#conclusion">Conclusion</a>
+        
+      </li>
+      
+      <li>
+        <a href="#code">Code</a>
+        
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="introduction-of-the-problem">Introduction of the Problem</h1>
+<p>During 2023–2025, I was a board member for <a rel="noopener" target="_blank" href="https://www.datascienceucsb.org/">Data Science UCSB</a>. A major event we host is our annual <a rel="noopener" target="_blank" href="https://www.datascienceucsb.org/projects">Project Showcase</a>, where club members present their projects in front of judges, comprised of industry experts, professors, PhD students, etc. Judges are asked to score each project, and we combine their scores via a simple sum to determine a final ranking, using this to distribute cash prizes.</p>
+<p>However, when we computed the final ranking for Project Showcase 2024, we were incredibly disappointed. Not because we believed the winners didn't deserve to win, but because the scores seemed completely arbitrary. The top 5 projects were all within 1–2 points from each other, out of about 60 points total.</p>
+<p>Upon closer inspection, we realized what the problem was. Many judges gave essentially the same score to all projects, particularly higher scores. In other words, many judges exhibited a <em><strong>positivity bias</strong></em>. Since all judges are weighted equally, this causes the value of an individual point to rise dramatically.</p>
+<p>One could argue that this is not inherently problematic. After all, the projects we select as finalists are going to be the better projects in our (very large) club, so it's natural to expect that they are all well-received by judges. Hence, the positivity bias is simply reflecting a <em><strong>survivorship bias</strong></em> that we the officers create.</p>
+<p>While this is a plausible explanation, we felt that the issue runs deeper. Out of 60 points, a point gap of about 5-10 among the top performers is to be expected. However, when 1st and 2nd place are only 1 point off from each other, when 2nd and 3rd place are 1–2 points off from each other, and so forth, it's difficult to conclude anything other than statistical noise.</p>
+<p>Anecdotally, I have heard this exact same problem articulated in many other clubs and judging panels. Thus, I feel justified in saying that there is a problem to be solved that isn't a result of the innate survivorship bias with our structure. The point of this blog is to detail, and justify, the solutions I arrived at.</p>
+<h1 id="preliminary-definitions">Preliminary Definitions</h1>
+<p>Before I can begin articulating my solutions, I must lay out definitions.</p>
+<h2 id="toy-data">Toy Data</h2>
+<p>For illustrating examples, we will use the anonymized raw scores for <strong>Project Showcase 2025</strong>. Judges were asked to score projects in 5 separate categories on a range from 1 to 9. Hence, the range of a judge's raw score is 5–45.</p>
+<div id="CSVTable" style="overflow-x: auto;"></div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
+<script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
+<script>
+$(function() {
+  $('#CSVTable').CSVToTable('/misc/adjusted-score/toy_judge_data.csv');
+});
+</script>
+<p>As can be immediately seen, <strong>Judge Delta</strong>'s scores range from 40 to 45. In other words, they gave every project near-perfect scores. Similar behavior exists across other judges, albeit with notable outliers.</p>
+<h2 id="mathematical-definitions">Mathematical Definitions</h2>
+<p>We use the index $i$ to refer to projects, and the index $j$ to refer to judges. First, we define the terms</p>
+<ul>
+<li>$M$: Number of projects</li>
+<li>$N$: Number of judges</li>
+<li>$p_{ij}$: The raw score of project $i$ from judge $j$.
+<ul>
+<li>In my original notes, the $p$ stood for "points", and I may use "points" to describe "scores".</li>
+<li>All the raw score data can be thought of as the matrix $P = (p_{ij})$</li>
+</ul>
+</li>
+</ul>
+<p>To introduce more formal terminology</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 176, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/abstract.svg)"
+    >
+      abstract
+    </div>
+    <span><strong>Definition: Scoring Method</strong></span>
+  </div>
+  <div class="pl-4"><p>A <strong>scoring method</strong> is a function $\rho: \mathbb{R}^{M \times N} \to \mathbb{R}^{M}$. The component $\rho_i$ is called the <strong>final score</strong> of project $i$.</p>
+</div>
+</div>
+<p>Essentially, a scoring method takes raw scores as input, such as the toy data above, and outputs a final score to each project. The standard we used, the <strong>Raw Sum</strong>, was simply
+$$
+\begin{equation}
+\rho_i = \sum_{j=1}^{N} p_{ij}
+\end{equation}
+$$
+While two methods may not always produce the same scores, they may be equal in one crucial way</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 176, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/abstract.svg)"
+    >
+      abstract
+    </div>
+    <span><strong>Definition: Equivalent in Ranking</strong></span>
+  </div>
+  <div class="pl-4"><p>Define $(k)_{ \vec{v} }$ as the index of the $k$th largest component of the vector $\vec{v}$, i.e. the index of the $k$th <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Order_statistic">order statistic</a>, in descending order.</p>
+<p>We say two scoring methods, $\rho$ and $\varrho$, are <strong>equivalent in ranking</strong> if, for every input $P$, $(k)_{\rho(P)} = (k)_{\varrho(P)}$ for every $1 \leq k \leq M$.</p>
+</div>
+</div>
+<p>This is a complicated way of saying that both methods always produce the same ranking, even if they don't produce the same final scores. For example, (1) is equivalent in ranking to the average judge score, i.e.</p>
+<p>$$
+\varrho_i = \frac{1}{N} \sum_{j=1}^{N} p_{ij}
+$$
+For our purposes, we consider two scoring methods as essentially the same if they are equivalent in ranking.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>More on Equivalent in Ranking</strong></span>
+  </div>
+  <div class="pl-4"><p>There are two details worth mentioning</p>
+<ol>
+<li>The precise definition of $(k)_{ \vec{v} }$ is intentionally avoided. Without proper care, it may not even be well-defined! What happens in the event of a tie?
+<ul>
+<li>In practice, a tiebreaker is defined. We do not concern ourselves with such details, and simply assume it is a part of the definition of $(k)_{ \vec{v} }$</li>
+</ul>
+</li>
+<li>Interestingly, equivalent in ranking forms an <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Equivalence_relation">equivalence relation</a>.</li>
+</ol>
+</div>
+</div>
+<h1 id="scoring-methods">Scoring Methods</h1>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>The Importance of the Raw Data Generating Process</strong></span>
+  </div>
+  <div class="pl-4"><p>This article exclusively talks about methods that produce final scores. However, in no way do I endorse any of these ideas as a panacea.</p>
+<p><strong>Creating a reasonable system that evaluates projects and translates judge's opinions into numbers</strong> is just as, if not more, important than a system that adjusts those numbers into final scores. As they say in machine learning, "garbage in, garbage out".</p>
+</div>
+</div>
+<p>Here we outline the methods I've thought about and proposed. Note that each has its own assumptions, with its own benefits and tradeoffs.</p>
+<p>As a baseline, here are the final scores using (1) as the scoring method</p>
+<p><em>Table 1: Raw Sum Final Scores</em></p>
+<table><thead><tr><th>Finalists</th><th>Raw Sum</th></tr></thead><tbody>
+<tr><td>Project 1</td><td>406</td></tr>
+<tr><td>Project 4</td><td>379</td></tr>
+<tr><td>Project 2</td><td>377</td></tr>
+<tr><td>Project 6</td><td>374</td></tr>
+<tr><td>Project 8</td><td>354</td></tr>
+<tr><td>Project 3</td><td>352</td></tr>
+<tr><td>Project 7</td><td>328</td></tr>
+<tr><td>Project 5</td><td>320</td></tr>
+</tbody></table>
+<p>These scores have a range of 50–450. As we can see, the data identifies Project 1 as a very clear winner, far surpassing all those below it. Between Projects 2, 4, and 6 though, the effect of the statistical noise becomes much more clear.</p>
+<p>For many of these methods, we will require the following two definitions from statistics</p>
+<ul>
+<li>$\mu_j$: Judge $j$'s raw score <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Arithmetic_mean">average</a>.</li>
+<li>$\sigma_j$: Judge $j$'s raw score <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a>.
+<ul>
+<li>Unless otherwise stated, we treat the data as a <strong>sample</strong> instead of a <strong>population</strong>. In those cases, we include <em><a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Bessel%27s_correction">Bessel's correction</a></em>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="z-score-sum">$z$-score Sum</h2>
+<p>A rather simple method that makes one fairly mild assumption.</p>
+<p> <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>Assumption: Data as Population</strong></span>
+  </div>
+  <div class="pl-4"><p>The score data for each judge represents a complete population, not a sample.</p>
+</div>
+</div>
+
+This is analogous to the methodology of standardized testing. It's customary to treat standardized test scores as a population, not a sample. We need this assumption for the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Standard_score">$z$-score</a> to be well-defined, otherwise we are in truth defining a <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/T-statistic">$t$-statistic</a>.</p>
+<p>The $z$-score of $p_{ij}$ is defined as</p>
+<p>$$
+z_{ij} = \frac{p_{ij} - \mu_j}{\sigma_j}
+$$</p>
+<p>Essentially, we treat each raw score as a part of a population of judge $j$'s scores, and transform them into $z$-scores. We therefore define the adjusted score as</p>
+<p>$$
+\begin{equation}
+\rho_{i}^{z\textrm{-score}} = \sum_{j=1}^{N} z_{ij}
+\end{equation}
+$$</p>
+<p>Applying this transformation to our toy data, we get the ranking</p>
+<p><em>Table 2: $z$-score Sum Final Scores</em></p>
+<table><thead><tr><th>Finalist</th><th>$z$-score Sum</th></tr></thead><tbody>
+<tr><td>Project 1</td><td>11.702</td></tr>
+<tr><td>Project 4</td><td>5.429</td></tr>
+<tr><td>Project 2</td><td>4.329</td></tr>
+<tr><td>Project 6</td><td>4.328</td></tr>
+<tr><td>Project 3</td><td>-2.235</td></tr>
+<tr><td>Project 8</td><td>-2.419</td></tr>
+<tr><td>Project 7</td><td>-9.711</td></tr>
+<tr><td>Project 5</td><td>-11.422</td></tr>
+</tbody></table>
+<p>At first glance, this gives us what we wanted. Namely, an unambiguous first place, and a fairly clear second place. Third and fourth place are incredibly close though, and suffers the same problem I outlined in the intro (winning due to statistical noise). However, there's more than meets the eye</p>
+<ol>
+<li>By definition, $z$-scores are <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Dimensionless_quantity">dimensionless</a>, therefore the final score is dimensionless. There are two conflicting interpretations of this:
+<ul>
+<li>On one hand, the final score being dimensionless makes it an objective quantity.</li>
+<li>On the other hand, we are effectively interpreting it as a score, which is contentious as it does not have the same units.</li>
+</ul>
+</li>
+<li>Interestingly, this is almost identical to the ranking of scoring method (1). However, note that Project 3 and Project 8 switched places.</li>
+<li>Unlike Raw Sum score, this has a (theoretically) infinite range. Without prior knowledge of $\{\mu_j\}_{j=1}^{N}, \{\sigma_j\} _{j=1}^{N}$, pinning down the range is incredibly difficult.</li>
+<li>Since we are <strong>DIVIDING</strong> by standard deviation, we are actually <em>uplifting</em> the positivity bias. Judge Delta's points are now the most valuable points since they contain the least variability.</li>
+</ol>
+<p>The last point is what caused us to reject using this method in Data Science UCSB events. After all, one of our goals was to <em>eliminate</em> positivity bias, not enhance it.</p>
+<h2 id="proportional-variance">Proportional Variance</h2>
+<p>Partially inspired by the <a rel="noopener" target="_blank" href="https://www.statology.org/explained-variance/">explained variance</a> metric, the Proportional Variance score seeks to weigh scores based on how much variability each judge introduces.</p>
+<p>For our metric to be well-defined, we need the following assumptions
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>Assumption: Judge Variability</strong></span>
+  </div>
+  <div class="pl-4"><p>The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.</p>
+</div>
+</div>
+
+This implies that <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Variance">variance</a> is a quantifier for how "informative" a judge's score is.</p>
+<p> <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>Assumption: Judge Independence</strong></span>
+  </div>
+  <div class="pl-4"><p>All judges choose their scores independently.</p>
+</div>
+</div>
+
+By independent, we mean the random variables representing each judge's scores are all <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Independence_(probability_theory)#More_than_two_random_variables">mutually independent</a>. We can interpret each random variable, $S_j$, as "Judge $j$'s outcomes for Project Showcase 2025". There's certainly more nuance than this, however to avoid being pedantic, we'll sweep those details under the rug.</p>
+<p>We want independence to ensure that there is no "overlapping signal" across judges. That is, each judge represents their own opinions and nothing more. Thus, $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ quantifies how much variability judge $j$ introduces in relation to all other judges.</p>
+<p>Therefore, define $\omega_j = \frac{\sigma_{j}^2}{\sum_{k=1}^{N} \sigma_{k}^2}$. Because of the prior analysis, there is validity behind interpreting $\omega_j$ as judge $j$'s introduced variability.</p>
+<p>We define the <strong>Proportional Variance</strong> score as
+$$
+\begin{equation}
+\rho_{i}^{\mathrm{PV}} = \sum_{j=1}^{N} \omega_j p_{ij}
+\end{equation}
+$$
+It's important to note that the similarities to explained variance are nominal. While the formula is similar, it is much different fundamentally.</p>
+<p>Applying this method to our scores, we get the following ranking</p>
+<p><em>Table 3: Proportional Variance Final Scores</em></p>
+<table><thead><tr><th>Finalist</th><th>Prop. Variance</th></tr></thead><tbody>
+<tr><td>Project 1</td><td>40.683</td></tr>
+<tr><td>Project 2</td><td>37.518</td></tr>
+<tr><td>Project 4</td><td>36.785</td></tr>
+<tr><td>Project 6</td><td>36.523</td></tr>
+<tr><td>Project 8</td><td>35.113</td></tr>
+<tr><td>Project 3</td><td>33.726</td></tr>
+<tr><td>Project 7</td><td>32.102</td></tr>
+<tr><td>Project 5</td><td>30.559</td></tr>
+</tbody></table>
+<p>The benefit of this scoring method is it preserves the range, as well as the units, of the raw data. In this example, the range is 5–45, and the units are points.</p>
+<p>Moreover, it reduces the tightness of the scores. If we multiply everything by 10 to bring the range to 50–450, we see that second and third place are off by about 8 points, whereas with the Raw Sum method, they're off by 2 points (see <em>Table 1</em>).</p>
+<p>As before though, there's more that meets the eye</p>
+<ol>
+<li>Saying that independence justifies the interpretation of $\omega_j$ <em>is</em> a bit fallacious. Rather, it's more appropriate to say independence <em>inspires</em> this interpretation.
+<ul>
+<li>You can also argue that, being an estimator, this approximates the truth pretty well. After all, it's common practice in statistics to replace quantities with estimators. However, this is merely acknowledging an abuse and not justifying it.</li>
+</ul>
+</li>
+<li>The assumption of independence is contentious. In this example, we have that $\sum_{k=1}^{N} \mathrm{Var}(S_k) \approx 163.571$, yet $\mathrm{Var}(\sum_{k=1}^{N} S_k) \approx 810.5$
+<ul>
+<li>One can argue that, if we drop the denominator in $\omega_j$, we obtain a new score method that's equivalent in ranking to Proportional Variance. Thus, we can drop the assumption of independence while keeping an essentially identical system.
+<ul>
+<li>However, this messes up both the range and the units. Is it okay to judge a project with units of $\mathrm{points}^3$?</li>
+<li>Also, see $\kappa$-adjusted score for a similar approach</li>
+</ul>
+</li>
+<li><strong>In fact, independence is unnecessarily strong</strong> for the interpretation of $\frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$ as introduced variability. <strong>Uncorrelated is sufficient</strong>, as this ensures $\mathrm{Var}(\sum_{k=1}^{N} S_k) = \sum_{k=1}^{N} \mathrm{Var}(S_k)$, hence $\frac{\mathrm{Var}(S_j)}{\mathrm{Var}(\sum_{k=1}^{N} S_k)} = \frac{\mathrm{Var}(S_j)}{\sum_{k=1}^{N} \mathrm{Var}(S_k)}$
+<ul>
+<li>At the cost of a modification, we can drop the assumption altogether. Using <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis</a>, we can linearly transform the random vector $(S_1, \dots, S_N)$ into $(\hat{S}_1, \dots, \hat{S}_N)$ such that $\hat{S}_i, \hat{S}_j$ are uncorrelated for every $i \neq j$. To obtain a ranking, we apply Proportional Variance on the new dataset induced by $(\hat{S}_1, \dots, \hat{S}_N)$.
+<ul>
+<li>We are essentially transforming the judges into a new, idealized set of judges with uncorrelated opinions. <em>Is this an ethical thing to do?</em></li>
+<li>Implementing this in code is incredibly simple. Note that all of this is equivalent to performing a change of basis on $P$ before computing its final scores. This is equivalent to finding $\rho^{\mathrm{PV}} (PC)$ where $C$ is the matrix of $P$'s principal components.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This method is pretty susceptible to outliers. One deviating score can drastically inflate the variance of a judge.
+<ul>
+<li>We see this behavior with <strong>Judge Foxtrot</strong>. All scores are within 5 points of 35, except one 44 entry.</li>
+</ul>
+</li>
+</ol>
+<p>As promising and reasonable Proportional Variance seems, it nonetheless has its problems.
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(255, 145, 0, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/warning.svg)"
+    >
+      warning
+    </div>
+    <span><strong>Caution: Ramifications of New Approach</strong></span>
+  </div>
+  <div class="pl-4"><p>In point 2 above, I outline a process that drops the assumption of independence altogether by weakening it to zero correlation, then showing that all score data can be manipulated to achieve zero correlation.</p>
+<p><strong>Be very careful with this approach</strong>. Aside from the ethical concerns of replacing the judges with idealized versions of themselves, this is ultimately manipulating the data to fit a very specific metric (i.e. uncorrelated). Is this level of preprocessing necessary? If yes, why is the solution to change the raw data and not its generating process?</p>
+<p>These criticisms may apply to all the other methods (e.g. "How is adjusting scores not fitting a specific goal?"). The point of this blog is to address them as best I can. I do not renounce this approach as fundamentally wrong, but <strong>I implore anyone attempting it to offer more justification than I have.</strong></p>
+</div>
+</div>
+</p>
+<h2 id="kappa-adjusted-score">$\kappa$-adjusted Score</h2>
+<p>This is ultimately the scoring method we settled on for use in Data Science UCSB's events. The development of this came from modifying the $z$-score Sum method to simultaneously down-weigh positivity bias while also maintaining units of points.</p>
+<p>Before we proceed, we must make two crucial assumptions
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>Assumption: Purely Average Score</strong></span>
+  </div>
+  <div class="pl-4"><p>All judges have a score which they would consistently give to any idealized average project. This "purely average score" is unique to each judge.</p>
+</div>
+</div>
+
+The existence of an "idealized average project" is dubious, but we set those details aside. The reason for this assumption is so we can explain why judges use different parts of the score spectrum. Suddenly, we can now say that one person's 7/10 may be someone else's 5/10.</p>
+<p>We will use $\mu_j$ as a stand-in for this "purely average score". This is objectionable for our toy dataset, since the judges were evaluating finalists, not all projects in the club, thus $\mu_j$ is a biased estimate (recall: survivorship bias).</p>
+<p>I acknowledge this concern, and an easy fix is to slightly modify the assumption to "Purely Average Score among Top Performers", or "Purely Decent Score". Note that this implicitly assumes some finalists are below this threshold. In our opinion, we felt that this assumption was equally reasonable for our events.</p>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>Assumption: Judge Variability</strong></span>
+  </div>
+  <div class="pl-4"><p>The judges whose individual points are most informative, hence possesses the least statistical noise, use a wider spectrum of the scores.</p>
+</div>
+</div>
+<p>Like Proportional Variance, we will use standard deviation to weigh points. Unlike Proportional Variance, we include a hyperparameter to tune the strength of this weighting.</p>
+<p>Let $\kappa &gt; -1$. The $\kappa$-adjusted score is defined as
+$$
+\rho_{i}^{\kappa\textrm{-adj}} = \sum_{j=1}^{N} \mathrm{sign}(p_{ij} - \mu_j) \left (\sigma_j^\kappa \left| p_{ij} - \mu_j \right| \right)^{\frac{1}{1 + \kappa}}
+$$</p>
+<p>While this definition is complicated, it's straightforward to unpack. Treating $\mu_j$ as the "purely average score", $|p_{ij} - \mu_j|$ captures how many points away a project is from "purely average". We then weigh this by $\sigma_{j}^{\kappa}$ in order to uplift judges with more variability. Finally, we root by $1 + \kappa$ to ensure the final units are the same as the raw data's. The purpose of the $\mathrm{sign}$ term is to simply avoid issues where we may root a negative number.</p>
+<p>However, there's more to the role of $\kappa$ than meets the eye. By design, it's intended to quantify how much weight $\sigma_j$ has. Higher $\kappa$ means the weights are larger. However, note that we effectively weigh the score by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, which means that the exponent is always less than 1. Perhaps not the precise desired behavior, but the desired behavior nonetheless.</p>
+<p>More interestingly, this method makes point gains non-linear.</p>
+<ul>
+<li>$\kappa \in (0, \infty)$: We see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a root function, meaning increasing $p_{ij}$ from $\mu_j$ → $\mu_j + 1$ has more of an increase than $\mu_j + 5$ → $\mu_j + 6$.</li>
+<li>$\kappa = 0$: This is linear, and in fact equivalent in ranking to (1).</li>
+<li>$\kappa \in (-1, 0)$: We see that $\left| p_{ij} - \mu_j \right|^\frac{1}{1 + \kappa}$ behaves like a polynomial, meaning increasing $p_{ij}$ from $\mu_j + 5$ → $\mu_j + 6$ has more of an increase than $\mu_j$ → $\mu_j + 1$.</li>
+<li>Lastly, while $\kappa &lt; -1$ is <em>technically</em> defined, it is not interpretable. We would run into a situation where scores close to $\mu_j$ are more valuable than scores far greater than $\mu_j$.</li>
+</ul>
+<p>Note that $\mu_j, \sigma_j$ changes if $p_{ij}$ changes. This analysis, while accurate for the most part, is oversimplified. Only small increments to points should be considered.</p>
+<p>Applying this method to our toy data yields</p>
+<p><em>Table 4: $\kappa$-adjusted Final Scores</em></p>
+<table><thead><tr><th>Finalist</th><th>$1$-adjusted</th><th>$2$-adjusted</th></tr></thead><tbody>
+<tr><td>Project 1</td><td>40.356</td><td>39.501</td></tr>
+<tr><td>Project 4</td><td>20.136</td><td>21.055</td></tr>
+<tr><td>Project 6</td><td>13.343</td><td>13.339</td></tr>
+<tr><td>Project 2</td><td>11.053</td><td>9.679</td></tr>
+<tr><td>Project 3</td><td>-5.657</td><td>-4.281</td></tr>
+<tr><td>Project 8</td><td>-8.674</td><td>-8.785</td></tr>
+<tr><td>Project 7</td><td>-31.173</td><td>-30.281</td></tr>
+<tr><td>Project 5</td><td>-37.502</td><td>-36.647</td></tr>
+</tbody></table>
+<p>As with everything else, there are deeper criticisms</p>
+<ol>
+<li>Like the $z$-score Sum, it's difficult to figure out the range without knowing $\kappa, \{\mu_j\}_{j=1}^{N}, \{\sigma_j\} _{j=1}^{N}$.</li>
+<li>It's difficult to choose a good value of $\kappa$. For Data Science UCSB events, we stuck with $\kappa = 1$ and increased if we felt the resulting final scores were too large. This approach suffers the same criticisms as <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Empirical_Bayes_method">empirical Bayes methods</a>.
+<ul>
+<li>The premise of this criticism is rather presumptuous, as choosing $\kappa$ is effectively choosing the scoring method. What defines a "good" scoring method?</li>
+<li>Still, is there any nuance or cleverness here, or is the choice arbitrary?</li>
+</ul>
+</li>
+<li>Out of all methods, this one is the most numerically unstable
+<ul>
+<li>Especially for raw scores with large ranges.</li>
+<li>Though not as susceptible to outliers as Proportional Variance since $\sigma_j$ is rooted.</li>
+</ul>
+</li>
+</ol>
+ <!---->
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1)"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0px] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>An Interesting Modification</strong></span>
+  </div>
+  <div class="pl-4"><p>Since we effectively weigh by $\sigma_{j}^{\frac{\kappa}{1 + \kappa}}$, the weights are going to be smaller than $\sigma_j$. It's quite strange that $\kappa$ has this effect.</p>
+<p>Motivated from the definition of the $L^p$ norms, let's instead define
+$$
+\varrho_{i}^{\kappa\textrm{-adj}} = \left| \sum_{j=1}^{N} \sigma_{j}^\kappa \left(p_{ij} - \mu_j \right) \right|^{\frac{1}{1 + \kappa}} \mathrm{sign}\left( \sum_{j=1}^{N} \sigma_j^\kappa \left( p_{ij} - \mu_j \right) \right)
+$$</p>
+<p>Not only does $\varrho^{\kappa\textrm{-adj}}$ share the same units as the raw data, the effects of $\kappa$ are much more straightforward.</p>
+<p>However, this loses the effect of non-linear point gains, and moreover $\mu_j$ can be dropped without affecting the ranking. Be aware of these changes if you decide to go with this modification.</p>
+</div>
+</div>
+<p>Still, in spite of these criticisms, we were the most satisfied with this scoring method. We felt that it not only down-weighted the positivity bias present in many judges, but also filtered out noise very well. We also saw the non-linear point gains as a benefit.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>While evaluating these scoring methods is rather tricky, and may even lead to a situation akin to <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Data_dredging">$p$-hacking</a>, it's nonetheless useful to have a number of tools at your disposal. The heuristics we mainly used in Data Science UCSB was</p>
+<ol>
+<li>Do we feel like the new gaps between scores changed in a positive and significant manner?</li>
+<li>Will the judges, participants, and audience accept the new ranking?</li>
+<li>Do we have a legitimate reason for adjusting the judge's assessments?</li>
+<li>Do we plan on releasing the scores, and if not, do we need to worry about participants that are well-below the winners?</li>
+</ol>
+<p>Obviously, many of these criteria are vague and imprecise. We only ended up using this system twice. Still, we felt like it gives us more peace-of-mind knowing that the winners were chosen more "fairly" and less "arbitrarily". Whatever that means.</p>
+<h1 id="code">Code</h1>
+<p>All code for all the discussed methods can be found on GitHub at <a rel="noopener" target="_blank" href="https://github.com/DanLeEpicMan/score-adjuster">DanLeEpicMan/score-adjuster</a>.</p>
+<p>The code is released under the <a rel="noopener" target="_blank" href="https://github.com/DanLeEpicMan/score-adjuster/blob/main/LICENSE">MIT License</a>, and as long as you abide by it, you are welcome to use my code however you please. I also encourage expanding upon any ideas I've written here in this blog.</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col">
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tags </span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://dtnaylor.com/writing/tags/recreational/"
+      >recreational</a
+    >
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://dtnaylor.com/writing/tags/project/"
+      >project</a
+    >
+    
+  </div>
+  
+</footer>
+
+<!---->
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  <!---->
+  
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;changing-time&#x2F;"
+    ><span>How My Troop Has Changed</span><span class="ml-1.5">→</span></a
+  >
+  
+</nav>
+
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by&#x2F;4.0&#x2F;deed.en" rel="noopener" target="_blank">
+      CC BY 4.0
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon & License</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>

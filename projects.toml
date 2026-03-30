@@ -1,0 +1,17 @@
+[[project]]
+name = "Adjusted Judge Scores"
+desc = "A tool for adjusting raw judge scores to account for judge bias and variability. Originally developed for Data Science UCSB's 2025 Hackathon and Project Showcase."
+tags = ["personal", "data science"]
+links = [
+    { name = "github", url = "https://github.com/DanLeEpicMan/score-adjuster" },
+    { name = "blog", url = "/writing/adjusted-score-notes" },
+]
+
+[[project]]
+name = "The Cause in Basketball Skill"
+desc = "A causal inference framework that proposes an alternative to RAPM for evaluating basketball players. Worked alongside Dr. Alexander Franks during Summer 2024."
+tags = ["sports analytics", "causal inference"]
+links = [
+    { name = "github", url = "https://github.com/DanLeEpicMan/RAPM" },
+    { name = "poster", url = "https://github.com/DanLeEpicMan/RAPM/blob/main/poster.pdf" },
+]
