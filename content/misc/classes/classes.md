@@ -28,21 +28,21 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 ## Graduate Degree (UC Irvine)
 
 - Spring 2026
-  - <small>**STATS 200C**: Probability and Statistical Theory III *(Dr. Zhaoxia Yu)*<small>
+  - <small>**STATS 200C**: Probability and Statistical Theory III *(Dr. Zhaoxia Yu)*</small>
     - <small>*Interval estimation, hypothesis testing, decision theory, basic linear model theory.*</small>
-  - <small>**STATS 212**: Statistical Methods III: Methods for Correlated Data *(Dr. Tianchen Qian)*<small>
+  - <small>**STATS 212**: Statistical Methods III: Methods for Correlated Data *(Dr. Tianchen Qian)*</small>
     - <small>*Repeated measures ANOVA, linear mixed models, non-linear mixed effects models, and generalized estimating equations.*</small>
-  - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*<small>
+  - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*</small>
     - <small>*Entropy, mutual information, asymptotic equipartition property, entropy rates of a stochastic process, data compression, channel capacity, differential entropy, the Gaussian channel.*</small>
 - Winter 2026
-  - <small>**STATS 200B**: Probability and Statistical Theory II *(Dr. Bin Nan)*<small>
-    - <small>*Sufficient statistics, point estimates, maximum likelihood, minimum variance estimators, confidence intervals, hypothesis testing*</small>
-  - <small>**STATS 205**: Bayesian Data Analysis *(Dr. Veronica Berrocal)*<small>
+  - <small>**STATS 200B**: Probability and Statistical Theory II *(Dr. Bin Nan)*</small>
+    - <small>*Sufficient statistics, point estimates, maximum likelihood, minimum variance estimators, confidence intervals, hypothesis testing.*</small>
+  - <small>**STATS 205**: Bayesian Data Analysis *(Dr. Veronica Berrocal)*</small>
     - <small>*Likelihood principle, prior and posterior distributions, Markov Chain Monte Carlo.*</small>
-  - <small>**STATS 211**: Statistical Methods II: Generalized Linear Models *(Dr. Daniel Gillen)*<small>
+  - <small>**STATS 211**: Statistical Methods II: Generalized Linear Models *(Dr. Daniel Gillen)*</small>
     - <small>*Theory and application of generalized linear models.*</small>
-  - <small>**STATS 295**: Spatial Statistics *(Dr. Veronica Berrocal)*<small>
-    - <small>*Spatial and correlated data, semi-variogram estimation, Gaussian Processes, Bayesian methods*</small>
+  - <small>**STATS 295**: Spatial Statistics *(Dr. Veronica Berrocal)*</small>
+    - <small>*Spatial and correlated data, semi-variogram estimation, Gaussian Processes, Bayesian methods.*</small>
 - Fall 2025
   - <small>**STATS 200A**: Probability and Statistical Theory I *(Dr. Wenzhuo Zhou)*</small>
     - <small>*Basics of probability theory.*</small>
@@ -60,15 +60,15 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
   - <small>**PSTAT 213C**: Probability Theory *(Dr. Ruimeng Hu)*</small>
     - <small>*Martingales, martingale convergence, stopping times, optional sampling, optional stopping theorem.*</small>
   - <small>**PSTAT 223C**: Computational Finance *(Dr. Mike Ludkovski)*</small>
-    - <small>*Monte Carlo, Partial Differential Equation simulation, American options*</small>
+    - <small>*Monte Carlo, Partial Differential Equation simulation, American options.*</small>
 
 - Winter 2025
   - <small>**MATHCS 120NT**: Seminar in Number Theory *(Dr. Yitang Zhang)*</small>
   - <small>**PHYS 7A**: Basic Physics *(Dr. Georgios Koutroulakis)*</small>
   - <small>**PSTAT 213B**: Probability Theory *(Dr. Ruimeng Hu)*</small>
-    - <small>*Convergence of random variables, laws of large numbers, central limit theorem, large deviations*</small>
+    - <small>*Convergence of random variables, laws of large numbers, central limit theorem, large deviations.*</small>
   - <small>**PSTAT 223B**: Financial Modeling *(Dr. Jean-Pierre Fouque)*</small>
-    - <small>*Stochastic models in finance, hedging of derivatives in equity, fixed income, and credit markets, portfolio allocation*</small>
+    - <small>*Stochastic models in finance, hedging of derivatives in equity, fixed income, and credit markets, portfolio allocation.*</small>
 
 - Fall 2024
   - <small>**MATHCS 128**: Transition to Higher Mathematics *(Dr. Karel Casteels)*</small>
