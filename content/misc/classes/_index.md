@@ -1,7 +1,7 @@
 +++
 title='Classes Taken'
 description='All my completed classes.'
-weight=2
+weight=3
 render=false
 page_template='pages.html'
 +++
