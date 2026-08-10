@@ -3,7 +3,7 @@ title = "Games"
 path = "misc/games"
 +++
 
-Anyone who knows me personally can tell you about [how much I love video games](https://steamcommunity.com/id/danleepicman/). Single-player narratives are my favorite type of games, however my exposure to games is very wide.
+Anyone who knows me personally can tell you about [how much I love video games](https://steamcommunity.com/id/danleepicman/). Single-player narratives are my favorite type of game, however my exposure to games is very wide.
 
 This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the". DLCs are included as sub-lists. Where appropriate, I link a Steam review that houses my opinions on the game. Some reviews were written by a much younger me and may blabber on. Nevertheless, you're welcome to reach out to me privately about any game on this list if you'd like to hear more :)
 
