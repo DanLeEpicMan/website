@@ -5,7 +5,15 @@ path = "misc/games"
 
 Anyone who knows me personally can tell you about [how much I love video games](https://steamcommunity.com/id/danleepicman/). Single-player narratives are my favorite type of game, however my exposure to games is very wide.
 
-This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the". DLCs are included as sub-lists. Where appropriate, I link a Steam review that houses my opinions on the game. Some reviews were written by a much younger me and may blabber on. Nevertheless, you're welcome to reach out to me privately about any game on this list if you'd like to hear more :)
+This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". DLCs are included as sub-lists. 
+
+Where appropriate, I link a Steam review{{ footnote() }} that houses my opinions on the game. A much younger me wrote many of those reviews, and while I polished their grammar and structure, the earlier ones may blabber on.
+
+Nonetheless, you're welcome to reach out to me privately about any game on this list if you'd like to hear more :)
+
+{% footnote_body() %}
+Since December 2024, I always write a review after completing a game. Before then, I wrote a review if I felt like it. That's why many games lack reviews.
+{% end %}
 
 - [1000xRESIST](https://steamcommunity.com/id/danleepicman/recommended/1675830)
 - 11-11 Memories Retold
@@ -64,7 +72,7 @@ This page is dedicated to every single-player game I've beaten, sorted alphabeti
 - Grand Theft Auto IV
   - The Ballad of Gay Tony
   - The Lost and The Damned
-- Grand Theft Auto V
+- [Grand Theft Auto V](https://steamcommunity.com/id/danleepicman/recommended/271590/)
 - The Great Ace Attorney Chronicles
 - [GRIS](https://steamcommunity.com/id/danleepicman/recommended/683320)
 - [Hacknet](https://steamcommunity.com/id/danleepicman/recommended/365450)
@@ -76,7 +84,7 @@ This page is dedicated to every single-player game I've beaten, sorted alphabeti
   - Nyakuza Metro
   - Seal the Deal
 - The Henry Stickmin Collection
-- Hitman GO: Definitive Edition
+- Hitman GO
 - Hollow Knight
 - [Hotline Miami](https://steamcommunity.com/id/danleepicman/recommended/219150)
 - Hotline Miami 2: Wrong Number
@@ -96,7 +104,8 @@ This page is dedicated to every single-player game I've beaten, sorted alphabeti
 - LEGO The Lord of the Rings
 - [Life is Strange](https://steamcommunity.com/id/danleepicman/recommended/319630)
 - [Life is Strange 2](https://steamcommunity.com/id/danleepicman/recommended/532210)
-- Life is Strange: Before the Storm
+- Life is Strange: Before the Storm 
+  - [Farewell](https://steamcommunity.com/id/danleepicman/recommended/763780)
 - LISA
   - LISA The Joyful
 - [Little Kitty, Big City](https://steamcommunity.com/id/danleepicman/recommended/1177980)
@@ -128,7 +137,7 @@ This page is dedicated to every single-player game I've beaten, sorted alphabeti
 - Red Dead Redemption 2
 - [Refunct](https://steamcommunity.com/id/danleepicman/recommended/406150)
 - Return of the Obra Dinn
-- Rise of the Tomb Raider
+- [Rise of the Tomb Raider](https://steamcommunity.com/id/danleepicman/recommended/391220)
 - [RoboCop: Rogue City](https://steamcommunity.com/id/danleepicman/recommended/1681430)
 - [The Search](https://steamcommunity.com/id/danleepicman/recommended/566190)
 - [Shadow of the Tomb Raider](https://steamcommunity.com/id/danleepicman/recommended/750920)
@@ -151,6 +160,7 @@ This page is dedicated to every single-player game I've beaten, sorted alphabeti
 - [Undertale](https://steamcommunity.com/id/danleepicman/recommended/391540)
 - [Warhammer 40,000: Space Marine 2](https://steamcommunity.com/id/danleepicman/recommended/2183900)
 - [Watch_Dogs](https://steamcommunity.com/id/danleepicman/recommended/243470)
+  - [Bad Blood](https://steamcommunity.com/id/danleepicman/recommended/293061)
 - Watch_Dogs 2
 - [What Remains of Edith Finch](https://steamcommunity.com/id/danleepicman/recommended/501300)
 - Who Pressed Mute on Uncle Marcus?
