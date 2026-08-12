@@ -32,14 +32,14 @@ Ultimately, I am not a critic whose opinion is sought after. And unlike critics,
 
 This alone produces a *strong* survivorship bias. If a game is poorly received, I will ignore it. On the contrary, if a game is critically acclaimed, I will want to play it. Moreover, I must buy the game. So for me to review a game, it must overcome two{{ footnote() }} crucial barriers: I need to have interest in playing it, and I need to purchase it{{ footnote() }}.
 
-All of this to say, a gap between positive and negative reviews is entirely expected. Should the positive-negative discrepancy be at, say 60%–40%, I would doubt my ability to acquire good titles, or view myself as an elitist. Nevertheless, even after accounting for this policy and survivorship bias, a gap of 77%–23% still feels rather wide.
+All of this to say, a gap between positive and negative reviews is entirely expected. Should the discrepancy be at, say 60%–40%, I would doubt my ability to acquire good titles. Or I'd view myself as an elitist. Nevertheless, even after accounting for this survivorship bias, as well as my habit of unconditionally writing reviews, a gap of 77%–23% still feels rather wide.
 
 {% footnote_body() %}
-Prior to my policy of always writing a review, there was a third barrier: I need to desire writing a review. In the words of my past self, I only wrote reviews for games that "stood out to me". I doubt this was truly the case, seeing that most of the titles on my greatest games list lack a review (see my Steam profile), while Shadow of the Tomb Raider possesses one. More plausibly, I wrote the review if I felt like it. After all, explaining why something is your favorite is a daunting task that I likely had little patience to do.
+Prior to my policy of always writing a review, there was a third barrier: I need to desire writing a review. My past self claims that I posted reviews for games that "stood out to me". I doubt this was truly the case, seeing that most of the titles on my greatest games list lack a review (see my Steam profile), while Shadow of the Tomb Raider possesses one. More plausibly, I wrote the review if I felt like it. After all, explaining why something is your favorite is a daunting task that I likely had little patience to do.
 {% end %}
 
 {% footnote_body() %}
-The two barriers correlate strongly. After all, why would I purchase a game I have no interest in playing? Nonetheless, one should consider that interest is a spectrum rather than binary. Same with price. Moreover, games have a reputation for deep, deep discounts, as high as 95% off. I will acquire even mildly interesting games at this rate. In some sense, I act whenever the market price meets, or falls under, my perceived value.
+The two barriers correlate strongly. After all, why would I purchase a game I have no interest in playing? Nonetheless, one should consider that interest is a spectrum rather than binary. Same with price. Moreover, games have a reputation for deep, deep discounts, as high as 95% off. I will acquire even mildly interesting games at this rate. In other words, I act whenever the market price meets, or falls under, my perceived value.
 {% end %}
 
 # Limits of Steam
@@ -50,16 +50,18 @@ Nevertheless, it is wrong to renounce Steam's system as fundamentally flawed. Wh
 
 Yet it is impossible for me to address the nuances of the reader. I have no clue who they are or what interests they may harbor. So I must answer the question in aggregate. How I decide to average across those nuances is entirely my call. Anyone desiring details can simply read the review.
 
-As such, using the positive-negative score to assess my positivity bias brings qualms. Aside from being reductive, it ultimately has a different interpretation. Of all the games I reviewed, I recommend the average person{{ footnote() }} check out 82% of them, and ignore the remaining 12%. This isn't a direct assessment of my taste. Maybe I only play good games? Nevertheless, I feel as if it is related, [seeing that my exposure to video games is very broad](/misc/games).
+As such, using the positive-negative score to assess my positivity bias brings qualms. Aside from being reductive, it ultimately has a different interpretation. Of all the games I reviewed, I recommend the average{{ footnote() }} person check out 82% of them, and ignore the remaining 12%. This isn't a direct assessment of my taste. Maybe I only play acclaimed games? Still, [seeing that my exposure to video games is very broad](/misc/games), I feel as if it is related.
 
 {% footnote_body() %}
-Keep in mind, I am the one defining "average". So more appropriately, this should read "I recommend my definition of the average person check out...". There's also the possibility "average" is inconsistent across reviews. I mean, who else but visual novel fans will be reading my review for a niche visual novel?
+Keep in mind, I am the one defining "average". So more appropriately, this should read "I recommend my definition of the average person check out...". There's also the possibility that "average" is inconsistent across reviews. I mean, who else but visual novel fans will be reading my review for a niche visual novel?
 {% end%}
 
 # The Bigger Picture
 
 While the subject of this blog is video games, the issue at heart is my taste in media. A positivity bias seemingly implies that I have generally low standards. While not inherently problematic, it makes me question my ability to discern mediocrity from excellency, or even good from great. If most things I come across receive the Daniel Seal of Approval, does the seal bear any value?
 
-I think it's rather elitist to think this way. Surely my praise holds value if it's backed up by a wall of text. Nonetheless, reading through positive recommendations that should otherwise be negative leaves a sour taste in my mouth. At the end of the day, only ever offering praise is a sure way to cement mediocracy into our everyday lives. Criticism is the cause for growth, for it is how we improve our mistakes and embolden our successes. And sometimes, that means admitting some things just aren't worth your time.
+I think it's rather elitist to think this way. Surely my praise holds *some* value if it's backed up by a wall of text. Yet reading through positive recommendations that should otherwise be negative leaves a sour taste in my mouth. 
 
-I guess my gripe with my positivity bias is I feet that, in some way, it empowers a mediocracy. I would also hate my positive recommendations to be associated with a negative experience. Perhaps I think too hard into the matter. At the very least, all my reviews post-December 2024 are articulated and defensible.
+At the end of the day, only ever offering praise is a sure way to cement mediocracy into everyday life. Criticism not only sharpens standards, it's the cause for growth. Through critique, we improve our mistakes and embolden our successes. Sometimes, that means admitting some people's hard work just isn't worth our time.
+
+I guess my gripe with my positivity bias is I feel that, in some way, it empowers a mediocracy. I would hate my positive recommendations to be associated with a negative experience. Perhaps I think too hard into the matter. At the very least, all my reviews post-December 2024 are articulated and defensible. And my media literacy in general has definitely improved.
