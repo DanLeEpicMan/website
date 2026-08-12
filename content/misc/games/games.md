@@ -34,7 +34,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - [Broken Age](https://steamcommunity.com/id/danleepicman/recommended/232790)
 - Call of Duty: Black Ops
 - [Call of Duty: Black Ops 2](https://steamcommunity.com/id/danleepicman/recommended/202970)
-- Call of Duty: Black Ops 3
+- [Call of Duty: Black Ops 3](https://steamcommunity.com/id/danleepicman/recommended/311210)
 - Call of Duty: Ghosts
 - Call of Duty: Infinite Warfare
 - [Call of Duty: Modern Warfare (2007)](https://steamcommunity.com/id/danleepicman/recommended/7940)
@@ -60,9 +60,9 @@ Since December 2024, I always write a review after completing a game. Before the
 - Dying Light
 - Emily is Away
 - Evan's Remains
-- Fallout 3
+- Fallout 3 (GOTY Edition)
 - Far Cry 3
-- Far Cry 3 Blood Dragon
+- Far Cry 3: Blood Dragon
 - Far Cry 4
 - [Far Cry 5](https://steamcommunity.com/id/danleepicman/recommended/552520)
 - Far Cry 6
