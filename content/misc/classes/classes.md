@@ -28,12 +28,12 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 ## Graduate Degree (UC Irvine)
 
 - Spring 2026
+  - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*</small>
+    - <small>*Entropy, mutual information, asymptotic equipartition property, entropy rates of a stochastic process, data compression, channel capacity, differential entropy, the Gaussian channel.*</small>
   - <small>**STATS 200C**: Probability and Statistical Theory III *(Dr. Zhaoxia Yu)*</small>
     - <small>*Interval estimation, hypothesis testing, decision theory, basic linear model theory.*</small>
   - <small>**STATS 212**: Statistical Methods III: Methods for Correlated Data *(Dr. Tianchen Qian)*</small>
     - <small>*Repeated measures ANOVA, linear mixed models, non-linear mixed effects models, and generalized estimating equations.*</small>
-  - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*</small>
-    - <small>*Entropy, mutual information, asymptotic equipartition property, entropy rates of a stochastic process, data compression, channel capacity, differential entropy, the Gaussian channel.*</small>
 - Winter 2026
   - <small>**STATS 200B**: Probability and Statistical Theory II *(Dr. Bin Nan)*</small>
     - <small>*Sufficient statistics, point estimates, maximum likelihood, minimum variance estimators, confidence intervals, hypothesis testing.*</small>
