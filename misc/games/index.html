@@ -1,0 +1,520 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Games - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="Games" />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Games" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="Games" />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;games&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;misc&#x2F;games&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Games</h1>
+  </header>
+
+  <section><p>Anyone who knows me personally can tell you about <a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/">how much I love video games</a>. Single-player narratives are my favorite type of game, however my exposure to games is very wide.</p>
+<p>This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". DLCs are included as sub-lists.</p>
+<p>Where appropriate, I link a Steam review<sup class='opacity-60 footnote' id='footnote-1'><a href='#footnote-body-1' style='text-decoration: none'>1</a></sup> that houses my opinions on the game. A much younger me wrote many of those reviews, and while I polished their grammar and structure, the earlier ones may blabber on.</p>
+<p>Nonetheless, you're welcome to reach out to me privately about any game on this list if you'd like to hear more :)</p>
+<p 
+    id='footnote-body-1' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-1" style="text-decoration: none"><b>1</b></a>: Since December 2024, I always write a review after completing a game. Before then, I wrote a review if I felt like it. That's why many games lack reviews.
+    </small>
+</p>
+</a>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1675830">1000xRESIST</a></li>
+<li>11-11 Memories Retold</li>
+<li>ABZÛ</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/288040">Actual Sunlight</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/280740">Aperture Tag: The Paint Gun Testing Initiative</a></li>
+<li>The Awesome Adventures of Captain Spirit</li>
+<li>Batman: Arkham Asylum</li>
+<li>Batman: Arkham City</li>
+<li>Batman: Arkham Origins</li>
+<li>Batman: Arkham Knight</li>
+<li>Battleblock Theater</li>
+<li>Battlefield: Bad Company 2</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1082430">Before Your Eyes</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1921980">Between Horizons</a></li>
+<li>Black Mesa</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/274190">Broforce</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/232790">Broken Age</a></li>
+<li>Call of Duty: Black Ops</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/202970">Call of Duty: Black Ops 2</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/311210">Call of Duty: Black Ops 3</a></li>
+<li>Call of Duty: Ghosts</li>
+<li>Call of Duty: Infinite Warfare</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/7940">Call of Duty: Modern Warfare (2007)</a></li>
+<li>Call of Duty: Modern Warfare (2019)</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/10180">Call of Duty: Modern Warfare 2 (2009)</a></li>
+<li>Call of Duty: Modern Warfare 3 (2011)</li>
+<li>Call of Duty: World at War</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/476600">Call of Duty: WWII</a></li>
+<li>Celeste</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/870780">Control</a></li>
+<li>Cruelty Squad</li>
+<li>Cuphead</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1091500">Cyberpunk 2077</a>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/2138330">Phantom Liberty</a></li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/413410">Danganronpa: Trigger Happy Havoc</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/413420">Danganronpa 2: Goodbye Despair</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/567640">Danganronpa V3: Killing Harmony</a></li>
+<li>Danganronpa Another Episode: Ultra Despair Girls</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1222140">Detroit: Become Human</a></li>
+<li>Doki Doki Literature Club</li>
+<li>DOOM (2016)</li>
+<li>DOOM Eternal</li>
+<li>Dying Light</li>
+<li>Emily is Away</li>
+<li>Evan's Remains</li>
+<li>Fallout 3 (GOTY Edition)</li>
+<li>Far Cry 3</li>
+<li>Far Cry 3: Blood Dragon</li>
+<li>Far Cry 4</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/552520">Far Cry 5</a></li>
+<li>Far Cry 6</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/371660">Far Cry Primal</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/337340">Finding Paradise</a></li>
+<li>Firewatch</li>
+<li>Grand Theft Auto IV
+<ul>
+<li>The Ballad of Gay Tony</li>
+<li>The Lost and The Damned</li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/271590/">Grand Theft Auto V</a></li>
+<li>The Great Ace Attorney Chronicles</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/683320">GRIS</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/365450">Hacknet</a>
+<ul>
+<li>Hacknet Labyrinths</li>
+</ul>
+</li>
+<li>Half-Life 2
+<ul>
+<li>Half-Life 2: Episode 1</li>
+<li>Half-Life 2: Episode 2</li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/253230">A Hat in Time</a>
+<ul>
+<li>Nyakuza Metro</li>
+<li>Seal the Deal</li>
+</ul>
+</li>
+<li>The Henry Stickmin Collection</li>
+<li>Hitman GO</li>
+<li>Hollow Knight</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/219150">Hotline Miami</a></li>
+<li>Hotline Miami 2: Wrong Number</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/304430">INSIDE</a></li>
+<li>Jusant</li>
+<li>Kyle is Famous</li>
+<li>Lara Croft GO</li>
+<li>LEGO Batman 2: DC Super Heroes</li>
+<li>LEGO Harry Potter: Years 1–4</li>
+<li>LEGO Indiana Jones: The Original Adventures</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/249130">LEGO Marvel Super Heroes</a></li>
+<li>The LEGO NINJAGO Movie Video Game</li>
+<li>LEGO Pirates of the Caribbean</li>
+<li>LEGO Star Wars: The Complete Saga</li>
+<li>LEGO Star Wars: The Skywalker Saga</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/285160">LEGO The Hobbit</a></li>
+<li>LEGO The Lord of the Rings</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/319630">Life is Strange</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/532210">Life is Strange 2</a></li>
+<li>Life is Strange: Before the Storm
+<ul>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/763780">Farewell</a></li>
+</ul>
+</li>
+<li>LISA
+<ul>
+<li>LISA The Joyful</li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1177980">Little Kitty, Big City</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/40700">Machinarium</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/234140">Mad Max</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/473950">Manifold Garden</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/286690">Metro 2033</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/287390">Metro Last Light</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1392820">Milk inside a bag of milk inside a bag of milk</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1604000">Milk outside a bag of milk outside a bag of milk</a></li>
+<li>Mirror's Edge</li>
+<li>Mirror's Edge Catalyst</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/812810">missed messages</a></li>
+<li>Montaro</li>
+<li>Montaro: RE</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1746030">Murders on the Yangtze River</a></li>
+<li>My Friend Pedro</li>
+<li>OMORI</li>
+<li>One Piece World Seeker</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/420530">OneShot</a></li>
+<li>Papers, Please</li>
+<li>Paradise Killer</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/466630">The Pedestrian</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/787480">Phoenix Wright: Ace Attorney Trilogy</a></li>
+<li>Pikuniku</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/752590">A Plague Tale: Innocence</a></li>
+<li>Portal</li>
+<li>Portal 2</li>
+<li>Red Dead Redemption 2</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/406150">Refunct</a></li>
+<li>Return of the Obra Dinn</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/391220">Rise of the Tomb Raider</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/1681430">RoboCop: Rogue City</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/566190">The Search</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/750920">Shadow of the Tomb Raider</a></li>
+<li>Slay the Princess</li>
+<li>Sonic Mania</li>
+<li>Spyro Reignited Trilogy</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/221910">The Stanley Parable</a></li>
+<li>STEINS;GATE</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/278360">A Story About My Uncle</a></li>
+<li>Stray</li>
+<li>Super Fancy Pants Adventure</li>
+<li>Super Mario 3D World
+<ul>
+<li>Bowser's Fury</li>
+</ul>
+</li>
+<li>Super Mario Odyssey</li>
+<li>SUPERHOT</li>
+<li>Thief (2014)</li>
+<li>Titanfall 2</li>
+<li>Tomb Raider (2013)</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/406970">The Uncertain Last Quiet Day</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/391540">Undertale</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/2183900">Warhammer 40,000: Space Marine 2</a></li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/243470">Watch_Dogs</a>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/293061">Bad Blood</a></li>
+</ul>
+</li>
+<li>Watch_Dogs 2</li>
+<li><a rel="noopener" target="_blank" href="https://steamcommunity.com/id/danleepicman/recommended/501300">What Remains of Edith Finch</a></li>
+<li>Who Pressed Mute on Uncle Marcus?</li>
+</ul>
+</section>
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="&#x2F;license" rel="noopener" target="_blank">
+      License
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
