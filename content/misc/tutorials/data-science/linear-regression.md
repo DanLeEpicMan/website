@@ -111,7 +111,7 @@ $$
 And the problem now amounts to finding the coefficients $\vec{\beta} = \left( \beta_0, \dots, \beta_p \right)$ such that $\epsilon$ is as small as possible.
 
 {% footnote_body() %}
-Actually, linear regression just means we have a linear function in terms of our coefficients. That is, $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
+Actually, linear regression just means $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
 {% end %}
 
 ## The Setup
@@ -234,7 +234,7 @@ Rather than finding a line of best fit, say we instead want to use
 $$
     Y = \beta_0 + \beta_1 X + \dots + \beta_k X^k + \epsilon
 $$
-That is, fit a $k$-degree polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-b'>See footnote b for a brief comment why</a>.
+That is, fit a $k$-degree polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-2'>See footnote 2 for a brief comment why</a>.
 
 For our example, we will use $k=25$. That is, fit a 25 degree polynomial.
 
