@@ -43,6 +43,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - Call of Duty: Modern Warfare 3 (2011)
 - Call of Duty: World at War
 - [Call of Duty: WWII](https://steamcommunity.com/id/danleepicman/recommended/476600)
+- [Catherine](https://steamcommunity.com/id/danleepicman/recommended/893180)
 - Celeste
 - [Control](https://steamcommunity.com/id/danleepicman/recommended/870780)
 - Cruelty Squad
