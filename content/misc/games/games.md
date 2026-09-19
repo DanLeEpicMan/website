@@ -5,7 +5,7 @@ path = "misc/games"
 
 Anyone who knows me personally can tell you about [how much I love video games](https://steamcommunity.com/id/danleepicman/). Single-player narratives are my favorite type of game, however my exposure to games is very wide.
 
-This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". DLCs are included as sub-lists. 
+This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". Some DLCs are included as sub-lists. 
 
 Where appropriate, I link a Steam review{{ footnote() }} that houses my opinions on the game. A much younger me wrote many of those reviews, and while I polished their grammar and structure, the earlier ones may blabber on.
 
@@ -43,6 +43,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - Call of Duty: Modern Warfare 3 (2011)
 - Call of Duty: World at War
 - [Call of Duty: WWII](https://steamcommunity.com/id/danleepicman/recommended/476600)
+- [Catherine](https://steamcommunity.com/id/danleepicman/recommended/893180)
 - Celeste
 - [Control](https://steamcommunity.com/id/danleepicman/recommended/870780)
 - Cruelty Squad
@@ -71,7 +72,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - Firewatch
 - Grand Theft Auto IV
   - The Ballad of Gay Tony
-  - The Lost and The Damned
+  - The Lost and Damned
 - [Grand Theft Auto V](https://steamcommunity.com/id/danleepicman/recommended/271590/)
 - The Great Ace Attorney Chronicles
 - [GRIS](https://steamcommunity.com/id/danleepicman/recommended/683320)
@@ -155,7 +156,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - SUPERHOT
 - Thief (2014)
 - Titanfall 2
-- Tomb Raider (2013)
+- [Tomb Raider (2013)](https://steamcommunity.com/id/danleepicman/recommended/203160)
 - [The Uncertain Last Quiet Day](https://steamcommunity.com/id/danleepicman/recommended/406970)
 - [Undertale](https://steamcommunity.com/id/danleepicman/recommended/391540)
 - [Warhammer 40,000: Space Marine 2](https://steamcommunity.com/id/danleepicman/recommended/2183900)

@@ -88,17 +88,17 @@ $$
 In plain English
 > Output the answer if we know it. Otherwise, output 0.
 
-It shouldn't be hard to see why this function is a terrible idea. However, as far as the math is concerned, this is the best possible fit for our data. After all, there's no way to know how wrong we are on stuff we've never seen before.
+It shouldn't be hard to see why this function is a terrible idea. However, as far as the math is concerned, this is the best possible fit for our data. After all, there's no way to know how wrong we are on data we've never seen before.
 
 To prevent ridiculous solutions like this, we limit ourselves to a certain **class of functions**. For example, we might say that
 1. We are only allowed to consider functions of the form $f(x) = \alpha \sin(x)$ for some constant $\alpha \in \mathbb{R}$
 2. We are only allowed to consider functions that satisfy the differential equation $f'(x) = x f(x)$.
 3. We are only allowed to consider the following list
-   - $x^2 / y$
-   - $\log(x) + y$
-   - $y^x$
+   - $f_1 (x) = x^2$
+   - $f_2 (x) = \log(x)$
+   - $f_3 (x) = e^x$
 
-We can define our class of functions however we want. Above, we explicitly write down the functional form as in (1), write down a condition as in (2), or specify a list as in (3). The class of functions we consider depends heavily on the problem at hand, such as how many inputs there are, and other domain-specific constraints.
+We can define our class of functions however we want. Above, we explicitly write down the functional form as in (1), write down a condition as in (2), or enumerate a list as in (3). The class of functions we consider depends heavily on the problem at hand, such as how many inputs there are, and other domain-specific constraints.
 
 Why do we do this? **Aside from filtering out dumb solutions, the problem becomes much more tractable.**
 
@@ -111,7 +111,7 @@ $$
 And the problem now amounts to finding the coefficients $\vec{\beta} = \left( \beta_0, \dots, \beta_p \right)$ such that $\epsilon$ is as small as possible.
 
 {% footnote_body() %}
-Actually, linear regression just means we have a linear function in terms of our coefficients. That is, $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
+Actually, linear regression just means $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
 {% end %}
 
 ## The Setup
@@ -184,7 +184,7 @@ Why? **Because doing so minimizes the distance between $\mathbf{Y}$ and $\hat{\m
 
 <figure>
     <img src='/images/tutorials/linear-regression/ols_visualization.webp'/>
-    <caption><small>Note that this is a visual aid. In practice, these vectors have hundreds of dimensions, so "distance" has no physical meaning.</small></caption>
+    <figcaption>Note that this is a visual aid. In practice, these vectors have hundreds of dimensions, so "distance" has no physical meaning.</figcaption>
 </figure>
 
 We call this the least squares approach because minimizing $||E||$ is the same as minimizing its square, $||E||^{2}$, and
@@ -234,7 +234,7 @@ Rather than finding a line of best fit, say we instead want to use
 $$
     Y = \beta_0 + \beta_1 X + \dots + \beta_k X^k + \epsilon
 $$
-That is, fit a $k$-degree polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-b'>See footnote b for a brief comment why</a>.
+That is, fit a $k$-degree polynomial instead of a line. After all, we know $X$, so finding powers of $X$ is an easy task. This may not seem linear, but it is. <a href='#footnote-2'>See footnote 2 for a brief comment why</a>.
 
 For our example, we will use $k=25$. That is, fit a 25 degree polynomial.
 
@@ -314,7 +314,7 @@ sns.lineplot(test_data, x='X', y=Yhat_test_lobf, color='g', ax=ax[1])
     <img src='/images/tutorials/linear-regression/poly_vs_lobf_test.webp'>
 </figure>
 
-It's fairly clear that the polynomial models does a rather poor job at predicting the new data, especially on the tails. (It's not obvious in the picture, but the right-most point has a prediction in the billions.) While it felt like the polynomial model did a good job with the original data, it does a poor job with everything else.
+It's fairly clear that the polynomial model does a poor job at predicting the new data, especially on the tails. In particular, the right-most point has a prediction in the billions. Despite this, the model had more promising performance on the original assessment.
 
 This phenomenon is called **overfitting**. Overfitting means that the model fits its **training data** too well, to the point that it's all but useless for outside data. In other words, we dug ourselves into a situation where the model is only telling us what we already know, and nothing more.
 
@@ -324,9 +324,9 @@ While we may know how to train models, we need some criteria by which to evaluat
 
 ## Train-Test Split
 
-As a general rule of thumb, you should always partition your data into two categories: **training** data and **testing** data. As the names suggest, the training data is used to find coefficients, while the testing data is used to evaluate generalizability. A common ratio is 75% train and 25% test, though this is completely arbitrary (in this article, we used a 50/50 ratio).
+You should **always** partition your data into *training* and *testing* sets. As the names suggest, the training data is used to find the best model, while the testing data is used to evaluate generalizability. A common ratio is 75% train and 25% test, though this is completely arbitrary. We used a 50/50 split, for example.
 
-Why do we do this? To test two things
+Why do we do this? We want...
 1. To check if our model is **overfitting** the data.
 2. To see how well our model **generalizes** to unseen data.
 
@@ -337,6 +337,7 @@ There are many packages that will do this partitioning for you. [Scikit-learn ha
 ## $R^2$ Score
 
 The $R^2$ score is a measurement of how well explanatory variance predicts the response variance. Setting $\bar{y}$ as the average of the responses, $R^2$ is defined as
+
 $$
 \begin{align}
     R^2 &= \frac{\sum\_{i=1}^{n} (\hat{y}_i - \bar{y})^2}{\sum\_{i=1}^{n} (y\_i - \bar{y})^2} \\\\
@@ -344,9 +345,14 @@ $$
     &\overset{(!)}{=} 1 - \frac{\sum\_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum\_{i=1}^{n} (y\_i - \bar{y})^2}
 \end{align}
 $$
-(1) gives us a clear interpretation of $R^2$ as a ratio of variances. More specifically, the numerator is proportional to the variance of the predictions, while the denominator is proportional to the variance of the response variables. In essence, $R^2$ tells us the amount of response variance explained by the predictions.
+
+(1) gives us a clear interpretation of $R^2$ as a ratio of variances. Specifically, the numerator is{{ footnote() }} the variance of the predictions, while the denominator is the variance of the response variables. In essence, $R^2$ tells us the amount of response variance explained by the predictions.
 
 (2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because it's more intuitive to write a metric in terms of error{{ footnote() }}.
+
+{% footnote_body() %}
+Is <i>proportional to</i>. You get the variance when multiplying both the numerator and denominator by $\frac{1}{n}$.
+{% end %}
 
 {% footnote_body() %}
 Note that the numerator in (2) is precisely $||E||^2$.
@@ -369,12 +375,12 @@ As we can see, the polynomial model is performing terribly, achieving a score we
 
 However, there is much more about $R^2$
 1. It's mainly useful for evaluating performance on your training data, as interpreting it as a ratio between variances relies on this fact. Evaluating it on outside data loses this interpretation, and thus much its value.
-    - The attentive reader will note that we did precisely this in the above example.
+    - You might ask, why did I do so then? To illustrate how damning minor errors and inattentive mistakes can be :)
 2. It has very questionable efficacy, as "explained variance" is not always a desirable outcome. Good models can have low $R^2$, and terrible models can have high $R^2$.
-    - In fact, high $R^2$ ($>0.95$) is a good sign of overfitting.
+    - In fact, high $R^2$ ($>0.95$) is a sign of overfitting.
 3. $R^2$ says nothing more beyond what's outlined above. It depends on many different things, and using it for model selection is very dubious.
 
-[This](https://stats.stackexchange.com/a/13317) stack exchange answer goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
+[This stack exchange](https://stats.stackexchange.com/a/13317) goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
 
 {% footnote_body() %}
 Intuitively, negative $R^2$ is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.
