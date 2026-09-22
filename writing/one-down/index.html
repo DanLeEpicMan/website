@@ -1,0 +1,632 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    One Down, Four To Go - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="My first year as a graduate student." />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="One Down, Four To Go" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="My first year as a graduate student." />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;one-down&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <meta property="og:image" content="https://dtnaylor.com/images/one-down/beginnings.webp" />
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;one-down&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#a-summer-of-nothing">A Summer of Nothing</a>
+        
+      </li>
+      
+      <li>
+        <a href="#fall-s-fresh-start">Fall&#x27;s Fresh Start</a>
+        
+      </li>
+      
+      <li>
+        <a href="#winter-s-insightful-tribulations">Winter&#x27;s Insightful Tribulations</a>
+        
+      </li>
+      
+      <li>
+        <a href="#spring-s-stressful-milestone">Spring&#x27;s Stressful Milestone</a>
+        
+      </li>
+      
+      <li>
+        <a href="#a-summer-of-solace">A Summer of Solace</a>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">One Down, Four To Go</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2026-08-04</time>
+  <span class="mx-1">&middot;</span>
+  <span>17min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  <!---->
+  <figure class="mt-0 mb-12">
+    <img
+      class="h-auto w-full rounded-lg"
+      src="https://dtnaylor.com/images/one-down/beginnings.webp"
+      alt="An anteater in front of a Galton board."
+    />
+  </figure>
+  
+
+  <!-- TOC -->
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span class="ml-2">Table of Contents</span>
+    </summary>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#a-summer-of-nothing">A Summer of Nothing</a>
+        
+      </li>
+      
+      <li>
+        <a href="#fall-s-fresh-start">Fall&#x27;s Fresh Start</a>
+        
+      </li>
+      
+      <li>
+        <a href="#winter-s-insightful-tribulations">Winter&#x27;s Insightful Tribulations</a>
+        
+      </li>
+      
+      <li>
+        <a href="#spring-s-stressful-milestone">Spring&#x27;s Stressful Milestone</a>
+        
+      </li>
+      
+      <li>
+        <a href="#a-summer-of-solace">A Summer of Solace</a>
+        
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+
+<!---->
+
+  <!-- Content -->
+  <section><p>My first year as a graduate student was hard-pressed. Aside from constant stress throughout the year, my free time was limited, to the point that I was unable to pursue many personal hobbies. The older students told us that the first year is the busiest one out of all five years in the PhD. Looking back, I'm very glad it is over.</p>
+<p>However, to suggest in any way that I wished it went down differently is wrong. By and large, I transformed enormously, being in a state worthy enough to consider myself a statistician. I'm glad the first year happened, but I wish to never experience anything like it again.</p>
+<h1 id="a-summer-of-nothing">A Summer of Nothing</h1>
+<p>Upon graduating from university, most of my friends started full-time jobs, leaving maybe two weeks for break at best. As for myself, I had three months until my commitments began. Aside from minor work as a tutor, I primarily stayed at home and kept to myself, mostly playing games or spending time with local friends. It felt nice to dedicate time entirely to myself, especially after accomplishing a task as grand as completing a bachelor's degree.</p>
+<p>Much like the summer after high school, I was in a state of limbo. There was nothing for me to return to, and I was entirely unsure of what to expect at my next destination, Irvine. Deep down, I knew that this summer was the last of its kind. Going forward, I will be far busier, eventually losing touch with the concept of a summer break once research cements itself into my life.</p>
+<p>Nevertheless, while unsure of my exact trajectory, I knew I was pointed in the right direction. This alone gave me great comfort.</p>
+<h1 id="fall-s-fresh-start">Fall's Fresh Start</h1>
+<p>Fall quarter was a time of adjustment, and contrary to the preamble, reasonably undemanding. Aside from acclimating to Irvine, it served largely to push me away from the undergraduate mindset and towards the graduate one. The most important value, of course, being the genuine desire to learn, and translate said learning into work, rather than optimize grades.</p>
+<p>Due to my taking of graduate courses while an upperclassman at UC Santa Barbara, I had partly undergone this transition. As a result, my courses were mindnumbingly easy.</p>
+<ul>
+<li>STATS 200A, Statistical Theory I, was a direct repeat of UCSB's PSTAT 207A, except at a much slower pace<sup class='opacity-60 footnote' id='footnote-1'><a href='#footnote-body-1' style='text-decoration: none'>1</a></sup>, covering ~60% of 207A's material. It was very uneventful for me.</li>
+<li>STATS 210, Applied Linear Regression, was by and large the most trivial course I've ever taken. Many of us agreed it should be abolished and replaced with something more intellectually stimulating.</li>
+<li>STATS 295, Clinical Trials, was equally boring. It was a paper-reading course, where each student is given the responsibility of reading and presenting a paper to the class. I learned nothing.</li>
+</ul>
+<p>The most tedious part of fall quarter was working as a teacher's assistant (TA). My professor required me to host <strong>nine</strong> hours of office hours a week in lieu of discussion section responsibilities. A major thorn in my side, as she insisted I hold all of them at hours convenient for students. While the bare minimum expectation for my job, I'm also a student myself. Holding me accountable to hosting nine hours of office hours in timeframes that my responsibilities largely occupied made both my personal schedule and my office hours schedule incredibly awkward. The silver lining is she allowed us to host them virtually.</p>
+<p>Annoyingly, these office hours saw next-to-no attendance. At best, I talked with students for 20 minutes a week. The remaining time was utterly pointless. Most people in my position would find this to be a blessing, since these empty hours become time for work. Unfortunately, I cannot focus while on-call, so my attempts at productivity were null. And as much as I wanted to abandon them to do other things, my moral conscious prevented me from doing so.</p>
+<p>The worst part of the job was my lack of agency. The professor micromanaged everything I did, insisting it all be done her way. For my grading responsibilities, she required me to grade the first few assignments in front of her and explain my reasoning for each score. Bear in mind, the class was lower division statistics. I certainly could not have made it into the PhD if I lacked the ability assess correctness of such material.</p>
+<p>Had I demonstrated incompetency previously, I would understand her desire for micromanagement. But I didn't. Her approach was nothing short of insulting. Worst yet, she went through my grading to double-check if it met her standards<sup class='opacity-60 footnote' id='footnote-2'><a href='#footnote-body-2' style='text-decoration: none'>2</a></sup>. Why even have me grade in front of her? Even more so, why have me grade at all? If she plans to read everything anyways, it's much easier on everyone for her to assign scores.</p>
+<p>As annoying as my TA experience was, I must concede my privilege. Me doing 20 hour work-weeks alongside classes I possess a strong familiarity with is a far better alternative than many of my friends who slaved away at full-time jobs. And while I harbor deep frustrations, I was quite happy. Even if seldom occuring, helping students tackle confusions was the highlight of the job.</p>
+<p>Elsewhere, bonding with my new cohort was extremely fun. We all got along super well. Plenty of late-night fast food runs and bar visits. I was also living in the same apartment with my friend of nine years, Nick, which did wonders for my social transition to Irvine.</p>
+<figure>
+    <img src="/images/one-down/balatro.webp" style="width: 50%">
+    <figcaption>It was very fun to regularly play Balatro with my friend, and roommate, Nick :)</figcaption>
+</figure>
+<p>As such, I acclimated well to Irvine physically, academically, and socially. Unfortunately, nothing could prepare me for the two quarters to come.</p>
+<p 
+    id='footnote-body-1' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-1" style="text-decoration: none"><b>1</b></a>: In addition to moving at a faster pace, PSTAT 207A was much more mathematically rigorous. Suffice it to say I was overqualified for STATS 200A.
+    </small>
+</p>
+</a><p 
+    id='footnote-body-2' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-2" style="text-decoration: none"><b>2</b></a>: At face value this sounds like I did a poor job, but she was like this with everyone who worked for her.
+    </small>
+</p>
+</a><h1 id="winter-s-insightful-tribulations">Winter's Insightful<sup class='opacity-60 footnote' id='footnote-3'><a href='#footnote-body-3' style='text-decoration: none'>3</a></sup> Tribulations</h1>
+<p>Winter quarter stands among my most stressful time periods. It also stands as the most illuminating. Prior to this quarter, I had a very vague idea of statistics, viewing myself more as a mathematician in an adjacent field rather than a proper statistician. After this quarter, I finally understood not only the subtlety of statistics, but also the role of mathematics in the sciences more deeply, and how statistics manifests itself into this role.</p>
+<p>For reasons that seem unwise, I enrolled in four courses rather than the recommended three. In addition to the mandatory courses STATS 200B and 211, we are required to take STATS 205, Bayesian statistics, in order to qualify for a master's degree. It is also a prerequisite to other PhD-required courses, though strangely not itself required. However, I wanted to take STATS 295<sup class='opacity-60 footnote' id='footnote-4'><a href='#footnote-body-4' style='text-decoration: none'>4</a></sup>, Spatial Statistics, since the material seemed interesting, and it's only offered once every two years.</p>
+<p>Having previously completed the UCSB equivalent of STATS 205, PSTAT 215A, I petitioned for a waiver. Everyone in the statistics department approved my waiver, notably the professor of 205 and the vice chair of the department. They agreed that I demonstrated knowledge of the material, and that I would gain nothing from the course. Unfortunately, the unqualified bureaucrats outside the department disagreed.</p>
+<blockquote>
+<p>Courses that were applied toward your undergraduate degree—whether electives or core requirements—are not eligible to be waived. This policy is set centrally by the Graduate Division, and even with [the vice chair's] support, an exception would not be possible.</p>
+</blockquote>
+<p>Talk about utter incompetency<sup class='opacity-60 footnote' id='footnote-5'><a href='#footnote-body-5' style='text-decoration: none'>5</a></sup>. After speaking with the professor, she agreed that my situation with the administrators is ridiculous, and that 295 is a far better use of my time. As such, she granted me extensions for 205's homework assignments whenever I needed them. This enabled me to take both, and I was very glad about it.</p>
+<p>Aside from this incident, all my other complications felt much more substantial compared to fall quarter. My new TA role offered me much more agency, and my remaining classes felt meaningful. Except for 211, those remaining courses were okay at-best.</p>
+<ul>
+<li>STATS 200B, a continuation of 200A, was largely a repeat of PSTAT 207A, with new material beginning halfway into the quarter. I would've enjoyed the course greater had it been more mathematically rigorous. Nonetheless, I'm glad I have <em>some</em> exposure to hypothesis testing theory.</li>
+<li>STATS 295 was also a fine course. It did a great job at exposing me to new ideas, although it leaned a little too much into applications for my liking. I personally enjoyed the theory and methodology most, finding it to be the most valuable takeaways. Despite this, the applied homework assignments helped immensely with my understanding.</li>
+</ul>
+<p>211, however, was simultaneously the crown jewel of the quarter, and also the stressful killer. I'm very happy to have experienced it, and I wish to never experience it ever again. Generalized Linear Models (GLMs) were the focus of the course, although GLMs weren't what made it valuable. Rather, the value came from the approach towards statistics, and mathematical modeling more broadly, that underpinned everything we did. It served as the most eloquent introduction into scientific thinking from a mathematical perspective.</p>
+<figure>
+    <img src="/images/one-down/well-dressed.webp">
+    <figcaption>The professor's lectures felt like sermons, so to surprise him, we all dressed up, as if going to church.</figcaption>
+</figure>
+<p>Imbuement of such themes cannot be accomplished exclusively through lecture. There must be a component of individual action. And herein lies the stress of the quarter. Our homework assignments were <em>long</em> and <em>involved</em>. By far the longest assignments I've been given, and among the most difficult. The most challenging aspect was translating vague scientific questions into precise statistical models, all the while defending said translations. This consists of not only understanding how models actualize into clear objectives and answers, but also using scientific facts to inform the choice of model and interpretation of its clarities.</p>
+<p>One of the major themes of the course was making tradeoffs between efficiency and robustness. Stronger assumptions will naturally lead to efficient methods, however violations of these assumptions will yield incorrect results. One can argue that this highlights the necessity of model diagnostics, and my response is one must ensure they stay behind the line of post-hoc rationalization. Another theme is the tackling of problems with an appropriate consideration of scientific factors, as any translation undertaken without an understanding of the overarching science is surely going to resolve into plausible nonsense. Most prominently, this came in the form of acknowledging limitations of both the data at hand and the approach taken.</p>
+<p>The last part was especially difficult to grasp, especially having come from an environment of exclusively mathematics. After all, how can I expect myself to account for an appropriate number of things if I have next-to-no expertise in the field? Much of this process involved literature review, into both facts related to the problem at hand, and a survey of the methodology for similar problems. And while I improved my ability at digesting science, I took away two important sentiments: I am not a scientist, and I hate literature reviews.</p>
+<p>Ultimately, 211 transformed me into a far more capable and confident statistician. The looming fear of the qualifying exams diminished substantially upon completion of the course. Nevertheless, this fear cemented itself into the back of my mind all-throughout next quarter.</p>
+<p 
+    id='footnote-body-3' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-3" style="text-decoration: none"><b>3</b></a>: Couldn't think of a synonym beginning with W :(
+    </small>
+</p>
+</a><p 
+    id='footnote-body-4' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-4" style="text-decoration: none"><b>4</b></a>: I mentioned STATS 295 already, Clinical Trials. 295 is the special topics course, i.e. topics that aren't regularly offered. In other words, it's a different class each quarter, so we are allowed to repeat it as many times as we want.
+    </small>
+</p>
+</a><p 
+    id='footnote-body-5' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-5" style="text-decoration: none"><b>5</b></a>: I didn't attend a single 205 lecture, and scored above 100% on the midterm. It truly was a waste of my time.
+    </small>
+</p>
+</a><h1 id="spring-s-stressful-milestone">Spring's Stressful Milestone</h1>
+<p>Out of the three quarters, spring was my favorite. Aside from having the best weather, all my courses consisted of new material. The workload was far easier and more manageable than winter quarter, and lacked most trivialities of fall quarter.</p>
+<ul>
+<li>STATS 200C, a continuation of 200B, was the theory of linear models. The class was okay, but largely tedious, since it felt like the professor tried to abstract as much linear algebra away from the course as possible. In a course about <strong>linear</strong> models. It also felt like we neglected most of the general theory, since we only ever considered a handful of problems, yet were required to solve them directly rather than apply theorems to simplify the work.</li>
+<li>STATS 212, Methods for Correlated Data, was a great class, though not as illuminating as 211. It served mostly to expand our toolbox rather than teach us philosophies for tackling problems. The professor required each student to give a presentation, and he allowed me to give a discussion on the normal distribution after a few remarks I made during the second lecture :)</li>
+<li>EECS 242, Information Theory, was a course I took out of pure curiosity. The available statistics elective didn't interest me much, and information theory is a topic I've wanted to study for quite some time. It was different from what I expected, but still interesting. As with 200B, I wish it were more mathematically rigorous, but I'm nevertheless glad I have exposure to new ideas.</li>
+</ul>
+<p>My TA situation was also the best to date. An older PhD student taught the course rather than a professor, which eased communication greatly. For instance, I felt respected and that my input held value. It was easy for us work together, as well as exchange feedback in order to improve our ideas. I was also tasked with writing some questions<sup class='opacity-60 footnote' id='footnote-6'><a href='#footnote-body-6' style='text-decoration: none'>6</a></sup> for both exams, which was scary to think about, but also refreshing to see the ingenuity of students' answers.</p>
+<p>Yet the looming fear of qualifying exams overshadowed all this joy. While I was pretty confident for both of them, having strong theory and the arduous 211 under my belt, it nonetheless stressed me<sup class='opacity-60 footnote' id='footnote-7'><a href='#footnote-body-7' style='text-decoration: none'>7</a></sup> to think about, especially as we got closer each day.</p>
+<p>And as confident as I was, nothing could have possibly foreshadowed either of those exams. By a very wide margin, those two qualifying exams were the worst tests I have ever taken. Let's begin with the theory exam. Naturally, to prepare for this test, I simulated previous years editions, treating each one as if it were real. I did three such tests, and well-exceeded the passing grade. The format of the exam is to answer any five questions out of seven within four hours. I consistently answered at least six questions, in complete detail, within three hours. Suffice it to say, I aced those tests.</p>
+<p>Come the morning of the actual qualifying exam, and we were given something that is substantially harder. Its difficulty dwarfed the previous five years by several orders of magnitude. While conceptaully harder, my main gripe with the exam was the tedious algebra littered throughout. Out of the four hours given to us, I spent <strong>two</strong> on two subquestions. Not the full question, mind you.</p>
+<p>What angers me most is the arbitrary increase in difficulty. The qualifying exam is meant to assess our competencies at doing research. By adjusting the difficulty of the exam based on our performance in the associated courses, it ceases to be a measurement of this, and more accurately assesses how well our skill is in-line with our professors' beliefs of our skill. Worst yet, most of the issues with tedious algebra would have been obvious had anyone attempted the exam themselves. Was this even proofread by anyone?</p>
+<p>My experience with the data analysis qualifying exam convinced me that there was no proofreading whatsoever. Upon leaving the somber atmosphere of the theory exam, the department released the data analysis exam (DA). The DA was essentially a take-home project. We were given a briefing containing several scientific questions alongside a relevant dataset, and have one week to write a report answering the questions with statistical models, all the while defending our modeling decisions.</p>
+<p>At first glance, the DA seemed effortless. I figured that I could finish the bulk of the report within two days. Naturally, I felt blessed after my horrible experience. In some sense, the calm after the storm.</p>
+<p>Alas, there was one major caveat. Alongside the briefing and the dataset, the department sent out the answer key. By mistake, of course. And upon realization of this error, great panic ensued. The department postponed our DA indefinitely while they scrambled towards a solution.</p>
+<p>Through the grapevine, I heard that they initially considered making us take next year's DA. A nice way to hold us accountable for their mistake. They also considered writing a new DA, but unfortunately, the original exam writer left the country for vacation. In the end, a professor stepped up to write a DA for us.</p>
+<p>And in the trivial DA's place came one of the most difficult DAs this department has ever given. The difficulty gap between the two DAs was massive. It appalls me how both exams can be considered equal assessments of research competency. An explanation that makes sense, of course, if the original was never proofread.</p>
+<p>If my experience with the theory exam was a storm, then my experience with the DA was a category five hurricane. That one week of doing the DA was one of the most miserable weeks of my life. The briefing explicitly said that the appropriate approach may require us to go beyond the knowledge of our courses. In other words, we weren't prepared for this exam. It felt like we were expected to teach ourselves the necessary methodology in order to answer the DA. A skill not intended to be measured per the exam's guidelines.</p>
+<figure>
+    <img src="/images/one-down/qualifying-results.webp">
+    <figcaption>At least I passed both exams :)</figcaption>
+</figure>
+<p>Had anyone bothered to proofread either exam, many of these difficulties would have subsided. The tedious algebra would be gone<sup class='opacity-60 footnote' id='footnote-8'><a href='#footnote-body-8' style='text-decoration: none'>8</a></sup>, and the answer key would have never been sent out. It deeply irks me how no one in the department takes these exams seriously. I sincerely hope that the mechanisms which produced these exams are reformed or abolished entirely.</p>
+<p 
+    id='footnote-body-6' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-6" style="text-decoration: none"><b>6</b></a>: For the final, she asked me to write a difficult bonus question. I created a counting problem, à la combinatorics, that I'm really proud of. Essentially, I repeatedly flip a coin in order to produce a sequence of six coin flips. What is the probability that there is a consecutive run of coins? Moreover, what's the probability that the first consecutive run of coins, if present, is all heads? The trick for the first question is to count the outcomes where there isn't a consecutive run, yielding a probability of 1 - ²⁄₆₄ = ⁶²⁄₆₄. The trick for the second question is to realize that for each consecutive run of heads, you can invert each coin to get a consecutive run of tails. By this reflection property, half the consecutive runs start with heads, while the other half start with tails, so the probability is ³¹⁄₆₄.
+    </small>
+</p>
+</a><p 
+    id='footnote-body-7' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-7" style="text-decoration: none"><b>7</b></a>: Although I handled the stress far better than most my peers. Seemingly a trait of confidence, but more plausibly, I think I am generally calm regarding stress, as most of my peers were just as capable as I am.
+    </small>
+</p>
+</a><p 
+    id='footnote-body-8' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-8" style="text-decoration: none"><b>8</b></a>: If the tedious algebra was intentional, then they are not testing competency, but patience. Perhaps patience is necessary for good research, but it definitely is not appropriate to push it in an exam like this.
+    </small>
+</p>
+</a><h1 id="a-summer-of-solace">A Summer of Solace</h1>
+<p>Upon completion of the DA, I felt liberated. My first year, supposedly the busiest, was <em>finally</em> over. My goal for the following summer was to just focus on myself. After all, I deserve it after those hectic qualifying exams. Partway into summer, I began research on my current project, which is sure to see a blog in the near future :)</p>
+<p>And so begins my departure from courses, and into the life of a researcher.</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col">
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tags </span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://dtnaylor.com/writing/tags/blog/"
+      >blog</a
+    >
+    
+  </div>
+  
+</footer>
+
+<!---->
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  <a
+    class="block-hover-mask flex min-w-[50%] grow items-center rounded-l-md p-6 pr-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;college-experience&#x2F;"
+    ><span class="mr-1.5">←</span><span>My College Experience</span></a
+  >
+  <!---->
+  
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;positivity-bias&#x2F;"
+    ><span>Positivity Bias</span><span class="ml-1.5">→</span></a
+  >
+  
+</nav>
+
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="&#x2F;license" rel="noopener" target="_blank">
+      License
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
