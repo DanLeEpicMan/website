@@ -1,7 +1,7 @@
 +++
 title = "Probability Theory" 
-description = "The fundamentals of probability" 
-date = '2026-09-02'
+description = "The fundamentals of probability." 
+date = '2026-09-18'
 weight = 2
 +++
 
@@ -21,13 +21,13 @@ Even then, there are many applications of probability that have nothing to do wi
 
 Familiarity with set theory and discrete mathematics is necessary. Notation such as $x \in A$, $f: A \to B$, and $f^{-1} (E)$ should read fluently to you. Otherwise, you will have a very difficult time understanding this tutorial.
 
-**I intend to approach probability theory from a measure-theoretic framework**. In my opinion, this is the most natural definition of probability. That said, I recognize such a treatment is difficult for the typical reader, especially those without a background in mathematics, let alone measure theory. As such, I will do my best to reduce difficult details. Nevertheless, familiarity with [real analysis](/misc/tutorials/mathematics/real-analysis) may be helpful, though certainly not necessary.
+**I intend to approach probability theory from a measure-theoretic framework**. In my opinion, measure theory is the most natural definition of probability. That said, I recognize such a treatment is difficult for the typical reader, especially those without a background in mathematics, let alone measure theory. As such, I will do my best to reduce difficult details. Nevertheless, familiarity with [real analysis](/misc/tutorials/mathematics/real-analysis) may be helpful, though certainly not necessary.
 
 # What Is Probability?
 
 As I hoped to communicate in the introduction, probability has no universally agreed meaning. To see why, let's walk through a simple example.
 
-Suppose I'm tossing a coin, as depicted below.
+Suppose I'm tossing a coin.
 
 <figure>
     <img src="/images/tutorials/probability-theory/penny.webp" alt="An illustration of the bounds of a set." />
@@ -50,7 +50,7 @@ As I hope these examples illustrate, asking what probability means opens much ro
 In spite of these differences, there is one agreement among all four of them. The probability of heads is 50%, or $\mathbb{P}(\textrm{Heads}) = 0.5$. My goal is to outline this unifying mathematical theory.
 
 {% footnote_body() %}
-Keep in mind that the following examples should not be taken as wholly accurate representatives of their school of thought.
+Keep in mind that these examples should not be taken as wholly accurate representatives of their school of thought.
 {% end %}
 
 {% footnote_body() %}
@@ -82,7 +82,7 @@ To illustrate with an example, suppose I am rolling a six sided die.
 
 The possible outcomes are 1–6, therefore $\Omega = \\{ 1, 2, \dots, 6 \\}$ is the sample space. A possible event is rolling an even number, which corresponds to $E_1 = \\{ 2, 4, 6 \\}$. Another event is nothing, i.e. $E_2 = \varnothing$, and its contrary is something, i.e. $E_3 = \Omega$.
 
-Rolling a six is also an event, $E_4 = \\{ 6 \\}$. This should not be confused with the *outcome* of $\omega = 6$. The difference is subtle, yet simple. $E_4 \subseteq \Omega$ while $\omega \in \Omega$.
+Rolling a six is also an event, $E_4 = \\{ 6 \\}$. $E_4$ should not be confused with the *outcome* $\omega = 6$. The difference is subtle, yet simple. $E_4 \subseteq \Omega$ while $\omega \in \Omega$.
 
 With outcomes and events mostly defined, we can now start asking ourselves about *collections* of events.
 
@@ -92,7 +92,7 @@ With outcomes and events mostly defined, we can now start asking ourselves about
 
 ## $\sigma$-algebra
 
-The name{{ footnote() }} of this section is daunting. Why are we introducing Greek? As horrifying as the notation may seem, I promise that it follows naturally from the previous section.
+The introduction of Greek{{ footnote() }} letters may seem intimidating. Nonetheless, I promise that $\sigma$-algebras follows naturally from the previous section.
 
 {% admonition(type='note', title='Sigma Algebra') %}
 
@@ -119,23 +119,23 @@ Depending on the author, $\sigma$-algebras are also called **$\sigma$-fields**, 
 *Note: (2), (3), and de Morgan's laws imply (4).*
 {% end %}
 
-$\sigma$-algebras encode the basic principles of deductive reasoning. Intuitively, a $\sigma$-algebra captures all the possible events one can deduce with a certain amount of knowledge. To translate each property into plain English
+$\sigma$-algebras encode the basic principles of deductive reasoning. Intuitively, a $\sigma$-algebra captures all the possible events one can deduce with a certain amount of knowledge. To see why, let's translate each property into plain language
 
 1. By definition of a random trial, it must always have an outcome. Therefore, we know $\Omega$ must happen. Hence, we can always deduce it, as uninteresting as it may be.
 2. If we know whether $E$ happened, we can say whether its contrary $E^c$ happened. They're mutually exclusive :)
    - A consequence of this and (1) is that $\Omega^c = \varnothing \in \Sigma$. Which logically makes sense. We always know nothing didn't happen.
-3. If we have a *countable* collection of events $E_1, E_2, \dots$, knowing whether each $E_i$ happened, then we can say whether its union $\cup_{i=1}^{\infty} E_i$ happened. This is true since unions are essentially OR statements (i.e. $A \cup B$ is the same as $A \textrm{ or } B$).
+3. If we have a *countable* collection of events $E_1, E_2, \dots$, knowing whether each $E_i$ happened, then we can say whether its union $\cup_{i=1}^{\infty} E_i$ happened. Note that unions are essentially OR statements, i.e. $A \cup B$ is the same as $A \textrm{ or } B$.
    - We allow the possibility of infinity for the most flexibility. Besides, having infinitely many outcomes isn't that shocking. Suppose my random trial is the number of attempts needed to throw a basketball into the hoop from across the court. Let $E_1 = \\{ 1 \\}, E_2 = \\{ 2 \\}, \dots, E_i = \\{ i \\}, \dots$
-   - However, we must emphasize *countable*. "Unions are essentially OR statements" relies on this. In uncountable settings, logic quickly becomes counterintuitive.
-4. In a similar vein as (3), intersections are essentially AND statements (i.e. $A \cap B$ is the same as $A \textrm{ and } B$)
+   - However, we must emphasize *countable*. In uncountable settings, "unions are essentially OR statements" is no longer true.
+4. In a similar vein as (3), intersections are essentially AND statements, i.e. $A \cap B$ is the same as $A \textrm{ and } B$.
 
-It will be easier to see the usefulness of these properties with an example.
+It will be easy to see the usefulness of these properties with an example.
 
 {% admonition(type='tip', title='Example: Knowledge of One Event') %}
 
-Suppose a friend rolls our six sided die. We are only told that the outcome is even, and nothing more. In other words, all we know is that the event $E = \\{ 2, 4, 6 \\}$ happened. We want to figure out every possible event we can deduce with absolute certainty.
+Suppose a friend rolls our six sided die. We are only told that the outcome is even, and nothing more. In other words, all we know is that the event $E = \\{ 2, 4, 6 \\}$ happened. We want to list every possible event which we can deduce with absolute certainty.
 
-Obviously, we can deduce $E$ happened. We also know that rolling an odd number, $E^c = \\{ 1, 3, 5 \\}$, didn't happen. Similarly, we know *something* happened, $\Omega$, and that *nothing* didn't happen, $\varnothing$. Beyond this, we cannot infer anything more with absolute certainty.
+Obviously, we can deduce $E$ happened. We also know that rolling an odd number, $E^c = \\{ 1, 3, 5 \\}$, didn't happen. Similarly, we know *something* happened, $\Omega$, and that *nothing* didn't happen, $\varnothing$. Beyond these events, we cannot infer anything more with absolute certainty.
 
 Therefore, the collection of sets $\Sigma = \\{ \varnothing, E, E^c, \Omega \\}$ forms a $\sigma$-algebra. It represents all possible events we can deduce with our friend's information.
 
@@ -157,7 +157,7 @@ Because each set either has 2 or doesn't have 2, we can deduce every possible ev
 
 {% end %}
 
-There's a little more nuance with these examples that involve conditional probabilities, but for our purposes, this suffices.
+There's a little more nuance with these examples that involve conditional probabilities. Nonetheless, these examples perfectly illustrate how $\sigma$-algebras encode information.
 
 {% footnote_body() %}
 For those curious, the $\sigma$ in $\sigma$-algebra means "countable". $\sigma$ comes from the German word "summe", sum, referring to the fact that $\sigma$-algebras are closed under countable unions, essentially sums of sets.
@@ -171,7 +171,7 @@ With $\sigma$-algebras out of the way, we may now define probability.
 
 {% admonition(type='note', title='Probability') %}
 
-Let $\Omega$ be a sample space, and $\Sigma$ a $\sigma$-algebra over $\Omega$. 
+Let $\Omega$ be a sample space, and $\Sigma$ a $\sigma$-algebra over $\Omega$.
 
 A **probability measure**{{ footnote() }}, often simply called a probability, is a function $\mathbb{P} : \Sigma \to [0, 1]$ such that
 
@@ -188,14 +188,14 @@ As before, with a bit of unpacking, the daunting becomes simple.
 
 1. The probability of something happening is 1 (100%).
 2. If a collection of events is disjoint, i.e. have no outcomes in common, then the probability of their union is the sum of their probabilities.
-    - Intuitively, this comes from [the addition principle](https://en.wikipedia.org/wiki/Addition_principle).
+    - Intuitively, this property comes from [the addition principle](https://en.wikipedia.org/wiki/Addition_principle).
     - The extension to countable collections rather than finite collections is mostly a convenience to enable work in infinite $\Omega$, such as $\mathbb{N}$ or $\mathbb{R}$.
 
-There's an enormous subtlety with this definition that deserves attention. Note that $\mathbb{P}$ only accepts members of $\Sigma$ as input, **not** arbitrary subsets of $\Omega$. While seemingly strange, there may be sets of outcomes we do not want to assign numbers to. An example illustrating this will be given shortly.
+There's an enormous subtlety with this definition that deserves attention. Note that $\mathbb{P}$ only accepts members of $\Sigma$ as input, **not** arbitrary subsets of $\Omega$. While seemingly strange, there may be sets of outcomes we do not want to assign numbers to. An example will be given shortly.
 
-Nevertheless, you might ask why we need to define probability measures over $\sigma$-algebras. Put differently, what's the point of $\sigma$-algebras at all? The true reason is that it's a technical necessity, the details of which come from measure theory. However, at risk of oversimplifying, there's a simple reason why we need to work with $\sigma$-algebras.
+Nevertheless, you might ask why we need to define probability measures over $\sigma$-algebras The true reason is that it's a technical necessity, the details of which come from measure theory. However, at risk of oversimplifying, there's a simple reason why we need to work with $\sigma$-algebras.
 
-One can think of probabilities as a generalization of truth values. Rather than declaring something to be true always, we may declare it to be true with some degree of confidence, à la Bayesianism, or true in some percentage of circumstances, à la frequentism. Regardless of how you decide to make sense of probability, you need to define it in such a way that respects the logic of truth values. The most basic way of doing so is a $\sigma$-algebra, namely a system that encodes the rules of AND, OR, NOT.
+One can think of probabilities as a generalization of truth values. Rather than declaring something to be true always, we may declare it to be true with some degree of confidence, à la Bayesianism, or true in some percentage of circumstances, à la frequentism. Regardless of how you decide to make sense of probability, you need to define it in such a way that respects the logic of truth values. The most basic way of doing so is a $\sigma$-algebra, namely a system that encodes the rules of NOT, OR, AND.
 
 Alternatively, here's a geometric explanation from Wikipedia.
 
@@ -227,7 +227,7 @@ $$
 \mathbb{P}(E) = \frac{|E|}{6}
 $$
 
-In other words, the number of elements in $E$ divided by 6. It's easy to see that $\mathbb{P}(\\{i\\}) = \frac{1}{6}$, so indeed this models die rolling perfectly.
+In other words, the number of elements in $E$ divided by 6. It's easy to see that $\mathbb{P}(\\{i\\}) = \frac{1}{6}$ for $i \in \Omega$, so indeed this models die rolling perfectly.
 
 {% end %}
 
@@ -242,7 +242,7 @@ What's the underlying motivation here? Even though we *could* assign probability
 {% end %}
 
 {% footnote_body() %}
-There's also another reason, although it is well-beyond the scope of this tutorial. If $\Omega = [0, 1]$, <a rel="noopener" target="_blank" href=//math.stackexchange.com/a/137959>it is possible to construct a set that has no meaningful notion of measure</a>, rendering $\Sigma = 2^{[0, 1]}$ impossible. Such counterintuitive examples are only possible in uncountable settings, of course.
+There's also another reason, although it is well-beyond the scope of this tutorial. If $\Omega = [0, 1]$, <a rel="noopener" target="_blank" href=//math.stackexchange.com/a/137959>it is possible to construct a set that has no meaningful notion of probability</a>, rendering $\Sigma = 2^{[0, 1]}$ impossible. Such counterintuitive examples are only possible in uncountable settings, of course.
 {% end %}
 
 ## Independence
@@ -284,7 +284,7 @@ $$
 \end{aligned}
 $$
 
-Hence, $\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P} (B)$ so they are independent.
+Hence, $\mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P} (B)$, so they are independent.
 
 {% end %}
 
@@ -295,12 +295,14 @@ Suppose we are still flipping two coins. However, instead of flipping the same c
 - If the first result is heads, use a coin that comes up heads 75% of the time, and tails 25% of the time.
 - If the first result is tails, use a coin that comes up heads 40% of the time, and tails 60% of the time.
 
+In other words, we bias the second result towards the first, albeit unequally.
+
 <figure>
     <img src="/images/tutorials/probability-theory/bent-penny.webp" alt="A bent penny." />
-    <figcaption>Perhaps I decide to toss a bent coin rather than a flat one :)</figcaption>
+    <figcaption>Perhaps I decide to toss a bent coin rather than a flat one.</figcaption>
 </figure>
 
-In other words, we bias the second result towards the first. As before, we still have $\Omega = \\{ HH, HT, TH, TT \\}$ and $\Sigma = 2^\Omega$. However, we instead will use the probability measure
+As before, we still have $\Omega = \\{ HH, HT, TH, TT \\}$ and $\Sigma = 2^\Omega$. However, instead of $\mathbb{P}$, we will use the probability measure
 
 $$
 \begin{aligned}
@@ -330,7 +332,9 @@ So it is clear that $\mathbb{Q}(A \cap B) \neq \mathbb{Q}(A) \mathbb{Q}(B)$.
 
 {% end %}
 
-The important takeaway{{ footnote() }} of these examples is that independence is a property of probability measures, **not** of the events themselves. $A$ and $B$ are independent under $\mathbb{P}$, but not under $\mathbb{Q}$. In practical terms, this highlights the centrality of probability in our model. The probability measure encodes the physical process. $\Omega$ and $\Sigma$ do no such thing.
+The important takeaway{{ footnote() }} of these examples is that independence is a property of probability measures, **not** of the events or the $\sigma$-algebra. $A$ and $B$ are independent under $\mathbb{P}$, but not under $\mathbb{Q}$. Wiggling around the numbers in $\mathbb{Q}$ is what broke independence.
+
+In practical terms, my point is to highlight the centrality of probability in our model. The probability measure encodes the physical process. $\Omega$ and $\Sigma$ do no such thing.
 
 {% footnote_body() %}
 Another takeaway, though not explicitly communicated here, is the usefulness of changing a measure. It's a clever way to simplify the relationship between events when direct computation is too difficult. <a rel="noopener" target="_blank" href="//en.wikipedia.org/wiki/Risk-neutral_measure">This is exactly the approach taken with risk-neutral pricing in mathematical finance</a>, for instance, wherein the real-world measure governing markets is replaced with an idealized measure. All that's needed is a means by which to translate between the two measures.
@@ -345,14 +349,14 @@ The final, and arguably most important, topic of this tutorial is random variabl
 While many of my examples were numeric, in practice many probability spaces lack any sort of mathematical structure. For example, common probability spaces include
 
 1. Opinions of humans
-2. Ecosystems
-3. Financial markets
-4. Clinical trials
+2. States of ecosystems
+3. Securities in financial markets
+4. Outcomes of clinical trials
 5. Physical systems
 
 Working with these directly is ugly. Besides, writing them down explicitly is usually impractical or impossible. Aside from requiring information possessed only by the omniscient, we typically care about one particular aspect of the probability space, and nothing more. All this to say, how can we go about modeling only the things we care about?
 
-This is the goal of random variables. In essence, they are a quantification of a random trial.
+Simplifying probability spaces is the goal of random variables. In essence, they are a quantification of a random trial.
 
 {% admonition(type='note', title='Random Variable') %}
 
@@ -366,7 +370,7 @@ $$
 
 {% end %}
 
-The precise definition, and meaning, of $\mathcal{F}$ is complicated. We will defer a proper explanation to the next section. For now, we can think of it as a quantification of $\Sigma$. Rather than represent events with non-mathematical objects from $\Omega$, we represent it with collections of numbers. In other words, $\Sigma$ uses opinions, living things, financial securities, etc., while $\mathcal{F}$ uses numbers. The latter being far easier to work with, of course.
+The precise meaning of $\mathcal{F}$ is complicated. We will defer a proper explanation to the next section. For now, we can think of $\mathcal{F}$ as a quantification of $\Sigma$. Rather than represent events with non-mathematical objects from $\Omega$, we represent it with collections of numbers. In other words, $\Sigma$ uses sets of opinions, living things, financial securities, etc., while $\mathcal{F}$ uses sets of numbers. The latter being far easier to work with, of course.
 
 What is the link between $\Sigma$ and $\mathcal{F}$? The random variable $X$. The definition says so: for any event that occurs in $\mathcal{F}$, we can find a corresponding event that caused it in $\Sigma$ through $X$. Put differently, **a random variable is a function that translates events from an abstract probability space into concrete numbers.** The important detail, of course, is that $X$ respects and preserves the structure between $\Sigma$ and $\mathcal{F}$.
 
@@ -374,7 +378,7 @@ By far the densest part of this tutorial, so let us walk through an example.
 
 {% admonition(type='tip', title='Example: Observing Even Dice Rolls') %}
 
-Earlier, we defined the probability space $\Omega = \\{1, \dots, 6\\}$, $\Sigma = 2^\Omega$, and $\mathbb{P}(\cdot) = \frac{| \cdot |}{6}$ to represent rolls of a six sided die. 
+Earlier, we defined the probability space $\Omega = \\{1, \dots, 6\\}$, $\Sigma = 2^\Omega$, and $\mathbb{P}(\cdot) = \frac{| \cdot |}{6}$ to represent rolls of a six sided die.
 
 Now, let $S = \\{0, 1\\}$ and $\mathcal{F} = 2^S = \\{ \varnothing, \\{0\\}, \\{1\\}, S\\}$. Consider the random variable
 
@@ -405,11 +409,11 @@ Everything on the right-hand side is within $2^\Omega$, so indeed, $X$ is a rand
 
 The last point about "efficiency" comes back to interpreting $\sigma$-algebras as information. The most "efficient" $\sigma$-algebra for $X$ represents the minimum amount of information needed in order to predict $X$ with absolute certainty. In this case, if we know whether the roll is even, which is precisely what $\\{ \varnothing, \\{ 1, 3, 5 \\}, \\{ 2, 4, 6 \\}, \Omega \\}$ represents, we can say whether $X$ is 0 or 1. Anything more is redundant.
 
-This also reveals a subtle point. If we take $\Sigma = 2^\Omega$, then *any* definition of $X$ will be a random variable, regardless of what $S$ and $\mathcal{F}$ may be. After all, there's no way its pre-images can fall outside $2^\Omega$. So why even bother with the condition on $X$'s pre-images?
+This also reveals a subtle point. If we take $\Sigma = 2^\Omega$, then *any* definition of $X$ will be a random variable, regardless of what $S$ and $\mathcal{F}$ may be. After all, there's no way $X$'s pre-images can fall outside $2^\Omega$. So why even bother with the condition on $X$'s pre-images?
 
 Herein lies the importance of $\Sigma$. If we were to use $\Sigma = \\{ \varnothing, \\{ 1, 3, 5 \\}, \\{ 2, 4, 6 \\}, \Omega \\}$, then it's no longer true that any $X$ will work across all possible $S$ and $\mathcal{F}$, i.e. quantifications of our probability space. For instance, set $S = \Omega$, $\mathcal{F} = 2^S$ and take $X(\omega) = \omega$.
 
-As we discussed in a prior example, using the above $\Sigma$ instead of $2^\Omega$ corresponds to the scenario where I only care about the parity of the role. In essence, $\Sigma$ dictates which subsets we care about, and which ones we don't{{ footnote() }}.
+As we discussed in a prior example, using the above $\Sigma$ instead of $2^\Omega$ corresponds to the scenario where I only care about the parity of the die roll. In essence, $\Sigma$ dictates which subsets we care about, and which ones we don't{{ footnote() }}.
 
 The above discussion also highlights the importance of $\mathcal{F}$, which will be elaborated in the following section.
 
@@ -451,7 +455,7 @@ $$
 
 This shows that writing $\mathbb{P}^{\*} (F) = \mathbb{P}(X^{-1} (F))$ is consistent. Otherwise, if we had that $X^{-1} (F) \notin \Sigma$ for some $F$, we would run into a contradiction since we created an invalid input into $\mathbb{P}$.
 
-It remains to verify the two requirements of probability. For the first one, note that
+It remains to verify the two requirements of probability. First, note that
 
 $$
 \begin{aligned}
@@ -461,7 +465,7 @@ $$
 \end{aligned}
 $$
 
-For the second one, recall the following two facts from set theory. For an arbitrary function $f$, sets $A, B$ and index set $I$, we have
+Second, recall the following two facts from set theory. For an arbitrary function $f$, sets $A, B$ and index set $I$, we have
 
 $$
 f^{-1} \left( \bigcup_{i \in I} A_i \right) = \bigcup_{i \in I} f^{-1} (A_i) \\\\
@@ -480,7 +484,7 @@ $$
 \end{aligned}
 $$
 
-This shows that $\mathbb{P}^{\*}$ is a probability, and hence $(S, \mathcal{F}, \mathbb{P}^{\*})$ is a probability space.
+This shows that $\mathbb{P}^{\*}$ is a probability measure, and hence $(S, \mathcal{F}, \mathbb{P}^{\*})$ is a probability space.
 
 {% end %}
 
@@ -517,7 +521,7 @@ Which makes perfect sense since a die roll is even and odd with 50% probability 
 
 {% end %}
 
-We can now properly interpret $\mathcal{F}$. It represents the set of all collections of numbers which we want to have a meaningful notion of probability. Generally, this should be as large as possible, since when we quantify outcomes into numbers, we want to have the most flexibility. Of course, making it too large can run into problems, and returns to the original dilemma of balancing model complexity with the things we care about.
+We can now properly interpret $\mathcal{F}$. It represents the set of all collections of numbers which we want to have a meaningful notion of probability. Generally, this should be as large as possible in order to enable the most flexibility. Of course, making it too large can run into problems, and returns to the original dilemma of balancing model complexity with the things we care about.
 
 ## Working over $S$
 
@@ -525,13 +529,15 @@ As is done in practice, the proposition implies that it's unnecessary to write d
 
 {% admonition(type='tip', title='Example: Working the Phone') %}
 
-Suppose I work at a call center, and on average I receive a phone call every minute. Let $T = \textrm{Time until next phone call}$.
+Suppose I work at a call center, say emergency services. On average, I receive a phone call every minute. Let $T = \textrm{Time until next phone call}$.
 
-Let $\Omega = \textrm{People who call the call center}$, where $\omega$ denotes an individual. Then $T(\omega)$ represents the amount of time I must wait for $\omega$'s phone call to come through, assuming $\omega$ is the next caller. In essence, the randomness comes from determining who the next caller actually will be.
+Let $\Omega = \\{\textrm{All possible circumstances of every individual}\\}$. In other words, $\omega$ denotes a possible state of the world. Perhaps John Doe set his stove on fire while cooking jambalaya, meanwhile the rest of the world is partying on the beach.
 
-Instead of defining $\Sigma, \mathbb{P}$ directly, it's far easier to work with the co-domain of $T$. First, it's clear that we should take $S = [0, \infty)$. After all, time itself is a continuum, and there's no obvious upper bound to place.
+In this way, $T(\omega)$ represents the amount of time until the next call if the world is in state $\omega$. In essence, the randomness comes from determining what $\omega$ will be.
 
-Next, we need to define $\mathcal{F}$. We want{{ footnote() }} it to be as large as possible in order to maximize flexibility. It's tempting to say $\mathcal{F} = 2^{[0, \infty)}$. Technically, we need to take a smaller $\sigma$-algebra. [See here for an example of a set that cannot have probability defined over it](https://math.stackexchange.com/questions/137949/the-construction-of-a-vitali-set/137959#137959). However, for our purposes, this smaller $\sigma$-algebra is effectively the same as $2^{[0, \infty)}$.
+Instead of defining $\Sigma, \mathbb{P}$ directly, an impossible task, it's far easier to work with the co-domain of $T$. First, it's clear that we should take $S = [0, \infty)$. After all, time itself is a continuum, and there's no obvious upper bound to place.
+
+Next, we need to define $\mathcal{F}$. We want it to be as large as possible in order to maximize flexibility. It's tempting to say $\mathcal{F} = 2^{[0, \infty)}$. Technically, we need to take a smaller $\sigma$-algebra. [See here for an example of a set that cannot have probability defined over it](https://math.stackexchange.com/questions/137949/the-construction-of-a-vitali-set/137959#137959). However, for our purposes, this smaller $\sigma$-algebra is effectively the same as $2^{[0, \infty)}$.
 
 Finally, we need to define $\mathbb{P}^{\*}$. Set{{ footnote() }}
 
@@ -543,13 +549,7 @@ It's easy to see that $\int_{[0, \infty)} e^{-t} dt = 1$, and splitting disjoint
 
 {% end %}
 
-The purpose of the above example is to illustrate how probability theory comes into play when modeling real-world scenarios. Truthfully, we really care about the co-domain of our random variable, and at best we only care about what $\Omega$ represents rather than what it actually is.
-
-{% footnote_body() %}
-
-There's some subtlety here. Using an uncountable $\sigma$-algebra for $\mathcal{F}$ implies $\Sigma$ must be uncountable, which implies that $\Omega$ must be infinite, since it has infinitely many distinct subsets. Yet there aren't infinitely many humans on the planet, let alone humans calling a call center. We can sweep these details under the rug, since the model misfit is very technical, and frankly, unimportant in practice.
-
-{% end %}
+The purpose of the above example is to illustrate how probability theory comes into play when modeling real-world scenarios. Truthfully, we really care about the co-domain of our random variable, and at best we only care about what $\Omega$ represents rather than what it actually is. I certainly do not want to go through the trouble of mathematically specifying what the state of the world looks like, let alone a $\sigma$-algebra defined over it.
 
 {% footnote_body() %}
 
@@ -559,9 +559,9 @@ For those curious, this comes from the <a rel="noopener" target="_blank" href=ht
 
 # Conclusion
 
-Much of this blog reads far more technical than most introductions into probability. This is an intentional design choice. I felt dissatisfied with a lot of introductions, as if they're missing the essence of probability. At its core, probability is a neat way to assign numbers to sets. Hence, motivating my presentation of everything with measure theoretic ideas, all the while abstracting the difficult details.
+Much of this blog reads far more technical than most introductions of probability. This is an intentional design choice. I felt dissatisfied with a lot of introductions, as if they're missing the essence of probability. At its core, probability is a neat way to assign numbers to sets. Hence, motivating my presentation of everything with measure theoretic ideas, all the while abstracting the difficult details.
 
-There are plenty of topics I omitted. I made a conscious effort to avoid topics that would normally be classified as "mathematical statistics" and attempted to restrict myself solely to "probability". Nevertheless, the most prominent omissions are expectations, density functions, and conditional probability. Discussing all three is incredibly illuminating with the language of measure theory and $\sigma$-algebras, but unfortunately, requires a far deeper mathematical background than what I assumed in the introduction. They are also lengthy and difficult to articulate in a single tutorial. I intend to introduce them in separate guides.
+There are plenty of topics I omitted. I made a conscious effort to avoid topics that would normally be classified as "mathematical statistics" and attempted to restrict myself solely to "probability". Nevertheless, the most prominent omissions are expectations, density functions, conditional probability, and stochastic processes. The language of measure theory and $\sigma$-algebras makes discussion of these topics incredibly illuminating. Unfortunately, doing so requires a far deeper mathematical background than what I assumed in the introduction. They are also lengthy and difficult to articulate in a single tutorial. I intend to introduce them in separate guides.
 
 ### Acknowledgements
 
