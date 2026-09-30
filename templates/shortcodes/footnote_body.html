@@ -1,9 +1,16 @@
+{% set rendered_body = body | markdown | trim %}
+{% set rendered_body = rendered_body | trim_start_matches(pat="<p>") | trim_end_matches(pat="</p>") %}
+
 <p 
     id='footnote-body-{{ nth }}' 
     class='opacity-60 footnote_body'
 >
     <small>
-        <a href="#footnote-{{ nth }}" style="text-decoration: none"><b>{{ nth }}</b></a>: {{ body | safe }}
+        <a href="#footnote-{{ nth }}" style="text-decoration: none"><b>{{ nth }}</b></a>: {{ rendered_body | safe }}
+        <a class="footnote-backlink" href="#footnote-{{ nth }}">
+            <span class="inline-svg-icon" aria-hidden="true">
+                {{ load_data(path="static/icons/left-arrow.svg") | safe }}
+            </span>
+        </a>
     </small>
 </p>
-</a>

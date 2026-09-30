@@ -14,7 +14,9 @@ There is good reason for doing so. Probability in and of itself lacks a universa
 **To this end, I must stress the importance of withholding prior conceptions of probability**. The best approach, in my opinion, is to simply understand the theory not as something with intrinsic meaning, but as a framework for uncertainty{{ footnote() }}.
 
 {% footnote_body() %}
+
 Even then, there are many applications of probability that have nothing to do with uncertainty.
+
 {% end %}
 
 ## Prerequisites
@@ -50,11 +52,15 @@ As I hope these examples illustrate, asking what probability means opens much ro
 In spite of these differences, there is one agreement among all four of them. The probability of heads is 50%, or $\mathbb{P}(\textrm{Heads}) = 0.5$. My goal is to outline this unifying mathematical theory.
 
 {% footnote_body() %}
+
 Keep in mind that these examples should not be taken as wholly accurate representatives of their school of thought.
+
 {% end %}
 
 {% footnote_body() %}
+
 Explaining why requires me to define "information". That's for a different blog.
+
 {% end %}
 
 # The Fundamentals
@@ -87,7 +93,9 @@ Rolling a six is also an event, $E_4 = \\{ 6 \\}$. $E_4$ should not be confused 
 With outcomes and events mostly defined, we can now start asking ourselves about *collections* of events.
 
 {% footnote_body() %}
+
 "Random" is left unaddressed. Indeed, we only assume it exists in some capacity. The precise meaning is left to the aforementioned schools of thought to figure out, and is otherwise unimportant to us.
+
 {% end %}
 
 ## $\sigma$-algebra
@@ -160,7 +168,9 @@ Because each set either has 2 or doesn't have 2, we can deduce every possible ev
 There's a little more nuance with these examples that involve conditional probabilities. Nonetheless, these examples perfectly illustrate how $\sigma$-algebras encode information.
 
 {% footnote_body() %}
+
 For those curious, the $\sigma$ in $\sigma$-algebra means "countable". $\sigma$ comes from the German word "summe", sum, referring to the fact that $\sigma$-algebras are closed under countable unions, essentially sums of sets.
+
 {% end %}
 
 # Probability
@@ -193,7 +203,7 @@ As before, with a bit of unpacking, the daunting becomes simple.
 
 There's an enormous subtlety with this definition that deserves attention. Note that $\mathbb{P}$ only accepts members of $\Sigma$ as input, **not** arbitrary subsets of $\Omega$. While seemingly strange, there may be sets of outcomes we do not want to assign numbers to. An example will be given shortly.
 
-Nevertheless, you might ask why we need to define probability measures over $\sigma$-algebras The true reason is that it's a technical necessity, the details of which come from measure theory. However, at risk of oversimplifying, there's a simple reason why we need to work with $\sigma$-algebras.
+Nevertheless, you might ask why we need to define probability measures over $\sigma$-algebras. The true reason is that it's a technical necessity, the details of which come from measure theory. However, at risk of oversimplifying, there's a simple reason why we need to work with $\sigma$-algebras.
 
 One can think of probabilities as a generalization of truth values. Rather than declaring something to be true always, we may declare it to be true with some degree of confidence, à la Bayesianism, or true in some percentage of circumstances, à la frequentism. Regardless of how you decide to make sense of probability, you need to define it in such a way that respects the logic of truth values. The most basic way of doing so is a $\sigma$-algebra, namely a system that encodes the rules of NOT, OR, AND.
 
@@ -202,7 +212,9 @@ Alternatively, here's a geometric explanation from Wikipedia.
 > $\sigma$-algebras are designed to capture our intuitive ideas about how sizes combine: if there is a well-defined probability that an event occurs, there should be a well-defined probability that it does not occur (closure under complements); if several sets have a well-defined size, so should their combination (countable unions); if several events have a well-defined probability of occurring, so should the event where they all occur simultaneously (countable intersections).
 
 {% footnote_body() %}
-We call probability a <i>measure</i> because it, quite literally, assigns numbers to events. In other words, probability measures events.
+
+We call probability a *measure* because it, quite literally, assigns numbers to events. In other words, probability measures events.
+
 {% end %}
 
 ## Spaces and Events (again)
@@ -242,7 +254,9 @@ What's the underlying motivation here? Even though we *could* assign probability
 {% end %}
 
 {% footnote_body() %}
-There's also another reason, although it is well-beyond the scope of this tutorial. If $\Omega = [0, 1]$, <a rel="noopener" target="_blank" href=//math.stackexchange.com/a/137959>it is possible to construct a set that has no meaningful notion of probability</a>, rendering $\Sigma = 2^{[0, 1]}$ impossible. Such counterintuitive examples are only possible in uncountable settings, of course.
+
+There's also another reason, although it is well-beyond the scope of this tutorial. If $\Omega = [0, 1]$, [it is possible to construct a set that has no meaningful notion of probability](https://math.stackexchange.com/a/137959), rendering $\Sigma = 2^{[0, 1]}$ impossible. Such counterintuitive examples are only possible in uncountable settings, of course.
+
 {% end %}
 
 ## Independence
@@ -251,7 +265,7 @@ Oftentimes, we are interested in how events relate to each other through probabi
 
 {% admonition(type='note', title='Independence') %}
 
-Let $(\Omega, \Sigma, \mathbb{P})$ be a probability space. We say $A, B$ are **independent** if
+Let $(\Omega, \Sigma, \mathbb{P})$ be a probability space, and let $A, B \in \Sigma$ be events. We say $A, B$ are **independent** if
 
 $$
 \mathbb{P}(A \cap B) = \mathbb{P}(A) \mathbb{P}(B)
@@ -337,7 +351,9 @@ The important takeaway{{ footnote() }} of these examples is that independence is
 In practical terms, my point is to highlight the centrality of probability in our model. The probability measure encodes the physical process. $\Omega$ and $\Sigma$ do no such thing.
 
 {% footnote_body() %}
-Another takeaway, though not explicitly communicated here, is the usefulness of changing a measure. It's a clever way to simplify the relationship between events when direct computation is too difficult. <a rel="noopener" target="_blank" href="//en.wikipedia.org/wiki/Risk-neutral_measure">This is exactly the approach taken with risk-neutral pricing in mathematical finance</a>, for instance, wherein the real-world measure governing markets is replaced with an idealized measure. All that's needed is a means by which to translate between the two measures.
+
+Another takeaway, though not explicitly communicated here, is the usefulness of changing a measure. It's a clever way to simplify the relationship between events when direct computation is too difficult. [This is exactly the approach taken with risk-neutral pricing in mathematical finance](https://en.wikipedia.org/wiki/Risk-neutral_measure), for instance, wherein the real-world measure governing markets is replaced with an idealized measure. All that's needed is a means by which to translate between the two measures.
+
 {% end %}
 
 # Random Variables
@@ -553,7 +569,7 @@ The purpose of the above example is to illustrate how probability theory comes i
 
 {% footnote_body() %}
 
-For those curious, this comes from the <a rel="noopener" target="_blank" href=https://en.wikipedia.org/wiki/Exponential_distribution>exponential distribution</a>, though I don't expect you to know what that is.
+For those curious, this comes from the [exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution), though I don't expect you to know what that is.
 
 {% end %}
 

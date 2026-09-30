@@ -9,7 +9,9 @@ description = "Do I think too highly of things?"
 While I was creating my [completed games page](/misc/games), I noticed that *a lot* of my reviews were positive. Out of my 74 total{{ footnote() }} reviews on Steam, 63 (82%) are positive, while 11 (18%) are negative. Seeing this left me a little shocked and mildly disappointed. Do I think too highly of things?
 
 {% footnote_body() %}
+
 As of writing, of course.
+
 {% end %}
 
 # Forgiving Standards
@@ -35,11 +37,15 @@ This alone produces a *strong* survivorship bias. If a game is poorly received, 
 All of this to say, a gap between positive and negative reviews is entirely expected. Should the discrepancy be at, say 60%–40%, I would doubt my ability to acquire good titles. Or I'd view myself as an elitist. Nevertheless, even after accounting for this survivorship bias, as well as my habit of unconditionally writing reviews, a gap of 77%–23% still feels rather wide.
 
 {% footnote_body() %}
+
 Prior to my policy of always writing a review, there was a third barrier: I need to desire writing a review. My past self claims that I posted reviews for games that "stood out to me". I doubt this was truly the case, seeing that most of the titles on my greatest games list lack a review (see my Steam profile), while Shadow of the Tomb Raider possesses one. More plausibly, I wrote the review if I felt like it. After all, explaining why something is your favorite is a daunting task that I likely had little patience to do.
+
 {% end %}
 
 {% footnote_body() %}
+
 The two barriers correlate strongly. After all, why would I purchase a game I have no interest in playing? Nonetheless, one should consider that interest is a spectrum rather than binary. Same with price. Moreover, games have a reputation for deep, deep discounts, as high as 95% off. I will acquire even mildly interesting games at this rate. In other words, I act whenever the market price meets, or falls under, my perceived value.
+
 {% end %}
 
 # Limits of Steam
@@ -53,8 +59,10 @@ Yet it is impossible for me to address the nuances of the reader. I have no clue
 As such, using the positive-negative score to assess my positivity bias brings qualms. Aside from being reductive, it ultimately has a different interpretation. Of all the games I reviewed, I recommend the average{{ footnote() }} person check out 82% of them, and ignore the remaining 18%. This isn't a direct assessment of my taste. Maybe I only play acclaimed games? Still, [seeing that my exposure to video games is very broad](/misc/games), I feel as if it is related.
 
 {% footnote_body() %}
+
 Keep in mind, I am the one defining "average". So more appropriately, this should read "I recommend my definition of the average person check out...". There's also the possibility that "average" is inconsistent across reviews. I mean, who else but visual novel fans will be reading my review for a niche visual novel?
-{% end%}
+
+{% end %}
 
 # The Bigger Picture
 

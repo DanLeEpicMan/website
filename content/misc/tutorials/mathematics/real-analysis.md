@@ -111,11 +111,15 @@ So $b^2$ is even, therefore by the same logic as above, $b$ is also even. This m
 This "incompleteness" of $\mathbb{Q}$ motivates the definition of the real numbers.
 
 {% footnote_body() %}
-This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers <b>including</b> 0.
+
+This definition of $\mathbb{N}$ excludes 0, which is a major source of debate among mathematicians. However, this definition of $\mathbb{N}$ is the most common, and natural (ba-dum-tss), in analysis. If needed, we will use $\mathbb{N}_0$ to denote the natural numbers **including** 0.
+
 {% end %}
 
 {% footnote_body() %}
+
 We use $\mathbb{Z}$ for integers because of the German word "Zahlen", meaning "numbers".
+
 {% end %}
 
 ## The Real Numbers
@@ -192,7 +196,9 @@ An immediate consequence of this is that **every real number can be approximated
 At this point, we may begin to ask what the point of the reals are. After all, every real number can be approximated by a rational number. To further motivate this idea of "completeness", we must segue into the concepts of bounds, infimums, and supremums.
 
 {% footnote_body() %}
+
 I technically haven't defined what it means to be "unbounded", though this will be explained in the next section.
+
 {% end %}
 
 ## The Infimum and Supremum
@@ -275,7 +281,9 @@ $$
 Then $A$ is bounded above by 2, a rational number. In fact, there are infinitely many rational upper bounds. However, since $\sup A = \sqrt{2} \notin \mathbb{Q}$, there is no **smallest** rational upper bound of $A$.
 
 {% footnote_body() %}
+
 No proof is given since this is more of a definition than a proof. In the same way that we built $\mathbb{Q}$ from $\mathbb{Z}$ with division, we can build $\mathbb{R}$ from $\mathbb{Q}$ with supremums (see Dedekind cuts). While you can prove this from first principles, it is incredibly difficult and tedious to do so.
+
 {% end %}
 
 # Sequences and Limits
@@ -470,10 +478,10 @@ Let $E$ be a subset of $\mathbb{R}$. We say $E$ is **complete**{{ footnote() }} 
 Intuitively, a space is complete if there aren't any "gaps". To be incomplete means that a sequence may approach a hole with nothing in it. As such, $\mathbb{R}$ is complete, while $\mathbb{Q}$ isn't. This is to say that **every Cauchy sequence converges in $\mathbb{R}$, but may not converge in $\mathbb{Q}$.**
 
 {% footnote_body() %}
+
 We already defined "completeness" using supremums in the prior section. Indeed, "supremum completeness" and "Cauchy completeness" are saying the same thing, though it's not obvious why.
+
 {% end %}
-
-
 
 # Point-Set Topology
 
@@ -514,10 +522,10 @@ In other words, for every $x \in U$, we can find a neighborhood around $x$ that 
 Intuitively, a set is open if every point has "breathing room" in every direction. Points on the boundary do not have this "breathing room", since any neighborhood around them must include points outside the set.
 
 {% footnote_body() %}
+
 The astute reader will notice that the concept of neighborhoods, and by extension open sets, extends to higher dimensions very easily. Indeed, by replacing the absolute value with the Euclidean norm in the definition of neighborhood, we enter the setting for $\mathbb{R}^n$.
+
 {% end %}
-
-
 
 ## Closed Sets
 
@@ -589,7 +597,7 @@ Let $x \in U$. Since $U^c$ is closed, it contains all its limit points, so $x$ i
 ## Sequences and Topology
 
 At this point, you may be inclined to ask why the topology diversion. After all, there's no obvious connection between the prior discussion and topology.
-    
+
 I'm here to say that they're really the same thing, just viewed under different lenses. Let's revisit the example
 $$
     A = \left\\{ \frac{1}{n} : n \in \mathbb{N} \right\\}

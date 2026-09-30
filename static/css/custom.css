@@ -11,6 +11,29 @@
   padding-left: 2px;
 }
 
+/* Keep inline SVG shortcodes aligned with surrounding text. */
+.inline-svg-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+}
+
+.inline-svg-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.inline-svg-icon svg path {
+  fill: currentColor;
+}
+
+.footnote-backlink {
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+}
+
 /* Footnote positioning */
 .footnote {
   scroll-margin-top: 10vh;

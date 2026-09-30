@@ -11,7 +11,7 @@ Inspired by [Terence Tao's website](https://www.math.ucla.edu/~tao/quotes.html).
   - *If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.*
   - *In mathematics, you don't understand things. You just get used to them.*
   - ***Truth... is much too complicated to allow anything but approximations.***
-- *All models are wrong, but some are useful.* - George Box 
+- *All models are wrong, but some are useful.* - George Box
 - Albert Einstein
   - ***Insofar as theories of mathematics speak about reality, they are not certain, and insofar as they are certain, they do not speak about reality.***
   - *I was sitting in a chair in the patent office at Bern, when all of a sudden, a thought occurred to me: If a person falls freely he will not feel his own weight. I was startled. This simple thought made a deep impression on me. It impelled me toward a theory of gravitation.*

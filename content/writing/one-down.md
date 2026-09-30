@@ -51,11 +51,15 @@ Elsewhere, bonding with my new cohort was extremely fun. We all got along super 
 As such, I acclimated well to Irvine physically, academically, and socially. Unfortunately, nothing could prepare me for the two quarters to come.
 
 {% footnote_body() %}
+
 In addition to moving at a faster pace, PSTAT 207A was much more mathematically rigorous. Suffice it to say I was overqualified for STATS 200A.
+
 {% end %}
 
 {% footnote_body() %}
+
 At face value this sounds like I did a poor job, but she was like this with everyone who worked for her.
+
 {% end %}
 
 # Winter's Insightful{{ footnote() }} Tribulations
@@ -91,15 +95,21 @@ The last part was especially difficult to grasp, especially having come from an 
 Ultimately, 211 transformed me into a far more capable and confident statistician. The looming fear of the qualifying exams diminished substantially upon completion of the course. Nevertheless, this fear cemented itself into the back of my mind all-throughout next quarter.
 
 {% footnote_body() %}
+
 Couldn't think of a synonym beginning with W :(
+
 {% end %}
 
 {% footnote_body() %}
+
 I mentioned STATS 295 already, Clinical Trials. 295 is the special topics course, i.e. topics that aren't regularly offered. In other words, it's a different class each quarter, so we are allowed to repeat it as many times as we want.
+
 {% end %}
 
 {% footnote_body() %}
+
 I didn't attend a single 205 lecture, and scored above 100% on the midterm. It truly was a waste of my time.
+
 {% end %}
 
 # Spring's Stressful Milestone
@@ -140,19 +150,25 @@ If my experience with the theory exam was a storm, then my experience with the D
 Had anyone bothered to proofread either exam, many of these difficulties would have subsided. The tedious algebra would be gone{{ footnote() }}, and the answer key would have never been sent out. It deeply irks me how no one in the department takes these exams seriously. I sincerely hope that the mechanisms which produced these exams are reformed or abolished entirely.
 
 {% footnote_body() %}
+
 For the final, she asked me to write a difficult bonus question. I created a counting problem, à la combinatorics, that I'm really proud of. Essentially, I repeatedly flip a coin in order to produce a sequence of six coin flips. What is the probability that there is a consecutive run of coins? Moreover, what's the probability that the first consecutive run of coins, if present, is all heads? The trick for the first question is to count the outcomes where there isn't a consecutive run, yielding a probability of 1 - ²⁄₆₄ = ⁶²⁄₆₄. The trick for the second question is to realize that for each consecutive run of heads, you can invert each coin to get a consecutive run of tails. By this reflection property, half the consecutive runs start with heads, while the other half start with tails, so the probability is ³¹⁄₆₄.
+
 {% end %}
 
 {% footnote_body() %}
+
 Although I handled the stress far better than most my peers. Seemingly a trait of confidence, but more plausibly, I think I am generally calm regarding stress, as most of my peers were just as capable as I am.
+
 {% end %}
 
 {% footnote_body() %}
+
 If the tedious algebra was intentional, then they are not testing competency, but patience. Perhaps patience is necessary for good research, but it definitely is not appropriate to push it in an exam like this.
+
 {% end %}
 
 # A Summer of Solace
 
-Upon completion of the DA, I felt liberated. My first year, supposedly the busiest, was *finally* over. My goal for the following summer was to just focus on myself. After all, I deserve it after those hectic qualifying exams. Partway into summer, I began research on my current project, which is sure to see a blog in the near future :) 
+Upon completion of the DA, I felt liberated. My first year, supposedly the busiest, was *finally* over. My goal for the following summer was to just focus on myself. After all, I deserve it after those hectic qualifying exams. Partway into summer, I began research on my current project, which is sure to see a blog in the near future :)
 
 And so begins my departure from courses, and into the life of a researcher.

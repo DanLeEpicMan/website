@@ -19,6 +19,7 @@ path = "misc/classes"
 </style>
 
 Listed here is every class I've taken while in school, in descending order. Note the following range of courses
+
 - 1–99: Undergraduate, lower division
 - 100–199: Undergraduate, upper division
 - 200+: Graduate

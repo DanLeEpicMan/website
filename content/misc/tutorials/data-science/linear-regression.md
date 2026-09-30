@@ -72,7 +72,9 @@ $$
 Where $\epsilon$ represents an error term. The process of finding such a $f$ that minimizes the error is called{{ footnote() }} **regression**.
 
 {% footnote_body() %}
+
 This isn't always true. Regression is really about finding the "best possible" function, where "best possible" is defined in a clear and tractable way. For our purposes though, let's stick with this framework of minimizing error.
+
 {% end %}
 
 ## A Problem with Regression
@@ -111,7 +113,9 @@ $$
 And the problem now amounts to finding the coefficients $\vec{\beta} = \left( \beta_0, \dots, \beta_p \right)$ such that $\epsilon$ is as small as possible.
 
 {% footnote_body() %}
+
 Actually, linear regression just means $Y$ is a linear combination of $\beta_0, \dots, \beta_p$.
+
 {% end %}
 
 ## The Setup
@@ -351,11 +355,15 @@ $$
 (2) is how $R^2$ is computed in many packages, including scikit-learn. However, note that the equality between (1) and (2) is only true over the training data. It is not true in general. (2) is preferred because it's more intuitive to write a metric in terms of error{{ footnote() }}.
 
 {% footnote_body() %}
-Is <i>proportional to</i>. You get the variance when multiplying both the numerator and denominator by $\frac{1}{n}$.
+
+Is *proportional to*. You get the variance when multiplying both the numerator and denominator by $\frac{1}{n}$.
+
 {% end %}
 
 {% footnote_body() %}
+
 Note that the numerator in (2) is precisely $||E||^2$.
+
 {% end %}
 
 ```python
@@ -383,7 +391,9 @@ However, there is much more about $R^2$
 [This stack exchange](https://stats.stackexchange.com/a/13317) goes into much more detail. However, there is a reason why $R^2$ still remains a very popular metric. As with many statistics, it's useful but dangerous.
 
 {% footnote_body() %}
+
 Intuitively, negative $R^2$ is only possible if the variance of the predictions is greater than the variance of the response data. In other words, if our predictions create more variability than exists.
+
 {% end %}
 
 ## Mean Squared Error
@@ -414,7 +424,9 @@ It's also important to note the units of MSE, as it's given in units of $Y^2$ ra
 However, in spite of its pitfalls, note that everything in this blog revolves around MSE. After all, when we use least squares, we are defining "best coefficients" in terms of squared error. As before, a useful but dangerous statistic.
 
 {% footnote_body() %}
+
 In statistics literature, a more common definition is $\frac{||E||^2}{n - p - 1}$, which is related to Bessel's correction.
+
 {% end %}
 
 ## Other Useful Metrics

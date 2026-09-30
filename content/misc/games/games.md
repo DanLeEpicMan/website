@@ -5,7 +5,7 @@ path = "misc/games"
 
 Anyone who knows me personally can tell you about [how much I love video games](https://steamcommunity.com/id/danleepicman/). Single-player narratives are my favorite type of game, however my exposure to games is very wide.
 
-This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". Some DLCs are included as sub-lists. 
+This page is dedicated to every single-player game I've beaten, sorted alphabetically, excluding "the" and "a". Some DLCs are included as sub-lists.
 
 Where appropriate, I link a Steam review{{ footnote() }} that houses my opinions on the game. A much younger me wrote many of those reviews, and while I polished their grammar and structure, the earlier ones may blabber on.
 
@@ -105,7 +105,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - LEGO The Lord of the Rings
 - [Life is Strange](https://steamcommunity.com/id/danleepicman/recommended/319630)
 - [Life is Strange 2](https://steamcommunity.com/id/danleepicman/recommended/532210)
-- Life is Strange: Before the Storm 
+- Life is Strange: Before the Storm
   - [Farewell](https://steamcommunity.com/id/danleepicman/recommended/763780)
 - LISA
   - LISA The Joyful

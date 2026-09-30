@@ -11,16 +11,18 @@ cover.alt = "Graduation photo."
 
 College, a rite of passage for a majority of young people. Whether this be community college, university, or vocational school, it's an experience many of us share.
 
-However, while we all may share it, everyone's college experience is different. Some people find college to be miserable or regretful. Some people find college to be among the best time of their life. Others find it unremarkable. The truth is likely a mix of the three, especially for me. 
+However, while we all may share it, everyone's college experience is different. Some people find college to be miserable or regretful. Some people find college to be among the best time of their life. Others find it unremarkable. The truth is likely a mix of the three, especially for me.
 
-How would I label mine? Well, I don't feel like I should. Any attempt to put a label on my college experience will be reductive in some way. Saying it was a good time of my life neglects my lows. Saying it was a regretful time of my life neglects my accomplishments. Saying it was *just* a time of my life neglects the underlying experiences. 
+How would I label mine? Well, I don't feel like I should. Any attempt to put a label on my college experience will be reductive in some way. Saying it was a good time of my life neglects my lows. Saying it was a regretful time of my life neglects my accomplishments. Saying it was *just* a time of my life neglects the underlying experiences.
 
 No group of labels can possibly capture everything. Thus, I feel the best way to share it is to simply tell the story. While a blog certainly will fail to capture everything, I feel as if it's one of the best ways to do so. After all,
 
 > Truth... is much too complicated to allow anything but approximations{{ footnote() }}
 
 {% footnote_body() %}
+
 John von Neumann
+
 {% end %}
 
 # Preparing for College
@@ -55,7 +57,9 @@ With my acceptance, I bid Valencia High School my last farewell, excited to cont
 </figure>
 
 {% footnote_body() %}
+
 This list is incomplete, as I do not remember all my acceptances, let alone the schools I applied to.
+
 {% end %}
 
 # Freshman Year
@@ -157,15 +161,21 @@ The best part though? My classmates never judged me, nor saw me as inferior. I w
 Ultimately, as much as I struggled, I did well in all of these courses, and Karel respected me greatly{{ footnote() }}. In the midst of spring quarter, my transfer application into CCS Math was approved, and I was finally in CCS. Rather than walking by the CCS building every day with feelings of doubt and shame, I can walk by it with a newfound sense of pride and accomplishment.
 
 {% footnote_body() %}
+
 As of writing, CCS has two math advisors. He told me to speak with the advisor I hadn't interacted with yet.
+
 {% end %}
 
 {% footnote_body() %}
+
 For those curious, Karel allowed me to take a mock math research class in winter, then Game Theory and Real Analysis in spring. The "prerequisites" were discrete mathematics.
+
 {% end %}
 
 {% footnote_body() %}
+
 At the end of my sophomore year, he told me (paraphrasing): "Wow, you're moving onto bigger classes and won't take any of mine anymore. I'll miss you and the energy you brought, I really liked it". Was very difficult for me to not cry right there and then.
+
 {% end %}
 
 ## A Summer of Doubt
@@ -188,12 +198,14 @@ While I didn't *dislike* the project, I didn't find it that interesting either. 
 I didn't articulate that last point until a bit later into my college experience, but the seeds of doubt were sowed. Ironically, the project leader for this Discord bot intended to offer us an experience that would help us break *into* computer science. However, he did the exact opposite for me, as it was this experience that broke me *out of* it.
 
 {% footnote_body() %}
+
 The reason why was because the leader of the project wanted to keep it small in scope, at 3 new people, amidst 10–15 members expressing interest.
+
 {% end %}
 
 # Sophomore Year
 
-Sophomore year was by far the most depressing time of my life. It's unsurprising that I don't have many pictures from this time period as a result. 
+Sophomore year was by far the most depressing time of my life. It's unsurprising that I don't have many pictures from this time period as a result.
 
 For a while, I also treated it as the least remarkable. But that's not really a fair thing to say. After all, it was precisely during sophomore year that I not only managed to develop foundations, academically and socially, that would carry me very far, but also point myself in the right direction.
 
@@ -261,7 +273,9 @@ After applying, I was selected for an interview. The interview went really well{
 We all got along very well, with Tanay, Mitali, and I referring to ourselves as the dream team, and Mehir serving as our leader. How little did I know that this decision was one of the most transformative decisions I've ever made, and is where I attribute all of my following success.
 
 {% footnote_body() %}
+
 The interview, led by Mehir, had a surprise technical question. "Given a string of words separated by whitespace, produce a list of the unique words." My solution was to split the string into a list, convert it to a hash table, then back into a list. The intended solution involved regex, but they accepted mine anyways. I later learned that, out of all the people they interviewed (15–20), including for more advanced roles, only 3 people figured it out, which were myself, Tanay, and Mitali.
+
 {% end %}
 
 ## A Summer of Development
@@ -282,7 +296,9 @@ What did this look like? Developing workshop material{{ footnote() }}. We partit
 Surprisingly, my math background was incredibly handy, as it became exceptionally useful for understanding everything. At first, I paid little attention to this detail, dismissing it as coincidence. But I would eventually come to realize, and appreciate, just how far a math background can take you.
 
 {% footnote_body() %}
+
 I wouldn't realize this until post-graduation, but I essentially employed Feynman's technique for all my learning.
+
 {% end %}
 
 # Junior Year
@@ -334,7 +350,9 @@ Instead, I worked on a project with Franks. Going into detail will require a blo
 While we weren't able to achieve our goal{{ footnote() }}, I learned immensely from this project. Although, I held myself to a ridiculously high standard, always fearing I was disappointing Franks. I learned the hard way just how much disconnect there is between graduate courses and real-world projects at the same level. As much as I may have panicked and potentially stressed him out, I think we bonded well during it.
 
 {% footnote_body() %}
+
 The bottleneck of the project was evaluation. We couldn't figure out a good way to benchmark our metrics with the industry standard's metrics, since they were fundamentally very different for our target audience. For ad hoc evaluations, we used RMSE, in which the null model that predicts 0 skill for everyone performed the best.
+
 {% end %}
 
 # Senior Year
@@ -386,7 +404,9 @@ My social life was at an all-time high, as my roommates and I moved to a newer (
 Those six months felt like a bliss. In many ways, things were going incredibly well{{ footnote() }}. All my worries of falling behind disappeared entirely. [The university even wrote an article about me.](https://news.ucsb.edu/2025/021894/ucsb-math-graduate-charts-his-next-move) Most of my courses were exclusively ones I wanted to take, except for introductory physics (PHYS 7A). My involvement, both in extracurriculars and social activities, was prolific. At last, everything I did was for myself, and myself only.
 
 {% footnote_body() %}
+
 Karel, my CCS math advisor, reached out to me in the beginning of winter quarter. He asked if I could be a grader for his optimization class, Math 132A. I was happy to be invited, and accepted the offer. Upon the start of spring quarter, the Math Department reached out to me and asked if I would be willing to grade for Math 132B. The offer left me feeling very excited knowing I did a good job in their eyes.
+
 {% end %}
 
 ## All Good Things Must Come to an End
@@ -412,11 +432,15 @@ And just as my luck would have it, I got gum stuck to my pants as soon as I sat 
 Alas, I bid my final farewell to UCSB, excited to begin a new journey at UCI.
 
 {% footnote_body() %}
+
 Although my diploma says June 13th, 2025. I honestly have no clue why, probably administrative consistency across all issued diplomas.
+
 {% end %}
 
 {% footnote_body() %}
+
 Except a graduation ceremony I attended on June 14th, though I didn't enter campus proper, just the outskirts along the lagoon.
+
 {% end %}
 
 # Closing Remarks
@@ -432,14 +456,16 @@ For anyone reading this blog for advice, there are a few key takeaways I want to
    - Never compare your average life to other people's highlights. You don't know my average life, just my peaks and valleys.
 3. Chase your interests, not dollar signs. Had I stuck with my pursuit of computer science{{ footnote() }}, an interest formed purely on the basis of wanting a well-paying job, I would have been miserable. My pursuit of mathematics, something I truly enjoyed, took me even further.
    - Some people don't have this luxury. Sometimes, you're forced to do something for money, or forced to chase after things you don't enjoy.
-   - That's legitimate, but I must question: how is a young college student at this point in their life? It's far too easy to look at other people's successes or the state of the world and conclude it's over for you, without actually assessing your available options, accomplishments, or time. 
+   - That's legitimate, but I must question: how is a young college student at this point in their life? It's far too easy to look at other people's successes or the state of the world and conclude it's over for you, without actually assessing your available options, accomplishments, or time.
      - Let this blog be a testament to the fact that I figured out my interests and made all my accomplishments in junior year, after two years of almost nothing, and went further than many people in my graduating class.
    - Besides, many vocational skills are extracurricular and achievable beyond the classroom. Studying something you enjoy will do volumes for your well-being and character development.
 
 {% footnote_body() %}
+
 Do not get the impression that I'm denouncing computer science, or any field adjacent to a job, as "pursuits of dollar signs". I am simply acknowledging that such fields were not good for me. This may not be the case for you, or most CS majors for that matter.
+
 {% end %}
 
-# Acknowledgements
+### Acknowledgements
 
 I obtained permission from my friends to use their images in this blog, and I appreciate them for it.
