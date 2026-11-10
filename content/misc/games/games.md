@@ -54,6 +54,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - [Danganronpa 2: Goodbye Despair](https://steamcommunity.com/id/danleepicman/recommended/413420)
 - [Danganronpa V3: Killing Harmony](https://steamcommunity.com/id/danleepicman/recommended/567640)
 - Danganronpa Another Episode: Ultra Despair Girls
+- Deltarune (Chapters 1–5)
 - [Detroit: Become Human](https://steamcommunity.com/id/danleepicman/recommended/1222140)
 - Doki Doki Literature Club
 - DOOM (2016)
@@ -145,6 +146,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - Slay the Princess
 - Sonic Mania
 - Spyro Reignited Trilogy
+- [Squirrel with a Gun](https://steamcommunity.com/id/danleepicman/recommended/2067050)
 - [The Stanley Parable](https://steamcommunity.com/id/danleepicman/recommended/221910)
 - STEINS;GATE
 - [A Story About My Uncle](https://steamcommunity.com/id/danleepicman/recommended/278360)
