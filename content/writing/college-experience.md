@@ -41,6 +41,7 @@ While I was in high school, I knew I wanted to attend a prestigious university, 
 I applied to UCSB as a double major in math and computer science at the College of Creative Studies, on advice from my father. Ultimately, I was rejected from CCS, and also from computer science, instead being admitted as a mathematics major to the College of Letters & Science.
 
 In the end, I was debating between the following three options
+
 1. UCSD: Computer Science
 2. UCI: Computer Science
 3. UCSB: Mathematics
@@ -77,13 +78,11 @@ I arrived onto campus for the first time at around midday, where my parents and 
 
 After bidding my parents farewell, the first thing I did was bend my lanyard's ring. I unlocked my door, forgetting to remove the key from the lock, and walked forward, causing my lanyard to snag on the ring and bend it slightly. To say I was utterly disappointed with myself would be an understatement, as this is the very first thing I've accomplished upon being given independence. Fortunately, my roommate Jackson was kind enough to lend me some pliers, and I was able to fix it pretty easily.
 
-Jackson and I got along very well. Our living habits weren't the most compatible, but we were able to work through it together very easily. He was never a major bother for me, and I imagine that I was never a major bother for him. While we didn't spend time together outside our dorm, we still talked pretty often and enjoyed each other's company. Although our other roommate, whom I will not name, lacked this harmony. 
+Jackson and I got along very well. Our living habits weren't the most compatible, but we were able to work through it together very easily. He was never a major bother for me, and I imagine that I was never a major bother for him. While we didn't spend time together outside our dorm, we still talked pretty often and enjoyed each other's company. Although our other roommate, whom I will not name, lacked this harmony.
 
-For the most part, my unnamed roommate was a recluse, keeping to himself most the time. He was never a major bother socially. His cleanliness was a major bother though. I remember him being in his bed for about 20 hours a day, having never washed his bedsheets a single time during the entire school year. Moreover, he showered incredibly inconsistently. To say our room smelled would be a gross understatement. Jackson and I protested to our roommate several times, all to no avail. Eventually, Jackson got so fed up with this that he frequently bought Febreze Air Fresheners simply to make the room bearable to stay in. Retrospectively, I appreciated Jackson standing up for the things that I was too cowardly to broach.
+For the most part, my unnamed roommate kept to himself most the time. He was never a major bother socially. His cleanliness was a major bother though. Jackson and I protested to our roommate several times, all to no avail. Eventually, Jackson got so fed up with this that he frequently bought Febreze Air Fresheners simply to make the room bearable to stay in. Retrospectively, I appreciated Jackson standing up for the things that I was too cowardly to broach.
 
-Ironically, it was my unnamed roommate's dirtiness that inspired me to remain clean. I made it a crucial point to never allow myself to become as unbearable of a person as he was. I never saw myself as a filthy person, but this experience most certainly strayed me from a path of ever becoming one.
-
-Aside from my roommate situation, the dorms were okay. The central location was a major bonus, as well as the proximity of all my friends. Being able to run into people and make plans on a whim is an unforgettable experience. 
+Aside from my roommate situation, the dorms were okay. The central location was a major bonus, as well as the proximity of all my friends. Being able to run into people and make plans on a whim is an unforgettable experience.
 
 <figure>
     <img src="/images/college-experience/santa_rosa_sky.webp">
@@ -126,7 +125,7 @@ Ending the social diversion here, I would like to return to the goals my high sc
 1. Transfer into CCS Computing
 2. Gain enough experience to work as a SWE at a big tech company, ideally Google
 
-To make myself "competitive", I figured I should do a double major in mathematics and computer science. So I contacted the CCS Math and Computing faculty about a transfer. 
+To make myself "competitive", I figured I should do a double major in mathematics and computer science. So I contacted the CCS Math and Computing faculty about a transfer.
 
 They responded essentially saying "sorry, our freshman class is too big, so we cannot accept any more students". Naturally, I was devastated, as my goals had essentially disappeared right in front of my eyes.
 
@@ -146,15 +145,16 @@ His response was along the lines of
 And you know, he was right. It's easy to say no to an email, but hard to say no to a face. Especially when that face is tied to demonstrated experience. I emailed Karel requesting exactly this: I want to transfer into CCS Math, and I would like to take a few courses to "prove my worth".
 
 He responded to my email positively, and after some back-and-forth, he essentially said{{ footnote() }}
+
 1. He will allow me to take one course in winter quarter.
 2. If I do well, he will allow me to take two additional courses in spring quarter.
 3. It is my responsibility to learn the prerequisites for these courses.
 
-I agreed, and spent all winter break catching myself up to speed. I asked one of my professors for material suggestions, in which he granted me access to an old course containing pre-recorded lectures. As a result, I put my computing ambitions on pause and focused solely on math. 
+I agreed, and spent all winter break catching myself up to speed. I asked one of my professors for material suggestions, in which he granted me access to an old course containing pre-recorded lectures. As a result, I put my computing ambitions on pause and focused solely on math.
 
 This was all very risky, as nothing was guaranteed, but I knew this was a step in the right direction. After all, I took the risk of coming to UCSB over comfortable options at UCSD and UCI, so it would be quite dumb to squander it.
 
-Prior to taking these courses, I was used to being at the top of the class, with everything coming very easily to me. This was especially true for the first few courses I took at UCSB. So being placed into a room full of significant prowess, far exceeding my own, where we're all learning material that took hours to digest, was incredibly humbling. 
+Prior to taking these courses, I was used to being at the top of the class, with everything coming very easily to me. This was especially true for the first few courses I took at UCSB. So being placed into a room full of significant prowess, far exceeding my own, where we're all learning material that took hours to digest, was incredibly humbling.
 
 The best part though? My classmates never judged me, nor saw me as inferior. I was treated as one of their own, as if I'd been a CCS Math student all along. As a result, my perspective on learning and the world changed substantially. The value of prestige and being "the best" now meant nothing, and I instead focused on learning. Because well, at a certain point, "the best" doesn't make any sense.
 
@@ -229,13 +229,15 @@ As they say, all good things must come to an end. The Saturday Crew, my primary 
 1. Jessica transferred to a different school.
 2. Antonia, while keeping in touch with us, branched off into other things.
 
-In spite of those two, Josephine and I stayed in touch for much of our freshman year, even the following summer. At some points we would even talk with each other daily. But alas, we drifted a part during fall quarter of sophomore year. She was in an entirely different major than I, so our classes began to diverge. At some point, I probably began to annoy and outright frustrate her, as I certainly wasn't the most mature nor respectful person towards her. Eventually, at the end of the quarter, we parted our separate ways from each other. Aside from one brief interaction a few months later, we have not spoken since.
+In spite of those two, Josephine and I stayed in touch for much of our freshman year, even the following summer. At some points we would even talk with each other daily. But alas, we drifted a part during fall quarter of sophomore year. She was in an entirely different major than I, so our classes began to diverge.
+
+I wasn't the most mature nor respectful person towards her. Being one of my few friends at university, I reached out to her *a lot*, which created a lot of strife. Eventually, at the end of the quarter, we parted our separate ways from each other. Aside from one brief interaction a few months later, we have not spoken since.
 
 Naturally, the collapsing of my friend group, as well as parting ways with one of my closest friends, left me very depressed. One of my biggest failures during freshman year was acquiring many friends. Outside the Saturday Crew, I didn't really interact with people that intimately. So I made it an especially important point to develop a stronger foundation of friends.
 
-One friend, Kavi, helped me greatly during my period of depression. I don't quite remember exactly how we met and started interacting, though I remember it was in the midst of my depression. I was a pretty terrible friend to her, as I frequently bailed on her or made little effort to interact with her. And yet, she still talked with me. We haven't spoken with each other in a long time, but I sincerely hope she's doing well.
+One friend, Kavi, helped me greatly during my period of depression. I don't quite remember exactly how we met and started interacting. Notwithstanding, I was a pretty terrible friend to her, as I frequently bailed on her or made little effort to interact with her. And yet, she still talked with me. We haven't spoken with each other in a long time, but I sincerely hope she's doing well.
 
-What especially helped, however, was forming a new friend group with my future roommates. Oddly enough, I befriended two cliques of them separately, both at the Tabletop Gaming Club. Eventually, they realized that they all knew who I was, and invited me to the broader friend group.
+What especially helped my recovery, however, was forming a new friend group with my future roommates. Oddly enough, I befriended two cliques of them separately, both at the Tabletop Gaming Club. Eventually, they realized that they all knew who I was, and invited me to the broader friend group.
 
 <figure>
     <img src="/images/college-experience/mahjong.webp">
@@ -291,7 +293,7 @@ Ultimately, we came up with the following plan.
 
 Which frightened me, since I was originally brought onto the club to teach Python, and am suddenly held to the standard of guiding advanced data science projects. Keep in mind that at this point, I had almost exclusively taken theoretical math courses, such as real analysis, complex analysis, numerical analysis, and linear algebra. So my knowledge of data science was largely nonexistent. However, I knew it would be wrong of me to object to the plan, since this design was best for the club as a whole. As a result, I spent that entire summer catching myself up to speed.
 
-What did this look like? Developing workshop material{{ footnote() }}. We partitioned workshop topics among ourselves and spent most of the summer building them from scratch. 
+What did this look like? Developing workshop material{{ footnote() }}. We partitioned workshop topics among ourselves and spent most of the summer building them from scratch.
 
 Surprisingly, my math background was incredibly handy, as it became exceptionally useful for understanding everything. At first, I paid little attention to this detail, dismissing it as coincidence. But I would eventually come to realize, and appreciate, just how far a math background can take you.
 
@@ -309,7 +311,7 @@ My most pivotal year that holds the crowned jewels of my accomplishments. Junior
 
 Upon junior year's beginning, I was rather nervous. My background in data science was fairly minimal, and we were beginning to execute our plans for the DS club. Moreover, I was taking several graduate courses across the math and PSTAT (Probability & Statistics) departments. Furthermore, I was working as a tutor for the university. I intended to maintain all these commitments, so I fully expected everything to be difficult.
 
-To make matters worse, almost as soon as the quarter started, our technical leader Mehir resigned from the club to pursue other interests. This left Tanay, Mitali, and I in an awkward situation, as we are now carrying out a plan without a clear leader, and with one less contributor. 
+To make matters worse, almost as soon as the quarter started, our technical leader Mehir resigned from the club to pursue other interests. This left Tanay, Mitali, and I in an awkward situation, as we are now carrying out a plan without a clear leader, and with one less contributor.
 
 <figure>
     <img src="/images/college-experience/ds_meeting.webp">
@@ -318,7 +320,7 @@ To make matters worse, almost as soon as the quarter started, our technical lead
 
 Luckily, all 3 of us got along very well, and quickly identified our niches. We understood all our strengths and shortcomings, and redirected curious club members to the appropriate officer.
 
-Moreover, hosting workshops and mentoring projects wasn't nearly as bad as I thought. My course knowledge, summer experience, and especially math background proved incredibly useful. The nice thing about teaching is you understand the material far better and identify your misconceptions. 
+Moreover, hosting workshops and mentoring projects wasn't nearly as bad as I thought. My course knowledge, summer experience, and especially math background proved incredibly useful. The nice thing about teaching is you understand the material far better and identify your misconceptions.
 
 Something I hadn't realized until much later was how much overlap, and consequentially personal development, my data science experience had with my tutoring experience. It essentially became a positive feedback loop: the tutoring experience improved my explanations, which improved my ability to mentor, which improved my ability to host group sessions, which improved my public speaking abilities, etc.
 
@@ -364,6 +366,7 @@ My most satisfying year, defined mainly by balancing commitments and stress, fol
 The first quarter of senior year was the most stressful quarter of my entire college, rivaled only by my first quarter of junior year.
 
 Why? Four reasons
+
 1. I took on the role of "Internal Vice President" for Data Science UCSB, which led the technical wing. It was much more demanding than I had anticipated.
     - I should note that, while a new executive role, no autonomy was lost among any of the technical officers.
     - We also were re-evaluating many of our ideas in the year prior, though fortunately we had a larger team which made it more manageable. 
@@ -411,7 +414,7 @@ Karel, my CCS math advisor, reached out to me in the beginning of winter quarter
 
 ## All Good Things Must Come to an End
 
-But alas, six months is not a very long time, and it ended just as quickly as it started. On June 8th, 2025, I finally graduated{{ footnote() }} from UCSB, with a major in mathematics and a minor in statistical sciences. 
+But alas, six months is not a very long time, and it ended just as quickly as it started. On June 8th, 2025, I finally graduated{{ footnote() }} from UCSB, with a major in mathematics and a minor in statistical sciences.
 
 <figure>
     <img src="/images/college-experience/graduation.webp">
@@ -450,8 +453,8 @@ To all that have read this far, I appreciate it. Keep in mind that there are man
 For anyone reading this blog for advice, there are a few key takeaways I want to highlight.
 
 1. There is no "proper" college experience. If you ask anyone else to retell theirs, it will be dramatically different from mine. Worry not about doing what other people consider right, but what you consider worthy.
-   - The worst thing you can do is use this blog as a template for your own experiences. Don't do that. You will be missing out on the whole point of independence. 
-2. There are several themes throughout this blog, namely perseverance, determination, and most notably, luck. It's easy to conclude that, while I was a hard worker, my success is a product of luck in my early formative years. This is a good point, but also one that neglects one crucial fact: **I am only telling the highlights, both highs and lows, of my story**. 
+   - The worst thing you can do is use this blog as a template for your own experiences. Don't do that. You will be missing out on the whole point of independence.
+2. There are several themes throughout this blog, namely perseverance, determination, and most notably, luck. It's easy to conclude that, while I was a hard worker, my success is a product of luck in my early formative years. This is a good point, but also one that neglects one crucial fact: **I am only telling the highlights, both highs and lows, of my story**.
    - For the most part, the reason *why* I was lucky was simply because I forced myself to do several things and kept the ones that stuck. I have not written about, nor mentioned, many of those things. Trying a select few things and waiting for something to happen only works for a small group of fortunate people.
    - Never compare your average life to other people's highlights. You don't know my average life, just my peaks and valleys.
 3. Chase your interests, not dollar signs. Had I stuck with my pursuit of computer science{{ footnote() }}, an interest formed purely on the basis of wanting a well-paying job, I would have been miserable. My pursuit of mathematics, something I truly enjoyed, took me even further.
@@ -466,6 +469,6 @@ Do not get the impression that I'm denouncing computer science, or any field adj
 
 {% end %}
 
-### Acknowledgements
+## Acknowledgements
 
 I obtained permission from my friends to use their images in this blog, and I appreciate them for it.

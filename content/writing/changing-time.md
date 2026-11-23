@@ -9,7 +9,7 @@ cover.image = "/images/changing-time/cover.webp"
 cover.alt = "Staring into the distance"
 +++
 
-As many people familiar with me know, I was a Boy Scout for most of my youth. I joined [Troop 609](https://www.troop609.org/) in 2014, and was incredibly active, going on almost every single one of the outings and events. My troop was famous in Los Angeles County for being **THEE** high adventure troop, and to this day, it still maintains that title. 
+As many people familiar with me know, I was a Boy Scout for most of my youth. I joined [Troop 609](https://www.troop609.org/) in 2014, and was incredibly active, going on almost every single one of the outings and events. My troop was famous in Los Angeles County for being **THEE** high adventure troop, and to this day, it still maintains that title.
 
 <figure>
     <img src="/images/changing-time/summit_to_whitney.webp" alt="Approaching Mount Whitney">
@@ -49,7 +49,7 @@ I looked forward to these meetings greatly. It was an opportunity to not only in
 
 ## Outings: Short and Simple Trips
 
-The real joy of Boy Scouts, however, was the outings. For most troops, this meant something very simple. For example, a hike lasting around 5–10 miles, or driving to a camping ground and spending a day or two there to enjoy the scenery. We dubbed the latter "car camping" since we typically didn't travel very far from the cars. 
+The real joy of Boy Scouts, however, was the outings. For most troops, this meant something very simple. For example, a hike lasting around 5–10 miles, or driving to a camping ground and spending a day or two there to enjoy the scenery. We dubbed the latter "car camping" since we typically didn't travel very far from the cars.
 
 <figure>
     <img src="/images/changing-time/running_springs.webp" alt="Running Springs">
@@ -86,7 +86,7 @@ While backpacking constituted a majority of our treks, it certainly wasn't the o
     <figcaption>Floating down the Colorado River in August 2018. The air was hot and the water was ice cold. Felt amazing to stop and swim.</figcaption>
 </figure>
 
-Something I never really appreciated until many years later was just how much endurance these adventures gave me. Backpacking, and treks in general, are <ins>hard</ins>. It is nothing short of miserable to feel the weight of 40 pounds of gear on your back, knowing that the destination is so far, and turning around is equally worse. But through this misery lies a purpose and a beauty. At the end of the day, I chose to go on these trips, knowing exactly how I will feel for most of it.
+Something I never really appreciated until many years later was just how much endurance these adventures gave me. Backpacking, and treks in general, are *hard*. It is nothing short of miserable to feel the weight of 40 pounds of gear on your back, knowing that the destination is so far, and turning around is equally worse. But through this misery lies a purpose and a beauty. At the end of the day, I chose to go on these trips, knowing exactly how I will feel for most of it.
 
 That stress made these trips all the better. It really felt like I had to earn these sights. And well, I did. This blog displays the most exemplary pictures, but it pales in comparison to experiencing it first-hand. Not many people are able to say they've seen the views I've seen, or the experiences I've had. Sightseeing is one thing, but going well-out of my comfort zone to connect with nature first-hand isn't something I can articulate in words or pictures. Also, it's nice to disconnect from the world and take some time off for myself.
 
@@ -94,11 +94,11 @@ That stress made these trips all the better. It really felt like I had to earn t
 
 My last memory of the troop was my final meeting as a Boy Scout, occurring about a week before I turned 18. As per tradition, every Scout is asked to give a brief farewell speech before transitioning into an adult. My speech verbatim was the following
 
-> Hello everybody. Some of you may know me, but to those that don't, my name is Daniel Naylor. This is my last meeting as a youth, as my 18th birthday is rapidly approaching. I've been in this Troop since 2014, about 7 years, and I hope you guys will remain here until you age out. I was thinking about what I could talk about: my greatest experiences, my most fond memories, etc., but I’d like to share something else, something that I’ve learned throughout my scouting experiences: try to be as open-minded as you can be. 
+> Hello everybody. Some of you may know me, but to those that don't, my name is Daniel Naylor. This is my last meeting as a youth, as my 18th birthday is rapidly approaching. I've been in this Troop since 2014, about 7 years, and I hope you guys will remain here until you age out. I was thinking about what I could talk about: my greatest experiences, my most fond memories, etc., but I’d like to share something else, something that I’ve learned throughout my scouting experiences: try to be as open-minded as you can be.
 >   
-> What do I mean by that? Don’t dismiss things because they’re unfamiliar. When I first joined, I hated the idea of camping and backpacking, especially for days long. Honestly, I thought it was a waste of time since I could easily access beautiful scenery within seconds on my phone. Yet, I tried them anyways, even though I was thinking to myself "this is a waste of time" while on the trip. It took a while and many, many trips, but I eventually broke out of that closed mindset and learned the value of camping and backpacking and, more importantly, the value of hard work and perseverance. 
+> What do I mean by that? Don’t dismiss things because they’re unfamiliar. When I first joined, I hated the idea of camping and backpacking, especially for days long. Honestly, I thought it was a waste of time since I could easily access beautiful scenery within seconds on my phone. Yet, I tried them anyways, even though I was thinking to myself "this is a waste of time" while on the trip. It took a while and many, many trips, but I eventually broke out of that closed mindset and learned the value of camping and backpacking and, more importantly, the value of hard work and perseverance.
 >   
-> I’m not suggesting that camping and backpacking is for everyone, but my main point is to be open minded, and don’t dismiss things you have yet to try. Aside from that, that’s all I really have to say. Thank you all for listening, and have a great rest of your youth.
+> I’m not suggesting that camping and backpacking is for everyone, but my main point is to be open-minded, and don’t dismiss things you have yet to try. Aside from that, that’s all I really have to say. Thank you all for listening, and have a great rest of your youth.
 
 As superfluously worded as this is, I still stand by this message. But after turning 18, I pretty much dropped most of my involvement with Troop 609. After all, I was about to graduate high school, and was excited to begin new experiences in college. I was periodically involved with the [Order of the Arrow](https://oa-scouting.org/about) during my undergraduate years, but for the most part, I had left Scouting behind me.
 
@@ -110,13 +110,13 @@ Upon arrival, I cannot describe my utter shock when I saw everyone again. I knew
 
 What especially broke my heart was seeing how small the troop had become. I remember the troop being massive, having 6 patrols at any given time, totaling about 50 people. However, a lot of scouts dropped out after covid. At this ceremony, there were 3 patrols and 20 scouts at best. The troop felt small. Roles like the [bugler](https://troopleader.scouting.org/general-troop-information/troop-structure/troop-positions/bugler/) were vacant. My first impressions were that the troop is now a mere skeleton of what it used to be. What happened to all the liveliness I remember growing up with?
 
-Covid hit scouting *hard*. Recruitment after covid never recovered to what it used to be. Many troops entirely collapsed and ceased to exist. In fact, another troop merged with 609 after their leadership effectively disappeared. While the pandemic may feel like a distancing memory, the effects of it are still felt and present, as evidenced by troop membership at an all-time low. Saddened about this, I talked to my scoutmaster, who's been diligent all these years and still leading the troop. 
+Covid hit scouting *hard*. Recruitment after covid never recovered to what it used to be. Many troops entirely collapsed and ceased to exist. In fact, another troop merged with 609 after their leadership effectively disappeared. While the pandemic may feel like a distancing memory, the effects of it are still felt and present, as evidenced by troop membership at an all-time low. Saddened about this, I talked to my scoutmaster, who's been diligent all these years and still leading the troop.
 
 Despite these concerns, my scoutmaster assured me there's nothing to worry about. While the troop is small, it's still as lively as ever, just not in the same way. The frequency and attendance of events are going strong. Maybe the grandeur of going somewhere with 50 like-minded youth is a thing of the past, but the joy of the events is here to stay.
 
 I checked the [troop's website](https://www.troop609.org/) after the meeting, and my scoutmaster was absolutely right. The website is covered with pictures of recent outings, from the short and simple ones to the high adventure treks. Our title of being THEE high adventure troop in Los Angeles County is as strong as I remembered it being.
 
-I'm very happy that the troop managed to survive the challenges of covid. It brings me joy to know that the experiences I grew up with are no longer a thing of the past. Still, seeing the new composition of members, the new size of the troop, the vacancies in all the roles, I couldn't help but think that the troop is approaching its endgame. As they say, all good things must come to an end. 
+I'm very happy that the troop managed to survive the challenges of covid. It brings me joy to know that the experiences I grew up with are no longer a thing of the past. Still, seeing the new composition of members, the new size of the troop, the vacancies in all the roles, I couldn't help but think that the troop is approaching its endgame. As they say, all good things must come to an end.
 
 Maybe I'm being dramatic and the troop only changed superficially. After all, the core values are still present and strong as ever. To say that it's the same is just wrong, but does it need to be? Maybe this is a step in the right direction, and I'm just too stuck in the past. No matter, I'm glad 609 is here to stay for the foreseeable future.
 

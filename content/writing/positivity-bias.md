@@ -16,7 +16,7 @@ As of writing, of course.
 
 # Forgiving Standards
 
-Before I wrote reviews for every game I played (December 2024), the point when I started being more critical and analytic, I had written 43 reviews total. 39 (91%) positive and 4 (9%) negative. After reading through these earlier reviews, I believe this discrepancy partly comes from my overly forgiving standards. 
+Before I wrote reviews for every game I played (December 2024), the point when I started being more critical and analytic, I had written 43 reviews total. 39 (91%) positive and 4 (9%) negative. After reading through these earlier reviews, I believe this discrepancy partly comes from my overly forgiving standards.
 
 For instance, here's an excerpt from my recommended review for [Shadow of the Tomb Raider](https://steamcommunity.com/id/danleepicman/recommended/750920/)
 

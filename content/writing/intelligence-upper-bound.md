@@ -27,14 +27,16 @@ Under MI, it is immediate why a person may be simultaneously brilliant and idiot
 However, MI is highly contentious, with modern research suggesting the existence of general intelligence alongside specialized intelligences. Moreover, it fails to explain a case like Fisher. On one hand, his work in statistics demonstrate exceptional logical-mathematical skills. On the other hand, his criticism against smoking findings were largely fallacies of imprecise defenses or cherry-picked counterexamples, suggesting gaps in logical-mathematical skills.
 
 {% footnote_body() %}
+
 I am not an expert in intelligence or on George Patton. This is just a quick heuristic argument, not a statement meant to be taken very seriously.
+
 {% end %}
 
 # The Case of Fisher
 
 When reading his personal history, there is a fairly straightforward explanation for why Fisher opposed public health officials so strongly. In addition to a disagreeable personality, he was a smoker himself. From his perspective, a new generation of scientists are arguing against *smoking* with *statistics*, an insult to two of his identities. After all, Fisher spent most of his career developing statistical methodology, so it must be frustrating to view what he believes to be misconduct, particularly with something so close to heart.
 
-There's certainly more nuance, but the underlying theme here is that pride clouded his judgment. A theme common among tales of brilliance. To quote Mahatma Gandhi on a related matter.
+The above account isn't meant to be a full description of Fisher's history. There's certainly more nuance. Nevertheless, the underlying theme is that pride clouded his judgment. A theme common among tales of brilliance. To quote Mahatma Gandhi on a related matter.
 
 > It is unwise to be too sure of one's own wisdom. It is healthy to be reminded that the strongest might weaken and the wisest might err.
 
