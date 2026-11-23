@@ -30,6 +30,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - [Before Your Eyes](https://steamcommunity.com/id/danleepicman/recommended/1082430)
 - [Between Horizons](https://steamcommunity.com/id/danleepicman/recommended/1921980)
 - Black Mesa
+- [Bomb Rush Cyberfunk](https://steamcommunity.com/id/danleepicman/recommended/1353230)
 - [Broforce](https://steamcommunity.com/id/danleepicman/recommended/274190)
 - [Broken Age](https://steamcommunity.com/id/danleepicman/recommended/232790)
 - Call of Duty: Black Ops

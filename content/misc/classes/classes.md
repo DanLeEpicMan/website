@@ -28,6 +28,14 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 
 ## Graduate Degree (UC Irvine)
 
+### Second Year
+
+- Fall 2025
+  - <small>**MATH 295A**: Partial Differential Equations *(Dr. Connor Mooney)*</small>
+    - <small>*Theory and techniques for linear partial differential equations.*</small>
+
+### First Year
+
 - Spring 2026
   - <small>**EECS 242**: Information Theory *(Dr. Syed Jafar)*</small>
     - <small>*Entropy, mutual information, asymptotic equipartition property, entropy rates of a stochastic process, data compression, channel capacity, differential entropy, the Gaussian channel.*</small>
@@ -54,7 +62,8 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
 
 ## Undergraduate Degree (UC Santa Barbara)
 
-### Senior 
+### Senior
+
 - Spring 2025
   - <small>**CMPTGCS 20**: Introduction to Python *(Dr. Richert Wang)*</small> 
   - <small>**HIST 164C**: Civil War and Reconstruction *(Dr. John Majewski)*</small>
@@ -80,8 +89,8 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
   - <small>**PSTAT 223A**: Stochastic Calculus *(Dr. Jean-Pierre Fouque)*</small>
     - <small>*Brownian motion, stochastic calculus and stochastic differential equations, diffusion processes, related partial differential equations and Feynman-Kac formula.*</small>
 
+### Junior
 
-### Junior 
 - Spring 2024
   - <small>**CH ST 1C**: Chicano Studies *(Dr. Dolores Inés Casillas)*</small>
   - <small>**MATH 111C**: Galois Theory *(Dr. Zheng Liu)*</small>
@@ -109,6 +118,7 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
     - <small>*Order statistics, estimation theory, likelihood, sufficiency, efficiency, maximum likelihood.*</small>
 
 ### Sophomore
+
 - Spring 2023
   - <small>**MATHCS 108B**: Linear Algebra *(Dr. Karel Casteels)*</small>
     - <small>*Inner product spaces, projections, least-squares approximations, canonical form.*</small>  
@@ -136,6 +146,7 @@ For anyone interested, [my course planner for my undergraduate degree can be fou
   - <small>**WRIT 107J**: Journalism Writing *(Dr. Paul Mena)*</small>
 
 ### Freshman
+
 - Spring 2022
   - <small>**INT 84AR**: Honors Seminar in Mathematics *(Dr. Dennis Labutin)*</small>
   - <small>**MATH 6B**: Multivariable Calculus *(Dr. Wenchuan Tian)*</small>

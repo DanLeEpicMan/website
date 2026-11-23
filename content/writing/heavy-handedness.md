@@ -10,17 +10,17 @@ description = "A reflection of my own writing."
 
 A few days ago, I reread one of my older pieces, [A Certain Level of Arrogance](/writing/certain-level/). My aim with the piece was to criticize two mindsets I encountered in tech-adjacent fields. First, those who carry undue confidence into areas where they lack exposure. Second, those who prioritize embellishment over skill acquisition.
 
-I still believe in the overall message, and I think the blog communicates it decently. However, I dislike the presentation. For one, my discussion in the section "Difficulty Imbalance" is pretty hypocritical. To illustrate
+I still believe in the overall message, and I think the blog communicates it decently. However, I dislike the presentation. For one, my discussion in the now-deleted section "Difficulty Imbalance" was pretty hypocritical. To illustrate
 
 > In general, it is true, though not universally true, that the skills of a tech major are relatively more difficult to learn than the skills of other non-tech majors, particularly non-STEM fields.
 
-In other words, I am conceding that *there exists* a hierarchy between STEM and non-STEM skills. Without citing any reasoning. A perfect display of the very arrogance I'm criticizing!
+In other words, I conceded that *there exists* a hierarchy between STEM and non-STEM skills. Without citing any reasoning. A perfect display of the very arrogance I'm criticizing!
 
 My main dislike, however, is how *certain* and *heavy-handed* I am with my criticism. Consider the following passage
 
 > Truth of the matter is that many of these people who neglect non-tech skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that's effectively what these people get out of it.
 
-These are pretty sweeping generalizations to make with little supporting evidence. In-between the lines there may be a nugget of truth, yet the framing is condescending. Moreover, the conclusions are *very* premature. What if I misread their intentions? My critiques are also a bit misguided: even though I come off as criticizing *people*, I really mean to criticize *mindsets*.
+These are pretty sweeping generalizations to make with little supporting evidence. In-between the lines there may be a nugget of truth, yet the framing is condescending and misguided. Even though I come off as criticizing *people*, I really mean to criticize *mindsets*. Moreover, the conclusions are *very* premature. What if I misread their intentions?
 
 Seeing such heavy-handedness left a sour taste in my mouth. Is it isolated to this one blog, or do I write like that in general?
 
