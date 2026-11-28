@@ -115,6 +115,7 @@ Since December 2024, I always write a review after completing a game. Before the
 - [Machinarium](https://steamcommunity.com/id/danleepicman/recommended/40700)
 - [Mad Max](https://steamcommunity.com/id/danleepicman/recommended/234140)
 - [Manifold Garden](https://steamcommunity.com/id/danleepicman/recommended/473950)
+- [Maple & Rufus: The Water Robbery](https://steamcommunity.com/id/danleepicman/recommended/2851420)
 - [Metro 2033](https://steamcommunity.com/id/danleepicman/recommended/286690)
 - [Metro Last Light](https://steamcommunity.com/id/danleepicman/recommended/287390)
 - [Milk inside a bag of milk inside a bag of milk](https://steamcommunity.com/id/danleepicman/recommended/1392820)
