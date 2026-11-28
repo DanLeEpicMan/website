@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="not-ready lg:text-base" lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>
+    Heavy Handedness - Daniel Naylor
+  </title>
+
+  <!-- Meta -->
+  <meta name="theme-color" />
+
+  
+  <!-- Author -->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  
+  <!---->
+  <meta name="description" content="A reflection of my own writing." />
+  <meta name="author" content="" />
+  <!-- The Open Graph protocol -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Heavy Handedness" />
+  <meta property="og:site_name" content="Daniel Naylor" />
+  <meta property="og:description" content="A reflection of my own writing." />
+  <meta property="og:url" content="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;heavy-handedness&#x2F;" />
+  
+  <!---->
+  
+  <!---->
+  
+
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://dtnaylor.com/main.css" />
+  <style>
+    :root {
+      --bg: #FFFFF0;
+      --bg-dark: #1F2022;
+      --header: #e4e4e7;
+      --header-dark: #27272a;
+    }
+  </style>
+
+  
+
+  <!-- Dark Icon -->
+  <link rel="preload" as="image" href="https://dtnaylor.com/icons/theme.svg" />
+
+  <!-- Math -->
+  
+  <!---->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () =>
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      // • rendering keys, e.g.:
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  <!---->
+  
+  <!---->
+
+  <!-- Mermaid -->
+  
+  <!---->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://dtnaylor.com/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://dtnaylor.com/apple-touch-icon.png" />
+
+  <!-- Feeds -->
+  
+  <!---->
+  
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom"
+    href="https://dtnaylor.com/atom.xml"
+  />
+   
+  <!---->
+  
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;heavy-handedness&#x2F;" />
+
+  <!-- Head inject -->
+  <link rel="stylesheet" href="https://dtnaylor.com/css/custom.css">
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white text-align:justify">
+    <header
+  class="blur-header fixed top-0 z-40 mx-auto min-h-[3.5rem] w-full"
+>
+  <div class="mx-auto w-full max-w-4xl p-3 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center">
+        <a class="text-2xl font-semibold" href="https://dtnaylor.com">Daniel Naylor</a>
+        <div
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] [background:url(./icons/theme.svg)_left_center/cover_no-repeat] dark:[background-position:right] dark:invert"
+          role="button"
+          aria-label="Dark"
+        ></div>
+      </div>
+      
+      <div
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        role="button"
+        aria-label="Menu"
+      ></div>
+      
+    </div>
+    <script>
+      // base
+      const htmlClass = document.documentElement.classList;
+      setTimeout(() => {
+        htmlClass.remove("not-ready");
+      }, 10);
+
+      // inject syntax theme styles and provide URLs from Zola
+      const syntaxLightHref = 'https://dtnaylor.com/css/syntax-theme-light.css';
+      const syntaxDarkHref = 'https://dtnaylor.com/css/syntax-theme-dark.css';
+
+      const ensureSyntaxLinks = () => {
+        if (!document.getElementById("syntax-light")) {
+          const l = document.createElement("link");
+          l.id = "syntax-light";
+          l.rel = "stylesheet";
+          l.href = syntaxLightHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+        if (!document.getElementById("syntax-dark")) {
+          const l = document.createElement("link");
+          l.id = "syntax-dark";
+          l.rel = "stylesheet";
+          l.href = syntaxDarkHref;
+          l.disabled = true;
+          document.head.appendChild(l);
+        }
+      };
+
+      // mobile menu
+      const btnMenu = document.querySelector(".btn-menu");
+      btnMenu?.addEventListener("click", () => {
+        htmlClass.toggle("open");
+      });
+
+      // dark theme
+      const setDark = (isDark) => {
+        ensureSyntaxLinks();
+        const lightLink = document.getElementById("syntax-light");
+        const darkLink = document.getElementById("syntax-dark");
+
+        if (isDark) {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "dark" }));
+          htmlClass.add("dark");
+        } else {
+          document.body.dispatchEvent(new CustomEvent("set-theme", { detail: "light" }));
+          htmlClass.remove("dark");
+        }
+
+        // enable/disable syntax styles so only the active one applies
+        if (darkLink) darkLink.disabled = !isDark;
+        if (lightLink) lightLink.disabled = isDark;
+
+        localStorage.setItem("dark", isDark);
+      };
+
+      // init
+      const darkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      ensureSyntaxLinks();
+      if (htmlClass.contains("dark")) {
+        setDark(true);
+      } else {
+        const darkVal = localStorage.getItem("dark");
+        setDark(darkVal ? darkVal === "true" : darkScheme.matches);
+      }
+
+      // listen system
+      darkScheme.addEventListener("change", (event) => {
+        setDark(event.matches);
+      });
+
+      // manual switch
+      const btnDark = document.querySelector(".btn-dark");
+      btnDark.addEventListener("click", () => {
+        setDark(localStorage.getItem("dark") !== "true");
+      });
+    </script>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <ul
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0"
+      >
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/cv"
+            >Curriculum Vitae</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/writing"
+            >Writing</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/misc"
+            >Misc.</a
+          >
+        </li>
+        
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://dtnaylor.com/about"
+            >About</a
+          >
+        </li>
+        
+      </ul>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <!-- Body Start inject -->
+    
+
+    <div class="flex justify-center">
+      <div class="order-3 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-1 mt-48 hidden lg:flex lg:justify-center lg:items-start h-min w-[calc((100%-var(--container-3xl))/2)]"
+      >
+        
+<nav
+  class="section-nav prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-screen px-2 pt-18 pb-4"
+>
+  <script src="/js/side_toc.js"></script>
+  <div class="toc-progress" aria-hidden="true">
+    <div class="toc-progress__bar"></div>
+  </div>
+  <div class="toc-markers" aria-hidden="true"></div>
+  <small>
+    <ul class="no-bullets">
+      
+      <li>
+        <a href="#surveying-the-past">Surveying the Past</a>
+        
+      </li>
+      
+      <li>
+        <a href="#confronting-reality">Confronting Reality</a>
+        
+      </li>
+      
+      <li>
+        <a href="#my-own-character">My Own Character</a>
+        
+      </li>
+      
+    </ul>
+  </small>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="my-0! pb-2.5">Heavy Handedness</h1>
+    <div class="text-sm antialiased opacity-60">
+  
+  <time>2026-11-22</time>
+  <span class="mx-1">&middot;</span>
+  <span>6min</span>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <!-- Page Info inject -->
+  
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
+  <details>
+    <summary class="cursor-pointer py-1 pl-4">
+      <span class="ml-2">Table of Contents</span>
+    </summary>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#surveying-the-past">Surveying the Past</a>
+        
+      </li>
+      
+      <li>
+        <a href="#confronting-reality">Confronting Reality</a>
+        
+      </li>
+      
+      <li>
+        <a href="#my-own-character">My Own Character</a>
+        
+      </li>
+      
+    </ul>
+  </details>
+</nav>
+
+<!---->
+
+  <!-- Content -->
+  <section><h1 id="surveying-the-past">Surveying the Past</h1>
+<p>A few days ago, I reread one of my older pieces, <a href="/writing/certain-level/">A Certain Level of Arrogance</a>. My aim with the piece was to criticize two mindsets I encountered in tech-adjacent fields. First, those who carry undue confidence into areas where they lack exposure. Second, those who prioritize embellishment over skill acquisition.</p>
+<p>I still believe in the overall message, and I think the blog communicates it decently. However, I dislike the presentation. For one, my discussion in the now-deleted section "Difficulty Imbalance" was pretty hypocritical. To illustrate</p>
+<blockquote>
+<p>In general, it is true, though not universally true, that the skills of a tech major are relatively more difficult to learn than the skills of other non-tech majors, particularly non-STEM fields.</p>
+</blockquote>
+<p>In other words, I conceded that <em>there exists</em> a hierarchy between STEM and non-STEM skills. Without citing any reasoning. A perfect display of the very arrogance I'm criticizing!</p>
+<p>My main dislike, however, is how <em>certain</em> and <em>heavy-handed</em> I am with my criticism. Consider the following passage</p>
+<blockquote>
+<p>Truth of the matter is that many of these people who neglect non-tech skills also have little regard for actually learning. Instead, the focus is to pick and choose the things that maximize results. While a tech degree teaches more than using technology, that's effectively what these people get out of it.</p>
+</blockquote>
+<p>These are pretty sweeping generalizations to make with little supporting evidence. In-between the lines there may be a nugget of truth, yet the framing is condescending and misguided. Even though I come off as criticizing <em>people</em>, I really mean to criticize <em>mindsets</em>. Moreover, the conclusions are <em>very</em> premature. What if I misread their intentions?</p>
+<p>Seeing such heavy-handedness left a sour taste in my mouth. Is it isolated to this one blog, or do I write like that in general?</p>
+<p>Lo and behold, consider another passage from <a href="/writing/one-down/">One Down, Four To Go</a>, published only three months ago.</p>
+<blockquote>
+<p>Having previously completed the UCSB equivalent of STATS 205, PSTAT 215A, I petitioned for a waiver. Everyone in the statistics department approved my waiver, notably the professor of 205 and the vice chair of the department. They agreed that I demonstrated knowledge of the material, and that I would gain nothing from the course. Unfortunately, the unqualified bureaucrats outside the department disagreed... Talk about utter incompetency.</p>
+</blockquote>
+<p>The frustrations I articulate are ones I still hold today. Nevertheless, I am quick to hold those bureaucrats<sup class='opacity-60 footnote' id='footnote-1'><a href='#footnote-body-1' style='text-decoration: none'>1</a></sup> as incompetent at their jobs. Over one single encounter.</p>
+<p>My frustration is also misdirected. I am mad with the policy set by the school, not those enforcing it. In a similar vein, I imply that circumventing it should be an obvious possibility, whose explanation is self-evident. This is far from the truth, for my scenario is the exception, not the norm.</p>
+<p>These cases are not cherry-picked. Finding similar examples across my writing was fairly straightforward. More broadly, this reveals a fairly deep character flaw of mine: allowing frustration to hasten my conclusions<sup class='opacity-60 footnote' id='footnote-2'><a href='#footnote-body-2' style='text-decoration: none'>2</a></sup>.</p>
+
+
+
+<p 
+    id='footnote-body-1' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-1" style="text-decoration: none"><b>1</b></a>: Administrators, more appropriately.
+        <a class="footnote-backlink" href="#footnote-1">
+            <span class="inline-svg-icon" aria-hidden="true">
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M9.66088 8.53078C9.95402 8.23813 9.95442 7.76326 9.66178 7.47012C9.36913 7.17698 8.89426 7.17658 8.60112 7.46922L9.66088 8.53078ZM4.47012 11.5932C4.17698 11.8859 4.17658 12.3607 4.46922 12.6539C4.76187 12.947 5.23674 12.9474 5.52988 12.6548L4.47012 11.5932ZM5.51318 11.5771C5.21111 11.2936 4.73648 11.3088 4.45306 11.6108C4.16964 11.9129 4.18475 12.3875 4.48682 12.6709L5.51318 11.5771ZM8.61782 16.5469C8.91989 16.8304 9.39452 16.8152 9.67794 16.5132C9.96136 16.2111 9.94625 15.7365 9.64418 15.4531L8.61782 16.5469ZM5 11.374C4.58579 11.374 4.25 11.7098 4.25 12.124C4.25 12.5382 4.58579 12.874 5 12.874V11.374ZM15.37 12.124V12.874L15.3723 12.874L15.37 12.124ZM17.9326 13.1766L18.4614 12.6447V12.6447L17.9326 13.1766ZM18.25 15.7351C18.2511 16.1493 18.5879 16.4841 19.0021 16.483C19.4163 16.4819 19.7511 16.1451 19.75 15.7309L18.25 15.7351ZM8.60112 7.46922L4.47012 11.5932L5.52988 12.6548L9.66088 8.53078L8.60112 7.46922ZM4.48682 12.6709L8.61782 16.5469L9.64418 15.4531L5.51318 11.5771L4.48682 12.6709ZM5 12.874H15.37V11.374H5V12.874ZM15.3723 12.874C16.1333 12.8717 16.8641 13.1718 17.4038 13.7084L18.4614 12.6447C17.6395 11.8276 16.5267 11.3705 15.3677 11.374L15.3723 12.874ZM17.4038 13.7084C17.9435 14.245 18.2479 14.974 18.25 15.7351L19.75 15.7309C19.7468 14.572 19.2833 13.4618 18.4614 12.6447L17.4038 13.7084Z" fill="#000000"/> </g>
+
+</svg>
+            </span>
+        </a>
+    </small>
+</p>
+
+
+<p 
+    id='footnote-body-2' 
+    class='opacity-60 footnote_body'
+>
+    <small>
+        <a href="#footnote-2" style="text-decoration: none"><b>2</b></a>: The first example isn't really related to this. I mainly wanted to include it because of how silly the reasoning is.
+        <a class="footnote-backlink" href="#footnote-2">
+            <span class="inline-svg-icon" aria-hidden="true">
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M9.66088 8.53078C9.95402 8.23813 9.95442 7.76326 9.66178 7.47012C9.36913 7.17698 8.89426 7.17658 8.60112 7.46922L9.66088 8.53078ZM4.47012 11.5932C4.17698 11.8859 4.17658 12.3607 4.46922 12.6539C4.76187 12.947 5.23674 12.9474 5.52988 12.6548L4.47012 11.5932ZM5.51318 11.5771C5.21111 11.2936 4.73648 11.3088 4.45306 11.6108C4.16964 11.9129 4.18475 12.3875 4.48682 12.6709L5.51318 11.5771ZM8.61782 16.5469C8.91989 16.8304 9.39452 16.8152 9.67794 16.5132C9.96136 16.2111 9.94625 15.7365 9.64418 15.4531L8.61782 16.5469ZM5 11.374C4.58579 11.374 4.25 11.7098 4.25 12.124C4.25 12.5382 4.58579 12.874 5 12.874V11.374ZM15.37 12.124V12.874L15.3723 12.874L15.37 12.124ZM17.9326 13.1766L18.4614 12.6447V12.6447L17.9326 13.1766ZM18.25 15.7351C18.2511 16.1493 18.5879 16.4841 19.0021 16.483C19.4163 16.4819 19.7511 16.1451 19.75 15.7309L18.25 15.7351ZM8.60112 7.46922L4.47012 11.5932L5.52988 12.6548L9.66088 8.53078L8.60112 7.46922ZM4.48682 12.6709L8.61782 16.5469L9.64418 15.4531L5.51318 11.5771L4.48682 12.6709ZM5 12.874H15.37V11.374H5V12.874ZM15.3723 12.874C16.1333 12.8717 16.8641 13.1718 17.4038 13.7084L18.4614 12.6447C17.6395 11.8276 16.5267 11.3705 15.3677 11.374L15.3723 12.874ZM17.4038 13.7084C17.9435 14.245 18.2479 14.974 18.25 15.7351L19.75 15.7309C19.7468 14.572 19.2833 13.4618 18.4614 12.6447L17.4038 13.7084Z" fill="#000000"/> </g>
+
+</svg>
+            </span>
+        </a>
+    </small>
+</p><h1 id="confronting-reality">Confronting Reality</h1>
+<p>My impression was to go back through my blogs and entirely rewrite them. Of course, it didn't take long for me to realize how terrible of an idea this is.</p>
+<p>First, I make it no secret how much I value honesty and transparency. I feel that going back and changing entire blogs to sound better comes off as performative. Allowing myself to err is a clear demonstration that I avoid renegading my own principles.</p>
+<p>Second, and most importantly, I think doing so is counterproductive. I am a growing person whose maturity, values, and even stylistic choices all change with time. There are probably elements of this blog I will disagree with ten years from now. Polishing the writing over and over again is just daunting, and frankly, stupid.</p>
+<p>There's also a much deeper side to leaving the writing unchanged. Each blog is a snapshot into my character at that particular moment in time. Rewriting them is destroying an artifact of the person that wrote it. I certainly don't want my future self to desecrate the version of me writing this. These blogs collectively form a chronology into my evolution as a person. Removing the essence of this chronology is, in my opinion, prioritizing perfection over what makes me human.</p>
+<p>Of course, I think it is also wrong to do nothing. I find many of my examples insulting, necessitating a change. And at the end of the day, I can freely disown my opinions without apology nor explanation to anyone. Part of evolving is discarding parts of my character I no longer agree with, which may include shelving them entirely. Putting all my flaws on display is more about insecure perfectionism than it is enlightening penance. I also question why anyone is entitled to an apology warranting penance for something as minor as harsh language.</p>
+<p>Ultimately, I went through and either edited particularly strong language, or added a disclaimer. Restricting myself between the extremes of doing nothing versus doing everything is silly. After all, I decide what's on this website, and am accountable only to myself.</p>
+<h1 id="my-own-character">My Own Character</h1>
+<p>The underlying subject of this blog isn't poor writing choices. Rather, it's a character flaw of mine. I tend to let frustration, sometimes pride, hasten my conclusions. Ironically, I criticized Ronald Fisher for doing the same in <a href="/writing/intelligence-upper-bound/">my most recent blog</a>.</p>
+<p>There is no shame in admitting this. Everyone has flaws, even the mightiest moral figures. Holding myself to perfection is unrealistic. Rewriting my past is performative. Instead, I feel the most appropriate course of action is to simply correct as needed.</p>
+<p>At the end of the day, I am at the helm of myself. How I decide to approach problems is entirely my decision. I write this blog not to announce anything, but because I find the matter interesting and worthy of discussion. Engaging in dialogue is also one of the most productive ways for me to perform introspection. Sometimes, this takes the form of personal journals, private conversations, or public blogs. I decide what goes where :)</p>
+</section>
+
+  <hr />
+
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col">
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tags </span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://dtnaylor.com/writing/tags/blog/"
+      >blog</a
+    >
+    
+  </div>
+  
+</footer>
+
+<!---->
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  <a
+    class="block-hover-mask flex min-w-[50%] grow items-center rounded-l-md p-6 pr-3 font-semibold no-underline"
+    href="https:&#x2F;&#x2F;dtnaylor.com&#x2F;writing&#x2F;intelligence-upper-bound&#x2F;"
+    ><span class="mr-1.5">←</span><span>Intelligence as an Upper Bound</span></a
+  >
+  <!---->
+  
+</nav>
+
+<!---->
+
+  <!-- Comment -->
+  
+
+  <!-- Page End inject -->
+  
+</article>
+
+      </main>
+    </div>
+
+    <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+    <!---->
+    <!---->
+    &copy; 2025 - 2026<!---->
+    
+    <a class="link" href="https://dtnaylor.com">
+      
+    </a>
+     |<!---->
+    <!---->
+    <a class="link" href="&#x2F;license" rel="noopener" target="_blank">
+      License
+    </a>
+    <!---->
+    
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <a class="link mr-6 lg:ml-6" href="https://www.getzola.org/" rel="noopener" target="_blank">
+      Powered by Zola
+    </a>
+    <a class="link" href="https://github.com/st1020/kita" rel="noopener" target="_blank">✎ Kita</a>
+  </div>
+  <!-- Footer inject -->
+  <a href="/colophon">Colophon</a>
+</footer>
+
+
+    <!-- Body End inject -->
+    
+  </body>
+</html>
